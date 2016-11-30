@@ -15,7 +15,7 @@ Al trabajar con XAML, especialmente si la vista tiene un listado de items, pued
 
 Este es un ejemplo de una vista de que contiene un ListView sin datos de ejemplo en vista de diseño:
 
-[<img class="  aligncenter wp-image-32 size-full" src="http://www.modestosanjuan.com/wp-content/uploads/2015/01/ventana-con-listview-vacío.png" alt="ventana con listview vacío" width="538" height="366" srcset="http://www.modestosanjuan.com/wp-content/uploads/2015/01/ventana-con-listview-vacío.png 538w, http://www.modestosanjuan.com/wp-content/uploads/2015/01/ventana-con-listview-vacío-300x204.png 300w" sizes="(max-width: 538px) 100vw, 538px" />][1]
+[<img class="  aligncenter wp-image-32 size-full" src="/wp-content/uploads/2015/01/ventana-con-listview-vacío.png" alt="ventana con listview vacío" width="538" height="366" srcset="/wp-content/uploads/2015/01/ventana-con-listview-vacío.png 538w, /wp-content/uploads/2015/01/ventana-con-listview-vacío-300x204.png 300w" sizes="(max-width: 538px) 100vw, 538px" />][1]
 
 La imagen corresponde a la vista de diseño de un código como este:
 
@@ -91,7 +91,7 @@ Una vez hecho esto, todos los bindings de datos con el ViewModel mostrarán los 
 Y así es como se vería en vista de diseño:
 
 <p style="text-align: center;">
-  <a href="http://www.modestosanjuan.com/wp-content/uploads/2015/01/ventana-con-listview-con-datos-de-ejemplo.png"><img class="alignnone size-full wp-image-35" src="http://www.modestosanjuan.com/wp-content/uploads/2015/01/ventana-con-listview-con-datos-de-ejemplo.png" alt="ventana con listview con datos de ejemplo" width="540" height="361" srcset="http://www.modestosanjuan.com/wp-content/uploads/2015/01/ventana-con-listview-con-datos-de-ejemplo.png 540w, http://www.modestosanjuan.com/wp-content/uploads/2015/01/ventana-con-listview-con-datos-de-ejemplo-300x201.png 300w" sizes="(max-width: 540px) 100vw, 540px" /></a>
+  <a href="/wp-content/uploads/2015/01/ventana-con-listview-con-datos-de-ejemplo.png"><img class="alignnone size-full wp-image-35" src="/wp-content/uploads/2015/01/ventana-con-listview-con-datos-de-ejemplo.png" alt="ventana con listview con datos de ejemplo" width="540" height="361" srcset="/wp-content/uploads/2015/01/ventana-con-listview-con-datos-de-ejemplo.png 540w, /wp-content/uploads/2015/01/ventana-con-listview-con-datos-de-ejemplo-300x201.png 300w" sizes="(max-width: 540px) 100vw, 540px" /></a>
 </p>
 
 Si no quieres meter los datos de ejemplo en tu clase de ViewModel, siempre puedes crear una clase específica para el ViewModel en tiempo de diseño. Sólo hay que cambiar el valor del _DesignInstance_ en el archivo XAML y darle el nombre del tipo para la vista de diseño. Eso si, mejor que recurras a interfaces o algo similar para asegurarte de que ambos ViewModel (el de vista de diseño y el que se ejecutará en real) compartan el mismo contrato.
@@ -100,4 +100,4 @@ Si no quieres meter los datos de ejemplo en tu clase de ViewModel, siempre puede
 
 \*\*IMPORTANTE:\*\* Para que las vistas tomen los datos de ejemplo debemos compilar el proyecto para que se compile el ViewModel. Si hacemos cambios en el conjunto de datos de ejemplos del ViewModel, deberemos compilar de nuevo, así que lo mejor es crear primero un conjunto de datos de ejemplo dignos y así luego podemos centrarnos en el trabajo de la vista.
 
- [1]: http://www.modestosanjuan.com/wp-content/uploads/2015/01/ventana-con-listview-vacío.png
+ [1]: /wp-content/uploads/2015/01/ventana-con-listview-vacío.png

@@ -22,7 +22,7 @@ Write-Host "Aquí ejecutaría código relacionado con el módulo"</pre>
 
 En este caso el módulo que estaba intentando importar resulta que no existía en mi máquina, por lo que al intentar hacer un Import-Module, obtenía un error que me indicaba que el módulo no se encontraba. El problema es que el comportamiento de PowerShell no era exáctamente como yo quería:
 
-<a href="http://www.modestosanjuan.com/wp-content/uploads/2015/06/Error-Import-Module.png" target="_blank"><img class="alignnone wp-image-109 size-full" src="http://www.modestosanjuan.com/wp-content/uploads/2015/06/Error-Import-Module.png" alt="Error-Import-Module" width="997" height="276" srcset="http://www.modestosanjuan.com/wp-content/uploads/2015/06/Error-Import-Module.png 997w, http://www.modestosanjuan.com/wp-content/uploads/2015/06/Error-Import-Module-300x83.png 300w" sizes="(max-width: 997px) 100vw, 997px" /></a>
+<a href="/wp-content/uploads/2015/06/Error-Import-Module.png" target="_blank"><img class="alignnone wp-image-109 size-full" src="/wp-content/uploads/2015/06/Error-Import-Module.png" alt="Error-Import-Module" width="997" height="276" srcset="/wp-content/uploads/2015/06/Error-Import-Module.png 997w, /wp-content/uploads/2015/06/Error-Import-Module-300x83.png 300w" sizes="(max-width: 997px) 100vw, 997px" /></a>
 
 &nbsp;
 
