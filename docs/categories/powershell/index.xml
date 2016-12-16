@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog de Modesto San Juan</title>
-    <link>http://www.modestosanjuan.com.com/categories/powershell/index.xml</link>
+    <link>http://www.modestosanjuan.com/categories/powershell/index.xml</link>
     <description>Recent content on Blog de Modesto San Juan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <atom:link href="http://www.modestosanjuan.com.com/categories/powershell/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.modestosanjuan.com/categories/powershell/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>[PowerShell] Pasar de SecureString a String</title>
-      <link>http://www.modestosanjuan.com.com/powershell-pasar-de-securestring-a-string/</link>
+      <link>http://www.modestosanjuan.com/powershell-pasar-de-securestring-a-string/</link>
       <pubDate>Wed, 25 Nov 2015 09:16:48 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/powershell-pasar-de-securestring-a-string/</guid>
+      <guid>http://www.modestosanjuan.com/powershell-pasar-de-securestring-a-string/</guid>
       <description>&lt;p&gt;En ocasiones necesito usar un &lt;strong&gt;SecureString&lt;/strong&gt; pero luego me veo obligado a utilizar ese string de forma no segura. Aunque la recomendación es no hacer esto, la realidad es que hay muchos escenarios en los que es necesario. Un ejemplo sencillo es el caso en el que necesito que el usuario meta un dato sensible por consola y pero luego necesito utilizar ese dato como texto plano para pasarlo como parámetro a un ejecutable de Windows. Este es un ejemplo de cómo hacerlo:&lt;/p&gt;
 
 &lt;pre class=&#34;lang:ps decode:true&#34;&gt;Param(
@@ -34,10 +34,10 @@ $nonSecure = Decrypt-SecureString $password&lt;/pre&gt;
     
     <item>
       <title>[PowerShell] Sacando partido a la conversión de tipos</title>
-      <link>http://www.modestosanjuan.com.com/powershell-sacando-partido-a-la-conversion-de-tipos/</link>
+      <link>http://www.modestosanjuan.com/powershell-sacando-partido-a-la-conversion-de-tipos/</link>
       <pubDate>Thu, 22 Oct 2015 00:27:51 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/powershell-sacando-partido-a-la-conversion-de-tipos/</guid>
+      <guid>http://www.modestosanjuan.com/powershell-sacando-partido-a-la-conversion-de-tipos/</guid>
       <description>&lt;p&gt;PowerShell ETS (Extended Type System) forma parte de las tripas de PowerShell y es la parte que permite que convivan tipos de .Net, COM, ADSI y WMI pero que a nosotros se nos muestren como objetos de PowerShell de primer orden.&lt;/p&gt;
 
 &lt;p&gt;ETS tiene mucha potencia y no siempre es fácil obtener documentación sobre cómo hacer las cosas, pero en este post quiero dejarle a mi yo futuro un regalito para cuando necesite realizar conversión de tipos de .Net en PowerShell.&lt;/p&gt;
@@ -164,10 +164,10 @@ namespace Configuration
     
     <item>
       <title>[PowerShell] Distinguir entre rutas relativas y absolutas</title>
-      <link>http://www.modestosanjuan.com.com/powershell-distinguir-entre-rutas-relativas-y-absolutas/</link>
+      <link>http://www.modestosanjuan.com/powershell-distinguir-entre-rutas-relativas-y-absolutas/</link>
       <pubDate>Thu, 08 Oct 2015 22:41:43 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/powershell-distinguir-entre-rutas-relativas-y-absolutas/</guid>
+      <guid>http://www.modestosanjuan.com/powershell-distinguir-entre-rutas-relativas-y-absolutas/</guid>
       <description>&lt;p&gt;Esta vez toca un truco muy simple pero muy útil cuando tengo un script que recibe una ruta como parámetro. Es muy típico no saber si la ruta es absoluta o relativa y muy frecuente querer hacer un &lt;strong&gt;Join-Path&lt;/strong&gt; con la ruta actual (o cualquier otra) en caso de que la ruta sea relativa.&lt;/p&gt;
 
 &lt;p&gt;En ocasiones me olvido de que PowerShell tiene a su disposición toda la potencia de .Net y en este caso es precisamente útil. Utilizando el método &lt;strong&gt;IsPathRooted&lt;/strong&gt; de &lt;strong&gt;System.IO.Path&lt;/strong&gt; puedo saber si la ruta es absoluta o relativa y actuar en consecuencia. Este sería un ejemplo típico de estos casos.&lt;/p&gt;
@@ -190,10 +190,10 @@ if (-not [string]::IsNullOrWhiteSpace($Path)) {
     
     <item>
       <title>[PowerShell] Variables automáticas</title>
-      <link>http://www.modestosanjuan.com.com/powershell-variables-automaticas/</link>
+      <link>http://www.modestosanjuan.com/powershell-variables-automaticas/</link>
       <pubDate>Sun, 20 Sep 2015 22:10:01 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/powershell-variables-automaticas/</guid>
+      <guid>http://www.modestosanjuan.com/powershell-variables-automaticas/</guid>
       <description>&lt;p&gt;PowerShell dispone de una serie de variables gestionadas de forma automática que permiten obtener información relacionada con la ejecución de código actual. Su propósito y utilidad es variado, siendo algunas de uso muy frecuente y otras de uso marginal. En cualquier caso, no está mal conocer unas cuantas y que suene dentro de la cabeza que hay otras que tal vez sea útiles en el futuro.&lt;/p&gt;
 
 &lt;p&gt;Tanto la &lt;a href=&#34;https://technet.microsoft.com/en-us/library/hh847768.aspx&#34; target=&#34;_blank&#34;&gt;documentación oficial&lt;/a&gt; como el comando _&amp;#8220;&lt;span style=&#34;color: #3366ff;&#34;&gt;get-help&lt;/span&gt; &lt;span style=&#34;color: #cc99ff;&#34;&gt;about_automatic_variables&lt;/span&gt;&amp;#8220;_ contienen el listado completo, pero me gustaría enumerar por aquí algunas que me resultan interesantes o que tienen truco.&lt;/p&gt;
@@ -220,10 +220,10 @@ $Error&lt;/pre&gt;
     
     <item>
       <title>[PowerShell] Ojo que no hay un único $null</title>
-      <link>http://www.modestosanjuan.com.com/powershell-ojo-que-no-hay-un-unico-null/</link>
+      <link>http://www.modestosanjuan.com/powershell-ojo-que-no-hay-un-unico-null/</link>
       <pubDate>Wed, 09 Sep 2015 20:49:56 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/powershell-ojo-que-no-hay-un-unico-null/</guid>
+      <guid>http://www.modestosanjuan.com/powershell-ojo-que-no-hay-un-unico-null/</guid>
       <description>&lt;p&gt;Este es un ejemplo curioso de esos que me ha vuelto loco hasta que me he dado cuenta. Si parto de este código:&lt;/p&gt;
 
 &lt;pre class=&#34;lang:ps decode:true&#34;&gt;$item1 = Get-ChildItem | Where-Object {$_ -eq &#34;no encuentras esto ni de coña&#34;}
@@ -253,10 +253,10 @@ $item2.PSObject -eq $null&lt;/pre&gt;
     
     <item>
       <title>[PowerShell] Saber si una variable ya ha sido definida</title>
-      <link>http://www.modestosanjuan.com.com/powershell-saber-si-una-variable-ya-ha-sido-definida/</link>
+      <link>http://www.modestosanjuan.com/powershell-saber-si-una-variable-ya-ha-sido-definida/</link>
       <pubDate>Thu, 20 Aug 2015 22:14:23 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/powershell-saber-si-una-variable-ya-ha-sido-definida/</guid>
+      <guid>http://www.modestosanjuan.com/powershell-saber-si-una-variable-ya-ha-sido-definida/</guid>
       <description>&lt;p&gt;En ocasiones tengo la necesidad de saber si una variable ha sido previamente definida. Esto es especialmente importante porque utilizo siempre el &amp;#8220;Set-StrictMode -Version 2&amp;#8221; y, si necesito recurrir a variables de otros scopes, cuando intento acceder a una variable no definida obtengo un error. Aunque generalmente intento no recurrir a otros scopes, especialmente el &lt;em&gt;$global&lt;/em&gt;, en ocasiones los necesito, especialmente el &lt;em&gt;$script&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;Un ejemplo podría ser querer verificar si una variable que contiene un array ha sido inicializada o no, para poder añadirle ítems. El código quedaría de la siguiente forma:&lt;/p&gt;
@@ -282,10 +282,10 @@ Write-Host $script:anyVariable&lt;/pre&gt;
     
     <item>
       <title>[PowerShell] Devolver un array vacío desde una función</title>
-      <link>http://www.modestosanjuan.com.com/powershell-devolver-un-array-vacio-desde-una-funcion/</link>
+      <link>http://www.modestosanjuan.com/powershell-devolver-un-array-vacio-desde-una-funcion/</link>
       <pubDate>Thu, 20 Aug 2015 15:07:23 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/powershell-devolver-un-array-vacio-desde-una-funcion/</guid>
+      <guid>http://www.modestosanjuan.com/powershell-devolver-un-array-vacio-desde-una-funcion/</guid>
       <description>&lt;p&gt;Esto es un truco rápido muy chorra pero que puede volver loco a más de un desarrollador que no esté acostumbrado a las peculiaridades de PowerShell. Tomando este código como ejemplo:&lt;/p&gt;
 
 &lt;pre class=&#34;lang:ps decode:true&#34;&gt;function Get-EmptyArray {
@@ -312,10 +312,10 @@ Write-Host (Get-EmptyArray).GetType()&lt;/pre&gt;
     
     <item>
       <title>[PowerShell] Las ventajas de usar parámetros y variables tipados</title>
-      <link>http://www.modestosanjuan.com.com/powershell-las-ventajas-de-usar-parametros-y-variables-tipados/</link>
+      <link>http://www.modestosanjuan.com/powershell-las-ventajas-de-usar-parametros-y-variables-tipados/</link>
       <pubDate>Tue, 18 Aug 2015 09:52:05 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/powershell-las-ventajas-de-usar-parametros-y-variables-tipados/</guid>
+      <guid>http://www.modestosanjuan.com/powershell-las-ventajas-de-usar-parametros-y-variables-tipados/</guid>
       <description>&lt;p&gt;Cuanto más uso PowerShell más convencido estoy de lo importante que es tipar las variables y los parámetros de las funciones. Debido a la forma en que trabaja PowerShell, especificar los tipos me ayuda a evitar comportamientos indeseados.&lt;/p&gt;
 
 &lt;p&gt;Por ejemplo, dado este script:&lt;/p&gt;
@@ -346,10 +346,10 @@ if ($items) {
     
     <item>
       <title>[PowerShell] Switch parameters</title>
-      <link>http://www.modestosanjuan.com.com/powershell-switch-parameters/</link>
+      <link>http://www.modestosanjuan.com/powershell-switch-parameters/</link>
       <pubDate>Mon, 17 Aug 2015 22:37:14 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/powershell-switch-parameters/</guid>
+      <guid>http://www.modestosanjuan.com/powershell-switch-parameters/</guid>
       <description>&lt;p&gt;En PowerShell es muy común usar parámetros de tipo &lt;em&gt;switch&lt;/em&gt;. La peculiaridad de estos parámetros es que al usarlos, se especifica el nombre del parámetro pero no se proporciona ningún valor, ya que se asume que al usarlo su valor será &lt;em&gt;$true&lt;/em&gt; y &lt;em&gt;$false&lt;/em&gt; si no se especifica. Ejemplos típicos son el uso de &amp;#8211;&lt;em&gt;Recurse o -Force. &lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Este sería un ejemplo de con este tipo de parámetros:&lt;/p&gt;
@@ -393,10 +393,10 @@ Do-Something
     
     <item>
       <title>[PowerShell] Cuidado que ($a -eq $a) no siempre es $true</title>
-      <link>http://www.modestosanjuan.com.com/powershell-cuidado-que-a-eq-a-no-siempre-es-true/</link>
+      <link>http://www.modestosanjuan.com/powershell-cuidado-que-a-eq-a-no-siempre-es-true/</link>
       <pubDate>Fri, 07 Aug 2015 00:22:46 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/powershell-cuidado-que-a-eq-a-no-siempre-es-true/</guid>
+      <guid>http://www.modestosanjuan.com/powershell-cuidado-que-a-eq-a-no-siempre-es-true/</guid>
       <description>&lt;p&gt;Este es uno de esos ejemplos en los que es importante intentar documentarse todo lo posible al desarrollar en un lenguaje/plataforma que no conocemos. Es frecuente asumir conceptos basados en nuestros conocimientos previos de otros lenguajes, pero en ocasiones nos puede jugar malas pasadas. En este caso voy a mostrar un ejemplo muy sencillo en el que yo asumí erróneamente el funcionamiento de algo tan sencillo como un operador de comparación.&lt;/p&gt;
 
 &lt;p&gt;Este problema lo encontré desarrollando una prueba mientras practicaba TDD. Por hacerlo fácil, este es el ejemplo más simple que se me ocurre para describir lo equivocado que estaba:&lt;/p&gt;
@@ -425,10 +425,10 @@ else { Write-Host &#34;$a no es igual que $a&#34; }&lt;/pre&gt;
     
     <item>
       <title>[PowerShell] Crear el fichero de manifiesto para muchos módulos a la vez</title>
-      <link>http://www.modestosanjuan.com.com/powershell-crear-el-fichero-de-manifiesto-para-muchos-modulos-a-la-vez/</link>
+      <link>http://www.modestosanjuan.com/powershell-crear-el-fichero-de-manifiesto-para-muchos-modulos-a-la-vez/</link>
       <pubDate>Wed, 05 Aug 2015 13:50:27 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/powershell-crear-el-fichero-de-manifiesto-para-muchos-modulos-a-la-vez/</guid>
+      <guid>http://www.modestosanjuan.com/powershell-crear-el-fichero-de-manifiesto-para-muchos-modulos-a-la-vez/</guid>
       <description>&lt;p&gt;Hoy he tenido que crear de golpe el manifest a varios módulos. Teníamos más de 10 módulos (.psm1), cada uno en su propia carpeta y necesitaba añadirles el manifest para poder definir la empresa de cada módulo. Gracias al pipeline de PowerShell, no he tenido que esforzarme mucho para conseguirlo:&lt;/p&gt;
 
 &lt;pre class=&#34;lang:ps decode:true&#34;&gt;ls *.psm1 -Recurse | ForEach-Object { 
@@ -451,10 +451,10 @@ else { Write-Host &#34;$a no es igual que $a&#34; }&lt;/pre&gt;
     
     <item>
       <title>[PowerShell] La importancia del Set-StrictMode</title>
-      <link>http://www.modestosanjuan.com.com/powershell-la-importancia-del-set-strictmode/</link>
+      <link>http://www.modestosanjuan.com/powershell-la-importancia-del-set-strictmode/</link>
       <pubDate>Mon, 03 Aug 2015 23:50:39 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/powershell-la-importancia-del-set-strictmode/</guid>
+      <guid>http://www.modestosanjuan.com/powershell-la-importancia-del-set-strictmode/</guid>
       <description>
 
 &lt;p&gt;Cuando empecé a programar scripts en PowerShell, cometía muchísimos fallos fruto de mi intoxicación con otros lenguajes, especialmente C#, con el que trabajo habitualmente. Después de un tiempo, me di cuenta que PowerShell tiene muchas más similitudes con JavaScript que con C# ya que es un lenguaje interpretado y de tipado débil. Y un tiempo después, aprendí que podía programar en PowerShell de una manera más próxima a TypeScript.&lt;/p&gt;
@@ -539,10 +539,10 @@ Write-Host $resultado
     
     <item>
       <title>[PowerShell] Evitar que wget (Invoke-WebRequest) tarde tanto</title>
-      <link>http://www.modestosanjuan.com.com/truco-evitar-que-wget-invoke-webrequest-tarde-tanto-en-powershell/</link>
+      <link>http://www.modestosanjuan.com/truco-evitar-que-wget-invoke-webrequest-tarde-tanto-en-powershell/</link>
       <pubDate>Sun, 22 Mar 2015 19:18:44 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/truco-evitar-que-wget-invoke-webrequest-tarde-tanto-en-powershell/</guid>
+      <guid>http://www.modestosanjuan.com/truco-evitar-que-wget-invoke-webrequest-tarde-tanto-en-powershell/</guid>
       <description>&lt;p&gt;Mientras estaba preparando unos scripts para automatizar el proceso de sideloading de una aplicación Windows 8.1, me encontré con un problema bastante tonto. Estaba descargando por HTTP el paquete de la aplicación desde una red local pero el comando wget de PowerShell tardaba demasiado. Tenía claro que no era problema de la red porque el archivo bajaba a buena velocidad por otros medios, pero siempre que usaba wget el comando tardaba demasiado tiempo. Una descarga de menos de 2 segundos se convertía en una descarga de más de 10.&lt;/p&gt;
 
 &lt;p&gt;Después de dedicar un rato descubrí que el problema estaba en el indicador de progreso de descarga del paquete. Lo único que tenía que hacer era desactivarla y el rendimiento pasaba a ser el esperado. Para hacer esto únicamente es necesario añadir esta línea antes de la llamada al comando wget:&lt;/p&gt;

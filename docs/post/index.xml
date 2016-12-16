@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Post-rsses on Blog de Modesto San Juan</title>
-    <link>http://www.modestosanjuan.com.com/post/index.xml</link>
+    <link>http://www.modestosanjuan.com/post/index.xml</link>
     <description>Recent content in Post-rsses on Blog de Modesto San Juan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
     <lastBuildDate>Thu, 10 Nov 2016 10:01:15 +0000</lastBuildDate>
-    <atom:link href="http://www.modestosanjuan.com.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.modestosanjuan.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>La regla del boy scout</title>
-      <link>http://www.modestosanjuan.com.com/la-regla-del-boy-scout/</link>
+      <link>http://www.modestosanjuan.com/la-regla-del-boy-scout/</link>
       <pubDate>Thu, 10 Nov 2016 10:01:15 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/la-regla-del-boy-scout/</guid>
+      <guid>http://www.modestosanjuan.com/la-regla-del-boy-scout/</guid>
       <description>
 
 &lt;p&gt;Hay discipinas en las que dicen que a largo plazo es más importante la constancia que el talento. Creo que en el desarrollo de software tener constancia es una virtud.&lt;/p&gt;
@@ -77,10 +77,10 @@
     
     <item>
       <title>Desarrollador, pon contenedores en tu vida</title>
-      <link>http://www.modestosanjuan.com.com/desarrollador-pon-contenedores-en-tu-vida/</link>
+      <link>http://www.modestosanjuan.com/desarrollador-pon-contenedores-en-tu-vida/</link>
       <pubDate>Sun, 06 Nov 2016 23:10:11 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/desarrollador-pon-contenedores-en-tu-vida/</guid>
+      <guid>http://www.modestosanjuan.com/desarrollador-pon-contenedores-en-tu-vida/</guid>
       <description>&lt;p&gt;No, en este post no te voy a vender las virtudes de desplegar su aplicación sobre docker. Mucho se ha escrito sobre el tema y mucho se seguirá escribiendo. También se ha escrito de &lt;a href=&#34;https://thehftguy.wordpress.com/2016/11/01/docker-in-production-an-history-of-failure/&#34;&gt;lo malo que es&lt;/a&gt; docker y de lo &lt;a href=&#34;http://patrobinson.github.io/2016/11/05/docker-in-production/&#34;&gt;no tan malo que es&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Este post está destinado especialmente a todos aquellos desarrolladores que no desplegáis vuestras aplicaciones con Docker. Porque los que ya usáis docker en el ciclo de entrega ya sabéis lo que voy a contar y además os parece obvio.&lt;/p&gt;
@@ -103,10 +103,10 @@
     
     <item>
       <title>Nuevos retos</title>
-      <link>http://www.modestosanjuan.com.com/nuevos-retos/</link>
+      <link>http://www.modestosanjuan.com/nuevos-retos/</link>
       <pubDate>Fri, 14 Oct 2016 15:40:53 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/nuevos-retos/</guid>
+      <guid>http://www.modestosanjuan.com/nuevos-retos/</guid>
       <description>&lt;p&gt;Estos últimos dos meses he andado bastante liado y no he prestado mucha atención al blog. Esta vez no voy a hablar de ningún tema técnico, se trata de una post muy personal. Si no te interesa mi vida, deja de leer. Si te interesa, eres un poco cotilla ;P&lt;/p&gt;
 
 &lt;p&gt;Este mes cierro una etapa profesional maravillosa que me ha dado muchas alegrías, me ha permitido trabajar con un equipo genial, aprender como no lo hacía en muchos años y divertirme haciendo lo que más me gusta, desarrollar software.&lt;/p&gt;
@@ -177,10 +177,10 @@
     
     <item>
       <title>¿Cuánto cuesta llamar a un método?</title>
-      <link>http://www.modestosanjuan.com.com/cuanto-cuesta-llamar-a-un-metodo/</link>
+      <link>http://www.modestosanjuan.com/cuanto-cuesta-llamar-a-un-metodo/</link>
       <pubDate>Tue, 02 Aug 2016 00:03:45 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/cuanto-cuesta-llamar-a-un-metodo/</guid>
+      <guid>http://www.modestosanjuan.com/cuanto-cuesta-llamar-a-un-metodo/</guid>
       <description>
 
 &lt;p&gt;Últimamente Twitter está siendo toda una fuente de inspiración. En esta ocasión el hilo culpable es &lt;a href=&#34;https://twitter.com/jcant0n/status/759081339098464257&#34;&gt;este&lt;/a&gt;. &lt;a href=&#34;https://twitter.com/jcant0n&#34;&gt;Javier Cantón&lt;/a&gt; hace un comentario respecto a la diferencia de rendimiento existente entre llamar a un método virtual versus llamar al mismo método a través de un interface.&lt;/p&gt;
@@ -337,10 +337,10 @@
     
     <item>
       <title>Claves primarias: inmutabilidad y generación</title>
-      <link>http://www.modestosanjuan.com.com/claves-primarias-inmutabilidad-y-generacion/</link>
+      <link>http://www.modestosanjuan.com/claves-primarias-inmutabilidad-y-generacion/</link>
       <pubDate>Sat, 30 Jul 2016 23:39:11 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/claves-primarias-inmutabilidad-y-generacion/</guid>
+      <guid>http://www.modestosanjuan.com/claves-primarias-inmutabilidad-y-generacion/</guid>
       <description>
 
 &lt;p&gt;Hace unos días &lt;a href=&#34;https://twitter.com/Pablyte/status/754056720666730500&#34;&gt;Pablo Iglesias&lt;/a&gt; &lt;a href=&#34;https://twitter.com/Pablyte/status/754056720666730500&#34;&gt;tuiteó&lt;/a&gt; una pregunta de Stack Exchange en la que hablaban sobre la inmutabilidad de las claves primarias. Se generó un debate bastante interesante en Twitter que se extendió más allá de la cuestión de la inmutabilidad. Este es un intento de recopilar y explicar algunos de los conceptos que se mencionaron durante ese debate.&lt;/p&gt;
@@ -437,10 +437,10 @@
     
     <item>
       <title>Palabras malditas</title>
-      <link>http://www.modestosanjuan.com.com/palabras-malditas/</link>
+      <link>http://www.modestosanjuan.com/palabras-malditas/</link>
       <pubDate>Mon, 13 Jun 2016 10:02:56 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/palabras-malditas/</guid>
+      <guid>http://www.modestosanjuan.com/palabras-malditas/</guid>
       <description>
 
 &lt;h1 id=&#34;extreme-programming-y-el-desarrollo-ágil&#34;&gt;Extreme programming y el desarrollo ágil&lt;/h1&gt;
@@ -521,10 +521,10 @@
     
     <item>
       <title>Presta atención a tus datos de pruebas</title>
-      <link>http://www.modestosanjuan.com.com/presta-atencion-a-tus-datos-de-pruebas/</link>
+      <link>http://www.modestosanjuan.com/presta-atencion-a-tus-datos-de-pruebas/</link>
       <pubDate>Mon, 29 Feb 2016 23:04:10 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/presta-atencion-a-tus-datos-de-pruebas/</guid>
+      <guid>http://www.modestosanjuan.com/presta-atencion-a-tus-datos-de-pruebas/</guid>
       <description>
 
 &lt;p&gt;Los datos utilizados en las pruebas son muy importantes y, aunque el tema de este post parece muy obvio, no son pocas la veces que me he encontrado con problemas debido a este tema, así que creo que merece la pena dedicarle al menos unas líneas.&lt;/p&gt;
@@ -582,10 +582,10 @@ discountCalculator.CalculateFor(client);&lt;/pre&gt;
     
     <item>
       <title>Impresiones sobre pair programming</title>
-      <link>http://www.modestosanjuan.com.com/impresiones-sobre-pair-programming/</link>
+      <link>http://www.modestosanjuan.com/impresiones-sobre-pair-programming/</link>
       <pubDate>Tue, 19 Jan 2016 01:13:56 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/impresiones-sobre-pair-programming/</guid>
+      <guid>http://www.modestosanjuan.com/impresiones-sobre-pair-programming/</guid>
       <description>
 
 &lt;p&gt;El viernes mantuve una conversación bastante entretenida sobre desarrollo de software con un compañero de profesión. Trabaja en una entidad financiera y al hablar de cosas como TDD, Agile, XP, etc. tenía ciertos sentimientos enfrentados. Precisamente uno de los temas que le causaban controversia era el pair programming. Su opinión básicamente se resumía en una frase: &amp;#8220;yo lo que no compro es que dos tíos senior sentados juntos a programar van a ser más productivos que si programan por separado&amp;#8221;.&lt;/p&gt;
@@ -642,10 +642,10 @@ discountCalculator.CalculateFor(client);&lt;/pre&gt;
     
     <item>
       <title>Nuestra programación es mala para el desarrollo de software</title>
-      <link>http://www.modestosanjuan.com.com/nuestra-programacion-es-mala-para-el-desarrollo-de-software/</link>
+      <link>http://www.modestosanjuan.com/nuestra-programacion-es-mala-para-el-desarrollo-de-software/</link>
       <pubDate>Mon, 28 Dec 2015 22:22:29 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/nuestra-programacion-es-mala-para-el-desarrollo-de-software/</guid>
+      <guid>http://www.modestosanjuan.com/nuestra-programacion-es-mala-para-el-desarrollo-de-software/</guid>
       <description>
 
 &lt;h1 id=&#34;la-programación-de-mi-color-favorito&#34;&gt;La programación de mi color favorito&lt;/h1&gt;
@@ -694,10 +694,10 @@ discountCalculator.CalculateFor(client);&lt;/pre&gt;
     
     <item>
       <title>La importancia del rojo en TDD</title>
-      <link>http://www.modestosanjuan.com.com/la-importancia-del-rojo-en-tdd/</link>
+      <link>http://www.modestosanjuan.com/la-importancia-del-rojo-en-tdd/</link>
       <pubDate>Tue, 22 Dec 2015 14:14:43 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/la-importancia-del-rojo-en-tdd/</guid>
+      <guid>http://www.modestosanjuan.com/la-importancia-del-rojo-en-tdd/</guid>
       <description>&lt;p&gt;A un desarrollador que practique TDD, el flujo &lt;strong&gt;rojo, verde, refactor&lt;/strong&gt; no le resulta extraño. En este post quiero romper una lanza a favor del &lt;strong&gt;rojo&lt;/strong&gt;, ese gran incomprendido. Para ilustrarlo voy a recurrir a un ejemplo muy sencillo:&lt;/p&gt;
 
 &lt;pre class=&#34;lang:c# decode:true&#34;&gt;[TestMethod]
@@ -746,10 +746,10 @@ public void sample_test()
     
     <item>
       <title>[PowerShell] Pasar de SecureString a String</title>
-      <link>http://www.modestosanjuan.com.com/powershell-pasar-de-securestring-a-string/</link>
+      <link>http://www.modestosanjuan.com/powershell-pasar-de-securestring-a-string/</link>
       <pubDate>Wed, 25 Nov 2015 09:16:48 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/powershell-pasar-de-securestring-a-string/</guid>
+      <guid>http://www.modestosanjuan.com/powershell-pasar-de-securestring-a-string/</guid>
       <description>&lt;p&gt;En ocasiones necesito usar un &lt;strong&gt;SecureString&lt;/strong&gt; pero luego me veo obligado a utilizar ese string de forma no segura. Aunque la recomendación es no hacer esto, la realidad es que hay muchos escenarios en los que es necesario. Un ejemplo sencillo es el caso en el que necesito que el usuario meta un dato sensible por consola y pero luego necesito utilizar ese dato como texto plano para pasarlo como parámetro a un ejecutable de Windows. Este es un ejemplo de cómo hacerlo:&lt;/p&gt;
 
 &lt;pre class=&#34;lang:ps decode:true&#34;&gt;Param(
@@ -770,10 +770,10 @@ $nonSecure = Decrypt-SecureString $password&lt;/pre&gt;
     
     <item>
       <title>Value Providers y Parameter Binding en ASP.NET Web API</title>
-      <link>http://www.modestosanjuan.com.com/value-providers-y-parameter-binding-en-asp-net-web-api/</link>
+      <link>http://www.modestosanjuan.com/value-providers-y-parameter-binding-en-asp-net-web-api/</link>
       <pubDate>Fri, 13 Nov 2015 10:02:22 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/value-providers-y-parameter-binding-en-asp-net-web-api/</guid>
+      <guid>http://www.modestosanjuan.com/value-providers-y-parameter-binding-en-asp-net-web-api/</guid>
       <description>&lt;p&gt;Cuando necesito acceder a información de la &lt;strong&gt;Request&lt;/strong&gt; desde una acción de un controlador en ASP.NET Web API, la primera tentación es acceder directamente al objeto request y buscar lo que necesito. El principal problema de hacer esto es que convierte en un infierno hacer cualquier tipo de prueba automatizada para esta acción. Por ejemplo:&lt;/p&gt;
 
 &lt;pre class=&#34;lang:c# decode:true&#34;&gt;[HttpGet] 
@@ -856,10 +856,10 @@ public class RefererValueProvider : IValueProvider {
     
     <item>
       <title>Bus de eventos usando Reactive Extensions</title>
-      <link>http://www.modestosanjuan.com.com/bus-de-eventos-usando-reactive-extensions/</link>
+      <link>http://www.modestosanjuan.com/bus-de-eventos-usando-reactive-extensions/</link>
       <pubDate>Tue, 10 Nov 2015 09:32:59 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/bus-de-eventos-usando-reactive-extensions/</guid>
+      <guid>http://www.modestosanjuan.com/bus-de-eventos-usando-reactive-extensions/</guid>
       <description>&lt;p&gt;Utilizar un bus de eventos dentro de una aplicación es algo bastante común. Un ejemplo muy sencillo podría ser desacoplar la lógica de envío de notificaciones al usuario en WPF desde los ViewModels sin necesidad de recurrir a la inyección de dependencias en el ViewModel. Aunque hasta ahora había recurrido siempre a programar mi propio bus de eventos, utilizar &lt;a href=&#34;https://github.com/Reactive-Extensions/Rx.NET&#34; target=&#34;_blank&#34;&gt;Reactive Extensions&lt;/a&gt; me ha resultado muy interesante, útil y sencillo. Este sería un ejemplo de bus de eventos utilizando RX:&lt;/p&gt;
 
 &lt;pre class=&#34;lang:c# decode:true&#34;&gt;public static class ReactiveEventBus {
@@ -908,10 +908,10 @@ ReactiveEventBus.AsObservable&amp;lt;ScopedEvent&amp;gt;()
     
     <item>
       <title>[PowerShell] Sacando partido a la conversión de tipos</title>
-      <link>http://www.modestosanjuan.com.com/powershell-sacando-partido-a-la-conversion-de-tipos/</link>
+      <link>http://www.modestosanjuan.com/powershell-sacando-partido-a-la-conversion-de-tipos/</link>
       <pubDate>Thu, 22 Oct 2015 00:27:51 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/powershell-sacando-partido-a-la-conversion-de-tipos/</guid>
+      <guid>http://www.modestosanjuan.com/powershell-sacando-partido-a-la-conversion-de-tipos/</guid>
       <description>&lt;p&gt;PowerShell ETS (Extended Type System) forma parte de las tripas de PowerShell y es la parte que permite que convivan tipos de .Net, COM, ADSI y WMI pero que a nosotros se nos muestren como objetos de PowerShell de primer orden.&lt;/p&gt;
 
 &lt;p&gt;ETS tiene mucha potencia y no siempre es fácil obtener documentación sobre cómo hacer las cosas, pero en este post quiero dejarle a mi yo futuro un regalito para cuando necesite realizar conversión de tipos de .Net en PowerShell.&lt;/p&gt;
@@ -1038,10 +1038,10 @@ namespace Configuration
     
     <item>
       <title>[PowerShell] Distinguir entre rutas relativas y absolutas</title>
-      <link>http://www.modestosanjuan.com.com/powershell-distinguir-entre-rutas-relativas-y-absolutas/</link>
+      <link>http://www.modestosanjuan.com/powershell-distinguir-entre-rutas-relativas-y-absolutas/</link>
       <pubDate>Thu, 08 Oct 2015 22:41:43 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/powershell-distinguir-entre-rutas-relativas-y-absolutas/</guid>
+      <guid>http://www.modestosanjuan.com/powershell-distinguir-entre-rutas-relativas-y-absolutas/</guid>
       <description>&lt;p&gt;Esta vez toca un truco muy simple pero muy útil cuando tengo un script que recibe una ruta como parámetro. Es muy típico no saber si la ruta es absoluta o relativa y muy frecuente querer hacer un &lt;strong&gt;Join-Path&lt;/strong&gt; con la ruta actual (o cualquier otra) en caso de que la ruta sea relativa.&lt;/p&gt;
 
 &lt;p&gt;En ocasiones me olvido de que PowerShell tiene a su disposición toda la potencia de .Net y en este caso es precisamente útil. Utilizando el método &lt;strong&gt;IsPathRooted&lt;/strong&gt; de &lt;strong&gt;System.IO.Path&lt;/strong&gt; puedo saber si la ruta es absoluta o relativa y actuar en consecuencia. Este sería un ejemplo típico de estos casos.&lt;/p&gt;

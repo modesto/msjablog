@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog de Modesto San Juan</title>
-    <link>http://www.modestosanjuan.com.com/categories/.net/index.xml</link>
+    <link>http://www.modestosanjuan.com/categories/.net/index.xml</link>
     <description>Recent content on Blog de Modesto San Juan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <atom:link href="http://www.modestosanjuan.com.com/categories/.net/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.modestosanjuan.com/categories/.net/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>La importancia del rojo en TDD</title>
-      <link>http://www.modestosanjuan.com.com/la-importancia-del-rojo-en-tdd/</link>
+      <link>http://www.modestosanjuan.com/la-importancia-del-rojo-en-tdd/</link>
       <pubDate>Tue, 22 Dec 2015 14:14:43 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/la-importancia-del-rojo-en-tdd/</guid>
+      <guid>http://www.modestosanjuan.com/la-importancia-del-rojo-en-tdd/</guid>
       <description>&lt;p&gt;A un desarrollador que practique TDD, el flujo &lt;strong&gt;rojo, verde, refactor&lt;/strong&gt; no le resulta extraño. En este post quiero romper una lanza a favor del &lt;strong&gt;rojo&lt;/strong&gt;, ese gran incomprendido. Para ilustrarlo voy a recurrir a un ejemplo muy sencillo:&lt;/p&gt;
 
 &lt;pre class=&#34;lang:c# decode:true&#34;&gt;[TestMethod]
@@ -62,10 +62,10 @@ public void sample_test()
     
     <item>
       <title>Value Providers y Parameter Binding en ASP.NET Web API</title>
-      <link>http://www.modestosanjuan.com.com/value-providers-y-parameter-binding-en-asp-net-web-api/</link>
+      <link>http://www.modestosanjuan.com/value-providers-y-parameter-binding-en-asp-net-web-api/</link>
       <pubDate>Fri, 13 Nov 2015 10:02:22 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/value-providers-y-parameter-binding-en-asp-net-web-api/</guid>
+      <guid>http://www.modestosanjuan.com/value-providers-y-parameter-binding-en-asp-net-web-api/</guid>
       <description>&lt;p&gt;Cuando necesito acceder a información de la &lt;strong&gt;Request&lt;/strong&gt; desde una acción de un controlador en ASP.NET Web API, la primera tentación es acceder directamente al objeto request y buscar lo que necesito. El principal problema de hacer esto es que convierte en un infierno hacer cualquier tipo de prueba automatizada para esta acción. Por ejemplo:&lt;/p&gt;
 
 &lt;pre class=&#34;lang:c# decode:true&#34;&gt;[HttpGet] 
@@ -148,10 +148,10 @@ public class RefererValueProvider : IValueProvider {
     
     <item>
       <title>Bus de eventos usando Reactive Extensions</title>
-      <link>http://www.modestosanjuan.com.com/bus-de-eventos-usando-reactive-extensions/</link>
+      <link>http://www.modestosanjuan.com/bus-de-eventos-usando-reactive-extensions/</link>
       <pubDate>Tue, 10 Nov 2015 09:32:59 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/bus-de-eventos-usando-reactive-extensions/</guid>
+      <guid>http://www.modestosanjuan.com/bus-de-eventos-usando-reactive-extensions/</guid>
       <description>&lt;p&gt;Utilizar un bus de eventos dentro de una aplicación es algo bastante común. Un ejemplo muy sencillo podría ser desacoplar la lógica de envío de notificaciones al usuario en WPF desde los ViewModels sin necesidad de recurrir a la inyección de dependencias en el ViewModel. Aunque hasta ahora había recurrido siempre a programar mi propio bus de eventos, utilizar &lt;a href=&#34;https://github.com/Reactive-Extensions/Rx.NET&#34; target=&#34;_blank&#34;&gt;Reactive Extensions&lt;/a&gt; me ha resultado muy interesante, útil y sencillo. Este sería un ejemplo de bus de eventos utilizando RX:&lt;/p&gt;
 
 &lt;pre class=&#34;lang:c# decode:true&#34;&gt;public static class ReactiveEventBus {
@@ -200,10 +200,10 @@ ReactiveEventBus.AsObservable&amp;lt;ScopedEvent&amp;gt;()
     
     <item>
       <title>Aclarando conceptos: proyectos PCL, universales y shared source</title>
-      <link>http://www.modestosanjuan.com.com/aclarando-conceptos-proyectos-pcl-universales-y-shared-source/</link>
+      <link>http://www.modestosanjuan.com/aclarando-conceptos-proyectos-pcl-universales-y-shared-source/</link>
       <pubDate>Sun, 08 Mar 2015 12:22:55 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/aclarando-conceptos-proyectos-pcl-universales-y-shared-source/</guid>
+      <guid>http://www.modestosanjuan.com/aclarando-conceptos-proyectos-pcl-universales-y-shared-source/</guid>
       <description>&lt;p&gt;Lo habitual cuando quiero compartir código entre proyectos es recurrir a crear bibliotecas de clases. Dependiendo del tipo de proyectos en los que quiera reutilizar mi trabajo, es necesario recurrir a bibliotecas portables (PCL) o incluso a proyectos de código compartido (shared source). Con bibliotecas PCL había trabajado anteriormente, pero no con proyectos universales y shared source, y creo que es importante tener claro cuales son las diferencias entre cada tipo, ya que juegan papeles muy diferentes.&lt;/p&gt;
 
 &lt;p&gt;Lo primero a tener en cuenta es que el objetivo de todos estos tipos de proyecto es sencillo: compartir código. Todos buscan que, cuando trabajemos con proyectos que se van a ejecutar en distintos &lt;em&gt;runtimes&lt;/em&gt;, podamos compartir la mayor cantidad de código posible. En este caso, todo surgió simplemente por compartir un módulo entre una aplicación Windows 8.1 y una WPF, pero es posible encontrar escenarios más complejos que incluyan proyectos de Windows Phone o Xamarin.&lt;/p&gt;
@@ -246,10 +246,10 @@ ReactiveEventBus.AsObservable&amp;lt;ScopedEvent&amp;gt;()
     
     <item>
       <title>[Solucionado] Fluent Migrator no encuentra migraciones</title>
-      <link>http://www.modestosanjuan.com.com/fluent-migrator-no-encuentra-migraciones/</link>
+      <link>http://www.modestosanjuan.com/fluent-migrator-no-encuentra-migraciones/</link>
       <pubDate>Mon, 19 Jan 2015 01:23:05 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/fluent-migrator-no-encuentra-migraciones/</guid>
+      <guid>http://www.modestosanjuan.com/fluent-migrator-no-encuentra-migraciones/</guid>
       <description>&lt;p&gt;Hace unos meses empecé a trabajar en un proyecto en el que utilizamos &lt;a href=&#34;https://github.com/schambers/fluentmigrator&#34;&gt;Fluent Migrator&lt;/a&gt;. Todo funciona bien el proyecto tiene bastantes migraciones funcionando sin problema. En líneas generales funciona casi igual que las migraciones de EF, con algún detalle distinto.&lt;/p&gt;
 
 &lt;p&gt;El caso es que hoy he empezado un proyecto nuevo y he añadido la referencia al paquete de Fluent Migrator para empezar a utilizarlo. Cuando he lanzado las migraciones parecía que todo estaba bien (no daba ningún error), pero no me encontraba ninguna de las migraciones que había definido en el ensamblado de migraciones.&lt;/p&gt;
@@ -262,15 +262,15 @@ ReactiveEventBus.AsObservable&amp;lt;ScopedEvent&amp;gt;()
     
     <item>
       <title>Datos de ejemplo en el ViewModel para facilitar la vista de diseño</title>
-      <link>http://www.modestosanjuan.com.com/datos-de-ejemplo-en-el-viewmodel-para-facilitar-la-vista-de-diseno/</link>
+      <link>http://www.modestosanjuan.com/datos-de-ejemplo-en-el-viewmodel-para-facilitar-la-vista-de-diseno/</link>
       <pubDate>Wed, 17 Dec 2014 00:27:25 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/datos-de-ejemplo-en-el-viewmodel-para-facilitar-la-vista-de-diseno/</guid>
+      <guid>http://www.modestosanjuan.com/datos-de-ejemplo-en-el-viewmodel-para-facilitar-la-vista-de-diseno/</guid>
       <description>&lt;p&gt;Al trabajar con XAML, especialmente si la vista tiene un listado de items, puede resultar muy complicado ajustar la vista para que se vea correctamente. Tareas como ajustar los márgenes, la posición de los elementos o cualquier tipo de cambio en los estilos se pueden convertir en algo bastante pesado.&lt;/p&gt;
 
 &lt;p&gt;Este es un ejemplo de una vista de que contiene un ListView sin datos de ejemplo en vista de diseño:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.modestosanjuan.com.com/wp-content/uploads/2015/01/ventana-con-listview-vacío.png&#34;&gt;&lt;img class=&#34;  aligncenter wp-image-32 size-full&#34; src=&#34;http://www.modestosanjuan.com.com/wp-content/uploads/2015/01/ventana-con-listview-vacío.png&#34; alt=&#34;ventana con listview vacío&#34; width=&#34;538&#34; height=&#34;366&#34; srcset=&#34;http://www.modestosanjuan.com.com/wp-content/uploads/2015/01/ventana-con-listview-vacío.png 538w, http://www.modestosanjuan.com.com/wp-content/uploads/2015/01/ventana-con-listview-vacío-300x204.png 300w&#34; sizes=&#34;(max-width: 538px) 100vw, 538px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.modestosanjuan.com/wp-content/uploads/2015/01/ventana-con-listview-vacío.png&#34;&gt;&lt;img class=&#34;  aligncenter wp-image-32 size-full&#34; src=&#34;http://www.modestosanjuan.com/wp-content/uploads/2015/01/ventana-con-listview-vacío.png&#34; alt=&#34;ventana con listview vacío&#34; width=&#34;538&#34; height=&#34;366&#34; srcset=&#34;http://www.modestosanjuan.com/wp-content/uploads/2015/01/ventana-con-listview-vacío.png 538w, http://www.modestosanjuan.com/wp-content/uploads/2015/01/ventana-con-listview-vacío-300x204.png 300w&#34; sizes=&#34;(max-width: 538px) 100vw, 538px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;La imagen corresponde a la vista de diseño de un código como este:&lt;/p&gt;
 
@@ -346,7 +346,7 @@ d:DataContext=&#34;{d:DesignInstance Type=wpfApplication1:SampleViewModel, IsDes
 &lt;p&gt;Y así es como se vería en vista de diseño:&lt;/p&gt;
 
 &lt;p style=&#34;text-align: center;&#34;&gt;
-  &lt;a href=&#34;http://www.modestosanjuan.com.com/wp-content/uploads/2015/01/ventana-con-listview-con-datos-de-ejemplo.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-35&#34; src=&#34;http://www.modestosanjuan.com.com/wp-content/uploads/2015/01/ventana-con-listview-con-datos-de-ejemplo.png&#34; alt=&#34;ventana con listview con datos de ejemplo&#34; width=&#34;540&#34; height=&#34;361&#34; srcset=&#34;http://www.modestosanjuan.com.com/wp-content/uploads/2015/01/ventana-con-listview-con-datos-de-ejemplo.png 540w, http://www.modestosanjuan.com.com/wp-content/uploads/2015/01/ventana-con-listview-con-datos-de-ejemplo-300x201.png 300w&#34; sizes=&#34;(max-width: 540px) 100vw, 540px&#34; /&gt;&lt;/a&gt;
+  &lt;a href=&#34;http://www.modestosanjuan.com/wp-content/uploads/2015/01/ventana-con-listview-con-datos-de-ejemplo.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-35&#34; src=&#34;http://www.modestosanjuan.com/wp-content/uploads/2015/01/ventana-con-listview-con-datos-de-ejemplo.png&#34; alt=&#34;ventana con listview con datos de ejemplo&#34; width=&#34;540&#34; height=&#34;361&#34; srcset=&#34;http://www.modestosanjuan.com/wp-content/uploads/2015/01/ventana-con-listview-con-datos-de-ejemplo.png 540w, http://www.modestosanjuan.com/wp-content/uploads/2015/01/ventana-con-listview-con-datos-de-ejemplo-300x201.png 300w&#34; sizes=&#34;(max-width: 540px) 100vw, 540px&#34; /&gt;&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;Si no quieres meter los datos de ejemplo en tu clase de ViewModel, siempre puedes crear una clase específica para el ViewModel en tiempo de diseño. Sólo hay que cambiar el valor del _DesignInstance_ en el archivo XAML y darle el nombre del tipo para la vista de diseño. Eso si, mejor que recurras a interfaces o algo similar para asegurarte de que ambos ViewModel (el de vista de diseño y el que se ejecutará en real) compartan el mismo contrato.&lt;/p&gt;

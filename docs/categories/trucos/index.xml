@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog de Modesto San Juan</title>
-    <link>http://www.modestosanjuan.com.com/categories/trucos/index.xml</link>
+    <link>http://www.modestosanjuan.com/categories/trucos/index.xml</link>
     <description>Recent content on Blog de Modesto San Juan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <atom:link href="http://www.modestosanjuan.com.com/categories/trucos/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.modestosanjuan.com/categories/trucos/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>[PowerShell] Evitar que wget (Invoke-WebRequest) tarde tanto</title>
-      <link>http://www.modestosanjuan.com.com/truco-evitar-que-wget-invoke-webrequest-tarde-tanto-en-powershell/</link>
+      <link>http://www.modestosanjuan.com/truco-evitar-que-wget-invoke-webrequest-tarde-tanto-en-powershell/</link>
       <pubDate>Sun, 22 Mar 2015 19:18:44 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/truco-evitar-que-wget-invoke-webrequest-tarde-tanto-en-powershell/</guid>
+      <guid>http://www.modestosanjuan.com/truco-evitar-que-wget-invoke-webrequest-tarde-tanto-en-powershell/</guid>
       <description>&lt;p&gt;Mientras estaba preparando unos scripts para automatizar el proceso de sideloading de una aplicación Windows 8.1, me encontré con un problema bastante tonto. Estaba descargando por HTTP el paquete de la aplicación desde una red local pero el comando wget de PowerShell tardaba demasiado. Tenía claro que no era problema de la red porque el archivo bajaba a buena velocidad por otros medios, pero siempre que usaba wget el comando tardaba demasiado tiempo. Una descarga de menos de 2 segundos se convertía en una descarga de más de 10.&lt;/p&gt;
 
 &lt;p&gt;Después de dedicar un rato descubrí que el problema estaba en el indicador de progreso de descarga del paquete. Lo único que tenía que hacer era desactivarla y el rendimiento pasaba a ser el esperado. Para hacer esto únicamente es necesario añadir esta línea antes de la llamada al comando wget:&lt;/p&gt;

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog de Modesto San Juan</title>
-    <link>http://www.modestosanjuan.com.com/categories/web-api/index.xml</link>
+    <link>http://www.modestosanjuan.com/categories/web-api/index.xml</link>
     <description>Recent content on Blog de Modesto San Juan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <atom:link href="http://www.modestosanjuan.com.com/categories/web-api/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.modestosanjuan.com/categories/web-api/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Value Providers y Parameter Binding en ASP.NET Web API</title>
-      <link>http://www.modestosanjuan.com.com/value-providers-y-parameter-binding-en-asp-net-web-api/</link>
+      <link>http://www.modestosanjuan.com/value-providers-y-parameter-binding-en-asp-net-web-api/</link>
       <pubDate>Fri, 13 Nov 2015 10:02:22 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/value-providers-y-parameter-binding-en-asp-net-web-api/</guid>
+      <guid>http://www.modestosanjuan.com/value-providers-y-parameter-binding-en-asp-net-web-api/</guid>
       <description>&lt;p&gt;Cuando necesito acceder a información de la &lt;strong&gt;Request&lt;/strong&gt; desde una acción de un controlador en ASP.NET Web API, la primera tentación es acceder directamente al objeto request y buscar lo que necesito. El principal problema de hacer esto es que convierte en un infierno hacer cualquier tipo de prueba automatizada para esta acción. Por ejemplo:&lt;/p&gt;
 
 &lt;pre class=&#34;lang:c# decode:true&#34;&gt;[HttpGet] 

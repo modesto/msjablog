@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog de Modesto San Juan</title>
-    <link>http://www.modestosanjuan.com.com/categories/sin-categor%C3%ADa/index.xml</link>
+    <link>http://www.modestosanjuan.com/categories/sin-categor%C3%ADa/index.xml</link>
     <description>Recent content on Blog de Modesto San Juan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <atom:link href="http://www.modestosanjuan.com.com/categories/sin-categor%C3%ADa/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.modestosanjuan.com/categories/sin-categor%C3%ADa/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>La regla del boy scout</title>
-      <link>http://www.modestosanjuan.com.com/la-regla-del-boy-scout/</link>
+      <link>http://www.modestosanjuan.com/la-regla-del-boy-scout/</link>
       <pubDate>Thu, 10 Nov 2016 10:01:15 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/la-regla-del-boy-scout/</guid>
+      <guid>http://www.modestosanjuan.com/la-regla-del-boy-scout/</guid>
       <description>
 
 &lt;p&gt;Hay discipinas en las que dicen que a largo plazo es más importante la constancia que el talento. Creo que en el desarrollo de software tener constancia es una virtud.&lt;/p&gt;
@@ -76,10 +76,10 @@
     
     <item>
       <title>Desarrollador, pon contenedores en tu vida</title>
-      <link>http://www.modestosanjuan.com.com/desarrollador-pon-contenedores-en-tu-vida/</link>
+      <link>http://www.modestosanjuan.com/desarrollador-pon-contenedores-en-tu-vida/</link>
       <pubDate>Sun, 06 Nov 2016 23:10:11 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/desarrollador-pon-contenedores-en-tu-vida/</guid>
+      <guid>http://www.modestosanjuan.com/desarrollador-pon-contenedores-en-tu-vida/</guid>
       <description>&lt;p&gt;No, en este post no te voy a vender las virtudes de desplegar su aplicación sobre docker. Mucho se ha escrito sobre el tema y mucho se seguirá escribiendo. También se ha escrito de &lt;a href=&#34;https://thehftguy.wordpress.com/2016/11/01/docker-in-production-an-history-of-failure/&#34;&gt;lo malo que es&lt;/a&gt; docker y de lo &lt;a href=&#34;http://patrobinson.github.io/2016/11/05/docker-in-production/&#34;&gt;no tan malo que es&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Este post está destinado especialmente a todos aquellos desarrolladores que no desplegáis vuestras aplicaciones con Docker. Porque los que ya usáis docker en el ciclo de entrega ya sabéis lo que voy a contar y además os parece obvio.&lt;/p&gt;
@@ -102,10 +102,10 @@
     
     <item>
       <title>Nuevos retos</title>
-      <link>http://www.modestosanjuan.com.com/nuevos-retos/</link>
+      <link>http://www.modestosanjuan.com/nuevos-retos/</link>
       <pubDate>Fri, 14 Oct 2016 15:40:53 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/nuevos-retos/</guid>
+      <guid>http://www.modestosanjuan.com/nuevos-retos/</guid>
       <description>&lt;p&gt;Estos últimos dos meses he andado bastante liado y no he prestado mucha atención al blog. Esta vez no voy a hablar de ningún tema técnico, se trata de una post muy personal. Si no te interesa mi vida, deja de leer. Si te interesa, eres un poco cotilla ;P&lt;/p&gt;
 
 &lt;p&gt;Este mes cierro una etapa profesional maravillosa que me ha dado muchas alegrías, me ha permitido trabajar con un equipo genial, aprender como no lo hacía en muchos años y divertirme haciendo lo que más me gusta, desarrollar software.&lt;/p&gt;
@@ -176,10 +176,10 @@
     
     <item>
       <title>¿Cuánto cuesta llamar a un método?</title>
-      <link>http://www.modestosanjuan.com.com/cuanto-cuesta-llamar-a-un-metodo/</link>
+      <link>http://www.modestosanjuan.com/cuanto-cuesta-llamar-a-un-metodo/</link>
       <pubDate>Tue, 02 Aug 2016 00:03:45 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/cuanto-cuesta-llamar-a-un-metodo/</guid>
+      <guid>http://www.modestosanjuan.com/cuanto-cuesta-llamar-a-un-metodo/</guid>
       <description>
 
 &lt;p&gt;Últimamente Twitter está siendo toda una fuente de inspiración. En esta ocasión el hilo culpable es &lt;a href=&#34;https://twitter.com/jcant0n/status/759081339098464257&#34;&gt;este&lt;/a&gt;. &lt;a href=&#34;https://twitter.com/jcant0n&#34;&gt;Javier Cantón&lt;/a&gt; hace un comentario respecto a la diferencia de rendimiento existente entre llamar a un método virtual versus llamar al mismo método a través de un interface.&lt;/p&gt;
@@ -336,10 +336,10 @@
     
     <item>
       <title>Claves primarias: inmutabilidad y generación</title>
-      <link>http://www.modestosanjuan.com.com/claves-primarias-inmutabilidad-y-generacion/</link>
+      <link>http://www.modestosanjuan.com/claves-primarias-inmutabilidad-y-generacion/</link>
       <pubDate>Sat, 30 Jul 2016 23:39:11 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/claves-primarias-inmutabilidad-y-generacion/</guid>
+      <guid>http://www.modestosanjuan.com/claves-primarias-inmutabilidad-y-generacion/</guid>
       <description>
 
 &lt;p&gt;Hace unos días &lt;a href=&#34;https://twitter.com/Pablyte/status/754056720666730500&#34;&gt;Pablo Iglesias&lt;/a&gt; &lt;a href=&#34;https://twitter.com/Pablyte/status/754056720666730500&#34;&gt;tuiteó&lt;/a&gt; una pregunta de Stack Exchange en la que hablaban sobre la inmutabilidad de las claves primarias. Se generó un debate bastante interesante en Twitter que se extendió más allá de la cuestión de la inmutabilidad. Este es un intento de recopilar y explicar algunos de los conceptos que se mencionaron durante ese debate.&lt;/p&gt;
@@ -436,10 +436,10 @@
     
     <item>
       <title>Palabras malditas</title>
-      <link>http://www.modestosanjuan.com.com/palabras-malditas/</link>
+      <link>http://www.modestosanjuan.com/palabras-malditas/</link>
       <pubDate>Mon, 13 Jun 2016 10:02:56 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/palabras-malditas/</guid>
+      <guid>http://www.modestosanjuan.com/palabras-malditas/</guid>
       <description>
 
 &lt;h1 id=&#34;extreme-programming-y-el-desarrollo-ágil&#34;&gt;Extreme programming y el desarrollo ágil&lt;/h1&gt;
@@ -520,10 +520,10 @@
     
     <item>
       <title>Presta atención a tus datos de pruebas</title>
-      <link>http://www.modestosanjuan.com.com/presta-atencion-a-tus-datos-de-pruebas/</link>
+      <link>http://www.modestosanjuan.com/presta-atencion-a-tus-datos-de-pruebas/</link>
       <pubDate>Mon, 29 Feb 2016 23:04:10 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/presta-atencion-a-tus-datos-de-pruebas/</guid>
+      <guid>http://www.modestosanjuan.com/presta-atencion-a-tus-datos-de-pruebas/</guid>
       <description>
 
 &lt;p&gt;Los datos utilizados en las pruebas son muy importantes y, aunque el tema de este post parece muy obvio, no son pocas la veces que me he encontrado con problemas debido a este tema, así que creo que merece la pena dedicarle al menos unas líneas.&lt;/p&gt;
@@ -581,10 +581,10 @@ discountCalculator.CalculateFor(client);&lt;/pre&gt;
     
     <item>
       <title>Impresiones sobre pair programming</title>
-      <link>http://www.modestosanjuan.com.com/impresiones-sobre-pair-programming/</link>
+      <link>http://www.modestosanjuan.com/impresiones-sobre-pair-programming/</link>
       <pubDate>Tue, 19 Jan 2016 01:13:56 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/impresiones-sobre-pair-programming/</guid>
+      <guid>http://www.modestosanjuan.com/impresiones-sobre-pair-programming/</guid>
       <description>
 
 &lt;p&gt;El viernes mantuve una conversación bastante entretenida sobre desarrollo de software con un compañero de profesión. Trabaja en una entidad financiera y al hablar de cosas como TDD, Agile, XP, etc. tenía ciertos sentimientos enfrentados. Precisamente uno de los temas que le causaban controversia era el pair programming. Su opinión básicamente se resumía en una frase: &amp;#8220;yo lo que no compro es que dos tíos senior sentados juntos a programar van a ser más productivos que si programan por separado&amp;#8221;.&lt;/p&gt;
@@ -641,10 +641,10 @@ discountCalculator.CalculateFor(client);&lt;/pre&gt;
     
     <item>
       <title>Nuestra programación es mala para el desarrollo de software</title>
-      <link>http://www.modestosanjuan.com.com/nuestra-programacion-es-mala-para-el-desarrollo-de-software/</link>
+      <link>http://www.modestosanjuan.com/nuestra-programacion-es-mala-para-el-desarrollo-de-software/</link>
       <pubDate>Mon, 28 Dec 2015 22:22:29 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/nuestra-programacion-es-mala-para-el-desarrollo-de-software/</guid>
+      <guid>http://www.modestosanjuan.com/nuestra-programacion-es-mala-para-el-desarrollo-de-software/</guid>
       <description>
 
 &lt;h1 id=&#34;la-programación-de-mi-color-favorito&#34;&gt;La programación de mi color favorito&lt;/h1&gt;
@@ -693,10 +693,10 @@ discountCalculator.CalculateFor(client);&lt;/pre&gt;
     
     <item>
       <title>[PowerShell] Pasar de SecureString a String</title>
-      <link>http://www.modestosanjuan.com.com/powershell-pasar-de-securestring-a-string/</link>
+      <link>http://www.modestosanjuan.com/powershell-pasar-de-securestring-a-string/</link>
       <pubDate>Wed, 25 Nov 2015 09:16:48 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/powershell-pasar-de-securestring-a-string/</guid>
+      <guid>http://www.modestosanjuan.com/powershell-pasar-de-securestring-a-string/</guid>
       <description>&lt;p&gt;En ocasiones necesito usar un &lt;strong&gt;SecureString&lt;/strong&gt; pero luego me veo obligado a utilizar ese string de forma no segura. Aunque la recomendación es no hacer esto, la realidad es que hay muchos escenarios en los que es necesario. Un ejemplo sencillo es el caso en el que necesito que el usuario meta un dato sensible por consola y pero luego necesito utilizar ese dato como texto plano para pasarlo como parámetro a un ejecutable de Windows. Este es un ejemplo de cómo hacerlo:&lt;/p&gt;
 
 &lt;pre class=&#34;lang:ps decode:true&#34;&gt;Param(
@@ -717,10 +717,10 @@ $nonSecure = Decrypt-SecureString $password&lt;/pre&gt;
     
     <item>
       <title>[PowerShell] Interrumpir la ejecución cuando Import-Module no encuentra el módulo</title>
-      <link>http://www.modestosanjuan.com.com/interrumpir-la-ejecucion-cuando-import-module-no-encuentra-el-modulo/</link>
+      <link>http://www.modestosanjuan.com/interrumpir-la-ejecucion-cuando-import-module-no-encuentra-el-modulo/</link>
       <pubDate>Tue, 30 Jun 2015 18:03:02 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/interrumpir-la-ejecucion-cuando-import-module-no-encuentra-el-modulo/</guid>
+      <guid>http://www.modestosanjuan.com/interrumpir-la-ejecucion-cuando-import-module-no-encuentra-el-modulo/</guid>
       <description>&lt;p&gt;Esto es un truco sencillo y muy básico de PowerShell, pero puede desconcertar bastante a quien está empezando o utiliza PowerShell de forma esporádica.&lt;/p&gt;
 
 &lt;p&gt;En PowerShell existen los llamados &amp;#8220;terminating errors&amp;#8221; y los &amp;#8220;non-terminating errors&amp;#8221;. Como su nombre permite intuir, unos finalizan la ejecución del script en curso cuando se producen y los otros no, limitándose a informar del error. Hasta aquí he descrito el comportamiento por defecto. Que un error sea del tipo &amp;#8220;terminating&amp;#8221; o del tipo &amp;#8220;non-terminating&amp;#8221;, no es algo que nosotros podamos controlar, y eso puede dar algún que otro quebradero de cabeza en algunas ocasiones.&lt;/p&gt;
@@ -733,7 +733,7 @@ Write-Host &#34;Aquí ejecutaría código relacionado con el módulo&#34;&lt;/pr
 
 &lt;p&gt;En este caso el módulo que estaba intentando importar resulta que no existía en mi máquina, por lo que al intentar hacer un Import-Module, obtenía un error que me indicaba que el módulo no se encontraba. El problema es que el comportamiento de PowerShell no era exáctamente como yo quería:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.modestosanjuan.com.com/wp-content/uploads/2015/06/Error-Import-Module.png&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;alignnone wp-image-109 size-full&#34; src=&#34;http://www.modestosanjuan.com.com/wp-content/uploads/2015/06/Error-Import-Module.png&#34; alt=&#34;Error-Import-Module&#34; width=&#34;997&#34; height=&#34;276&#34; srcset=&#34;http://www.modestosanjuan.com.com/wp-content/uploads/2015/06/Error-Import-Module.png 997w, http://www.modestosanjuan.com.com/wp-content/uploads/2015/06/Error-Import-Module-300x83.png 300w&#34; sizes=&#34;(max-width: 997px) 100vw, 997px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.modestosanjuan.com/wp-content/uploads/2015/06/Error-Import-Module.png&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;alignnone wp-image-109 size-full&#34; src=&#34;http://www.modestosanjuan.com/wp-content/uploads/2015/06/Error-Import-Module.png&#34; alt=&#34;Error-Import-Module&#34; width=&#34;997&#34; height=&#34;276&#34; srcset=&#34;http://www.modestosanjuan.com/wp-content/uploads/2015/06/Error-Import-Module.png 997w, http://www.modestosanjuan.com/wp-content/uploads/2015/06/Error-Import-Module-300x83.png 300w&#34; sizes=&#34;(max-width: 997px) 100vw, 997px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
@@ -759,15 +759,15 @@ Write-Host &#34;Este código nunca llega a llamarse&#34;
     
     <item>
       <title>Eliminar regiones (#region) de forma masiva desde Visual Studio</title>
-      <link>http://www.modestosanjuan.com.com/eliminar-regiones-de-forma-masiva-desde-visual-studio/</link>
+      <link>http://www.modestosanjuan.com/eliminar-regiones-de-forma-masiva-desde-visual-studio/</link>
       <pubDate>Tue, 16 Jun 2015 10:58:45 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/eliminar-regiones-de-forma-masiva-desde-visual-studio/</guid>
+      <guid>http://www.modestosanjuan.com/eliminar-regiones-de-forma-masiva-desde-visual-studio/</guid>
       <description>&lt;p&gt;No voy a entrar en el debate de si el uso de #regions es una buena práctica o no, pero es algo que no utilizo y que suelo interpretar como un mal olor cuando me lo encuentro en el código. Me he animado a escribir este pequeño apune porque recientemente me he encontrado con la necesidad de eliminar de un proyecto casi 25.000 regiones (si, veinticinco mil) y quiero tener esto a mano para el futuro.&lt;/p&gt;
 
 &lt;p&gt;El truco es muy sencillo, necesitamos recurrir a la funcionalidad de buscar y reemplazar de Visual Studio y marcar el check para que utilice expresiones regulares en la búsqueda.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.modestosanjuan.com.com/wp-content/uploads/2015/06/search-replace-vs.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-104&#34; src=&#34;http://www.modestosanjuan.com.com/wp-content/uploads/2015/06/search-replace-vs.png&#34; alt=&#34;Buscar y reemplazar&#34; width=&#34;385&#34; height=&#34;504&#34; srcset=&#34;http://www.modestosanjuan.com.com/wp-content/uploads/2015/06/search-replace-vs.png 385w, http://www.modestosanjuan.com.com/wp-content/uploads/2015/06/search-replace-vs-229x300.png 229w&#34; sizes=&#34;(max-width: 385px) 100vw, 385px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.modestosanjuan.com/wp-content/uploads/2015/06/search-replace-vs.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-104&#34; src=&#34;http://www.modestosanjuan.com/wp-content/uploads/2015/06/search-replace-vs.png&#34; alt=&#34;Buscar y reemplazar&#34; width=&#34;385&#34; height=&#34;504&#34; srcset=&#34;http://www.modestosanjuan.com/wp-content/uploads/2015/06/search-replace-vs.png 385w, http://www.modestosanjuan.com/wp-content/uploads/2015/06/search-replace-vs-229x300.png 229w&#34; sizes=&#34;(max-width: 385px) 100vw, 385px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
@@ -792,10 +792,10 @@ Si es VB.Net
     
     <item>
       <title>¿Necesitas programar un servicio para Windows? Prueba Topshelf</title>
-      <link>http://www.modestosanjuan.com.com/necesitas-programar-un-servicio-para-windows-prueba-topshelf/</link>
+      <link>http://www.modestosanjuan.com/necesitas-programar-un-servicio-para-windows-prueba-topshelf/</link>
       <pubDate>Mon, 15 Jun 2015 23:44:42 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/necesitas-programar-un-servicio-para-windows-prueba-topshelf/</guid>
+      <guid>http://www.modestosanjuan.com/necesitas-programar-un-servicio-para-windows-prueba-topshelf/</guid>
       <description>&lt;p&gt;Programar un servicio para Windows suele ser una tarea engorrosa y &lt;a href=&#34;http://topshelf-project.com/&#34; target=&#34;_blank&#34;&gt;Topshelf&lt;/a&gt; proporciona una alternativa bastante interesante y muchísimo menos engorrosa que la plantilla por defecto que incorpora Visual Studio.&lt;/p&gt;
 
 &lt;p&gt;Aunque podría enumerar bastantes aspectos interesantes de Topshelf, me quedo con uno que para mi es fundamental, permite que una aplicación de consola sea un servicio de Windows. Esto significa que es posible recurrir a la aplicación de consola durante la fase de desarrollo o para su ejecución de forma independiente, pero que además es posible instalar esa aplicación de consola como un servicio Windows simplemente pasando un parámetro en su ejecución.&lt;/p&gt;
@@ -845,10 +845,10 @@ Si es VB.Net
     
     <item>
       <title>Utilizando Extensionless para monitorizar logs y excepciones</title>
-      <link>http://www.modestosanjuan.com.com/utilizando-extensionless-para-monitorizar-logs-y-excepciones/</link>
+      <link>http://www.modestosanjuan.com/utilizando-extensionless-para-monitorizar-logs-y-excepciones/</link>
       <pubDate>Fri, 05 Jun 2015 18:11:52 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/utilizando-extensionless-para-monitorizar-logs-y-excepciones/</guid>
+      <guid>http://www.modestosanjuan.com/utilizando-extensionless-para-monitorizar-logs-y-excepciones/</guid>
       <description>
 
 &lt;p&gt;Cada vez que abordo un nuevo desarrollo, considero que la generación de trazas es una parte vital ya que es uno de los mecanismos que nos va a permitir diagnosticar e identificar cualquier tipo de problema cuando estemos en producción, en ocasiones incluso antes de que los propios usuarios lleguen a reportarlo.&lt;/p&gt;
@@ -893,10 +893,10 @@ Si es VB.Net
     
     <item>
       <title>Cómo crear Appx para Sideloading desde Integración Continua</title>
-      <link>http://www.modestosanjuan.com.com/como-crear-appx-para-sideloading-desde-integracion-continua/</link>
+      <link>http://www.modestosanjuan.com/como-crear-appx-para-sideloading-desde-integracion-continua/</link>
       <pubDate>Wed, 13 May 2015 06:45:57 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/como-crear-appx-para-sideloading-desde-integracion-continua/</guid>
+      <guid>http://www.modestosanjuan.com/como-crear-appx-para-sideloading-desde-integracion-continua/</guid>
       <description>&lt;p&gt;Cuando trabajamos con aplicaciones para la tienda de Windows, hay escenarios en los que necesitamos hacer Sideloading. Básicamente el Sideloading nos permite instalar una aplicación de la tienda de Windows, sin utilizar la tienda de Windows. Las razones para querer hacer Sideloading pueden ser muchas: probar la aplicación en local antes de subirla a la tienda, instalar la aplicación en algunos dispositivos para hacer testing en friends&amp;amp;family o simplemente utilizar la aplicación a nivel corporativo fuera de la tienda de Windows.&lt;/p&gt;
 
 &lt;p&gt;En uno de los proyectos en los que estoy trabajando ahora mismo nos encontramos dentro de esos escenarios. Tenemos una aplicación que se distribuye mediante Sideloading y además tenemos un equipo de Q&amp;amp;A que prueba tanto las versiones de desarrollo como las release candidate.&lt;/p&gt;

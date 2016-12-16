@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog de Modesto San Juan</title>
-    <link>http://www.modestosanjuan.com.com/tags/fluentmigrator/index.xml</link>
+    <link>http://www.modestosanjuan.com/tags/fluentmigrator/index.xml</link>
     <description>Recent content on Blog de Modesto San Juan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <atom:link href="http://www.modestosanjuan.com.com/tags/fluentmigrator/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.modestosanjuan.com/tags/fluentmigrator/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>[Solucionado] Fluent Migrator no encuentra migraciones</title>
-      <link>http://www.modestosanjuan.com.com/fluent-migrator-no-encuentra-migraciones/</link>
+      <link>http://www.modestosanjuan.com/fluent-migrator-no-encuentra-migraciones/</link>
       <pubDate>Mon, 19 Jan 2015 01:23:05 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com.com/fluent-migrator-no-encuentra-migraciones/</guid>
+      <guid>http://www.modestosanjuan.com/fluent-migrator-no-encuentra-migraciones/</guid>
       <description>&lt;p&gt;Hace unos meses empecé a trabajar en un proyecto en el que utilizamos &lt;a href=&#34;https://github.com/schambers/fluentmigrator&#34;&gt;Fluent Migrator&lt;/a&gt;. Todo funciona bien el proyecto tiene bastantes migraciones funcionando sin problema. En líneas generales funciona casi igual que las migraciones de EF, con algún detalle distinto.&lt;/p&gt;
 
 &lt;p&gt;El caso es que hoy he empezado un proyecto nuevo y he añadido la referencia al paquete de Fluent Migrator para empezar a utilizarlo. Cuando he lanzado las migraciones parecía que todo estaba bien (no daba ningún error), pero no me encontraba ninguna de las migraciones que había definido en el ensamblado de migraciones.&lt;/p&gt;
