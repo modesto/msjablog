@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es-es">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+
+
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="Datos de ejemplo en el ViewModel para facilitar la vista de diseño"/>
+<meta name="twitter:description" content="Al trabajar con XAML, especialmente si la vista tiene un listado de items, puede resultar muy complicado ajustar la vista para que se vea correctamente. Tareas como ajustar los márgenes, la posición de los elementos o cualquier tipo de cambio en los estilos se pueden convertir en algo bastante pesado.
+Este es un ejemplo de una vista de que contiene un ListView sin datos de ejemplo en vista de diseño:"/>
+
+    <meta name="twitter:site" content="@@msanjuan"/>
+
+
+
+  	<meta property="og:title" content=" Datos de ejemplo en el ViewModel para facilitar la vista de diseño &middot;  Blog de Modesto San Juan" />
+  	<meta property="og:site_name" content="Blog de Modesto San Juan" />
+  	<meta property="og:url" content="http://www.modestosanjuan.com.com/datos-de-ejemplo-en-el-viewmodel-para-facilitar-la-vista-de-diseno/" />
+
+    
+  	<meta property="og:type" content="article" />
+
+    <meta property="og:article:published_time" content="2014-12-17T00:27:25Z" />
+
+    
+    
+
+    <title>
+       Datos de ejemplo en el ViewModel para facilitar la vista de diseño &middot;  Blog de Modesto San Juan
+    </title>
+
+    <meta name="description" content="DESCUBRIMIENTOS, IDEAS Y OTRAS CHORRADAS" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="http://www.modestosanjuan.com.com/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="http://www.modestosanjuan.com.com/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="http://www.modestosanjuan.com.com/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.modestosanjuan.com.com/css/nav.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
+
+
+    
+      
+          <link href="http://www.modestosanjuan.com.com/index.xml" rel="alternate" type="application/rss+xml" title="Blog de Modesto San Juan" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.17" />
+
+    <link rel="canonical" href="http://www.modestosanjuan.com.com/datos-de-ejemplo-en-el-viewmodel-para-facilitar-la-vista-de-diseno/" />
+
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-58663898-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+        
+    </ul>
+    
+    
+    <a class="subscribe-button icon-feed" href="http://www.modestosanjuan.com.com/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+      <a class="blog-logo" href="http://www.modestosanjuan.com.com/"><img src="http://www.modestosanjuan.com.com/images/logo.jpg" alt="Home" /></a>
+  
+  
+      <a class="menu-button icon-feed" href="http://www.modestosanjuan.com.com/index.xml">&nbsp;&nbsp;Subscribe</a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">Datos de ejemplo en el ViewModel para facilitar la vista de diseño</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2014-12-17T00:27:25Z">
+            Dec 17, 2014
+          </time>
+        
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <p>Al trabajar con XAML, especialmente si la vista tiene un listado de items, puede resultar muy complicado ajustar la vista para que se vea correctamente. Tareas como ajustar los márgenes, la posición de los elementos o cualquier tipo de cambio en los estilos se pueden convertir en algo bastante pesado.</p>
+
+<p>Este es un ejemplo de una vista de que contiene un ListView sin datos de ejemplo en vista de diseño:</p>
+
+<p><a href="/wp-content/uploads/2015/01/ventana-con-listview-vacío.png"><img class="  aligncenter wp-image-32 size-full" src="/wp-content/uploads/2015/01/ventana-con-listview-vacío.png" alt="ventana con listview vacío" width="538" height="366" srcset="/wp-content/uploads/2015/01/ventana-con-listview-vacío.png 538w, /wp-content/uploads/2015/01/ventana-con-listview-vacío-300x204.png 300w" sizes="(max-width: 538px) 100vw, 538px" /></a></p>
+
+<p>La imagen corresponde a la vista de diseño de un código como este:</p>
+
+<pre class="lang:xhtml decode:true">&lt;ListBox ItemsSource="{Binding SampleData}"&gt;
+    &lt;ListBox.ItemTemplate&gt;
+        &lt;DataTemplate&gt;
+            &lt;TextBlock Text="{Binding Name}"&gt;&lt;/TextBlock&gt;
+        &lt;/DataTemplate&gt;
+    &lt;/ListBox.ItemTemplate&gt;
+&lt;/ListBox&gt;</pre>
+
+<p>Este es un ejemplo que ilustra bastante bien el problema, no se ve nada. Se trata de un fragmento de XAML muy sencillo y no presenta grandes problemas para intuir lo que se va a pintar, pero en cuanto la cosa se complica un poco más, ir a ciegas no resulta nada agradable. Como no tenemos datos de ejemplo, no somos capaces de saber cómo van a mostrarse los items de la lista y cualquier tipo de cambio se hace a ciegas. Para cambios pequeños, se recurre al ensayo y error, pero esto es una solución muy engorrosa y poco fluida. Para evitar ir a ciegas tenemos que hacer dos cosas:</p>
+
+<p><strong>Paso 1</strong></p>
+
+<p>Decirle a la vista que cree una instancia del ViewModel en vista de diseño:</p>
+
+<pre class="lang:xhtml decode:true">xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+xmlns:wpfApplication1="clr-namespace:WpfApplication1"
+mc:Ignorable="d"
+d:DataContext="{d:DesignInstance Type=wpfApplication1:SampleViewModel, IsDesignTimeCreatable=True}"
+</pre>
+
+<p>La clave está en la última línea. El tipo del ViewModel es <strong>SampleViewmodel</strong> y al poner a _true <strong>el</strong>_ <strong>IsDesignTimeCreatablele,</strong> se hablilita la creación de una instancia del viewmodel en vista de diseño.</p>
+
+<p><strong>Paso 2</strong></p>
+
+<p>Para hacer que el ViewModel tenga datos de ejemplo, lo único necesario es asignar los datos en el constructor. En la vista de ejemplo se puede llamar desde el constructor a un método que haga algo como esto:</p>
+
+<pre class="lang:c# decode:true">if (DesignerProperties.GetIsInDesignMode(new DependencyObject()))
+{
+    var sampleData = new List&lt;ClientData&gt;();
+    sampleData.Add(new ClientData() { Name = "Sample Client 1", Email = "email@domain.com" });
+    sampleData.Add(new ClientData() { Name = "Sample Client 2", Email = "email@domain.com" });
+    sampleData.Add(new ClientData() { Name = "Sample Client 3", Email = "email@domain.com" });
+    sampleData.Add(new ClientData() { Name = "Sample Client 4", Email = "email@domain.com" });
+    sampleData.Add(new ClientData() { Name = "Sample Client 5", Email = "email@domain.com" });
+    sampleData.Add(new ClientData() { Name = "Sample Client 6", Email = "email@domain.com" });
+
+    SampleData = new ObservableCollection&lt;ClientData&gt;(sampleData);
+}
+</pre>
+
+<p>Es muy importante que únicamente se rellenen los datos en vista de diseño, para que no se rellenen durante la ejecución de la aplicación. Por eso el <em>if</em> de la primera línea.</p>
+
+<p>Una vez hecho esto, todos los bindings de datos con el ViewModel mostrarán los datos de ejemplo en vista de diseño, pudiendo así hacer los ajustes de estilos sin necesidad de ejecutar la aplicación. Por ejemplo:</p>
+
+<pre class="lang:xhtml decode:true">&lt;Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:wpfApplication1="clr-namespace:WpfApplication1"
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance Type=wpfApplication1:SampleViewModel, IsDesignTimeCreatable=True}"
+        Title="MainWindow" Height="350" Width="525"&gt;
+    &lt;Grid&gt;
+        &lt;ListBox ItemsSource="{Binding SampleData}"&gt;
+            &lt;ListBox.ItemTemplate&gt;
+                &lt;DataTemplate&gt;
+                    &lt;StackPanel Orientation="Horizontal"&gt;
+                        &lt;TextBlock Text="{Binding Name}"&gt;&lt;/TextBlock&gt;
+                        &lt;TextBlock Text="{Binding Email}" Margin="15,0,0,0"&gt;&lt;/TextBlock&gt;
+                    &lt;/StackPanel&gt;
+                &lt;/DataTemplate&gt;
+            &lt;/ListBox.ItemTemplate&gt;
+        &lt;/ListBox&gt;
+    &lt;/Grid&gt;
+&lt;/Window&gt;
+</pre>
+
+<p>Y así es como se vería en vista de diseño:</p>
+
+<p style="text-align: center;">
+  <a href="/wp-content/uploads/2015/01/ventana-con-listview-con-datos-de-ejemplo.png"><img class="alignnone size-full wp-image-35" src="/wp-content/uploads/2015/01/ventana-con-listview-con-datos-de-ejemplo.png" alt="ventana con listview con datos de ejemplo" width="540" height="361" srcset="/wp-content/uploads/2015/01/ventana-con-listview-con-datos-de-ejemplo.png 540w, /wp-content/uploads/2015/01/ventana-con-listview-con-datos-de-ejemplo-300x201.png 300w" sizes="(max-width: 540px) 100vw, 540px" /></a>
+</p>
+
+<p>Si no quieres meter los datos de ejemplo en tu clase de ViewModel, siempre puedes crear una clase específica para el ViewModel en tiempo de diseño. Sólo hay que cambiar el valor del _DesignInstance_ en el archivo XAML y darle el nombre del tipo para la vista de diseño. Eso si, mejor que recurras a interfaces o algo similar para asegurarte de que ambos ViewModel (el de vista de diseño y el que se ejecutará en real) compartan el mismo contrato.</p>
+
+<p>&nbsp;</p>
+
+<p>**IMPORTANTE:** Para que las vistas tomen los datos de ejemplo debemos compilar el proyecto para que se compile el ViewModel. Si hacemos cambios en el conjunto de datos de ejemplos del ViewModel, deberemos compilar de nuevo, así que lo mejor es crear primero un conjunto de datos de ejemplo dignos y así luego podemos centrarnos en el trabajo de la vista.</p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+    <figure class="author-image">
+        <a class="img" href="http://www.modestosanjuan.com.com/" style="background-image: url(http://www.modestosanjuan.com.com/images/logo.jpg)"><span class="hidden">Modesto San Juan's Picture</span></a>
+    </figure>
+    
+
+    
+
+
+
+
+
+<section class="author">
+  <h4><a href="http://www.modestosanjuan.com.com/">Modesto San Juan</a></h4>
+  
+  <p>Desarrollo software e intento hacerlo bien</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Madrid, Spain</span>
+    <span class="author-link icon-link"><a href="http://www.modestosanjuan.com">http://www.modestosanjuan.com</a></span>
+  </div>
+</section>
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Datos%20de%20ejemplo%20en%20el%20ViewModel%20para%20facilitar%20la%20vista%20de%20dise%c3%b1o&nbsp;-&nbsp;Blog%20de%20Modesto%20San%20Juan&amp;url=http%3a%2f%2fwww.modestosanjuan.com.com%2fdatos-de-ejemplo-en-el-viewmodel-para-facilitar-la-vista-de-diseno%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.modestosanjuan.com.com%2fdatos-de-ejemplo-en-el-viewmodel-para-facilitar-la-vista-de-diseno%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.modestosanjuan.com.com%2fdatos-de-ejemplo-en-el-viewmodel-para-facilitar-la-vista-de-diseno%2f&amp;description=Datos%20de%20ejemplo%20en%20el%20ViewModel%20para%20facilitar%20la%20vista%20de%20dise%c3%b1o"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=http%3a%2f%2fwww.modestosanjuan.com.com%2fdatos-de-ejemplo-en-el-viewmodel-para-facilitar-la-vista-de-diseno%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_shortname = 'modestosanjuan';
+  var disqus_url = 'http:\/\/www.modestosanjuan.com.com\/datos-de-ejemplo-en-el-viewmodel-para-facilitar-la-vista-de-diseno\/';
+  (function() {
+    if (window.location.hostname == "localhost")
+          return;
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+  </footer>
+</article>
+
+</main>
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">Blog de Modesto San Juan</a> </section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="http://www.modestosanjuan.com.com/js/jquery.js"></script>
+    <script type="text/javascript" src="http://www.modestosanjuan.com.com/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="http://www.modestosanjuan.com.com/js/index.js"></script>
+    
+</body>
+</html>
+

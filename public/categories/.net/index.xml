@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog de Modesto San Juan</title>
+    <link>http://www.modestosanjuan.com.com/categories/.net/index.xml</link>
+    <description>Recent content on Blog de Modesto San Juan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-es</language>
+    <atom:link href="http://www.modestosanjuan.com.com/categories/.net/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>La importancia del rojo en TDD</title>
+      <link>http://www.modestosanjuan.com.com/la-importancia-del-rojo-en-tdd/</link>
+      <pubDate>Tue, 22 Dec 2015 14:14:43 +0000</pubDate>
+      
+      <guid>http://www.modestosanjuan.com.com/la-importancia-del-rojo-en-tdd/</guid>
+      <description>&lt;p&gt;A un desarrollador que practique TDD, el flujo &lt;strong&gt;rojo, verde, refactor&lt;/strong&gt; no le resulta extraño. En este post quiero romper una lanza a favor del &lt;strong&gt;rojo&lt;/strong&gt;, ese gran incomprendido. Para ilustrarlo voy a recurrir a un ejemplo muy sencillo:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:c# decode:true&#34;&gt;[TestMethod]
+public void sample_test()
+{
+    var messagingService = GivenAMessagingServiceStub();
+    var unreadMessages = messagingService.UnreadMessages();
+    unreadMessages.Count.Should().Be(1)
+}&lt;/pre&gt;
+
+&lt;p&gt;Este ejemplo esta simplificado, pero me permite mostrar un test con una estructura de tipo &lt;strong&gt;given/when/then o AAA&lt;/strong&gt; (según gustos). Con el objetivo de obtener ese primer rojo, me encuentro a veces con esto:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:default decode:true&#34;&gt;public IEnumerable&amp;lt;Message&amp;gt; UnreadMessages()
+{
+    throw new NotImplementedException();
+}&lt;/pre&gt;
+
+&lt;p&gt;Creo que hacer esto desvirtúa el objetivo de buscar el rojo. Uno de los objetivos de buscar el primer rojo es verificar el test, pero es imposible verificar el test si no se llega a ejecutar completo. Es cierto que al lanzar el test va a dar un rojo, pero ese rojo es equivalente a haber lanzado la excepción en lugar de la llamada al código de producción, así que de poco vale. Otras veces se llega un poco más en la búsqueda del rojo con un código similar a este:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:default decode:true&#34;&gt;public IEnumerable&amp;lt;Message&amp;gt; UnreadMessages()
+{
+    return null;
+}&lt;/pre&gt;
+
+&lt;p&gt;En este caso es cierto que el test falla en la línea del &lt;strong&gt;then&lt;/strong&gt;, pero personalmente sigue sin convencerme porque en realidad el rojo no se produce a causa del assert. La razón es sencilla y se ilustra bastante bien diseccionando el test de esta forma:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:default decode:true&#34;&gt;[TestMethod]
+public void sample_test()
+{
+    var messagingService = GivenAMessagingServiceStub();
+    var unreadMessages = messagingService.UnreadMessages();
+    var count = unreadMessages.Count;
+    count.Should().Be(1)
+}&lt;/pre&gt;
+
+&lt;p&gt;Con este ejemplo se puede ver claramente que el rojo no da debido al assert, da debido a una &lt;strong&gt;NullPointerException&lt;/strong&gt; en la asignación de la variable &lt;strong&gt;count&lt;/strong&gt;, lo que sigue alejado del objetivo de probar primero el test. En este caso, no cuesta mucho buscar un rojo que además permita probar el test completo:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:default decode:true &#34;&gt;public IEnumerable&amp;lt;Message&amp;gt; UnreadMessages()
+{
+    return new List&amp;lt;Message&amp;gt;();
+}&lt;/pre&gt;
+
+&lt;p&gt;Por supuesto, es importante no olvidar que el primer paso nunca es el rojo, es pensar.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Value Providers y Parameter Binding en ASP.NET Web API</title>
+      <link>http://www.modestosanjuan.com.com/value-providers-y-parameter-binding-en-asp-net-web-api/</link>
+      <pubDate>Fri, 13 Nov 2015 10:02:22 +0000</pubDate>
+      
+      <guid>http://www.modestosanjuan.com.com/value-providers-y-parameter-binding-en-asp-net-web-api/</guid>
+      <description>&lt;p&gt;Cuando necesito acceder a información de la &lt;strong&gt;Request&lt;/strong&gt; desde una acción de un controlador en ASP.NET Web API, la primera tentación es acceder directamente al objeto request y buscar lo que necesito. El principal problema de hacer esto es que convierte en un infierno hacer cualquier tipo de prueba automatizada para esta acción. Por ejemplo:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:c# decode:true&#34;&gt;[HttpGet] 
+[Route(&#34;doAnything&#34;)] 
+public IHttpActionResult Get() 
+{ 
+    var referrer = request.Headers.Referrer
+    var resul = .....
+    // DO ANY STUFF WITH THE REFERRER    
+    return result; 
+}&lt;/pre&gt;
+
+&lt;p&gt;El mecanismo más sencillo que se me ocurre para hacer que esta acción sea fácil de probar es hacer que el dato que necesito de la request, le llegue como parámetro a la acción:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:c# decode:true&#34;&gt;public IHttpActionResult Get(string referrer) 
+&lt;/pre&gt;
+
+&lt;p&gt;Con esta modificación puedo programar sin problemas un test para esta acción y me quedo tan ancho. Pero claro, ¿qué pasa cuando ejecuto el código en Web API? Evidentemente falla. En este punto es donde Web API me echa un cable y me permite hacer algo como esto:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:c# decode:true&#34;&gt;public IHttpActionResult Get([ValueProvider(typeof(ReferrerValueProviderFactory))]string referrer) 
+&lt;/pre&gt;
+
+&lt;p&gt;Gracias a los &lt;strong&gt;Value Providers&lt;/strong&gt; Web aPI puede inyectar en el parámetro el valor que necesito. El código sería este:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:c# decode:true&#34;&gt;public class RefererValueProviderFactory : ValueProviderFactory {
+    public override IValueProvider GetValueProvider(HttpActionContext actionContext) {
+        return new RefererValueProvider(actionContext.Request.Headers);
+    }
+}
+
+public class RefererValueProvider : IValueProvider {
+    private readonly HttpRequestHeaders headers;
+
+    public RefererValueProvider(HttpRequestHeaders headers) {
+        this.headers = headers;
+    }
+
+    public bool ContainsPrefix(string prefix) {
+        return true;
+    }
+
+    public ValueProviderResult GetValue(string key) {
+        return new ValueProviderResult(headers.Referrer, headers.Referrer.ToString(), CultureInfo.InvariantCulture);
+    }
+}&lt;/pre&gt;
+
+&lt;p&gt;El código está simplificado para el ejemplo, pero es necesario aplicar control de errores. Por ejemplo, es posible que la cabecera sea nula, lo que lanzaría una excepción al intentar hacer el &lt;strong&gt;ToString()&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Para que lo que llevo de ejemplo funcione faltaría únicamente registrar el nuevo value provider  en el &lt;strong&gt;Register&lt;/strong&gt; de &lt;strong&gt;WebApiConfig&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:default decode:true&#34;&gt;public static void Register(HttpConfiguration config)
+{
+    config.Services.Add(typeof(ValueProviderFactory), new ReferrerValueProviderFactory());
+
+    ...&lt;/pre&gt;
+
+&lt;p&gt;El problema que le veo hasta este punto es que el uso de el atributo [ValueProvide] dificulta la lectura y tener que registrarlo añade un poco de complejidad al setup y algo de lo que me tendría que acordar en el próximo proyecto. Teniendo en cuenta cómo se hacen las cosas en Web API, preferiría tener algo como esto:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:c# decode:true&#34;&gt;public IHttpActionResult Get([FromReferrerHeader]string referrer)&lt;/pre&gt;
+
+&lt;p&gt;Algo como esto resulta mucho más legible y alineado con lo que ya estoy acostumbrado cuando recurro a atributos como &lt;strong&gt;[FromBody]&lt;/strong&gt; o &lt;strong&gt;[FromUri]&lt;/strong&gt;. Aquí es donde Web API me invita a utilizar &lt;strong&gt;Parameter Binding&lt;/strong&gt;. Básicamente lo que voy a hacer es crear un atributo que herede de &lt;strong&gt;HttpParameterBinding&lt;/strong&gt; y a utilizar el ValueProvider que he creado justo antes para obtener este dato:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:c# decode:true &#34;&gt;public class FromReferrerHeaderAttribute : ParameterBindingAttribute {
+    public override HttpParameterBinding GetBinding(HttpParameterDescriptor parameter) {
+        var httpConfig = parameter.Configuration;
+        var binder = new ModelBinderAttribute()
+            .GetModelBinder(httpConfig, parameter.ParameterType);
+        return new ModelBinderParameterBinding(
+            parameter, binder,
+            new ValueProviderFactory[] { new ReferrerValueProviderFactory() });
+    }
+} 
+&lt;/pre&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;Además, al utilizar parameter binding, ya no es necesario registrar el value provider, lo que simplifica su uso.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bus de eventos usando Reactive Extensions</title>
+      <link>http://www.modestosanjuan.com.com/bus-de-eventos-usando-reactive-extensions/</link>
+      <pubDate>Tue, 10 Nov 2015 09:32:59 +0000</pubDate>
+      
+      <guid>http://www.modestosanjuan.com.com/bus-de-eventos-usando-reactive-extensions/</guid>
+      <description>&lt;p&gt;Utilizar un bus de eventos dentro de una aplicación es algo bastante común. Un ejemplo muy sencillo podría ser desacoplar la lógica de envío de notificaciones al usuario en WPF desde los ViewModels sin necesidad de recurrir a la inyección de dependencias en el ViewModel. Aunque hasta ahora había recurrido siempre a programar mi propio bus de eventos, utilizar &lt;a href=&#34;https://github.com/Reactive-Extensions/Rx.NET&#34; target=&#34;_blank&#34;&gt;Reactive Extensions&lt;/a&gt; me ha resultado muy interesante, útil y sencillo. Este sería un ejemplo de bus de eventos utilizando RX:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:c# decode:true&#34;&gt;public static class ReactiveEventBus {
+    private static readonly Subject&amp;lt;object&amp;gt; messageSubject = new Subject&amp;lt;object&amp;gt;();
+
+    public static void Send&amp;lt;T&amp;gt;(T message) {
+        messageSubject.OnNext(message);
+    }
+
+    public static IObservable&amp;lt;T&amp;gt; AsObservable&amp;lt;T&amp;gt;() { return messageSubject.OfType&amp;lt;T&amp;gt;(); }
+}&lt;/pre&gt;
+
+&lt;p&gt;Este código lo encontré &lt;a href=&#34;http://rogeralsing.com/2010/01/23/rx-framework-building-a-message-bus/&#34; target=&#34;_blank&#34;&gt;aquí&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Lo habitual en un bus de eventos es tener un mecanismo para enviar eventos y otro para suscribirnos a ellos. En este caso, en lugar de habilitar la suscripción, lo que me proporciona es la posibilidad de obtener un &lt;strong&gt;IObservable&lt;T&gt;&lt;/strong&gt;, siendo &lt;strong&gt;T&lt;/strong&gt; el tipo del mensaje que quiero observar.&lt;/p&gt;
+
+&lt;p&gt;Aplicado al ejemplo de las notificaciones, en la MainWindow (o donde sea) podría añadir este código:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:c# decode:true&#34;&gt;var subscription = ReactiveEventBus.AsObservable&amp;lt;GlobalMessage&amp;gt;().Subscribe(message =&amp;gt; MessageBox.Show(message.Message));
+Closed += (sender, args) =&amp;gt; subscription.Dispose();
+&lt;/pre&gt;
+
+&lt;p&gt;Y eso me permitiría poder enviar mensajes desde cualquier ViewModel (o cualquier otro sitio) con este código:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:c# decode:true&#34;&gt;ReactiveEventBus.Send(new GlobalMessage(&#34;Hola!&#34;));
+&lt;/pre&gt;
+
+&lt;p&gt;Es muy importante tener en cuenta la llamada al &lt;strong&gt;Dispose()&lt;/strong&gt; de la suscripción para evitar problemas de liberación de recursos.&lt;/p&gt;
+
+&lt;p&gt;Lo interesante de que el bus de eventos me de un &lt;strong&gt;IObservable&lt;T&gt;&lt;/strong&gt; es que, combinado con RX puedo hacer cosas más complejas de una forma muy sencilla, como:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:c# decode:true &#34;&gt;ReactiveEventBus.AsObservable&amp;lt;ScopedEvent&amp;gt;()
+    .Where(evt =&amp;gt; evt.Scope == &#34;Scope1&#34;)
+    .Subscribe(evt =&amp;gt; PUT YOUR CODE FOR Scope1 HERE);
+
+ReactiveEventBus.AsObservable&amp;lt;ScopedEvent&amp;gt;()
+    .Where(evt =&amp;gt; evt.Scope == &#34;Scope2&#34;)
+    .Subscribe(evt =&amp;gt; PUT YOUR CODE FOR Scope2 HERE);
+&lt;/pre&gt;
+
+&lt;p&gt;Respecto a si tiene sentido el uso de una propiedad para determinar el scope o sería más adecuado utilizar un objeto de distinto tipo, la respuesta es la de siempre: &lt;strong&gt;depende&lt;/strong&gt; 😉&lt;/p&gt;
+
+&lt;p&gt;Algunos casos en los que me parece interesante son el envío un evento destinado únicamente a los UserControl que están mostrando una entidad concreta en un interfaz MDI o hacer que el scope de un evento sea una ventana concreta.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Aclarando conceptos: proyectos PCL, universales y shared source</title>
+      <link>http://www.modestosanjuan.com.com/aclarando-conceptos-proyectos-pcl-universales-y-shared-source/</link>
+      <pubDate>Sun, 08 Mar 2015 12:22:55 +0000</pubDate>
+      
+      <guid>http://www.modestosanjuan.com.com/aclarando-conceptos-proyectos-pcl-universales-y-shared-source/</guid>
+      <description>&lt;p&gt;Lo habitual cuando quiero compartir código entre proyectos es recurrir a crear bibliotecas de clases. Dependiendo del tipo de proyectos en los que quiera reutilizar mi trabajo, es necesario recurrir a bibliotecas portables (PCL) o incluso a proyectos de código compartido (shared source). Con bibliotecas PCL había trabajado anteriormente, pero no con proyectos universales y shared source, y creo que es importante tener claro cuales son las diferencias entre cada tipo, ya que juegan papeles muy diferentes.&lt;/p&gt;
+
+&lt;p&gt;Lo primero a tener en cuenta es que el objetivo de todos estos tipos de proyecto es sencillo: compartir código. Todos buscan que, cuando trabajemos con proyectos que se van a ejecutar en distintos &lt;em&gt;runtimes&lt;/em&gt;, podamos compartir la mayor cantidad de código posible. En este caso, todo surgió simplemente por compartir un módulo entre una aplicación Windows 8.1 y una WPF, pero es posible encontrar escenarios más complejos que incluyan proyectos de Windows Phone o Xamarin.&lt;/p&gt;
+
+&lt;p&gt;Hay que partir de la base de que hace tiempo que no existe un único .Net framework. Antes sólo era necesario preocuparse de la versión de framework para saber si unas características estaban disponibles o no, ya que siempre tenía el mismo entorno de ejecución. Ahora, dependiendo del tipo de proyecto con el que esté trabajando, me encuentro con que, con la misma versión del framework, me encuentro con distintas capacidades en función de su plataforma de ejecución. Esto implica que no voy a tener disponibles las mismas capacidades en todos los sitios en los que intente reutilizar mis bibliotecas de clases.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Bibliotecas PCL&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Al crea una biblioteca PCL, hay que especificar las versiones de .Net a las que está destinado su uso. Esta elección, modificable en cualquier momento, determina las características de .Net se van a poder explotar, así como las bibliotecas de terceros que se podrán utilizar.&lt;/p&gt;
+
+&lt;p&gt;Por ejemplo: si para utilizar &lt;em&gt;dynamics&lt;/em&gt;, hay que tener en cuenta que la biblioteca podrá utilizarse desde aplicaciones .Net de escritorio y aplicaciones Windows 8 de la tienda de Windows, pero no podrá ser utilizada por aplicaciones para Windows Phone.&lt;/p&gt;
+
+&lt;p&gt;Si quieres información detallada sobre bibliotecas PCL y las funcionalidades disponibles en cada plataforma, la documentación oficial es &lt;a title=&#34;Desarrollo multiplataforma con la Biblioteca de clases portable&#34; href=&#34;https://msdn.microsoft.com/es-ES/library/gg597391(v=vs.110).aspx&#34; target=&#34;_blank&#34;&gt;esta&lt;/a&gt;. Si quieres crear bibliotecas PCL compatibles con Xamarin, también proporcionan &lt;a title=&#34;Introduction to Portable Class Libraries&#34; href=&#34;http://developer.xamarin.com/guides/cross-platform/application_fundamentals/pcl/introduction_to_portable_class_libraries/&#34; target=&#34;_blank&#34;&gt;documentación&lt;/a&gt; al respecto.&lt;/p&gt;
+
+&lt;p&gt;En este, recurrimos a biblioteclas PCL para Windows 8.1, Windows Phone 8.1 y .Net 4.5 para las clases de los clientes de servicios REST, DTOs, etc. Compartimos incluso algunos ViewModels. Por ejemplo, tenemos un interfaz que define un mecanismo para persistir datos de logging y telemetría. Como las implementaciones dependen de cada plataforma, la biblioteca PCL contiene únicamente el interfaz a implementar.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Bibliotecas universales&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Dentro de las bibliotecas PCL, están las llamadas bibliotecas universales. Aparecieron junto al concepto de &lt;a title=&#34;Creación de aplicaciones universales para Windows para cualquier dispositivo de Windows&#34; href=&#34;https://dev.windows.com/es-es/develop/building-universal-Windows-apps&#34; target=&#34;_blank&#34;&gt;aplicaciones universales&lt;/a&gt; con Windows 8.1 y Windows Phone 8.1 y, en esencia, se trata de bibliotecas PCL destinadas únicamente a ser utilizadas en aplicaciones para Windows 8.1 modern ui y para Windows Phone 8.1. Con la aparición de Windows 10, estas bibliotecas se extienden a otras plataformas, como Xbox, HoloLens y Raspberry Pi 2.&lt;/p&gt;
+
+&lt;p&gt;Eso significa que no podremos utilizar estas bibliotecas en proyectos .Net de escritorio o web, por ejemplo. Personalmente, teniendo en cuenta sus limitaciones, creo que el nombre _universal_ está mal escogido &lt;em&gt;universal&lt;/em&gt; 😉&lt;/p&gt;
+
+&lt;p&gt;Para interfaz de persistencia mencionado en el anterior ejemplo., las dos primeras implementaciones que necesitaba se limitaban a escribir los datos en el disco para posterior explotación en otros módulos de la aplicación. Como las aplicaciones universales no tienen acceso al espacio de nombre System.IO, recurrí a dos implementaciones: una en una biblioteca universal, que hacía uso de la clase StorageFile y otra en una biblioteca tradicional, que si dispone de acceso a System.IO.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Proyectos de código compartido&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Estos proyectos son peculiares. Ni siquiera son proyectos que puedas compilar de forma individual. Al crear una aplicación universal se crea un proyecto de código compartido, aunque hay una &lt;a title=&#34;Shared Project Reference Manager&#34; href=&#34;https://visualstudiogallery.msdn.microsoft.com/315c13a7-2787-4f57-bdf7-adae6ed54450&#34; target=&#34;_blank&#34;&gt;extensión&lt;/a&gt; que nos permite hacerlo manualmente para usar proyectos de código compartido en soluciones y proyectos existente.&lt;/p&gt;
+
+&lt;p&gt;Usar un proyecto de código compartido es lo más parecido a compartir una carpeta entre dos proyectos, solo que la forma de compartirla es añadiendo el proyecto de código compartido como una referencia. Durante la compilación, se incluirá el código del proyecto compartido como parte del proceso íntegro de compilación del proyecto que le esté referenciando.&lt;/p&gt;
+
+&lt;p&gt;Volviendo al ejemplo anterior, para Windows 8.1 y Windows Phone 8.1 desarrollé una implementación que persistía en SQLite. El código para acceder al API de SQLite es el mismo en ambas plataformas, pero la referencia que hay que añadir es distinta en &lt;a title=&#34;SQLite for Windows Runtime (Windows 8.1) &#34; href=&#34;https://visualstudiogallery.msdn.microsoft.com/1d04f82f-2fe9-4727-a2f9-a2db127ddc9a&#34; target=&#34;_blank&#34;&gt;Windows 8.1&lt;/a&gt; y en &lt;a title=&#34;SQLite for Windows Phone 8.1&#34; href=&#34;https://visualstudiogallery.msdn.microsoft.com/5d97faf6-39e3-4048-a0bc-adde2af75d1b&#34; target=&#34;_blank&#34;&gt;Windows Phone 8.1&lt;/a&gt;, por lo que no puedo llamar al código desde un proyecto Universal. Usando un proyecto de código compartido puedo añadir a cada proyecto la referencia pertinente de SQLite pero reutilizar en ambos proyectos el código que utiliza SQLite.&lt;/p&gt;
+
+&lt;p&gt;Es importante recordar que el código de los proyectos de código compartido &lt;strong&gt;no&lt;/strong&gt; se compila como un ensamblado a parte, sino como parte de cada proyecto que le referencia, como si fuese código del propio proyecto.&lt;/p&gt;
+
+&lt;p&gt;En este &lt;a title=&#34;Easier Code Sharing Across iOS, Android, and Windows&#34; href=&#34;http://blog.xamarin.com/share-code-across-ios-android-and-universal-windows-apps-using-shared-projects/&#34; target=&#34;_blank&#34;&gt;post&lt;/a&gt; se puede ver un ejemplo de su uso con proyectos que utilizan Xamarin.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>[Solucionado] Fluent Migrator no encuentra migraciones</title>
+      <link>http://www.modestosanjuan.com.com/fluent-migrator-no-encuentra-migraciones/</link>
+      <pubDate>Mon, 19 Jan 2015 01:23:05 +0000</pubDate>
+      
+      <guid>http://www.modestosanjuan.com.com/fluent-migrator-no-encuentra-migraciones/</guid>
+      <description>&lt;p&gt;Hace unos meses empecé a trabajar en un proyecto en el que utilizamos &lt;a href=&#34;https://github.com/schambers/fluentmigrator&#34;&gt;Fluent Migrator&lt;/a&gt;. Todo funciona bien el proyecto tiene bastantes migraciones funcionando sin problema. En líneas generales funciona casi igual que las migraciones de EF, con algún detalle distinto.&lt;/p&gt;
+
+&lt;p&gt;El caso es que hoy he empezado un proyecto nuevo y he añadido la referencia al paquete de Fluent Migrator para empezar a utilizarlo. Cuando he lanzado las migraciones parecía que todo estaba bien (no daba ningún error), pero no me encontraba ninguna de las migraciones que había definido en el ensamblado de migraciones.&lt;/p&gt;
+
+&lt;p&gt;Después de darle muchas vueltas buscando el problema, me he dado cuenta de que en el proyecto nuevo la versión de Fluent Migrator era la 1.4. Buscando un poco he encontrado una &lt;a href=&#34;https://github.com/schambers/fluentmigrator/issues/567&#34;&gt;incidencia&lt;/a&gt; en la que describían lo mismo que me pasaba a mi, pero no especificaban la solución. Tirando del hilo me he dado cuenta también de la versión del &amp;#8220;migrate.exe&amp;#8221; que estaba ejecutando era la correspondiente a las Fluent Migrator Tools 1.3, porque tenía añadida la ruta en el PATH.&lt;/p&gt;
+
+&lt;p&gt;Al quitar la ruta del path y utilizar el &amp;#8220;migrate.exe&amp;#8221; de la versión 1.4, todo ha funcionado correctamente.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Datos de ejemplo en el ViewModel para facilitar la vista de diseño</title>
+      <link>http://www.modestosanjuan.com.com/datos-de-ejemplo-en-el-viewmodel-para-facilitar-la-vista-de-diseno/</link>
+      <pubDate>Wed, 17 Dec 2014 00:27:25 +0000</pubDate>
+      
+      <guid>http://www.modestosanjuan.com.com/datos-de-ejemplo-en-el-viewmodel-para-facilitar-la-vista-de-diseno/</guid>
+      <description>&lt;p&gt;Al trabajar con XAML, especialmente si la vista tiene un listado de items, puede resultar muy complicado ajustar la vista para que se vea correctamente. Tareas como ajustar los márgenes, la posición de los elementos o cualquier tipo de cambio en los estilos se pueden convertir en algo bastante pesado.&lt;/p&gt;
+
+&lt;p&gt;Este es un ejemplo de una vista de que contiene un ListView sin datos de ejemplo en vista de diseño:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.modestosanjuan.com.com/wp-content/uploads/2015/01/ventana-con-listview-vacío.png&#34;&gt;&lt;img class=&#34;  aligncenter wp-image-32 size-full&#34; src=&#34;http://www.modestosanjuan.com.com/wp-content/uploads/2015/01/ventana-con-listview-vacío.png&#34; alt=&#34;ventana con listview vacío&#34; width=&#34;538&#34; height=&#34;366&#34; srcset=&#34;http://www.modestosanjuan.com.com/wp-content/uploads/2015/01/ventana-con-listview-vacío.png 538w, http://www.modestosanjuan.com.com/wp-content/uploads/2015/01/ventana-con-listview-vacío-300x204.png 300w&#34; sizes=&#34;(max-width: 538px) 100vw, 538px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;La imagen corresponde a la vista de diseño de un código como este:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:xhtml decode:true&#34;&gt;&amp;lt;ListBox ItemsSource=&#34;{Binding SampleData}&#34;&amp;gt;
+    &amp;lt;ListBox.ItemTemplate&amp;gt;
+        &amp;lt;DataTemplate&amp;gt;
+            &amp;lt;TextBlock Text=&#34;{Binding Name}&#34;&amp;gt;&amp;lt;/TextBlock&amp;gt;
+        &amp;lt;/DataTemplate&amp;gt;
+    &amp;lt;/ListBox.ItemTemplate&amp;gt;
+&amp;lt;/ListBox&amp;gt;&lt;/pre&gt;
+
+&lt;p&gt;Este es un ejemplo que ilustra bastante bien el problema, no se ve nada. Se trata de un fragmento de XAML muy sencillo y no presenta grandes problemas para intuir lo que se va a pintar, pero en cuanto la cosa se complica un poco más, ir a ciegas no resulta nada agradable. Como no tenemos datos de ejemplo, no somos capaces de saber cómo van a mostrarse los items de la lista y cualquier tipo de cambio se hace a ciegas. Para cambios pequeños, se recurre al ensayo y error, pero esto es una solución muy engorrosa y poco fluida. Para evitar ir a ciegas tenemos que hacer dos cosas:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Paso 1&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Decirle a la vista que cree una instancia del ViewModel en vista de diseño:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:xhtml decode:true&#34;&gt;xmlns:mc=&#34;http://schemas.openxmlformats.org/markup-compatibility/2006&#34;
+xmlns:d=&#34;http://schemas.microsoft.com/expression/blend/2008&#34;
+xmlns:wpfApplication1=&#34;clr-namespace:WpfApplication1&#34;
+mc:Ignorable=&#34;d&#34;
+d:DataContext=&#34;{d:DesignInstance Type=wpfApplication1:SampleViewModel, IsDesignTimeCreatable=True}&#34;
+&lt;/pre&gt;
+
+&lt;p&gt;La clave está en la última línea. El tipo del ViewModel es &lt;strong&gt;SampleViewmodel&lt;/strong&gt; y al poner a _true &lt;strong&gt;el&lt;/strong&gt;_ &lt;strong&gt;IsDesignTimeCreatablele,&lt;/strong&gt; se hablilita la creación de una instancia del viewmodel en vista de diseño.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Paso 2&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Para hacer que el ViewModel tenga datos de ejemplo, lo único necesario es asignar los datos en el constructor. En la vista de ejemplo se puede llamar desde el constructor a un método que haga algo como esto:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:c# decode:true&#34;&gt;if (DesignerProperties.GetIsInDesignMode(new DependencyObject()))
+{
+    var sampleData = new List&amp;lt;ClientData&amp;gt;();
+    sampleData.Add(new ClientData() { Name = &#34;Sample Client 1&#34;, Email = &#34;email@domain.com&#34; });
+    sampleData.Add(new ClientData() { Name = &#34;Sample Client 2&#34;, Email = &#34;email@domain.com&#34; });
+    sampleData.Add(new ClientData() { Name = &#34;Sample Client 3&#34;, Email = &#34;email@domain.com&#34; });
+    sampleData.Add(new ClientData() { Name = &#34;Sample Client 4&#34;, Email = &#34;email@domain.com&#34; });
+    sampleData.Add(new ClientData() { Name = &#34;Sample Client 5&#34;, Email = &#34;email@domain.com&#34; });
+    sampleData.Add(new ClientData() { Name = &#34;Sample Client 6&#34;, Email = &#34;email@domain.com&#34; });
+
+    SampleData = new ObservableCollection&amp;lt;ClientData&amp;gt;(sampleData);
+}
+&lt;/pre&gt;
+
+&lt;p&gt;Es muy importante que únicamente se rellenen los datos en vista de diseño, para que no se rellenen durante la ejecución de la aplicación. Por eso el &lt;em&gt;if&lt;/em&gt; de la primera línea.&lt;/p&gt;
+
+&lt;p&gt;Una vez hecho esto, todos los bindings de datos con el ViewModel mostrarán los datos de ejemplo en vista de diseño, pudiendo así hacer los ajustes de estilos sin necesidad de ejecutar la aplicación. Por ejemplo:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:xhtml decode:true&#34;&gt;&amp;lt;Window x:Class=&#34;WpfApplication1.MainWindow&#34;
+        xmlns=&#34;http://schemas.microsoft.com/winfx/2006/xaml/presentation&#34;
+        xmlns:x=&#34;http://schemas.microsoft.com/winfx/2006/xaml&#34;
+        xmlns:mc=&#34;http://schemas.openxmlformats.org/markup-compatibility/2006&#34;
+        xmlns:d=&#34;http://schemas.microsoft.com/expression/blend/2008&#34;
+        xmlns:wpfApplication1=&#34;clr-namespace:WpfApplication1&#34;
+        mc:Ignorable=&#34;d&#34;
+        d:DataContext=&#34;{d:DesignInstance Type=wpfApplication1:SampleViewModel, IsDesignTimeCreatable=True}&#34;
+        Title=&#34;MainWindow&#34; Height=&#34;350&#34; Width=&#34;525&#34;&amp;gt;
+    &amp;lt;Grid&amp;gt;
+        &amp;lt;ListBox ItemsSource=&#34;{Binding SampleData}&#34;&amp;gt;
+            &amp;lt;ListBox.ItemTemplate&amp;gt;
+                &amp;lt;DataTemplate&amp;gt;
+                    &amp;lt;StackPanel Orientation=&#34;Horizontal&#34;&amp;gt;
+                        &amp;lt;TextBlock Text=&#34;{Binding Name}&#34;&amp;gt;&amp;lt;/TextBlock&amp;gt;
+                        &amp;lt;TextBlock Text=&#34;{Binding Email}&#34; Margin=&#34;15,0,0,0&#34;&amp;gt;&amp;lt;/TextBlock&amp;gt;
+                    &amp;lt;/StackPanel&amp;gt;
+                &amp;lt;/DataTemplate&amp;gt;
+            &amp;lt;/ListBox.ItemTemplate&amp;gt;
+        &amp;lt;/ListBox&amp;gt;
+    &amp;lt;/Grid&amp;gt;
+&amp;lt;/Window&amp;gt;
+&lt;/pre&gt;
+
+&lt;p&gt;Y así es como se vería en vista de diseño:&lt;/p&gt;
+
+&lt;p style=&#34;text-align: center;&#34;&gt;
+  &lt;a href=&#34;http://www.modestosanjuan.com.com/wp-content/uploads/2015/01/ventana-con-listview-con-datos-de-ejemplo.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-35&#34; src=&#34;http://www.modestosanjuan.com.com/wp-content/uploads/2015/01/ventana-con-listview-con-datos-de-ejemplo.png&#34; alt=&#34;ventana con listview con datos de ejemplo&#34; width=&#34;540&#34; height=&#34;361&#34; srcset=&#34;http://www.modestosanjuan.com.com/wp-content/uploads/2015/01/ventana-con-listview-con-datos-de-ejemplo.png 540w, http://www.modestosanjuan.com.com/wp-content/uploads/2015/01/ventana-con-listview-con-datos-de-ejemplo-300x201.png 300w&#34; sizes=&#34;(max-width: 540px) 100vw, 540px&#34; /&gt;&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Si no quieres meter los datos de ejemplo en tu clase de ViewModel, siempre puedes crear una clase específica para el ViewModel en tiempo de diseño. Sólo hay que cambiar el valor del _DesignInstance_ en el archivo XAML y darle el nombre del tipo para la vista de diseño. Eso si, mejor que recurras a interfaces o algo similar para asegurarte de que ambos ViewModel (el de vista de diseño y el que se ejecutará en real) compartan el mismo contrato.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;**IMPORTANTE:** Para que las vistas tomen los datos de ejemplo debemos compilar el proyecto para que se compile el ViewModel. Si hacemos cambios en el conjunto de datos de ejemplos del ViewModel, deberemos compilar de nuevo, así que lo mejor es crear primero un conjunto de datos de ejemplo dignos y así luego podemos centrarnos en el trabajo de la vista.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

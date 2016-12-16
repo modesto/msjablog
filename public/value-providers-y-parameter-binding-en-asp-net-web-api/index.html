@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es-es">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+
+
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="Value Providers y Parameter Binding en ASP.NET Web API"/>
+<meta name="twitter:description" content="Cuando necesito acceder a información de la Request desde una acción de un controlador en ASP.NET Web API, la primera tentación es acceder directamente al objeto request y buscar lo que necesito. El principal problema de hacer esto es que convierte en un infierno hacer cualquier tipo de prueba automatizada para esta acción. Por ejemplo:
+[HttpGet] [Route(&#34;doAnything&#34;)] public IHttpActionResult Get() { var referrer = request.Headers.Referrer var resul = ..... // DO ANY STUFF WITH THE REFERRER return result; } El mecanismo más sencillo que se me ocurre para hacer que esta acción sea fácil de probar es hacer que el dato que necesito de la request, le llegue como parámetro a la acción:"/>
+
+    <meta name="twitter:site" content="@@msanjuan"/>
+
+
+
+  	<meta property="og:title" content=" Value Providers y Parameter Binding en ASP.NET Web API &middot;  Blog de Modesto San Juan" />
+  	<meta property="og:site_name" content="Blog de Modesto San Juan" />
+  	<meta property="og:url" content="http://www.modestosanjuan.com.com/value-providers-y-parameter-binding-en-asp-net-web-api/" />
+
+    
+  	<meta property="og:type" content="article" />
+
+    <meta property="og:article:published_time" content="2015-11-13T10:02:22Z" />
+
+    
+    
+
+    <title>
+       Value Providers y Parameter Binding en ASP.NET Web API &middot;  Blog de Modesto San Juan
+    </title>
+
+    <meta name="description" content="DESCUBRIMIENTOS, IDEAS Y OTRAS CHORRADAS" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="http://www.modestosanjuan.com.com/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="http://www.modestosanjuan.com.com/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="http://www.modestosanjuan.com.com/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.modestosanjuan.com.com/css/nav.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
+
+
+    
+      
+          <link href="http://www.modestosanjuan.com.com/index.xml" rel="alternate" type="application/rss+xml" title="Blog de Modesto San Juan" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.17" />
+
+    <link rel="canonical" href="http://www.modestosanjuan.com.com/value-providers-y-parameter-binding-en-asp-net-web-api/" />
+
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-58663898-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+        
+    </ul>
+    
+    
+    <a class="subscribe-button icon-feed" href="http://www.modestosanjuan.com.com/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+      <a class="blog-logo" href="http://www.modestosanjuan.com.com/"><img src="http://www.modestosanjuan.com.com/images/logo.jpg" alt="Home" /></a>
+  
+  
+      <a class="menu-button icon-feed" href="http://www.modestosanjuan.com.com/index.xml">&nbsp;&nbsp;Subscribe</a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">Value Providers y Parameter Binding en ASP.NET Web API</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2015-11-13T10:02:22Z">
+            Nov 13, 2015
+          </time>
+        
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <p>Cuando necesito acceder a información de la <strong>Request</strong> desde una acción de un controlador en ASP.NET Web API, la primera tentación es acceder directamente al objeto request y buscar lo que necesito. El principal problema de hacer esto es que convierte en un infierno hacer cualquier tipo de prueba automatizada para esta acción. Por ejemplo:</p>
+
+<pre class="lang:c# decode:true">[HttpGet] 
+[Route("doAnything")] 
+public IHttpActionResult Get() 
+{ 
+    var referrer = request.Headers.Referrer
+    var resul = .....
+    // DO ANY STUFF WITH THE REFERRER    
+    return result; 
+}</pre>
+
+<p>El mecanismo más sencillo que se me ocurre para hacer que esta acción sea fácil de probar es hacer que el dato que necesito de la request, le llegue como parámetro a la acción:</p>
+
+<pre class="lang:c# decode:true">public IHttpActionResult Get(string referrer) 
+</pre>
+
+<p>Con esta modificación puedo programar sin problemas un test para esta acción y me quedo tan ancho. Pero claro, ¿qué pasa cuando ejecuto el código en Web API? Evidentemente falla. En este punto es donde Web API me echa un cable y me permite hacer algo como esto:</p>
+
+<pre class="lang:c# decode:true">public IHttpActionResult Get([ValueProvider(typeof(ReferrerValueProviderFactory))]string referrer) 
+</pre>
+
+<p>Gracias a los <strong>Value Providers</strong> Web aPI puede inyectar en el parámetro el valor que necesito. El código sería este:</p>
+
+<pre class="lang:c# decode:true">public class RefererValueProviderFactory : ValueProviderFactory {
+    public override IValueProvider GetValueProvider(HttpActionContext actionContext) {
+        return new RefererValueProvider(actionContext.Request.Headers);
+    }
+}
+
+public class RefererValueProvider : IValueProvider {
+    private readonly HttpRequestHeaders headers;
+
+    public RefererValueProvider(HttpRequestHeaders headers) {
+        this.headers = headers;
+    }
+
+    public bool ContainsPrefix(string prefix) {
+        return true;
+    }
+
+    public ValueProviderResult GetValue(string key) {
+        return new ValueProviderResult(headers.Referrer, headers.Referrer.ToString(), CultureInfo.InvariantCulture);
+    }
+}</pre>
+
+<p>El código está simplificado para el ejemplo, pero es necesario aplicar control de errores. Por ejemplo, es posible que la cabecera sea nula, lo que lanzaría una excepción al intentar hacer el <strong>ToString()</strong>.</p>
+
+<p>Para que lo que llevo de ejemplo funcione faltaría únicamente registrar el nuevo value provider  en el <strong>Register</strong> de <strong>WebApiConfig</strong>:</p>
+
+<pre class="lang:default decode:true">public static void Register(HttpConfiguration config)
+{
+    config.Services.Add(typeof(ValueProviderFactory), new ReferrerValueProviderFactory());
+
+    ...</pre>
+
+<p>El problema que le veo hasta este punto es que el uso de el atributo [ValueProvide] dificulta la lectura y tener que registrarlo añade un poco de complejidad al setup y algo de lo que me tendría que acordar en el próximo proyecto. Teniendo en cuenta cómo se hacen las cosas en Web API, preferiría tener algo como esto:</p>
+
+<pre class="lang:c# decode:true">public IHttpActionResult Get([FromReferrerHeader]string referrer)</pre>
+
+<p>Algo como esto resulta mucho más legible y alineado con lo que ya estoy acostumbrado cuando recurro a atributos como <strong>[FromBody]</strong> o <strong>[FromUri]</strong>. Aquí es donde Web API me invita a utilizar <strong>Parameter Binding</strong>. Básicamente lo que voy a hacer es crear un atributo que herede de <strong>HttpParameterBinding</strong> y a utilizar el ValueProvider que he creado justo antes para obtener este dato:</p>
+
+<pre class="lang:c# decode:true ">public class FromReferrerHeaderAttribute : ParameterBindingAttribute {
+    public override HttpParameterBinding GetBinding(HttpParameterDescriptor parameter) {
+        var httpConfig = parameter.Configuration;
+        var binder = new ModelBinderAttribute()
+            .GetModelBinder(httpConfig, parameter.ParameterType);
+        return new ModelBinderParameterBinding(
+            parameter, binder,
+            new ValueProviderFactory[] { new ReferrerValueProviderFactory() });
+    }
+} 
+</pre>
+
+<p>&nbsp;</p>
+
+<p>Además, al utilizar parameter binding, ya no es necesario registrar el value provider, lo que simplifica su uso.</p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+    <figure class="author-image">
+        <a class="img" href="http://www.modestosanjuan.com.com/" style="background-image: url(http://www.modestosanjuan.com.com/images/logo.jpg)"><span class="hidden">Modesto San Juan's Picture</span></a>
+    </figure>
+    
+
+    
+
+
+
+
+
+<section class="author">
+  <h4><a href="http://www.modestosanjuan.com.com/">Modesto San Juan</a></h4>
+  
+  <p>Desarrollo software e intento hacerlo bien</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Madrid, Spain</span>
+    <span class="author-link icon-link"><a href="http://www.modestosanjuan.com">http://www.modestosanjuan.com</a></span>
+  </div>
+</section>
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Value%20Providers%20y%20Parameter%20Binding%20en%20ASP.NET%20Web%20API&nbsp;-&nbsp;Blog%20de%20Modesto%20San%20Juan&amp;url=http%3a%2f%2fwww.modestosanjuan.com.com%2fvalue-providers-y-parameter-binding-en-asp-net-web-api%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.modestosanjuan.com.com%2fvalue-providers-y-parameter-binding-en-asp-net-web-api%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.modestosanjuan.com.com%2fvalue-providers-y-parameter-binding-en-asp-net-web-api%2f&amp;description=Value%20Providers%20y%20Parameter%20Binding%20en%20ASP.NET%20Web%20API"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=http%3a%2f%2fwww.modestosanjuan.com.com%2fvalue-providers-y-parameter-binding-en-asp-net-web-api%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_shortname = 'modestosanjuan';
+  var disqus_url = 'http:\/\/www.modestosanjuan.com.com\/value-providers-y-parameter-binding-en-asp-net-web-api\/';
+  (function() {
+    if (window.location.hostname == "localhost")
+          return;
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+  </footer>
+</article>
+
+</main>
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">Blog de Modesto San Juan</a> </section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="http://www.modestosanjuan.com.com/js/jquery.js"></script>
+    <script type="text/javascript" src="http://www.modestosanjuan.com.com/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="http://www.modestosanjuan.com.com/js/index.js"></script>
+    
+</body>
+</html>
+

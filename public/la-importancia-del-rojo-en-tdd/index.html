@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es-es">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+
+
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="La importancia del rojo en TDD"/>
+<meta name="twitter:description" content="A un desarrollador que practique TDD, el flujo rojo, verde, refactor no le resulta extraño. En este post quiero romper una lanza a favor del rojo, ese gran incomprendido. Para ilustrarlo voy a recurrir a un ejemplo muy sencillo:
+[TestMethod] public void sample_test() { var messagingService = GivenAMessagingServiceStub(); var unreadMessages = messagingService.UnreadMessages(); unreadMessages.Count.Should().Be(1) } Este ejemplo esta simplificado, pero me permite mostrar un test con una estructura de tipo given/when/then o AAA (según gustos)."/>
+
+    <meta name="twitter:site" content="@@msanjuan"/>
+
+
+
+  	<meta property="og:title" content=" La importancia del rojo en TDD &middot;  Blog de Modesto San Juan" />
+  	<meta property="og:site_name" content="Blog de Modesto San Juan" />
+  	<meta property="og:url" content="http://www.modestosanjuan.com.com/la-importancia-del-rojo-en-tdd/" />
+
+    
+  	<meta property="og:type" content="article" />
+
+    <meta property="og:article:published_time" content="2015-12-22T14:14:43Z" />
+
+    
+    
+
+    <title>
+       La importancia del rojo en TDD &middot;  Blog de Modesto San Juan
+    </title>
+
+    <meta name="description" content="DESCUBRIMIENTOS, IDEAS Y OTRAS CHORRADAS" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="http://www.modestosanjuan.com.com/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="http://www.modestosanjuan.com.com/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="http://www.modestosanjuan.com.com/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.modestosanjuan.com.com/css/nav.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
+
+
+    
+      
+          <link href="http://www.modestosanjuan.com.com/index.xml" rel="alternate" type="application/rss+xml" title="Blog de Modesto San Juan" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.17" />
+
+    <link rel="canonical" href="http://www.modestosanjuan.com.com/la-importancia-del-rojo-en-tdd/" />
+
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-58663898-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+        
+    </ul>
+    
+    
+    <a class="subscribe-button icon-feed" href="http://www.modestosanjuan.com.com/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+      <a class="blog-logo" href="http://www.modestosanjuan.com.com/"><img src="http://www.modestosanjuan.com.com/images/logo.jpg" alt="Home" /></a>
+  
+  
+      <a class="menu-button icon-feed" href="http://www.modestosanjuan.com.com/index.xml">&nbsp;&nbsp;Subscribe</a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">La importancia del rojo en TDD</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2015-12-22T14:14:43Z">
+            Dec 22, 2015
+          </time>
+        
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <p>A un desarrollador que practique TDD, el flujo <strong>rojo, verde, refactor</strong> no le resulta extraño. En este post quiero romper una lanza a favor del <strong>rojo</strong>, ese gran incomprendido. Para ilustrarlo voy a recurrir a un ejemplo muy sencillo:</p>
+
+<pre class="lang:c# decode:true">[TestMethod]
+public void sample_test()
+{
+    var messagingService = GivenAMessagingServiceStub();
+    var unreadMessages = messagingService.UnreadMessages();
+    unreadMessages.Count.Should().Be(1)
+}</pre>
+
+<p>Este ejemplo esta simplificado, pero me permite mostrar un test con una estructura de tipo <strong>given/when/then o AAA</strong> (según gustos). Con el objetivo de obtener ese primer rojo, me encuentro a veces con esto:</p>
+
+<pre class="lang:default decode:true">public IEnumerable&lt;Message&gt; UnreadMessages()
+{
+    throw new NotImplementedException();
+}</pre>
+
+<p>Creo que hacer esto desvirtúa el objetivo de buscar el rojo. Uno de los objetivos de buscar el primer rojo es verificar el test, pero es imposible verificar el test si no se llega a ejecutar completo. Es cierto que al lanzar el test va a dar un rojo, pero ese rojo es equivalente a haber lanzado la excepción en lugar de la llamada al código de producción, así que de poco vale. Otras veces se llega un poco más en la búsqueda del rojo con un código similar a este:</p>
+
+<pre class="lang:default decode:true">public IEnumerable&lt;Message&gt; UnreadMessages()
+{
+    return null;
+}</pre>
+
+<p>En este caso es cierto que el test falla en la línea del <strong>then</strong>, pero personalmente sigue sin convencerme porque en realidad el rojo no se produce a causa del assert. La razón es sencilla y se ilustra bastante bien diseccionando el test de esta forma:</p>
+
+<pre class="lang:default decode:true">[TestMethod]
+public void sample_test()
+{
+    var messagingService = GivenAMessagingServiceStub();
+    var unreadMessages = messagingService.UnreadMessages();
+    var count = unreadMessages.Count;
+    count.Should().Be(1)
+}</pre>
+
+<p>Con este ejemplo se puede ver claramente que el rojo no da debido al assert, da debido a una <strong>NullPointerException</strong> en la asignación de la variable <strong>count</strong>, lo que sigue alejado del objetivo de probar primero el test. En este caso, no cuesta mucho buscar un rojo que además permita probar el test completo:</p>
+
+<pre class="lang:default decode:true ">public IEnumerable&lt;Message&gt; UnreadMessages()
+{
+    return new List&lt;Message&gt;();
+}</pre>
+
+<p>Por supuesto, es importante no olvidar que el primer paso nunca es el rojo, es pensar.</p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+    <figure class="author-image">
+        <a class="img" href="http://www.modestosanjuan.com.com/" style="background-image: url(http://www.modestosanjuan.com.com/images/logo.jpg)"><span class="hidden">Modesto San Juan's Picture</span></a>
+    </figure>
+    
+
+    
+
+
+
+
+
+<section class="author">
+  <h4><a href="http://www.modestosanjuan.com.com/">Modesto San Juan</a></h4>
+  
+  <p>Desarrollo software e intento hacerlo bien</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Madrid, Spain</span>
+    <span class="author-link icon-link"><a href="http://www.modestosanjuan.com">http://www.modestosanjuan.com</a></span>
+  </div>
+</section>
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=La%20importancia%20del%20rojo%20en%20TDD&nbsp;-&nbsp;Blog%20de%20Modesto%20San%20Juan&amp;url=http%3a%2f%2fwww.modestosanjuan.com.com%2fla-importancia-del-rojo-en-tdd%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.modestosanjuan.com.com%2fla-importancia-del-rojo-en-tdd%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.modestosanjuan.com.com%2fla-importancia-del-rojo-en-tdd%2f&amp;description=La%20importancia%20del%20rojo%20en%20TDD"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=http%3a%2f%2fwww.modestosanjuan.com.com%2fla-importancia-del-rojo-en-tdd%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_shortname = 'modestosanjuan';
+  var disqus_url = 'http:\/\/www.modestosanjuan.com.com\/la-importancia-del-rojo-en-tdd\/';
+  (function() {
+    if (window.location.hostname == "localhost")
+          return;
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+  </footer>
+</article>
+
+</main>
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">Blog de Modesto San Juan</a> </section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="http://www.modestosanjuan.com.com/js/jquery.js"></script>
+    <script type="text/javascript" src="http://www.modestosanjuan.com.com/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="http://www.modestosanjuan.com.com/js/index.js"></script>
+    
+</body>
+</html>
+

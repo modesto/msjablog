@@ -1,3 +1,22 @@
-baseurl = "http://replace-this-with-your-hugo-site.com/"
-title = "My New Hugo Site"
-languageCode = "en-us"
+baseurl = "http://www.modestosanjuan.com.com/"
+title = "Blog de Modesto San Juan"
+languageCode = "es-es"
+disqusShortname = "modestosanjuan"
+
+[params]
+  description = "DESCUBRIMIENTOS, IDEAS Y OTRAS CHORRADAS"
+  cover = "images/cover.png"
+  author = "Modesto San Juan"
+  authorlocation = "Madrid, Spain"
+  authorwebsite = "http://www.modestosanjuan.com"
+  bio= "Desarrollo software e intento hacerlo bien"
+  logo = "images/logo.jpg"
+  googleAnalyticsUserID = "UA-58663898-1"
+  # Optional RSS-Link, if not provided it defaults to the standard index.xml
+  #RSSLink = "http://feeds.feedburner.com/..."
+  githubName = "modesto"
+  twitterName = "msanjuan"
+  # set true if you are not proud of using Hugo (true will hide the footer note "Proudly published with HUGO.....")
+  hideHUGOSupport = false
+  [params.social]
+    twitter = "@msanjuan"

@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog de Modesto San Juan</title>
+    <link>http://www.modestosanjuan.com.com/categories/powershell/index.xml</link>
+    <description>Recent content on Blog de Modesto San Juan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-es</language>
+    <atom:link href="http://www.modestosanjuan.com.com/categories/powershell/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>[PowerShell] Pasar de SecureString a String</title>
+      <link>http://www.modestosanjuan.com.com/powershell-pasar-de-securestring-a-string/</link>
+      <pubDate>Wed, 25 Nov 2015 09:16:48 +0000</pubDate>
+      
+      <guid>http://www.modestosanjuan.com.com/powershell-pasar-de-securestring-a-string/</guid>
+      <description>&lt;p&gt;En ocasiones necesito usar un &lt;strong&gt;SecureString&lt;/strong&gt; pero luego me veo obligado a utilizar ese string de forma no segura. Aunque la recomendación es no hacer esto, la realidad es que hay muchos escenarios en los que es necesario. Un ejemplo sencillo es el caso en el que necesito que el usuario meta un dato sensible por consola y pero luego necesito utilizar ese dato como texto plano para pasarlo como parámetro a un ejecutable de Windows. Este es un ejemplo de cómo hacerlo:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:ps decode:true&#34;&gt;Param(
+   [Parameter(Mandatory=$True)]
+   [SecureString]$password
+)
+
+function Decrypt-SecureString($secureString) {
+    $BSTR = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($password)
+    return [System.Runtime.InteropServices.Marshal]::PtrToStringAuto($BSTR)
+}
+
+$nonSecure = Decrypt-SecureString $password&lt;/pre&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>[PowerShell] Sacando partido a la conversión de tipos</title>
+      <link>http://www.modestosanjuan.com.com/powershell-sacando-partido-a-la-conversion-de-tipos/</link>
+      <pubDate>Thu, 22 Oct 2015 00:27:51 +0000</pubDate>
+      
+      <guid>http://www.modestosanjuan.com.com/powershell-sacando-partido-a-la-conversion-de-tipos/</guid>
+      <description>&lt;p&gt;PowerShell ETS (Extended Type System) forma parte de las tripas de PowerShell y es la parte que permite que convivan tipos de .Net, COM, ADSI y WMI pero que a nosotros se nos muestren como objetos de PowerShell de primer orden.&lt;/p&gt;
+
+&lt;p&gt;ETS tiene mucha potencia y no siempre es fácil obtener documentación sobre cómo hacer las cosas, pero en este post quiero dejarle a mi yo futuro un regalito para cuando necesite realizar conversión de tipos de .Net en PowerShell.&lt;/p&gt;
+
+&lt;p&gt;El ejemplo es muy sencillo y me ha surgido en un contexto real y para explicarlo lo voy a simplificar todo lo que pueda. Imaginemos que tenemos un tipo personalizado tal que este:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:ps decode:true&#34;&gt;Add-Type -TypeDefinition @”
+using System;
+using System.Collections;
+ 
+namespace Configuration
+{
+    public class ConfigFolder {
+        public ConfigFolder() {}
+        
+        public ConfigFolder(string path) {
+            Path = path;
+        }
+
+        public string Path { get; set; }
+
+        public override string ToString() {
+            return Path;
+        }
+    }
+}
+“@
+&lt;/pre&gt;
+
+&lt;p&gt;Al sobreescribir el método &lt;strong&gt;ToString()&lt;/strong&gt; del tipo, esto nos permite hacer cosas como esta:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:ps decode:true&#34;&gt;Function Write-AsString($folder) {
+    &#34;as string we get: {0}&#34; -f $folder
+}
+
+$configFolder = New-Object Configuration.ConfigFolder
+$configFolder.Path = &#34;c:\anyPath\&#34;
+
+Write-AsString $configFolder
+&lt;/pre&gt;
+
+&lt;p&gt;Como la función &lt;strong&gt;Write-AsString&lt;/strong&gt; no especifica el tipo para &lt;strong&gt;$folder&lt;/strong&gt;, al llamar a la función con el parámetro de tipo &lt;strong&gt;ConfigFolder&lt;/strong&gt;, se está llamando al método &lt;strong&gt;ToString()&lt;/strong&gt; para convertir el valor automáticamente. El tema es que si queremos sacarle un poco más de partido y especificar un tipo que no sea string a &lt;strong&gt;$folder&lt;/strong&gt;, lo que obtendremos será un error. Por ejemplo:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:ps decode:true&#34;&gt;Function Write-FullName([System.IO.DirectoryInfo]$folder) {
+    &#34;BaseName is: {0}&#34; -f $folder.BaseName
+}
+
+$configFolder = New-Object Configuration.ConfigFolder
+$configFolder.Path = &#34;c:\anyPath\&#34;
+
+Write-FullName $configFolder
+&lt;/pre&gt;
+
+&lt;p&gt;Al ejecutar este código nos dará un error de conversión de tipos porque PowerShell no tiene ni la menor idea de cómo convertir un ConfigFolder en un System.IO.DirectoryInfo. Aquí es donde ETS viene al rescate.  Además de añadir el tipo ConfigFolder, es necesario añadir un tipo que realice la conversión automáticamente:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:ps decode:true &#34;&gt;Add-Type -TypeDefinition @”
+using System;
+using System.Collections;
+using System.Management.Automation;
+ 
+namespace Configuration
+{
+    public class ConfigFolderConverter : PSTypeConverter {
+        public override bool CanConvertFrom(Object sourceValue, Type destinationType)
+        {
+            string src = sourceValue as string;
+            if (src != null) {
+                return true;
+            }
+            return false;
+        }
+ 
+        public override object ConvertFrom(object sourceValue, Type destinationType, IFormatProvider provider, bool IgnoreCase) {
+            if (sourceValue == null) { throw new InvalidCastException(&#34;no conversion possible&#34;); }
+            if (this.CanConvertFrom(sourceValue, destinationType)) {
+                try {
+                    string src = sourceValue as string;
+                    return new Aida.ConfigFolder(src);
+                }
+                catch (Exception) { throw new InvalidCastException(&#34;no conversion possible&#34;); }
+            }
+            throw new InvalidCastException(&#34;no conversion possible&#34;);
+        }
+        public override bool CanConvertTo(object value, Type destinationType) { 
+            if((destinationType == typeof(System.IO.DirectoryInfo)) &amp;&amp; (value.GetType() == typeof(Configuration.ConfigFolder))) {
+                return true;
+            }
+            return false; 
+        }
+        public override object ConvertTo(object value, Type destinationType, IFormatProvider provider, bool IgnoreCase) {
+            if (CanConvertTo(value, destinationType)) {
+                return new System.IO.DirectoryInfo((value as Configuration.ConfigFolder).Path);
+            }
+            throw new InvalidCastException(&#34;no conversion possible&#34;);
+        }
+    }
+}
+“@&lt;/pre&gt;
+
+&lt;p&gt;Por supuesto, este tipo es un ejemplo y podría dejarse un código mucho más limpio, pero cualquiera que sepa lo que es experimentar con el &lt;strong&gt;Add-Type&lt;/strong&gt; de PowerShell entenderá que porqué prefiero no dedicarle mucho tiempo a limpiarlo y a irlo probando ;).&lt;/p&gt;
+
+&lt;p&gt;Después de añadir este tipo, es necesario decirle a PowerShell que lo tiene que usar. Para esto es necesario crear un archivo (por ejemplo: ConfigFolder.Converter.ps1xml) que sería así:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:xhtml decode:true &#34;&gt;&amp;lt;Types&amp;gt;
+  &amp;lt;Type&amp;gt;
+    &amp;lt;Name&amp;gt;Configuration.ConfigFolder&amp;lt;/Name&amp;gt;
+    &amp;lt;TypeConverter&amp;gt;
+      &amp;lt;TypeName&amp;gt;Configuration.ConfigFolderConverter&amp;lt;/TypeName&amp;gt;
+    &amp;lt;/TypeConverter&amp;gt;
+  &amp;lt;/Type&amp;gt;
+&amp;lt;/Types&amp;gt;&lt;/pre&gt;
+
+&lt;p&gt;Y luego ejecutar el comando:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:ps decode:true&#34;&gt;Update-TypeData .\ConfigFolder.Converter.ps1xml&lt;/pre&gt;
+
+&lt;p&gt;Una vez hecho esto, el ejemplo que antes fallaba ahora funcionará perfectamente, permitiendo conversiones automáticas del tipo &lt;strong&gt;ConfigFolder&lt;/strong&gt; a &lt;strong&gt;System.IO.DirectoryInfo&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Esto es sólo un ejemplo de lo que PowerShell ETS tiene para ofrecernos. Además de custom converters, también permite extender clases existentes, añadir alias y algunas cosillas curiosas.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>[PowerShell] Distinguir entre rutas relativas y absolutas</title>
+      <link>http://www.modestosanjuan.com.com/powershell-distinguir-entre-rutas-relativas-y-absolutas/</link>
+      <pubDate>Thu, 08 Oct 2015 22:41:43 +0000</pubDate>
+      
+      <guid>http://www.modestosanjuan.com.com/powershell-distinguir-entre-rutas-relativas-y-absolutas/</guid>
+      <description>&lt;p&gt;Esta vez toca un truco muy simple pero muy útil cuando tengo un script que recibe una ruta como parámetro. Es muy típico no saber si la ruta es absoluta o relativa y muy frecuente querer hacer un &lt;strong&gt;Join-Path&lt;/strong&gt; con la ruta actual (o cualquier otra) en caso de que la ruta sea relativa.&lt;/p&gt;
+
+&lt;p&gt;En ocasiones me olvido de que PowerShell tiene a su disposición toda la potencia de .Net y en este caso es precisamente útil. Utilizando el método &lt;strong&gt;IsPathRooted&lt;/strong&gt; de &lt;strong&gt;System.IO.Path&lt;/strong&gt; puedo saber si la ruta es absoluta o relativa y actuar en consecuencia. Este sería un ejemplo típico de estos casos.&lt;/p&gt;
+
+&lt;pre class=&#34;lang:ps decode:true&#34;&gt;param([string]$Path) 
+
+$targetPath = pwd
+
+if (-not [string]::IsNullOrWhiteSpace($Path)) { 
+    if ([System.IO.Path]::IsPathRooted($Path)) {
+        $targetPath = $Path
+    } else{
+        $targetPath = Join-Path (pwd) $Path
+    }
+}&lt;/pre&gt;
+
+&lt;p&gt;De regalo este script trae otro ejemplo en el que recurrir a .Net es muy útil, el método &lt;strong&gt;IsNullOrWhiteSpace&lt;/strong&gt;&lt;strong&gt;()&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>[PowerShell] Variables automáticas</title>
+      <link>http://www.modestosanjuan.com.com/powershell-variables-automaticas/</link>
+      <pubDate>Sun, 20 Sep 2015 22:10:01 +0000</pubDate>
+      
+      <guid>http://www.modestosanjuan.com.com/powershell-variables-automaticas/</guid>
+      <description>&lt;p&gt;PowerShell dispone de una serie de variables gestionadas de forma automática que permiten obtener información relacionada con la ejecución de código actual. Su propósito y utilidad es variado, siendo algunas de uso muy frecuente y otras de uso marginal. En cualquier caso, no está mal conocer unas cuantas y que suene dentro de la cabeza que hay otras que tal vez sea útiles en el futuro.&lt;/p&gt;
+
+&lt;p&gt;Tanto la &lt;a href=&#34;https://technet.microsoft.com/en-us/library/hh847768.aspx&#34; target=&#34;_blank&#34;&gt;documentación oficial&lt;/a&gt; como el comando _&amp;#8220;&lt;span style=&#34;color: #3366ff;&#34;&gt;get-help&lt;/span&gt; &lt;span style=&#34;color: #cc99ff;&#34;&gt;about_automatic_variables&lt;/span&gt;&amp;#8220;_ contienen el listado completo, pero me gustaría enumerar por aquí algunas que me resultan interesantes o que tienen truco.&lt;/p&gt;
+
+&lt;p&gt;Algunas variables son de sobra conocidas para cualquiera que conozca medianamente PowerShell. Variables como &lt;strong&gt;$_, $true, $false, $Args, $NULL&lt;/strong&gt; son de uso común incluso antes de saber siquiera qué es eso de las variables automáticas.&lt;/p&gt;
+
+&lt;p&gt;Relacionadas con la gestión de errores, las variables &lt;strong&gt;$?&lt;/strong&gt; y &lt;strong&gt;$Error&lt;/strong&gt; podrían ser útiles, aunque hay que tratarlas con cuidado. En el primer caso, &lt;strong&gt;$?&lt;/strong&gt; devuelve TRUE si la última operación se realizó correctamente o FALSE en caso contrario. La variable &lt;strong&gt;$Error&lt;/strong&gt; en principio se trata de un array que contiene los errores más recientes. El problema que le veo a este array es que únicamente contiene los errores de PowerShell. Es decir, tomando este código como ejemplo:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:ps decode:true&#34;&gt;ping error_forzado
+$?
+$Error&lt;/pre&gt;
+
+&lt;p&gt;En un caso como este, la variable &lt;strong&gt;$?&lt;/strong&gt; será &lt;em&gt;False&lt;/em&gt; pero &lt;strong&gt;$Error&lt;/strong&gt; no contendrá el error que ha dado el comando &lt;em&gt;ping&lt;/em&gt;. La razón es que no se trata de un error de PowerShell. Cuando hacemos &lt;em&gt;ping&lt;/em&gt; estamos invocando un ejecutable, no una función o cmdlet de PowerShell. Por eso hay que tener cuidado y normalmente es más conveniente capturar los errores mediante otros mecanismos.&lt;/p&gt;
+
+&lt;p&gt;Relacionado también la captura de errores está la variable &lt;strong&gt;$LastExitCode&lt;/strong&gt;, que almacena el código de salida del último programa de windows ejecutado. en el ejemplo anterior, &lt;strong&gt;$LastExitCode&lt;/strong&gt; tendría un valor de 1.&lt;/p&gt;
+
+&lt;p&gt;Otra variable muy interesante es &lt;strong&gt;$MyInvocation&lt;/strong&gt;. Esta variable proporciona información sobre el comando que se está ejecutando actualmente, incluyendo el nombre del script, la función, la ruta, los parámetros, etc. Por ejemplo, las propiedades &lt;em&gt;BoundParameters&lt;/em&gt; y &lt;em&gt;UnboundArguments&lt;/em&gt; permiten acceder al listado de argumentos pasados a la función. &lt;em&gt;UnboundArguments&lt;/em&gt; es algo así como &lt;strong&gt;$Args&lt;/strong&gt;, aunque el tipo de &lt;strong&gt;$Args&lt;/strong&gt; es Object[] y _UnboundArguments_  es de tipo List&lt;Object&gt;.&lt;/p&gt;
+
+&lt;p&gt;Otra variable interesante, relacionada con la anterior es &lt;strong&gt;$PSBoundParameters&lt;/strong&gt;. En este caso la explicación es sencilla, llamar a esta variable es lo mismo que llamar a &lt;strong&gt;$MyInvocation.BoundParameters&lt;/strong&gt;. Al menos así es en mi máquina, en la que &lt;em&gt;$PSBoundParameters.Equals($MyInvocation.BoundParameters)&lt;/em&gt; devuelve &lt;em&gt;True&lt;/em&gt;. Y recurro al clásico &amp;#8220;en mi máquina funciona&amp;#8221; porque me he encontrado por &lt;a href=&#34;https://gist.github.com/anderssonjohan/4738733&#34; target=&#34;_blank&#34;&gt;ahí&lt;/a&gt; quien dice lo contrario en función de la versión de PowerShell que se ejecute.&lt;/p&gt;
+
+&lt;p&gt;Y por último, dos que dan mucho juego: &lt;strong&gt;$PSCommmandPath&lt;/strong&gt; y &lt;strong&gt;$PSScriptRoot&lt;/strong&gt;. Estas dos variables proporcionan respectivamente la ruta completa y el directorio del script desde el que se está ejecutando el código. Estas variables pueden resultar muy útiles para hacer referencias a rutas relativas a un script en concreto, independientemente del cual sea el valor de &lt;em&gt;Get-Location&lt;/em&gt;. Eso si, es importante tener en cuenta que son de tipo string, si queremos manipularlas lo más conveniente suele ser crear variables de tipo &lt;em&gt;DirectoryInfo&lt;/em&gt; o &lt;em&gt;FileInfo&lt;/em&gt; a partir de sus valores.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>[PowerShell] Ojo que no hay un único $null</title>
+      <link>http://www.modestosanjuan.com.com/powershell-ojo-que-no-hay-un-unico-null/</link>
+      <pubDate>Wed, 09 Sep 2015 20:49:56 +0000</pubDate>
+      
+      <guid>http://www.modestosanjuan.com.com/powershell-ojo-que-no-hay-un-unico-null/</guid>
+      <description>&lt;p&gt;Este es un ejemplo curioso de esos que me ha vuelto loco hasta que me he dado cuenta. Si parto de este código:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:ps decode:true&#34;&gt;$item1 = Get-ChildItem | Where-Object {$_ -eq &#34;no encuentras esto ni de coña&#34;}
+&#34;item1 es nulo? {0}&#34; -f ($null -eq $item1)
+$item2 = $null
+&#34;item2 es nulo? {0}&#34; -f ($null -eq $item2)&lt;/pre&gt;
+
+&lt;p&gt;Al ejecutarlo el resultado es &amp;#8220;True&amp;#8221; en ambos casos. Vamos, que tanto &lt;em&gt;item1&lt;/em&gt; como &lt;em&gt;item2&lt;/em&gt; son &lt;em&gt;$null&lt;/em&gt;. Hasta aquí todo bien. Ahora voy a ejecutar este código después del anterior:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:default decode:true&#34;&gt;$lista1 = @($item1)
+&#34;La lista 1 tiene una longitud de {0}&#34; -f $lista1.Length
+$lista2 = @($item2)
+&#34;La lista 2 tiene una longitud de {0}&#34; -f $lista2.Length&lt;/pre&gt;
+
+&lt;p&gt;En principio el resultado debería ser el mismo en ambos casos&amp;#8230; o no. Al ejecutar este código el resultado será 0 para &lt;em&gt;lista1&lt;/em&gt; y 1 para &lt;em&gt;lista2&lt;/em&gt;. Toma ya!&lt;/p&gt;
+
+&lt;p&gt;En caso de que sea necesario distinguir de qué tipo de _$null_ se trata en cada caso, este código puede servir para salir de dudas:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:ps decode:true&#34;&gt;$item1.PSObject -eq $null
+$item2.PSObject -eq $null&lt;/pre&gt;
+
+&lt;p&gt;En este caso, para _item1_ obtendremos un &lt;em&gt;false&lt;/em&gt; y para &lt;em&gt;item2&lt;/em&gt; un &lt;em&gt;true&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;En fin, aquí queda otro &lt;a href=&#34;https://www.destroyallsoftware.com/talks/wat&#34;&gt;WAT&lt;/a&gt; de PowerShell de esos que hacen que la vida sea más divertida 😉&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>[PowerShell] Saber si una variable ya ha sido definida</title>
+      <link>http://www.modestosanjuan.com.com/powershell-saber-si-una-variable-ya-ha-sido-definida/</link>
+      <pubDate>Thu, 20 Aug 2015 22:14:23 +0000</pubDate>
+      
+      <guid>http://www.modestosanjuan.com.com/powershell-saber-si-una-variable-ya-ha-sido-definida/</guid>
+      <description>&lt;p&gt;En ocasiones tengo la necesidad de saber si una variable ha sido previamente definida. Esto es especialmente importante porque utilizo siempre el &amp;#8220;Set-StrictMode -Version 2&amp;#8221; y, si necesito recurrir a variables de otros scopes, cuando intento acceder a una variable no definida obtengo un error. Aunque generalmente intento no recurrir a otros scopes, especialmente el &lt;em&gt;$global&lt;/em&gt;, en ocasiones los necesito, especialmente el &lt;em&gt;$script&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Un ejemplo podría ser querer verificar si una variable que contiene un array ha sido inicializada o no, para poder añadirle ítems. El código quedaría de la siguiente forma:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:ps decode:true&#34;&gt;Function Add-ItemToScriptVariable($item) {
+    if (-not (Test-Path variable:script:anyVariable)) {
+        [System.Collections.ArrayList]$script:anyVariable = @()
+    }
+    $script:anyVariable += $item
+}
+
+Add-ItemToScriptVariable &#34;item 1&#34;
+Add-ItemToScriptVariable &#34;item 2&#34;
+Add-ItemToScriptVariable &#34;item 3&#34;
+
+Write-Host $script:anyVariable&lt;/pre&gt;
+
+&lt;p&gt;Como es costumbre en PowerShell, un mismo comando vale aparentemente para múltiples propósitos. En este caso, &lt;em&gt;&lt;strong&gt;Test-Path&lt;/strong&gt;&lt;/em&gt; nos permite verificar si una variable existe en un ámbito determinado. Aunque choque, es importante fijarse en que el habitual símbolo del dolar no aparece por ningún lado en este caso.&lt;/p&gt;
+
+&lt;p&gt;Por si alguien se lo pregunta, al igual que el &lt;em&gt;&lt;strong&gt;Test-Path&lt;/strong&gt;&lt;/em&gt; funciona, también es posible utilizar el comando &lt;em&gt;&lt;strong&gt;&amp;#8220;Get-ChildItem variable:&amp;#8221;&lt;/strong&gt;&lt;/em&gt;. No obstante, si el objetivo es enumerar las variables, es mucho más apropiado utilizar el comando &lt;em&gt;&lt;strong&gt;Get-Variable&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>[PowerShell] Devolver un array vacío desde una función</title>
+      <link>http://www.modestosanjuan.com.com/powershell-devolver-un-array-vacio-desde-una-funcion/</link>
+      <pubDate>Thu, 20 Aug 2015 15:07:23 +0000</pubDate>
+      
+      <guid>http://www.modestosanjuan.com.com/powershell-devolver-un-array-vacio-desde-una-funcion/</guid>
+      <description>&lt;p&gt;Esto es un truco rápido muy chorra pero que puede volver loco a más de un desarrollador que no esté acostumbrado a las peculiaridades de PowerShell. Tomando este código como ejemplo:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:ps decode:true&#34;&gt;function Get-EmptyArray {
+ [System.Collections.ArrayList]$anyArray = @()
+ return $anyArray 
+}
+
+Write-Host (Get-EmptyArray).GetType()&lt;/pre&gt;
+
+&lt;p&gt;En principio podría resultar bastante evidente que el resultado de la ejecución será ver por pantalla la cadena &amp;#8220;System.Collections.Arraylist&amp;#8221;. Pues no, el resultado será un error como una casa del estilo de &amp;#8220;&lt;span style=&#34;color: #ff0000;&#34;&gt;You cannot call a method on a null-valued expression&lt;/span&gt;&amp;#8221;&lt;/p&gt;
+
+&lt;p&gt;La explicación de este funcionamiento tiene que ver con la forma que tiene PowerShell de gestionar qué se retorna en una función y creo que da para otro minipost. Como el objetivo en este caso es saber la solución, el truco es sencillo:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:ps decode:true &#34;&gt;function Get-EmptyArray {
+ [System.Collections.ArrayList]$anyArray = @()
+ return ,$anyArray 
+}
+
+Write-Host (Get-EmptyArray).GetType()&lt;/pre&gt;
+
+&lt;p&gt;Por si la diferencia no se aprecia, el truco es poner una coma delante de la variable _$anyArray_ cuando se hace el return. Fácil, sencillo y feo, pero funciona 😉&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>[PowerShell] Las ventajas de usar parámetros y variables tipados</title>
+      <link>http://www.modestosanjuan.com.com/powershell-las-ventajas-de-usar-parametros-y-variables-tipados/</link>
+      <pubDate>Tue, 18 Aug 2015 09:52:05 +0000</pubDate>
+      
+      <guid>http://www.modestosanjuan.com.com/powershell-las-ventajas-de-usar-parametros-y-variables-tipados/</guid>
+      <description>&lt;p&gt;Cuanto más uso PowerShell más convencido estoy de lo importante que es tipar las variables y los parámetros de las funciones. Debido a la forma en que trabaja PowerShell, especificar los tipos me ayuda a evitar comportamientos indeseados.&lt;/p&gt;
+
+&lt;p&gt;Por ejemplo, dado este script:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:ps decode:true&#34;&gt;Set-StrictMode -Version 2
+
+$items = Get-ChildItem
+if ($items) {
+   $items.Count
+}
+&lt;/pre&gt;
+
+&lt;p&gt;Si lo ejecuto estando en un directorio con varios archivos o carpetas, mostrará en pantalla el número de items. Pero si lo ejecuto en un directorio que tenga únicamente un ítem, el resultado será un error estrepitoso porque dice que no tiene ni idea de qué es eso de la propiedad &lt;em&gt;Count&lt;/em&gt;. Simplemente con tipar la variable &lt;em&gt;$items&lt;/em&gt; este ejemplo funcionaría perfectamente:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:ps decode:true&#34;&gt;Set-StrictMode -Version 2
+
+[array]$items = Get-ChildItem
+if ($items) {
+   $items.Count
+}
+&lt;/pre&gt;
+
+&lt;p&gt;Otro ejemplo habitual  me lo encuentro cuando tengo una función en la que recibo la ruta de un directorio. Es muy habitual recibir un string con la ruta. El problema es que si trabajamos con rutas de red, esto no funciona muy bien y hay que añadirle por delante de la ruta la cadena &amp;#8220;filesystem::&amp;#8221;. A no ser que estemos interactuando con código .Net, en cuyo caso la ruta con el &amp;#8220;filesystem::&amp;#8221; por delante no le gusta ni un pelo. Al final es mucho más sencillo si hago el parámetro tipado con el tipo &lt;em&gt;System.IO.DirectoryInfo, FileInfo o el que sea pertinente&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>[PowerShell] Switch parameters</title>
+      <link>http://www.modestosanjuan.com.com/powershell-switch-parameters/</link>
+      <pubDate>Mon, 17 Aug 2015 22:37:14 +0000</pubDate>
+      
+      <guid>http://www.modestosanjuan.com.com/powershell-switch-parameters/</guid>
+      <description>&lt;p&gt;En PowerShell es muy común usar parámetros de tipo &lt;em&gt;switch&lt;/em&gt;. La peculiaridad de estos parámetros es que al usarlos, se especifica el nombre del parámetro pero no se proporciona ningún valor, ya que se asume que al usarlo su valor será &lt;em&gt;$true&lt;/em&gt; y &lt;em&gt;$false&lt;/em&gt; si no se especifica. Ejemplos típicos son el uso de &amp;#8211;&lt;em&gt;Recurse o -Force. &lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Este sería un ejemplo de con este tipo de parámetros:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:ps decode:true&#34;&gt;Function Do-Something([Switch]$Recurse) {
+    Write-Host $Recurse
+}
+
+Do-Something -Recurse
+Do-Something
+&lt;/pre&gt;
+
+&lt;p&gt;Si ejecuto este script, veré por pantalla &lt;em&gt;$True&lt;/em&gt; y &lt;em&gt;$False, como podría esperar. Si le añado algunas modificaciones al código, el resultado sigue siendo el esperado:&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre class=&#34;lang:ps decode:true&#34;&gt;Function Do-Something([Switch]$Recurse) {
+    if ($Recurse.IsPresent) { 
+        Write-Host &#34;Lo haré recursivo&#34;
+    } Else {
+        Write-Host &#34;No lo haré recursivo&#34;
+    }
+}
+
+Do-Something -Recurse
+Do-Something
+&lt;/pre&gt;
+
+&lt;p&gt;Hasta aquí todo bien, pero en realidad no lo he estado haciendo como está recomendado. Si me diese por hacer una prueba en Pester en la que me viese obligado a verificar el _$Recurse_ de este modo:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:ps decode:true&#34;&gt;$Recurse | Should Be $True
+&lt;/pre&gt;
+
+&lt;p&gt;Obtendría un resultado inesperado, ya que en realidad &lt;em&gt;$Recurse&lt;/em&gt; no es de tipo Boolean. Al hacer un GetType() es posible ver que en realidad es de tipo &lt;em&gt;System.Management.Automation.SwitchParameter&lt;/em&gt;. En realidad la forma correcta de verificar si me han pasado el parámetro es así:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:default decode:true &#34;&gt;$Recurse.IsPresent | Should Be $True&lt;/pre&gt;
+
+&lt;p&gt;Y si alguna vez es necesario tratarlo como un boolean, siempre es posible recurrir al método &lt;em&gt;ToBool()&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>[PowerShell] Cuidado que ($a -eq $a) no siempre es $true</title>
+      <link>http://www.modestosanjuan.com.com/powershell-cuidado-que-a-eq-a-no-siempre-es-true/</link>
+      <pubDate>Fri, 07 Aug 2015 00:22:46 +0000</pubDate>
+      
+      <guid>http://www.modestosanjuan.com.com/powershell-cuidado-que-a-eq-a-no-siempre-es-true/</guid>
+      <description>&lt;p&gt;Este es uno de esos ejemplos en los que es importante intentar documentarse todo lo posible al desarrollar en un lenguaje/plataforma que no conocemos. Es frecuente asumir conceptos basados en nuestros conocimientos previos de otros lenguajes, pero en ocasiones nos puede jugar malas pasadas. En este caso voy a mostrar un ejemplo muy sencillo en el que yo asumí erróneamente el funcionamiento de algo tan sencillo como un operador de comparación.&lt;/p&gt;
+
+&lt;p&gt;Este problema lo encontré desarrollando una prueba mientras practicaba TDD. Por hacerlo fácil, este es el ejemplo más simple que se me ocurre para describir lo equivocado que estaba:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:ps decode:true&#34;&gt;$a = @(&#34;item1&#34;, &#34;item2&#34;)
+if ($a -eq $a) { Write-Host &#34;$a es igual que $a&#34; }
+else { Write-Host &#34;$a no es igual que $a&#34; }&lt;/pre&gt;
+
+&lt;p&gt;Asumiendo que &lt;strong&gt;-eq&lt;/strong&gt; es el operador de igualdad, alguien que no conozca PowerShell pero si conozca otros lenguajes de programación podría asumir que este script de ejemplo entraría por el if en lugar de por el else. Mi error fue precisamente ese. Si ejecuto este script en powershell, pintará en pantalla &lt;em&gt;&lt;strong&gt;&amp;#8220;item1 item2 no es igual que item1 item2&amp;#8221;&lt;/strong&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Si me hubiera molestado en leer la &lt;a href=&#34;https://technet.microsoft.com/en-us/library/hh847759.aspx&#34; target=&#34;_blank&#34;&gt;documentación&lt;/a&gt; de PowerShell hubiera visto que el operador &lt;strong&gt;-eq&lt;/strong&gt; es bastante peculiar y en realidad hace algo más complicado. Aunque recomiendo leer la fuente original, estes es un pequeño resumen:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Si ambas variables son de tipo string, aplicará una comparación &amp;#8220;case-insensitive&amp;#8221; retornando $true o $false&lt;/li&gt;
+&lt;li&gt;Si la de la izquierda es un array de strings @(&amp;#8220;item1&amp;#8221;, &amp;#8220;item2&amp;#8221;) y la de la derecha es un string &amp;#8220;item1&amp;#8221;, buscará si el array contiene &amp;#8220;item1&amp;#8221; y retornará @(&amp;#8220;item1&amp;#8221;)&lt;/li&gt;
+&lt;li&gt;Si a la izquierda tenemos un array de strings @(&amp;#8220;item1&amp;#8221;, &amp;#8220;item2&amp;#8221;) y a la derecha un array de strings con un único item @(&amp;#8220;item1&amp;#8221;), retornará @(&amp;#8220;item1&amp;#8221;)&lt;/li&gt;
+&lt;li&gt;Como ya hemos visto al principio, si tenemos un dos arrays de strings, aunque sean iguales, retornará @()&lt;/li&gt;
+&lt;li&gt;Algunos ejemplos anteriores darán resultados distintos si invertimos las variables y cambiamos izquierda por derecha, si quieres saberlos, prueba! 😉&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Conclusión, hay que leer más. Para mi es de mucha ayuda leer código de otros. Estudiar cómo están desarrollados Pester o Psake me ha permitido entender mucho mejor las bondades de PowerShell.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>[PowerShell] Crear el fichero de manifiesto para muchos módulos a la vez</title>
+      <link>http://www.modestosanjuan.com.com/powershell-crear-el-fichero-de-manifiesto-para-muchos-modulos-a-la-vez/</link>
+      <pubDate>Wed, 05 Aug 2015 13:50:27 +0000</pubDate>
+      
+      <guid>http://www.modestosanjuan.com.com/powershell-crear-el-fichero-de-manifiesto-para-muchos-modulos-a-la-vez/</guid>
+      <description>&lt;p&gt;Hoy he tenido que crear de golpe el manifest a varios módulos. Teníamos más de 10 módulos (.psm1), cada uno en su propia carpeta y necesitaba añadirles el manifest para poder definir la empresa de cada módulo. Gracias al pipeline de PowerShell, no he tenido que esforzarme mucho para conseguirlo:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:ps decode:true&#34;&gt;ls *.psm1 -Recurse | ForEach-Object { 
+                                        $manifestFileName = $_.BaseName + &#34;.psd1&#34;
+                                        $manifestPath = Join-Path $_.Directory $manifestFileName
+                                        $companyConstant = &#34;AnyCompany&#34;
+                                        New-ModuleManifest -Path $manifestPath  -RootModule $_.Name -Author $companyConstant -CompanyName $companyConstant -Copyright $companyConstant -FileList @($_.Name)
+                                        Write-Host $manifestPath
+                                    }&lt;/pre&gt;
+
+&lt;p&gt;Es un script tonto, sin mucho misterio, pero me lo dejo aquí apuntado para el futuro. La razón por la que necesitaba hacer esto era para luego poder descargar de golpe todos los módulos cargados de esta empresa. Para hacer esto también es bastante sencillo:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:ps decode:true &#34;&gt;Get-module | Where-Object { $_.CompanyName -eq &#34;AnyCompany&#34; } | Remove-Module&lt;/pre&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>[PowerShell] La importancia del Set-StrictMode</title>
+      <link>http://www.modestosanjuan.com.com/powershell-la-importancia-del-set-strictmode/</link>
+      <pubDate>Mon, 03 Aug 2015 23:50:39 +0000</pubDate>
+      
+      <guid>http://www.modestosanjuan.com.com/powershell-la-importancia-del-set-strictmode/</guid>
+      <description>
+
+&lt;p&gt;Cuando empecé a programar scripts en PowerShell, cometía muchísimos fallos fruto de mi intoxicación con otros lenguajes, especialmente C#, con el que trabajo habitualmente. Después de un tiempo, me di cuenta que PowerShell tiene muchas más similitudes con JavaScript que con C# ya que es un lenguaje interpretado y de tipado débil. Y un tiempo después, aprendí que podía programar en PowerShell de una manera más próxima a TypeScript.&lt;/p&gt;
+
+&lt;p&gt;Lo explico de esta forma porque a mi cerebro le resulta más sencillo recurrir a este paralelismo. Cuando estoy programando en PowerShell, a mi cerebro le cuesta mucho menos si llevo puesto el sombrero de programador en TypeScript/Javascript) que si estoy pensando en C#. Cometo menos errores y el código me sale de forma más fluida.&lt;/p&gt;
+
+&lt;p&gt;Aún así hay un cmdlet que me ayuda muchísimo y que creo que permite generar un código mucho más robusto. Se trata del cmdlet &lt;strong&gt;Set-StrictMode&lt;/strong&gt;. Este cmdlet permite establecer una serie de restricciones de cara al código que escribimos en PowerShell. Generalmente siempre añado esta línea al principio de mis scripts:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:ps decode:true&#34;&gt;Set-StrictMode -Version 2&lt;/pre&gt;
+
+&lt;p&gt;La versión 2 determina exactamente qué restricciones se van a aplicar. Las opciones son 1, 2 o Latest. Resumiendo lo que explican en la &lt;a href=&#34;https://technet.microsoft.com/es-es/library/hh849692.aspx&#34; target=&#34;_blank&#34;&gt;documentación&lt;/a&gt; de Microsoft:&lt;/p&gt;
+
+&lt;p&gt;1.0 &amp;#8211; Prohíbe referencias a variables no inicializadas.&lt;/p&gt;
+
+&lt;p&gt;2.0 &amp;#8211; Prohíbe:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Referencias a variables no inicializadas&lt;/li&gt;
+&lt;li&gt;Referencias a propiedades de un objeto que no existen.&lt;/li&gt;
+&lt;li&gt;Llamadas a fuciones utilizando la sintaxis de llamadas a métodos (usando los parñentesis)&lt;/li&gt;
+&lt;li&gt;El uso de variables sin nombre (${})&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Latest &amp;#8211; Aplica la versión más estricta de las disponibles. Dependerá de la versión de PowerShell que se esté utilizando, pero a día de hoy (PowerShell 5.0) el valor más alto sigue siendo 2.&lt;/p&gt;
+
+&lt;p&gt;Aunque la tentación puede ser recurrir al parámetro &lt;strong&gt;Latest&lt;/strong&gt;, no lo recomiendo ya que podría implicar que se rompan scripts que funcionan bien si se incrementa el nivel de restricciones en una futura versión de PowerShell.&lt;/p&gt;
+
+&lt;p&gt;Dicho todo esto, qué mejor que un ejemplo:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:ps decode:true&#34;&gt;function Suma($valor1, $valor2) {
+    return $valr1 + $valor2
+}
+
+$resultado = Suma(1, 2)
+Write-Host $resultado&lt;/pre&gt;
+
+&lt;p&gt;Si ejecuto este script con &lt;strong&gt;Set-StrictMode -Off&lt;/strong&gt; el resutado será que no se pinta nada en pantalla. La razón es que me se hace referencia a la variable &lt;em&gt;$valr1&lt;/em&gt; en lugar de a &lt;em&gt;$valor1&lt;/em&gt;. Si corrijo este fallo, aún así obtendré un resultado indeseado, ya que en pantalla se pintará &amp;#8220;1 2&amp;#8221; sin las comillas. En este caso es un error típico cuando tengo puesto el sombrero de C#, el error es que estoy llamando a la función &lt;em&gt;Suma&lt;/em&gt; como si fuese un método. Para que el script funcionase como deseo, debería ser así:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:ps decode:true&#34;&gt;Set-StrictMode -Version 2
+
+function Suma($valor1, $valor2) {
+    return $valor1 + $valor2
+}
+
+$resultado = Suma 1 2
+Write-Host $resultado&lt;/pre&gt;
+
+&lt;h1 id=&#34;sus-similitudes-con-typescript&#34;&gt;Sus similitudes con TypeScript&lt;/h1&gt;
+
+&lt;p&gt;Al principio del post he mencionado que con el tiempo me he acostumbrado a la proximidad con TypeScript. Salvando las distancias, este podría ser una muestra basada en el ejemplo anterior:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:ps decode:true&#34;&gt;Set-StrictMode -Version 2
+
+function Suma([int]$valor1, [int]$valor2) { 
+   return $valor1 + $valor2 
+}
+
+$resultado = Suma 1 2
+Write-Host $resultado&lt;/pre&gt;
+
+&lt;p&gt;Incluso podría retorcerlo un poco más y ponerme más estricto:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:ps decode:true&#34;&gt;Set-StrictMode -Version 2
+
+function Suma {
+     Param(
+       [Parameter(Mandatory=$true)][int]$valor1,
+       [Parameter(Mandatory=$true)][int]$valor2
+    )
+    return $valor1 + $valor2
+}
+
+$resultado = Suma (1, 2)
+Write-Host $resultado
+&lt;/pre&gt;
+
+&lt;p&gt;Normalmente no llego tan lejos ya que creo que dificulta demasiado la lectura del código y, en la mayoría de los casos, no necesito recurrir a tantas restricciones en el código.&lt;/p&gt;
+
+&lt;p&gt;Además de recurrir al &lt;strong&gt;Set-StrictMode&lt;/strong&gt;, aplico TDD para desarrollar mis scripts, algo que también resulta de muchísima ayuda, especialmente cuando empiezas a manejar mucho código. Pero lo explicaré en otro post.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>[PowerShell] Evitar que wget (Invoke-WebRequest) tarde tanto</title>
+      <link>http://www.modestosanjuan.com.com/truco-evitar-que-wget-invoke-webrequest-tarde-tanto-en-powershell/</link>
+      <pubDate>Sun, 22 Mar 2015 19:18:44 +0000</pubDate>
+      
+      <guid>http://www.modestosanjuan.com.com/truco-evitar-que-wget-invoke-webrequest-tarde-tanto-en-powershell/</guid>
+      <description>&lt;p&gt;Mientras estaba preparando unos scripts para automatizar el proceso de sideloading de una aplicación Windows 8.1, me encontré con un problema bastante tonto. Estaba descargando por HTTP el paquete de la aplicación desde una red local pero el comando wget de PowerShell tardaba demasiado. Tenía claro que no era problema de la red porque el archivo bajaba a buena velocidad por otros medios, pero siempre que usaba wget el comando tardaba demasiado tiempo. Una descarga de menos de 2 segundos se convertía en una descarga de más de 10.&lt;/p&gt;
+
+&lt;p&gt;Después de dedicar un rato descubrí que el problema estaba en el indicador de progreso de descarga del paquete. Lo único que tenía que hacer era desactivarla y el rendimiento pasaba a ser el esperado. Para hacer esto únicamente es necesario añadir esta línea antes de la llamada al comando wget:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:ps decode:true&#34;&gt;$ProgressPreference=&#39;SilentlyContinue&#39;&lt;/pre&gt;
+
+&lt;p&gt;Si quisiera volver a mostrar el indicador de progreso para los siguientes comandos, únicamente tendría que volver a establecer su valor por defecto:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:ps decode:true &#34;&gt;$progressPreference = &#39;Continue&#39;&lt;/pre&gt;
+
+&lt;p&gt;En fin, es una tontería que seguro que cualquiera con algo de callo con PowerShell conoce, pero mejor me lo apunto por aquí por si lo vuelvo a necesitar 😉&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
