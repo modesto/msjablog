@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Hoy he tenido que crear de golpe el manifest a varios módulos. Teníamos más de 10 módulos (.psm1), cada uno en su propia carpeta y necesitaba añadirles el manifest para poder definir la empresa de cada módulo. Gracias al pipeline de PowerShell, no he tenido que esforzarme mucho para conseguirlo:
 ls *.psm1 -Recurse | ForEach-Object { $manifestFileName = $_.BaseName &#43; &#34;.psd1&#34; $manifestPath = Join-Path $_.Directory $manifestFileName $companyConstant = &#34;AnyCompany&#34; New-ModuleManifest -Path $manifestPath -RootModule $_."/>
 
-    <meta name="twitter:site" content="@@msanjuan"/>
+    <meta name="twitter:site" content="@msanjuan"/>
 
 
 

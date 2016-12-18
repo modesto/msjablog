@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Cuando necesito acceder a información de la Request desde una acción de un controlador en ASP.NET Web API, la primera tentación es acceder directamente al objeto request y buscar lo que necesito. El principal problema de hacer esto es que convierte en un infierno hacer cualquier tipo de prueba automatizada para esta acción. Por ejemplo:
 [HttpGet] [Route(&#34;doAnything&#34;)] public IHttpActionResult Get() { var referrer = request.Headers.Referrer var resul = ..... // DO ANY STUFF WITH THE REFERRER return result; } El mecanismo más sencillo que se me ocurre para hacer que esta acción sea fácil de probar es hacer que el dato que necesito de la request, le llegue como parámetro a la acción:"/>
 
-    <meta name="twitter:site" content="@@msanjuan"/>
+    <meta name="twitter:site" content="@msanjuan"/>
 
 
 
