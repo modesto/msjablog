@@ -1,9 +1,9 @@
 +++
 author = ""
-title = "La arquitectura de software como habilidad"
+title = "Arquitectura de software como habilidad"
 draft = false
 date = "2016-12-17T15:34:32+01:00"
-slug = "la-arquitectura-de-software-como-habilidad"
+slug = "arquitectura-de-software-como-habilidad"
 tags = []
 image = "images/dand.jpg"
 comments = true     # set false to hide Disqus comments
