@@ -141,6 +141,36 @@
 	   
 <article class="post post">
     <header class="post-header">
+        <h2 class="post-title"><a href="/la-importancia-del-rojo-en-tdd/">La importancia del rojo en TDD</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>A un desarrollador que practique TDD, el flujo rojo, verde, refactor no le resulta extraño. En este post quiero romper una lanza a favor del rojo, ese gran incomprendido. Para ilustrarlo voy a recurrir a un ejemplo muy sencillo:
+[TestMethod] public void sample_test() { var messagingService = GivenAMessagingServiceStub(); var unreadMessages = messagingService.UnreadMessages(); unreadMessages.Count.Should().Be(1) } Este ejemplo esta simplificado, pero me permite mostrar un test con una estructura de tipo given/when/then o AAA (según gustos). <a class="read-more" href="/la-importancia-del-rojo-en-tdd/">&raquo;</a></p>
+    </section>
+    <footer class="post-meta">
+        
+        
+            
+            
+        
+
+        
+            <img class="author-thumb" src="http://www.modestosanjuan.com/images/logo.jpg" alt="Author image" nopin="nopin" />
+        
+        
+            Modesto San Juan
+        
+        
+        <time class="post-date" datetime="2015-12-22T14:14:43Z">
+            22 Dec 2015
+        </time>
+    </footer>
+</article>
+
+	
+	   
+<article class="post post">
+    <header class="post-header">
         <h2 class="post-title"><a href="/powershell-pasar-de-securestring-a-string/">[PowerShell] Pasar de SecureString a String</a></h2>
     </header>
     <section class="post-excerpt">
@@ -401,37 +431,6 @@ function Get-EmptyArray { [System.Collections.ArrayList]$anyArray = @() return $
         
         <time class="post-date" datetime="2015-08-20T15:07:23Z">
             20 Aug 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/powershell-las-ventajas-de-usar-parametros-y-variables-tipados/">[PowerShell] Las ventajas de usar parámetros y variables tipados</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>Cuanto más uso PowerShell más convencido estoy de lo importante que es tipar las variables y los parámetros de las funciones. Debido a la forma en que trabaja PowerShell, especificar los tipos me ayuda a evitar comportamientos indeseados.
-Por ejemplo, dado este script:
-Set-StrictMode -Version 2 $items = Get-ChildItem if ($items) { $items.Count }  Si lo ejecuto estando en un directorio con varios archivos o carpetas, mostrará en pantalla el número de items. <a class="read-more" href="/powershell-las-ventajas-de-usar-parametros-y-variables-tipados/">&raquo;</a></p>
-    </section>
-    <footer class="post-meta">
-        
-        
-            
-            
-        
-
-        
-            <img class="author-thumb" src="http://www.modestosanjuan.com/images/logo.jpg" alt="Author image" nopin="nopin" />
-        
-        
-            Modesto San Juan
-        
-        
-        <time class="post-date" datetime="2015-08-18T09:52:05Z">
-            18 Aug 2015
         </time>
     </footer>
 </article>

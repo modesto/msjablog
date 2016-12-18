@@ -6,8 +6,89 @@
     <description>Recent content in Post-rsses on Blog de Modesto San Juan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <lastBuildDate>Thu, 10 Nov 2016 10:01:15 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 17 Dec 2016 15:34:32 +0100</lastBuildDate>
     <atom:link href="http://www.modestosanjuan.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Arquitectura de software como habilidad</title>
+      <link>http://www.modestosanjuan.com/post/arquitectura-de-software-como-habilidad/</link>
+      <pubDate>Sat, 17 Dec 2016 15:34:32 +0100</pubDate>
+      
+      <guid>http://www.modestosanjuan.com/post/arquitectura-de-software-como-habilidad/</guid>
+      <description>
+
+&lt;h2 id=&#34;el-pícaro-en-ad-d-2ª-edición&#34;&gt;El pícaro en AD&amp;amp;D 2ª edición&lt;/h2&gt;
+
+&lt;p&gt;Advanced Dungeons &amp;amp; Dragons 2ª edición tenía un sistema de reglas bastante restrictivo que puede ser resumido con un ejemplo bastante sencillo: el pícaro era el único tipo de personaje que tenía permitido intentar esconderse entre la sombras o moverse sigilosamente.&lt;/p&gt;
+
+&lt;p&gt;Si, es así de fácil. Si no eras un pícaro, esas dos habilidades estaban fuera de tu alcance.&lt;/p&gt;
+
+&lt;p&gt;En su disculpa he de decir que AD&amp;amp;D 2ªed. es del año 1989 y las reglas originales son del 74. Algunos años después, este despropósito se corrigío porque no tenía ningún sentido.&lt;/p&gt;
+
+&lt;p&gt;Y es que resulta mucho más interesante jugar bajo un sistema de reglas en el que cualquier jugador puede intentar moverse sigilosamente, dependiendo esta acción de su nivel de habilidad y de su contexto. Evidentemente, no es lo mismo intentarlo si llevas una armadura de placas metálica que si vas desnudo con calcetines de felpa.&lt;/p&gt;
+
+&lt;h2 id=&#34;el-arquitecto-de-software&#34;&gt;El arquitecto de software&lt;/h2&gt;
+
+&lt;p&gt;A día de hoy, a las puertas del año 2017, muchas empresas se empeñan en establecer sistemas de reglas que rigen el funcionamiento de sus equipos de desarrollo como si de partidas de AD&amp;amp;D 2ªed. se tratase.&lt;/p&gt;
+
+&lt;p&gt;Me refiero especialmente a esos equipos en los que existe una figura de &amp;ldquo;arquitecto&amp;rdquo; que, en la línea del pícaro, es el único que tiene permitido desempeñar tareas relacionadas con la arquitectura del software.&lt;/p&gt;
+
+&lt;h2 id=&#34;la-arquitectura-como-habilidad&#34;&gt;La arquitectura como habilidad&lt;/h2&gt;
+
+&lt;p&gt;Estoy totalmente convencido de que la arquitectura de software debería tratarse como una habilidad en lugar de como un rol.&lt;/p&gt;
+
+&lt;p&gt;Como toda habilidad, es posible aprenderla, cultivarla y ponerla en práctica sea cual sea nuestro nivel en ella. Por supuesto, dependiendo de nuestro nivel, los resultados podrán ser desde desastrosos ha plenamente satisfactorios, como pasa con la práctica de cualquier otra habilidad.&lt;/p&gt;
+
+&lt;p&gt;Enfocar la arquitectura de software como una habilidad en lugar de como un rol tiene muchas ventajas, tanto para el proyecto como para los integrantes del equipo.&lt;/p&gt;
+
+&lt;h3 id=&#34;propiedad-colectiva-del-código&#34;&gt;Propiedad colectiva del código&lt;/h3&gt;
+
+&lt;p&gt;Extreme Programming nos habla de la &lt;a href=&#34;http://www.extremeprogramming.org/rules/collective.html&#34;&gt;propiedad colectiva del código&lt;/a&gt; como una forma de alentar a todos los miembros del equipo a participar en cualquier parte del código, sin limitarse a aquellas partes que ellos han desarrollado.&lt;/p&gt;
+
+&lt;p&gt;Nos invita a cuestionar el diseño, la arquitectura, a modificar cualquier parte del código, siempre con responsabilidad, por supuesto.&lt;/p&gt;
+
+&lt;p&gt;Las ventajas son múltiples y los beneficios compensan con creces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Elimina cuellos de botella.- Dejar la arquitectura en manos de una única persona no escala y además es malísimo para el bus factor.&lt;/li&gt;
+&lt;li&gt;Reduce silos de conocimiento.&lt;/li&gt;
+&lt;li&gt;Ayuda a crear equipo.- Cuando un equipo se construye a base de un sistema de castas, dificulta tener sensación de pertenencia.&lt;/li&gt;
+&lt;li&gt;Promueve el incremento de la calidad del software. Evidentemente no lo garantiza, pero es que no hay NADA que lo garantice.&lt;/li&gt;
+&lt;li&gt;Facilita que suba el nivel del equipo.- Promover la propiedad colectiva del código hace que aquellos que tienen su &amp;ldquo;skill&amp;rdquo; más baja, tiendan a subirla si realmente tienen interés.&lt;/li&gt;
+&lt;li&gt;Mejora el crecimiento del equipo.- Cuando el negocio necesite que el equipo crezca, nada como que la mayoría del equipo tenga un conocimiento amplio del software. Situaciones del tipo &amp;ldquo;esto lo tenemods que ver con el arquitecto&amp;rdquo; desaparecen por completo. Esto está totalmente relacionado con la existencia de silos de conocimiento.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;solucionando-un-problema-que-no-es-de-software&#34;&gt;Solucionando un problema que no es de software&lt;/h2&gt;
+
+&lt;p&gt;Muchas veces se dan casos como estos:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Soy arquitecto porque así gano mas dinero.- En este caso estamos hablando de solucionar un problema económico del ámbito personal, no del software. Esto es algo típico en grandes corps en las que el crecimiento económico está vinculado a una tabla de roles clásica. Como anécdota curiosa, hace muchos años fuí contratado como director de arte por una razón similar. Aún así, que te te denominen &amp;ldquo;arquitecto&amp;rdquo; no implica que debas ejercer de dictador de la arquitectura, se pueden seguir aplicando los criterios de la propiedad colectiva del código.&lt;/li&gt;
+&lt;li&gt;El cliente demanda esa figura.- Una posible respuesta sería: &amp;ldquo;pues no trabajes con ese cliente&amp;rdquo;. Evidentemente es una respuesta válida, pero no siempre es realista. En esos casos nada te impide hacer lo mismo que en el punto anterior, es simplemente una fachada de cara a trabajar con un cliente.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;El equipo está muy verde.- El problema ha sido montar un equipo mal balanceado. Puede que esta sea una buena solución a corto plazo, pero un equipo no puede estar verde para siempre, se debería hacer un ejercicio proactivo en balancear el equipo y buscar su madurez.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Los dos primeros puntos tienen mucho que ver con una cuestión de &amp;ldquo;hacking cultural&amp;rdquo;. Para mi es vital regular bien la cantidad de energía empleada para realizar estas acciones de hacking. En ocasiones puede merecer la pena cambiar de cliente/trabajo y dedicar esa energía a activades más provechosas.&lt;/p&gt;
+
+&lt;h2 id=&#34;una-cuestión-cultural&#34;&gt;Una cuestión cultural&lt;/h2&gt;
+
+&lt;p&gt;¿Quiero decir con esto que todo el mundo debería hacer de todo y saber de todo?&lt;/p&gt;
+
+&lt;p&gt;No necesariamente. Todo equipo está compuesto por personas cuyas habilidades están a diferentes niveles. Puede que unos sean más fuertes en un punto que otros, es normal. Pero también es normal que emerjan figuras de liderazgo de facto, algo muy diferente a la figura del arquitecto que ya he mencionado.&lt;/p&gt;
+
+&lt;p&gt;Un problema habitual es que, en el momento en el que responsabilizas a una persona de un aspecto del desarrollo, automáticamente el resto de los miembros del equipo pasan a tener una actitud totalmente pasiva respecto a ese aspecto.&lt;/p&gt;
+
+&lt;h2 id=&#34;no-es-fácil&#34;&gt;No es fácil&lt;/h2&gt;
+
+&lt;p&gt;Por supuesto, hay mil casos y situaciones que pueden llevar a que tener una figura de este tipo sea una buena idea, no lo niego. Pero creo que todos ellos son siempre casos coyunturales con fecha de caducidad que deberían tender a evolucionar en forma de un equipo sólido, maduro y equilibrado.&lt;/p&gt;
+
+&lt;p&gt;Está claro que no es fácil tener un equipo equilibrado, en el que la mayoría de sus integrantes no sólo se preocupen de la arquitectura, sino que además tengan la capacidad de hacerlo. ¿Pero quién ha dicho que sea fácil? Hacer software que perdure en el tiempo, que se mantenga estable y con un nivel de mantenilibilidad adecuado no es fácil.&lt;/p&gt;
+
+&lt;p&gt;Si el enfoque de tu empresa es tener una máquina de hacer churros en la que se contrata programadores a kilo, tal vez la idea de tener arquitectos que sobrevuelan por los proyectos tallando la arquitectura sobre tablas de piedra resulte lo más normal. Pero es que esto nos lleva al punto anterior, adoptar una solución para un problema que no debería existir.&lt;/p&gt;
+
+&lt;p&gt;** La imagen de la cabecera es de &lt;a href=&#34;http://svetlaya777.deviantart.com/&#34;&gt;Svetlana Vorobyeva&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>La regla del boy scout</title>
@@ -1033,32 +1114,6 @@ namespace Configuration
 &lt;p&gt;Esto es sólo un ejemplo de lo que PowerShell ETS tiene para ofrecernos. Además de custom converters, también permite extender clases existentes, añadir alias y algunas cosillas curiosas.&lt;/p&gt;
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>[PowerShell] Distinguir entre rutas relativas y absolutas</title>
-      <link>http://www.modestosanjuan.com/powershell-distinguir-entre-rutas-relativas-y-absolutas/</link>
-      <pubDate>Thu, 08 Oct 2015 22:41:43 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/powershell-distinguir-entre-rutas-relativas-y-absolutas/</guid>
-      <description>&lt;p&gt;Esta vez toca un truco muy simple pero muy útil cuando tengo un script que recibe una ruta como parámetro. Es muy típico no saber si la ruta es absoluta o relativa y muy frecuente querer hacer un &lt;strong&gt;Join-Path&lt;/strong&gt; con la ruta actual (o cualquier otra) en caso de que la ruta sea relativa.&lt;/p&gt;
-
-&lt;p&gt;En ocasiones me olvido de que PowerShell tiene a su disposición toda la potencia de .Net y en este caso es precisamente útil. Utilizando el método &lt;strong&gt;IsPathRooted&lt;/strong&gt; de &lt;strong&gt;System.IO.Path&lt;/strong&gt; puedo saber si la ruta es absoluta o relativa y actuar en consecuencia. Este sería un ejemplo típico de estos casos.&lt;/p&gt;
-
-&lt;pre class=&#34;lang:ps decode:true&#34;&gt;param([string]$Path) 
-
-$targetPath = pwd
-
-if (-not [string]::IsNullOrWhiteSpace($Path)) { 
-    if ([System.IO.Path]::IsPathRooted($Path)) {
-        $targetPath = $Path
-    } else{
-        $targetPath = Join-Path (pwd) $Path
-    }
-}&lt;/pre&gt;
-
-&lt;p&gt;De regalo este script trae otro ejemplo en el que recurrir a .Net es muy útil, el método &lt;strong&gt;IsNullOrWhiteSpace&lt;/strong&gt;&lt;strong&gt;()&lt;/strong&gt;&lt;/p&gt;
 </description>
     </item>
     
