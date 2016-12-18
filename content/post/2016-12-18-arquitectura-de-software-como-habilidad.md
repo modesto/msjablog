@@ -31,7 +31,7 @@ Me refiero especialmente a esos equipos en los que existe una figura de "arquite
 
 Estoy totalmente convencido de que la arquitectura de software debería tratarse como una habilidad en lugar de como un rol.
 
-Como toda habilidad, es posible aprenderla, cultivarla y ponerla en práctica sea cual sea nuestro nivel en ella. Por supuesto, dependiendo de nuestro nivel, los resultados podrán ser desde desastrosos ha plenamente satisfactorios, como pasa con la práctica de cualquier otra habilidad.
+Como toda habilidad, es posible aprenderla, cultivarla y ponerla en práctica sea cual sea nuestro nivel en ella. Por supuesto, dependiendo de nuestro nivel, los resultados podrán ser desde desastrosos a plenamente satisfactorios, como pasa con la práctica de cualquier otra habilidad.
 
 Enfocar la arquitectura de software como una habilidad en lugar de como un rol tiene muchas ventajas, tanto para el proyecto como para los integrantes del equipo.
 
@@ -48,7 +48,7 @@ Las ventajas son múltiples y los beneficios compensan con creces:
 * Ayuda a crear equipo.- Cuando un equipo se construye a base de un sistema de castas, dificulta tener sensación de pertenencia.
 * Promueve el incremento de la calidad del software. Evidentemente no lo garantiza, pero es que no hay NADA que lo garantice.
 * Facilita que suba el nivel del equipo.- Promover la propiedad colectiva del código hace que aquellos que tienen su "skill" más baja, tiendan a subirla si realmente tienen interés.
-* Mejora el crecimiento del equipo.- Cuando el negocio necesite que el equipo crezca, nada como que la mayoría del equipo tenga un conocimiento amplio del software. Situaciones del tipo "esto lo tenemods que ver con el arquitecto" desaparecen por completo. Esto está totalmente relacionado con la existencia de silos de conocimiento.
+* Mejora el crecimiento del equipo.- Cuando el negocio necesite que el equipo crezca, nada como que la mayoría del equipo tenga un conocimiento amplio del software. Situaciones del tipo "esto lo tenemos que ver con el arquitecto" desaparecen por completo. Esto está totalmente relacionado con la existencia de silos de conocimiento.
 
 ## Solucionando un problema que no es de software
 
