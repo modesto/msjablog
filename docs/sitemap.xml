@@ -3,7 +3,17 @@
   
   <url>
     <loc>http://www.modestosanjuan.com/</loc>
-    <lastmod>2016-12-17T15:34:32+01:00</lastmod>
+    <lastmod>2017-01-09T15:34:32+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.modestosanjuan.com/post/encapsulacion-visibilidad-y-retencion-de-estado/</loc>
+    <lastmod>2017-01-09T15:34:32+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.modestosanjuan.com/post/redescubriendo-la-orientacion-a-objetos/</loc>
+    <lastmod>2017-01-09T15:34:32+01:00</lastmod>
   </url>
   
   <url>
@@ -174,6 +184,10 @@
   <url>
     <loc>http://www.modestosanjuan.com/datos-de-ejemplo-en-el-viewmodel-para-facilitar-la-vista-de-diseno/</loc>
     <lastmod>2014-12-17T00:27:25+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.modestosanjuan.com/includes/oop-serie/</loc>
   </url>
   
 </urlset>

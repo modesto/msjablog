@@ -43,7 +43,7 @@
     <link rel="stylesheet" type="text/css" href="http://www.modestosanjuan.com/css/screen.css" />
     <link rel="stylesheet" type="text/css" href="http://www.modestosanjuan.com/css/nav.css" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
-
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/arta.min.css">
 
     
       
@@ -69,6 +69,8 @@
     
 
     
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body class="nav-closed">
 
@@ -208,6 +210,12 @@
     
         
     
+        
+    
+        
+    
+        
+    
 
     
         
@@ -231,6 +239,65 @@
 </nav>
 
     </div>
+
+    
+        
+<article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/impresiones-sobre-pair-programming/">Impresiones sobre pair programming</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>El viernes mantuve una conversación bastante entretenida sobre desarrollo de software con un compañero de profesión. Trabaja en una entidad financiera y al hablar de cosas como TDD, Agile, XP, etc. tenía ciertos sentimientos enfrentados. Precisamente uno de los temas que le causaban controversia era el pair programming. Su opinión básicamente se resumía en una frase: &#8220;yo lo que no compro es que dos tíos senior sentados juntos a programar van a ser más productivos que si programan por separado&#8221;. <a class="read-more" href="/impresiones-sobre-pair-programming/">&raquo;</a></p>
+    </section>
+    <footer class="post-meta">
+        
+        
+            
+            
+        
+
+        
+            <img class="author-thumb" src="http://www.modestosanjuan.com/images/logo.jpg" alt="Author image" nopin="nopin" />
+        
+        
+            Modesto San Juan
+        
+        
+        <time class="post-date" datetime="2016-01-19T01:13:56Z">
+            19 Jan 2016
+        </time>
+    </footer>
+</article>
+
+    
+        
+<article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/nuestra-programacion-es-mala-para-el-desarrollo-de-software/">Nuestra programación es mala para el desarrollo de software</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>La programación de mi color favorito El otro día mi hija me preguntó cuál era mi color favorito. Respondí inmediatamente sin pensarlo: &#8220;el azul&#8221;. No era la primera vez que me lo preguntaban y es un dato que tengo claro desde que era niño. O no.
+En esta ocasión, no se exactamente porqué, después de responder a mi hija algo en mi cabeza empezó a retorcerse: &#8220;¿es el azul mi color favorito? <a class="read-more" href="/nuestra-programacion-es-mala-para-el-desarrollo-de-software/">&raquo;</a></p>
+    </section>
+    <footer class="post-meta">
+        
+        
+            
+            
+        
+
+        
+            <img class="author-thumb" src="http://www.modestosanjuan.com/images/logo.jpg" alt="Author image" nopin="nopin" />
+        
+        
+            Modesto San Juan
+        
+        
+        <time class="post-date" datetime="2015-12-28T22:22:29Z">
+            28 Dec 2015
+        </time>
+    </footer>
+</article>
 
     
         
@@ -466,66 +533,6 @@ $item1 = Get-ChildItem | Where-Object {$_ -eq "no encuentras esto ni de coña"} 
         
         <time class="post-date" datetime="2015-09-09T20:49:56Z">
             9 Sep 2015
-        </time>
-    </footer>
-</article>
-
-    
-        
-<article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/powershell-saber-si-una-variable-ya-ha-sido-definida/">[PowerShell] Saber si una variable ya ha sido definida</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>En ocasiones tengo la necesidad de saber si una variable ha sido previamente definida. Esto es especialmente importante porque utilizo siempre el &#8220;Set-StrictMode -Version 2&#8221; y, si necesito recurrir a variables de otros scopes, cuando intento acceder a una variable no definida obtengo un error. Aunque generalmente intento no recurrir a otros scopes, especialmente el $global, en ocasiones los necesito, especialmente el $script.
-Un ejemplo podría ser querer verificar si una variable que contiene un array ha sido inicializada o no, para poder añadirle ítems. <a class="read-more" href="/powershell-saber-si-una-variable-ya-ha-sido-definida/">&raquo;</a></p>
-    </section>
-    <footer class="post-meta">
-        
-        
-            
-            
-        
-
-        
-            <img class="author-thumb" src="http://www.modestosanjuan.com/images/logo.jpg" alt="Author image" nopin="nopin" />
-        
-        
-            Modesto San Juan
-        
-        
-        <time class="post-date" datetime="2015-08-20T22:14:23Z">
-            20 Aug 2015
-        </time>
-    </footer>
-</article>
-
-    
-        
-<article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/powershell-devolver-un-array-vacio-desde-una-funcion/">[PowerShell] Devolver un array vacío desde una función</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>Esto es un truco rápido muy chorra pero que puede volver loco a más de un desarrollador que no esté acostumbrado a las peculiaridades de PowerShell. Tomando este código como ejemplo:
-function Get-EmptyArray { [System.Collections.ArrayList]$anyArray = @() return $anyArray } Write-Host (Get-EmptyArray).GetType() En principio podría resultar bastante evidente que el resultado de la ejecución será ver por pantalla la cadena &#8220;System.Collections.Arraylist&#8221;. Pues no, el resultado será un error como una casa del estilo de &#8220;You cannot call a method on a null-valued expression&#8221; <a class="read-more" href="/powershell-devolver-un-array-vacio-desde-una-funcion/">&raquo;</a></p>
-    </section>
-    <footer class="post-meta">
-        
-        
-            
-            
-        
-
-        
-            <img class="author-thumb" src="http://www.modestosanjuan.com/images/logo.jpg" alt="Author image" nopin="nopin" />
-        
-        
-            Modesto San Juan
-        
-        
-        <time class="post-date" datetime="2015-08-20T15:07:23Z">
-            20 Aug 2015
         </time>
     </footer>
 </article>

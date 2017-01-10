@@ -6,8 +6,184 @@
     <description>Recent content in Post-rsses on Blog de Modesto San Juan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <lastBuildDate>Sat, 17 Dec 2016 15:34:32 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 09 Jan 2017 15:34:32 +0100</lastBuildDate>
     <atom:link href="http://www.modestosanjuan.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Encapsulación, visibilidad y retención de estado</title>
+      <link>http://www.modestosanjuan.com/post/encapsulacion-visibilidad-y-retencion-de-estado/</link>
+      <pubDate>Mon, 09 Jan 2017 15:34:32 +0100</pubDate>
+      
+      <guid>http://www.modestosanjuan.com/post/encapsulacion-visibilidad-y-retencion-de-estado/</guid>
+      <description>&lt;p&gt;Para empezar nada mejor que hablar del concepto el que se erigió como el único punto en común del comité de sabios mencionado en el anterior post la encapsulación. Después hablaremos de la visibilidad, un concepto que suele ir de la mano de la encapsulación, llegando a tratarse como si fueran lo mismo. Para finalizar, dedicaremos algunas líneas a hablar de la retención del estado, algo muy obvio pero esencial en orientación a objetos.&lt;/p&gt;
+
+&lt;h2 id=&#34;encapsulación&#34;&gt;Encapsulación&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;La encapsulación permite agrupar funcionalidades (métodos) y estado (datos) de una forma cohesiva. Los métodos proporcionarán los mecanismos adecuados para modificar el estado y en algunos casos también serán la puerta de acceso a este.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Así es, no es necesaria mucha más parafernalia para describir qué es la encapsulación. Es más, podríamos incluso definirlo como &amp;quot;tener los datos y sus funcionalidades directamente relacionadas juntitos y trazar un perímetro al que le pondremos un nombre&amp;quot;, pero la definición quedaría más fea ;)&lt;/p&gt;
+
+&lt;p&gt;En lenguajes como Java, la forma de acceder al estado será mediante métodos tipo getXXX(). En C# disponemos de propiedades, así que podemos recurrir a estas para acceder al estado. No obstante, en ocasiones también resultará conveniente recurrir a métodos para acceder al estado.&lt;/p&gt;
+
+&lt;h2 id=&#34;visibilidad&#34;&gt;Visibilidad&lt;/h2&gt;
+
+&lt;p&gt;Cuando hablamos de visibilidad solemos referirnos a la ocultación o publicación tanto de la información del estado como de la implementación de la funcionalidad de una clase.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;La visibilidad nos permite ocultar al exterior detalles del estado o de la implementación que no queremos que sean expuestos fuera de nuestra &amp;quot;unidad de encapsulación&amp;quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Un ejemplo muy sencillo sería el siguiente: en un juego no queremos que se sepa la vida de los personajes, únicamente queremos que se sepa si el personaje está vivo, herido o muerto. Podríamos recurrir a una propiedad privada que almacene los puntos de vida del personaje y un método público que nos permita obtener su estado. El método calcularía el estado en función de los puntos de vida del jugador pero los puntos de vida no quedarían expuestos en ningún momento.&lt;/p&gt;
+
+&lt;p&gt;El concepto de visibilidad suele acompañar al de encapsulación hasta el punto de que a veces se asume que encapsulación y visibilidad son sinónimos. Esto es algo que no pocos libros han descrito de este modo. Pero la palabra &amp;quot;encapsulación&amp;quot; se utiliza con significados distintos: en unos de ellos se utiliza para hablar de visibilidad, y en otros se refiere exclusivamente a las definiciones que utilizo en este post. Este tema que lo debatí bastante con Fran Reyes en su día y su punto de vista me convenció.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;El propósito de la encapsulación no es la ocultación de información.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Lenguajes como Python proporcionan encapsulación a través de clases pero el concepto de visibilidad privada es en esencia una convención.&lt;/p&gt;
+
+&lt;h2 id=&#34;retención-de-estado&#34;&gt;Retención de estado&lt;/h2&gt;
+
+&lt;p&gt;Cuando hablamos de programación funcional, al llamar a una función, esta no mantiene estado ninguno de una ejecución a otra. Cada vez que llamamos a una función debemos proporcionarle los datos con los que tiene que trabajar y esta a su vez nos devolverá los datos con las modificaciones pertinentes aplicadas.&lt;/p&gt;
+
+&lt;p&gt;En orientación a objetos, a nuestros métodos no debemos proporcionarles la información de estado con la que tienen que trabajar, ya que la tienen accesible dentro del objeto. Un objeto mantiene su estado entre cada llamada.&lt;/p&gt;
+
+&lt;h2 id=&#34;modelos-anémicos&#34;&gt;Modelos anémicos&lt;/h2&gt;
+
+&lt;p&gt;El concepto de modelo anémico está relacionado con la incorrecta aplicación de la orientación a objetos. Cuando tenemos clases que únicamente tienen propiedades con getters y setters públicos y el código relacionado con la gestión del estado está fuera de las propias clases, estamos hablando de que tenemos un modelo anémico.&lt;/p&gt;
+
+&lt;p&gt;Si hacemos que la lógica de gestión del estado esté fuera del objecto, no estaremos aplicando correctamente la encapsulación y por lo tanto, no estamos aplicando correctamente orientación a objetos.&lt;/p&gt;
+
+&lt;p&gt;Un ejemplo sencillo (sacado de la wikipedia) sería:&lt;/p&gt;
+
+&lt;p&gt;Anémico:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-csharp&#34;&gt;class Box
+{
+    public int Height { get; set; }
+    public int Width { get; set; }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Orientado a objetos:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-csharp&#34;&gt;class Box
+{
+    public int Height { get; private set; }
+    public int Width { get; private set; }
+
+    public Box(int height, int width)
+    {
+        if (height &amp;lt;= 0) {
+            throw new ArgumentOutOfRangeException(nameof(height));
+        }
+        if (width &amp;lt;= 0) {
+            throw new ArgumentOutOfRangeException(nameof(width));
+        }
+        Height = height;
+        Width = width;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;propiedades-vs-campos-en-c&#34;&gt;Propiedades vs campos en C#
+&lt;/h2&gt;
+
+&lt;p&gt;En ocasiones existe la duda de si en C# deberíamos utilizar propiedades o campos públicos para exponer el estado. Para muchos desarrolladores no hay mucha diferencia pero debermos tener en cuenta que las propiedades tienen características diferenciales respecto a los campos:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;El acceso a una propiedad se considera como una llamada a un método, eso significa que podemos cambiar la implementación tanto del método Get como del Set en el futuro. Esto está relacionado con el concepto de ocultación de la implementación y para una variable no es posible.&lt;/li&gt;
+&lt;li&gt;Al considerar el acceso a una propiedad como un método, podemos ejecutar código al acceder a su valor.&lt;/li&gt;
+&lt;li&gt;Utilizando propiedades podemos gestionar el nivel de visibilidad del get y el set por separado.&lt;/li&gt;
+&lt;li&gt;Las propiedades no pueden ser pasadas por referencia a métodos.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sobre si se debe usar una propiedad o un método para los getter, personalmente me gusta recurrir a propiedades cuando accedo al estado &amp;quot;en bruto&amp;quot;, sin tratar y por lo tanto lo voy a obtener de manera inmediata. Recurro a métodos cuando voy a realizar alguna transformación o a aplicar algún tipo de lógica, especialmente si se trata de una lógica pesada. Creo que se explicita mucho mejor que al acceder a ese dato a través de un método estamos realizando una operación que no va a ser instantánea.&lt;/p&gt;
+
+&lt;p&gt;Recordemos además que los métodos podemos hacerlos asíncronos, pero las propiedades no.&lt;/p&gt;
+
+&lt;p&gt;Respecto a las colecciones de datos, hay que pensar bien el tipo de colección que vamos a utilizar. Si recurrimos a colecciones que no sean &amp;quot;readonly&amp;quot;, perderemos la posibilidad de interceptar con facilidad el código que modique la colección, algo muy habitual cuando queremos aplicar validaciones o cualquier otro tipo de lógica. Si exponemos una colección que no es de sólo lectura, estamos impidiendo la posibilidad de encapsular la lógica de gestión de esa propiedad.&lt;/p&gt;
+
+&lt;p&gt;Otro concepto interesante relacionado con la retención de estado es la inmutabilidad, pero mejor lo dejamos para otro día ;)&lt;/p&gt;
+
+&lt;p&gt;Por el momento, este es el listado de posts que he publicado sobre este tema:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.modestosanjuan.com/post/redescubriendo-la-orientacion-a-objetos/&#34;&gt;Redescubriendo la orientación a objetos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.modestosanjuan.com/post/encapsulacion-y-visibilidad/&#34;&gt;Encapsulación y visibilidad&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;El dibujo de Yoda está sacado de la web &lt;a href=&#34;https://www.vecteezy.com/people/36181-yoda-vector&#34;&gt;Vecteezy&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Redescubriendo la orientación a objetos</title>
+      <link>http://www.modestosanjuan.com/post/redescubriendo-la-orientacion-a-objetos/</link>
+      <pubDate>Mon, 09 Jan 2017 15:34:32 +0100</pubDate>
+      
+      <guid>http://www.modestosanjuan.com/post/redescubriendo-la-orientacion-a-objetos/</guid>
+      <description>&lt;h2 id=&#34;mi-introducción-en-la-orientación-a-objetos&#34;&gt;Mi introducción en la orientación a objetos&lt;/h2&gt;
+
+&lt;p&gt;La primera vez que escuché hablar de la orientación a objetos yo estaba en un momento de mi aprendizaje en el que no me cuestionaba mucho el porqué de las cosas. Estaba demasiado ocupado en asimilar la cantidad de cosas que tenía que aprender y me limitaba a tratar de ingerirlas sin indigestarme, que ya era bastante. Digamos que estaba en pleno &amp;quot;Shu&amp;quot; y aprendía fundamentalmente por imitación.&lt;/p&gt;
+
+&lt;p&gt;Es por ello que durante mucho tiempo, para mi la orientación a objetos era básicamente repetir siempre los mismos mantras: clases, encapsulación, herencia y polimorfismo.&lt;/p&gt;
+
+&lt;p&gt;Con el paso del tiempo descubrí que estos mantras eran los propios del &amp;quot;estilo&amp;quot; de orientación a objetos propuesto por Bjarne Stroustrup en C++ y continuado por todo un elenco de lenguajes derivados.&lt;/p&gt;
+
+&lt;h2 id=&#34;redescubriendo-la-orientación-a-objetos&#34;&gt;Redescubriendo la orientación a objetos&lt;/h2&gt;
+
+&lt;p&gt;Cuando pasé la fase ingerir información de manera indiscriminada me encontré con que había otros puntos de vista sobre lo que era la orientación a objetos. Podemos encontrarnos con definiciones completamente distintas y con matices respecto a las definiciones habituales que estaba acostumbrado a escuchar.&lt;/p&gt;
+
+&lt;p&gt;Una de las primeras sorpresas fue descubrir que la definición de orientación a objetos propuesta por la persona que había acuñado el término en los años 70, no mencionaba las palabras encapsulacón, herencia o polimorfismo:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;quot;OOP to me means only messaging, local retention and protection and hiding of state-process, and extreme LateBinding of all things.&amp;quot; - Alan Kay&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Como ejemplo de lenguaje que siga fielmente esta definición tenemos Smalltalk, creado entre otros por el propio Alan Kay. Si pasamos del universo vintage a algo un poco más usado actualmente podemos encontrarnos con Objective-C o Ruby.&lt;/p&gt;
+
+&lt;p&gt;Es curioso que esta definición encaja a la perfección con el modelo de actores, creo que se nota su influencia. No obstante, el modelo de actores se postula como un modelo de computación y la orientación a objetos como un paradigma de desarrollo, así que tienen ámbitos distintos.&lt;/p&gt;
+
+&lt;h2 id=&#34;buscando-el-consenso&#34;&gt;Buscando el consenso&lt;/h2&gt;
+
+&lt;p&gt;En el año 1995 Meilir Page-Jones escribió el libro &lt;a href=&#34;https://www.amazon.es/dp/0932633315/&#34;&gt;&amp;quot;What every programmer should know about Object-Oriented design&amp;quot;&lt;/a&gt;. En el libro, Meilir habla precisamente sobre la falta de consenso respecto a la definición de qué era la orientación a objetos y cuenta una anécdota que voy a intentar traducir tomándome muchas libertades:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Hace unos años, decidí resolver el asunto de una vez por todas. Agarré una docena de expertos del mundo de la orientación a objetos y los encerré en una habitación sin comida ni agua. Les dije que les dejaría salir sólo cuando se hubieran puesto de acuerdo en una definición de qué era la orientación a objetos que pudiera publicar.&lt;/p&gt;
+
+&lt;p&gt;Después de una hora de gritos y golpes en la habitación se hizo el silencio. Entré en la habitación temiendo lo peor [...] y me encontré a los gurús vivos, aunque ya no hablaban entre ellos.&lt;/p&gt;
+
+&lt;p&gt;Aparentemente, cada gurú había comenzado la sesión intentando establecer una definición de la orientación a objetos y, después de no llegar a ninguna parte, habían acordado que cada enumerase las propiedades que consideraban indispensables en un entorno orientado a objetos. Cada uno había creado una lista de entre 6 y 10 propiedades indispensables.&lt;/p&gt;
+
+&lt;p&gt;Llegados a este punto, en lugar de crear una gran lista resultado de unirlas todas, decidieron crear una lista sólo con las palabras en común de todas las listas. El resultado fue una lista con una única palabra &amp;quot;encapsulación&amp;quot;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;El resto de la historia es interesante, pero no voy a traducir el libro en este post, si os interesa podéis comprarlo ;)&lt;/p&gt;
+
+&lt;p&gt;Anécdotas aparte, lo que parece que &lt;a href=&#34;http://wiki.c2.com/?NobodyAgreesOnWhatOoIs&#34;&gt;está claro&lt;/a&gt; es que el consenso respecto a qué es exáctamente la orientación a objetos resulta complejo de alcanzar. Mi opinión es que al final terminamos por adoptar el consenso establecido por el lenguaje de programación que estamos utilizando.&lt;/p&gt;
+
+&lt;h2 id=&#34;buscando-un-estilo&#34;&gt;Buscando un estilo&lt;/h2&gt;
+
+&lt;p&gt;Cuando decimos que la orientación a objetos es un paradigma de desarrollo, estamos asumiendo que hay un estilo definido, una serie de patrones y funcionalidades proporcionadas por el lenguaje de programación que utilicemos, que nos van a guiar y van a definir la forma en la que deberíamos desarrollar.&lt;/p&gt;
+
+&lt;p&gt;Todo esto es muy bonito, pero nada más lejos de la realidad. Dentro de la orientación a objetos hay muchos estilos y muchas formas de interpretar el paradigma. Y no sólo entre lenguajes distintos, también dentro del mismo lenguaje, por eso con el paso de los años se han ido imponiendo ciertos patrones y buenas prácticas, aunque algunas siguen siendo &amp;quot;cuestión de gustos&amp;quot;.&lt;/p&gt;
+
+&lt;p&gt;Mi intención es describir en una serie de posts cómo entiendo actualmente la orientación a objetos y cómo la aplico en C#. Me han gustado mucho algunas de las explicaciones del libro de Melir Page-Jones, así que seguramente las use como hilo conductor. No se si serán dos posts o 20, escribiré mientras tenga ganas y tiempo ;)&lt;/p&gt;
+
+&lt;p&gt;Por el momento, este es el listado de posts que he publicado sobre este tema:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.modestosanjuan.com/post/redescubriendo-la-orientacion-a-objetos/&#34;&gt;Redescubriendo la orientación a objetos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.modestosanjuan.com/post/encapsulacion-y-visibilidad/&#34;&gt;Encapsulación y visibilidad&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;La imagen de portada pertenece a &lt;a href=&#34;http://dilbert.com/strip/1995-10-11&#34;&gt;esta tira de Dilbert&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Arquitectura de software como habilidad</title>
@@ -932,188 +1108,6 @@ public class RefererValueProvider : IValueProvider {
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
 &lt;p&gt;Además, al utilizar parameter binding, ya no es necesario registrar el value provider, lo que simplifica su uso.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Bus de eventos usando Reactive Extensions</title>
-      <link>http://www.modestosanjuan.com/bus-de-eventos-usando-reactive-extensions/</link>
-      <pubDate>Tue, 10 Nov 2015 09:32:59 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/bus-de-eventos-usando-reactive-extensions/</guid>
-      <description>&lt;p&gt;Utilizar un bus de eventos dentro de una aplicación es algo bastante común. Un ejemplo muy sencillo podría ser desacoplar la lógica de envío de notificaciones al usuario en WPF desde los ViewModels sin necesidad de recurrir a la inyección de dependencias en el ViewModel. Aunque hasta ahora había recurrido siempre a programar mi propio bus de eventos, utilizar &lt;a href=&#34;https://github.com/Reactive-Extensions/Rx.NET&#34; target=&#34;_blank&#34;&gt;Reactive Extensions&lt;/a&gt; me ha resultado muy interesante, útil y sencillo. Este sería un ejemplo de bus de eventos utilizando RX:&lt;/p&gt;
-
-&lt;pre class=&#34;lang:c# decode:true&#34;&gt;public static class ReactiveEventBus {
-    private static readonly Subject&amp;lt;object&amp;gt; messageSubject = new Subject&amp;lt;object&amp;gt;();
-
-    public static void Send&amp;lt;T&amp;gt;(T message) {
-        messageSubject.OnNext(message);
-    }
-
-    public static IObservable&amp;lt;T&amp;gt; AsObservable&amp;lt;T&amp;gt;() { return messageSubject.OfType&amp;lt;T&amp;gt;(); }
-}&lt;/pre&gt;
-
-&lt;p&gt;Este código lo encontré &lt;a href=&#34;http://rogeralsing.com/2010/01/23/rx-framework-building-a-message-bus/&#34; target=&#34;_blank&#34;&gt;aquí&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Lo habitual en un bus de eventos es tener un mecanismo para enviar eventos y otro para suscribirnos a ellos. En este caso, en lugar de habilitar la suscripción, lo que me proporciona es la posibilidad de obtener un &lt;strong&gt;IObservable&lt;T&gt;&lt;/strong&gt;, siendo &lt;strong&gt;T&lt;/strong&gt; el tipo del mensaje que quiero observar.&lt;/p&gt;
-
-&lt;p&gt;Aplicado al ejemplo de las notificaciones, en la MainWindow (o donde sea) podría añadir este código:&lt;/p&gt;
-
-&lt;pre class=&#34;lang:c# decode:true&#34;&gt;var subscription = ReactiveEventBus.AsObservable&amp;lt;GlobalMessage&amp;gt;().Subscribe(message =&amp;gt; MessageBox.Show(message.Message));
-Closed += (sender, args) =&amp;gt; subscription.Dispose();
-&lt;/pre&gt;
-
-&lt;p&gt;Y eso me permitiría poder enviar mensajes desde cualquier ViewModel (o cualquier otro sitio) con este código:&lt;/p&gt;
-
-&lt;pre class=&#34;lang:c# decode:true&#34;&gt;ReactiveEventBus.Send(new GlobalMessage(&#34;Hola!&#34;));
-&lt;/pre&gt;
-
-&lt;p&gt;Es muy importante tener en cuenta la llamada al &lt;strong&gt;Dispose()&lt;/strong&gt; de la suscripción para evitar problemas de liberación de recursos.&lt;/p&gt;
-
-&lt;p&gt;Lo interesante de que el bus de eventos me de un &lt;strong&gt;IObservable&lt;T&gt;&lt;/strong&gt; es que, combinado con RX puedo hacer cosas más complejas de una forma muy sencilla, como:&lt;/p&gt;
-
-&lt;pre class=&#34;lang:c# decode:true &#34;&gt;ReactiveEventBus.AsObservable&amp;lt;ScopedEvent&amp;gt;()
-    .Where(evt =&amp;gt; evt.Scope == &#34;Scope1&#34;)
-    .Subscribe(evt =&amp;gt; PUT YOUR CODE FOR Scope1 HERE);
-
-ReactiveEventBus.AsObservable&amp;lt;ScopedEvent&amp;gt;()
-    .Where(evt =&amp;gt; evt.Scope == &#34;Scope2&#34;)
-    .Subscribe(evt =&amp;gt; PUT YOUR CODE FOR Scope2 HERE);
-&lt;/pre&gt;
-
-&lt;p&gt;Respecto a si tiene sentido el uso de una propiedad para determinar el scope o sería más adecuado utilizar un objeto de distinto tipo, la respuesta es la de siempre: &lt;strong&gt;depende&lt;/strong&gt; 😉&lt;/p&gt;
-
-&lt;p&gt;Algunos casos en los que me parece interesante son el envío un evento destinado únicamente a los UserControl que están mostrando una entidad concreta en un interfaz MDI o hacer que el scope de un evento sea una ventana concreta.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>[PowerShell] Sacando partido a la conversión de tipos</title>
-      <link>http://www.modestosanjuan.com/powershell-sacando-partido-a-la-conversion-de-tipos/</link>
-      <pubDate>Thu, 22 Oct 2015 00:27:51 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/powershell-sacando-partido-a-la-conversion-de-tipos/</guid>
-      <description>&lt;p&gt;PowerShell ETS (Extended Type System) forma parte de las tripas de PowerShell y es la parte que permite que convivan tipos de .Net, COM, ADSI y WMI pero que a nosotros se nos muestren como objetos de PowerShell de primer orden.&lt;/p&gt;
-
-&lt;p&gt;ETS tiene mucha potencia y no siempre es fácil obtener documentación sobre cómo hacer las cosas, pero en este post quiero dejarle a mi yo futuro un regalito para cuando necesite realizar conversión de tipos de .Net en PowerShell.&lt;/p&gt;
-
-&lt;p&gt;El ejemplo es muy sencillo y me ha surgido en un contexto real y para explicarlo lo voy a simplificar todo lo que pueda. Imaginemos que tenemos un tipo personalizado tal que este:&lt;/p&gt;
-
-&lt;pre class=&#34;lang:ps decode:true&#34;&gt;Add-Type -TypeDefinition @”
-using System;
-using System.Collections;
- 
-namespace Configuration
-{
-    public class ConfigFolder {
-        public ConfigFolder() {}
-        
-        public ConfigFolder(string path) {
-            Path = path;
-        }
-
-        public string Path { get; set; }
-
-        public override string ToString() {
-            return Path;
-        }
-    }
-}
-“@
-&lt;/pre&gt;
-
-&lt;p&gt;Al sobreescribir el método &lt;strong&gt;ToString()&lt;/strong&gt; del tipo, esto nos permite hacer cosas como esta:&lt;/p&gt;
-
-&lt;pre class=&#34;lang:ps decode:true&#34;&gt;Function Write-AsString($folder) {
-    &#34;as string we get: {0}&#34; -f $folder
-}
-
-$configFolder = New-Object Configuration.ConfigFolder
-$configFolder.Path = &#34;c:\anyPath\&#34;
-
-Write-AsString $configFolder
-&lt;/pre&gt;
-
-&lt;p&gt;Como la función &lt;strong&gt;Write-AsString&lt;/strong&gt; no especifica el tipo para &lt;strong&gt;$folder&lt;/strong&gt;, al llamar a la función con el parámetro de tipo &lt;strong&gt;ConfigFolder&lt;/strong&gt;, se está llamando al método &lt;strong&gt;ToString()&lt;/strong&gt; para convertir el valor automáticamente. El tema es que si queremos sacarle un poco más de partido y especificar un tipo que no sea string a &lt;strong&gt;$folder&lt;/strong&gt;, lo que obtendremos será un error. Por ejemplo:&lt;/p&gt;
-
-&lt;pre class=&#34;lang:ps decode:true&#34;&gt;Function Write-FullName([System.IO.DirectoryInfo]$folder) {
-    &#34;BaseName is: {0}&#34; -f $folder.BaseName
-}
-
-$configFolder = New-Object Configuration.ConfigFolder
-$configFolder.Path = &#34;c:\anyPath\&#34;
-
-Write-FullName $configFolder
-&lt;/pre&gt;
-
-&lt;p&gt;Al ejecutar este código nos dará un error de conversión de tipos porque PowerShell no tiene ni la menor idea de cómo convertir un ConfigFolder en un System.IO.DirectoryInfo. Aquí es donde ETS viene al rescate.  Además de añadir el tipo ConfigFolder, es necesario añadir un tipo que realice la conversión automáticamente:&lt;/p&gt;
-
-&lt;pre class=&#34;lang:ps decode:true &#34;&gt;Add-Type -TypeDefinition @”
-using System;
-using System.Collections;
-using System.Management.Automation;
- 
-namespace Configuration
-{
-    public class ConfigFolderConverter : PSTypeConverter {
-        public override bool CanConvertFrom(Object sourceValue, Type destinationType)
-        {
-            string src = sourceValue as string;
-            if (src != null) {
-                return true;
-            }
-            return false;
-        }
- 
-        public override object ConvertFrom(object sourceValue, Type destinationType, IFormatProvider provider, bool IgnoreCase) {
-            if (sourceValue == null) { throw new InvalidCastException(&#34;no conversion possible&#34;); }
-            if (this.CanConvertFrom(sourceValue, destinationType)) {
-                try {
-                    string src = sourceValue as string;
-                    return new Aida.ConfigFolder(src);
-                }
-                catch (Exception) { throw new InvalidCastException(&#34;no conversion possible&#34;); }
-            }
-            throw new InvalidCastException(&#34;no conversion possible&#34;);
-        }
-        public override bool CanConvertTo(object value, Type destinationType) { 
-            if((destinationType == typeof(System.IO.DirectoryInfo)) &amp;&amp; (value.GetType() == typeof(Configuration.ConfigFolder))) {
-                return true;
-            }
-            return false; 
-        }
-        public override object ConvertTo(object value, Type destinationType, IFormatProvider provider, bool IgnoreCase) {
-            if (CanConvertTo(value, destinationType)) {
-                return new System.IO.DirectoryInfo((value as Configuration.ConfigFolder).Path);
-            }
-            throw new InvalidCastException(&#34;no conversion possible&#34;);
-        }
-    }
-}
-“@&lt;/pre&gt;
-
-&lt;p&gt;Por supuesto, este tipo es un ejemplo y podría dejarse un código mucho más limpio, pero cualquiera que sepa lo que es experimentar con el &lt;strong&gt;Add-Type&lt;/strong&gt; de PowerShell entenderá que porqué prefiero no dedicarle mucho tiempo a limpiarlo y a irlo probando ;).&lt;/p&gt;
-
-&lt;p&gt;Después de añadir este tipo, es necesario decirle a PowerShell que lo tiene que usar. Para esto es necesario crear un archivo (por ejemplo: ConfigFolder.Converter.ps1xml) que sería así:&lt;/p&gt;
-
-&lt;pre class=&#34;lang:xhtml decode:true &#34;&gt;&amp;lt;Types&amp;gt;
-  &amp;lt;Type&amp;gt;
-    &amp;lt;Name&amp;gt;Configuration.ConfigFolder&amp;lt;/Name&amp;gt;
-    &amp;lt;TypeConverter&amp;gt;
-      &amp;lt;TypeName&amp;gt;Configuration.ConfigFolderConverter&amp;lt;/TypeName&amp;gt;
-    &amp;lt;/TypeConverter&amp;gt;
-  &amp;lt;/Type&amp;gt;
-&amp;lt;/Types&amp;gt;&lt;/pre&gt;
-
-&lt;p&gt;Y luego ejecutar el comando:&lt;/p&gt;
-
-&lt;pre class=&#34;lang:ps decode:true&#34;&gt;Update-TypeData .\ConfigFolder.Converter.ps1xml&lt;/pre&gt;
-
-&lt;p&gt;Una vez hecho esto, el ejemplo que antes fallaba ahora funcionará perfectamente, permitiendo conversiones automáticas del tipo &lt;strong&gt;ConfigFolder&lt;/strong&gt; a &lt;strong&gt;System.IO.DirectoryInfo&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Esto es sólo un ejemplo de lo que PowerShell ETS tiene para ofrecernos. Además de custom converters, también permite extender clases existentes, añadir alias y algunas cosillas curiosas.&lt;/p&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
 </description>
     </item>
     

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es-es">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+
+
+    
+        
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:image" content="http://www.modestosanjuan.com/images/yoda_getters_setters.png"/>
+    
+
+
+
+<meta name="twitter:title" content="Encapsulación, visibilidad y retención de estado"/>
+<meta name="twitter:description" content="Para empezar nada mejor que hablar del concepto el que se erigió como el único punto en común del comité de sabios mencionado en el anterior post la encapsulación. Después hablaremos de la visibilidad, un concepto que suele ir de la mano de la encapsulación, llegando a tratarse como si fueran lo mismo. Para finalizar, dedicaremos algunas líneas a hablar de la retención del estado, algo muy obvio pero esencial en orientación a objetos."/>
+
+    <meta name="twitter:site" content="@msanjuan"/>
+
+
+
+  	<meta property="og:title" content=" Encapsulación, visibilidad y retención de estado &middot;  Blog de Modesto San Juan" />
+  	<meta property="og:site_name" content="Blog de Modesto San Juan" />
+  	<meta property="og:url" content="http://www.modestosanjuan.com/post/encapsulacion-visibilidad-y-retencion-de-estado/" />
+
+    
+  	<meta property="og:type" content="article" />
+
+    <meta property="og:article:published_time" content="2017-01-09T15:34:32&#43;01:00" />
+
+    
+    
+
+    <title>
+       Encapsulación, visibilidad y retención de estado &middot;  Blog de Modesto San Juan
+    </title>
+
+    <meta name="description" content="DESCUBRIMIENTOS, IDEAS Y OTRAS CHORRADAS" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="http://www.modestosanjuan.com/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="http://www.modestosanjuan.com/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="http://www.modestosanjuan.com/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.modestosanjuan.com/css/nav.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/arta.min.css">
+
+    
+      
+          <link href="http://www.modestosanjuan.com/index.xml" rel="alternate" type="application/rss+xml" title="Blog de Modesto San Juan" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.17" />
+
+    <link rel="canonical" href="http://www.modestosanjuan.com/post/encapsulacion-visibilidad-y-retencion-de-estado/" />
+
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-58663898-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    
+
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+        
+    </ul>
+    
+    
+    <a class="subscribe-button icon-feed" href="http://www.modestosanjuan.com/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+
+  
+  <header class="main-header post-head" style="background-image: url(http://www.modestosanjuan.com/images/yoda_getters_setters.png)">
+  
+  <nav class="main-nav overlay clearfix">
+
+
+  
+      <a class="blog-logo" href="http://www.modestosanjuan.com/"><img src="http://www.modestosanjuan.com/images/logo.jpg" alt="Home" /></a>
+  
+  
+      <a class="menu-button icon-feed" href="http://www.modestosanjuan.com/index.xml">&nbsp;&nbsp;Subscribe</a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">Encapsulación, visibilidad y retención de estado</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2017-01-09T15:34:32&#43;01:00">
+            Jan 9, 2017
+          </time>
+        
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <p>Para empezar nada mejor que hablar del concepto el que se erigió como el único punto en común del comité de sabios mencionado en el anterior post la encapsulación. Después hablaremos de la visibilidad, un concepto que suele ir de la mano de la encapsulación, llegando a tratarse como si fueran lo mismo. Para finalizar, dedicaremos algunas líneas a hablar de la retención del estado, algo muy obvio pero esencial en orientación a objetos.</p>
+
+<h2 id="encapsulación">Encapsulación</h2>
+
+<blockquote>
+<p>La encapsulación permite agrupar funcionalidades (métodos) y estado (datos) de una forma cohesiva. Los métodos proporcionarán los mecanismos adecuados para modificar el estado y en algunos casos también serán la puerta de acceso a este.</p>
+</blockquote>
+
+<p>Así es, no es necesaria mucha más parafernalia para describir qué es la encapsulación. Es más, podríamos incluso definirlo como &quot;tener los datos y sus funcionalidades directamente relacionadas juntitos y trazar un perímetro al que le pondremos un nombre&quot;, pero la definición quedaría más fea ;)</p>
+
+<p>En lenguajes como Java, la forma de acceder al estado será mediante métodos tipo getXXX(). En C# disponemos de propiedades, así que podemos recurrir a estas para acceder al estado. No obstante, en ocasiones también resultará conveniente recurrir a métodos para acceder al estado.</p>
+
+<h2 id="visibilidad">Visibilidad</h2>
+
+<p>Cuando hablamos de visibilidad solemos referirnos a la ocultación o publicación tanto de la información del estado como de la implementación de la funcionalidad de una clase.</p>
+
+<blockquote>
+<p>La visibilidad nos permite ocultar al exterior detalles del estado o de la implementación que no queremos que sean expuestos fuera de nuestra &quot;unidad de encapsulación&quot;</p>
+</blockquote>
+
+<p>Un ejemplo muy sencillo sería el siguiente: en un juego no queremos que se sepa la vida de los personajes, únicamente queremos que se sepa si el personaje está vivo, herido o muerto. Podríamos recurrir a una propiedad privada que almacene los puntos de vida del personaje y un método público que nos permita obtener su estado. El método calcularía el estado en función de los puntos de vida del jugador pero los puntos de vida no quedarían expuestos en ningún momento.</p>
+
+<p>El concepto de visibilidad suele acompañar al de encapsulación hasta el punto de que a veces se asume que encapsulación y visibilidad son sinónimos. Esto es algo que no pocos libros han descrito de este modo. Pero la palabra &quot;encapsulación&quot; se utiliza con significados distintos: en unos de ellos se utiliza para hablar de visibilidad, y en otros se refiere exclusivamente a las definiciones que utilizo en este post. Este tema que lo debatí bastante con Fran Reyes en su día y su punto de vista me convenció.</p>
+
+<blockquote>
+<p>El propósito de la encapsulación no es la ocultación de información.</p>
+</blockquote>
+
+<p>Lenguajes como Python proporcionan encapsulación a través de clases pero el concepto de visibilidad privada es en esencia una convención.</p>
+
+<h2 id="retención-de-estado">Retención de estado</h2>
+
+<p>Cuando hablamos de programación funcional, al llamar a una función, esta no mantiene estado ninguno de una ejecución a otra. Cada vez que llamamos a una función debemos proporcionarle los datos con los que tiene que trabajar y esta a su vez nos devolverá los datos con las modificaciones pertinentes aplicadas.</p>
+
+<p>En orientación a objetos, a nuestros métodos no debemos proporcionarles la información de estado con la que tienen que trabajar, ya que la tienen accesible dentro del objeto. Un objeto mantiene su estado entre cada llamada.</p>
+
+<h2 id="modelos-anémicos">Modelos anémicos</h2>
+
+<p>El concepto de modelo anémico está relacionado con la incorrecta aplicación de la orientación a objetos. Cuando tenemos clases que únicamente tienen propiedades con getters y setters públicos y el código relacionado con la gestión del estado está fuera de las propias clases, estamos hablando de que tenemos un modelo anémico.</p>
+
+<p>Si hacemos que la lógica de gestión del estado esté fuera del objecto, no estaremos aplicando correctamente la encapsulación y por lo tanto, no estamos aplicando correctamente orientación a objetos.</p>
+
+<p>Un ejemplo sencillo (sacado de la wikipedia) sería:</p>
+
+<p>Anémico:</p>
+
+<pre><code class="language-csharp">class Box
+{
+    public int Height { get; set; }
+    public int Width { get; set; }
+}
+</code></pre>
+
+<p>Orientado a objetos:</p>
+
+<pre><code class="language-csharp">class Box
+{
+    public int Height { get; private set; }
+    public int Width { get; private set; }
+
+    public Box(int height, int width)
+    {
+        if (height &lt;= 0) {
+            throw new ArgumentOutOfRangeException(nameof(height));
+        }
+        if (width &lt;= 0) {
+            throw new ArgumentOutOfRangeException(nameof(width));
+        }
+        Height = height;
+        Width = width;
+    }
+}
+</code></pre>
+
+<h2 id="propiedades-vs-campos-en-c">Propiedades vs campos en C#
+</h2>
+
+<p>En ocasiones existe la duda de si en C# deberíamos utilizar propiedades o campos públicos para exponer el estado. Para muchos desarrolladores no hay mucha diferencia pero debermos tener en cuenta que las propiedades tienen características diferenciales respecto a los campos:</p>
+
+<ul>
+<li>El acceso a una propiedad se considera como una llamada a un método, eso significa que podemos cambiar la implementación tanto del método Get como del Set en el futuro. Esto está relacionado con el concepto de ocultación de la implementación y para una variable no es posible.</li>
+<li>Al considerar el acceso a una propiedad como un método, podemos ejecutar código al acceder a su valor.</li>
+<li>Utilizando propiedades podemos gestionar el nivel de visibilidad del get y el set por separado.</li>
+<li>Las propiedades no pueden ser pasadas por referencia a métodos.</li>
+</ul>
+
+<p>Sobre si se debe usar una propiedad o un método para los getter, personalmente me gusta recurrir a propiedades cuando accedo al estado &quot;en bruto&quot;, sin tratar y por lo tanto lo voy a obtener de manera inmediata. Recurro a métodos cuando voy a realizar alguna transformación o a aplicar algún tipo de lógica, especialmente si se trata de una lógica pesada. Creo que se explicita mucho mejor que al acceder a ese dato a través de un método estamos realizando una operación que no va a ser instantánea.</p>
+
+<p>Recordemos además que los métodos podemos hacerlos asíncronos, pero las propiedades no.</p>
+
+<p>Respecto a las colecciones de datos, hay que pensar bien el tipo de colección que vamos a utilizar. Si recurrimos a colecciones que no sean &quot;readonly&quot;, perderemos la posibilidad de interceptar con facilidad el código que modique la colección, algo muy habitual cuando queremos aplicar validaciones o cualquier otro tipo de lógica. Si exponemos una colección que no es de sólo lectura, estamos impidiendo la posibilidad de encapsular la lógica de gestión de esa propiedad.</p>
+
+<p>Otro concepto interesante relacionado con la retención de estado es la inmutabilidad, pero mejor lo dejamos para otro día ;)</p>
+
+<p>Por el momento, este es el listado de posts que he publicado sobre este tema:</p>
+
+<ol>
+<li><a href="/post/redescubriendo-la-orientacion-a-objetos/">Redescubriendo la orientación a objetos</a></li>
+<li><a href="/post/encapsulacion-y-visibilidad/">Encapsulación y visibilidad</a></li>
+</ol>
+
+<p>El dibujo de Yoda está sacado de la web <a href="https://www.vecteezy.com/people/36181-yoda-vector">Vecteezy</a></p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+    <figure class="author-image">
+        <a class="img" href="http://www.modestosanjuan.com/" style="background-image: url(http://www.modestosanjuan.com/images/logo.jpg)"><span class="hidden">Modesto San Juan's Picture</span></a>
+    </figure>
+    
+
+    
+
+
+
+
+
+<section class="author">
+  <h4><a href="http://www.modestosanjuan.com/">Modesto San Juan</a></h4>
+  
+  <p>Desarrollo software e intento hacerlo bien</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Madrid, Spain</span>
+    <span class="author-link icon-link"><a href="http://www.modestosanjuan.com">http://www.modestosanjuan.com</a></span>
+  </div>
+</section>
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Encapsulaci%c3%b3n%2c%20visibilidad%20y%20retenci%c3%b3n%20de%20estado&nbsp;-&nbsp;Blog%20de%20Modesto%20San%20Juan&amp;url=http%3a%2f%2fwww.modestosanjuan.com%2fpost%2fencapsulacion-visibilidad-y-retencion-de-estado%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.modestosanjuan.com%2fpost%2fencapsulacion-visibilidad-y-retencion-de-estado%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.modestosanjuan.com%2fpost%2fencapsulacion-visibilidad-y-retencion-de-estado%2f&amp;description=Encapsulaci%c3%b3n%2c%20visibilidad%20y%20retenci%c3%b3n%20de%20estado"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=http%3a%2f%2fwww.modestosanjuan.com%2fpost%2fencapsulacion-visibilidad-y-retencion-de-estado%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_shortname = 'modestosanjuan';
+  var disqus_url = 'http:\/\/www.modestosanjuan.com\/post\/encapsulacion-visibilidad-y-retencion-de-estado\/';
+  (function() {
+    if (window.location.hostname == "localhost")
+          return;
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+  </footer>
+</article>
+
+</main>
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">Blog de Modesto San Juan</a> </section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="http://www.modestosanjuan.com/js/jquery.js"></script>
+    <script type="text/javascript" src="http://www.modestosanjuan.com/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="http://www.modestosanjuan.com/js/index.js"></script>
+    
+</body>
+</html>
+

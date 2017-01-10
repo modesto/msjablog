@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es-es">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+
+
+    
+        
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:image" content="http://www.modestosanjuan.com/images/oop.jpg"/>
+    
+
+
+
+<meta name="twitter:title" content="Redescubriendo la orientación a objetos"/>
+<meta name="twitter:description" content="Mi introducción en la orientación a objetos La primera vez que escuché hablar de la orientación a objetos yo estaba en un momento de mi aprendizaje en el que no me cuestionaba mucho el porqué de las cosas. Estaba demasiado ocupado en asimilar la cantidad de cosas que tenía que aprender y me limitaba a tratar de ingerirlas sin indigestarme, que ya era bastante. Digamos que estaba en pleno &quot;Shu&quot; y aprendía fundamentalmente por imitación."/>
+
+    <meta name="twitter:site" content="@msanjuan"/>
+
+
+
+  	<meta property="og:title" content=" Redescubriendo la orientación a objetos &middot;  Blog de Modesto San Juan" />
+  	<meta property="og:site_name" content="Blog de Modesto San Juan" />
+  	<meta property="og:url" content="http://www.modestosanjuan.com/post/redescubriendo-la-orientacion-a-objetos/" />
+
+    
+  	<meta property="og:type" content="article" />
+
+    <meta property="og:article:published_time" content="2017-01-09T15:34:32&#43;01:00" />
+
+    
+    
+
+    <title>
+       Redescubriendo la orientación a objetos &middot;  Blog de Modesto San Juan
+    </title>
+
+    <meta name="description" content="DESCUBRIMIENTOS, IDEAS Y OTRAS CHORRADAS" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="http://www.modestosanjuan.com/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="http://www.modestosanjuan.com/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="http://www.modestosanjuan.com/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.modestosanjuan.com/css/nav.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/arta.min.css">
+
+    
+      
+          <link href="http://www.modestosanjuan.com/index.xml" rel="alternate" type="application/rss+xml" title="Blog de Modesto San Juan" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.17" />
+
+    <link rel="canonical" href="http://www.modestosanjuan.com/post/redescubriendo-la-orientacion-a-objetos/" />
+
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-58663898-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    
+
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+        
+    </ul>
+    
+    
+    <a class="subscribe-button icon-feed" href="http://www.modestosanjuan.com/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+
+  
+  <header class="main-header post-head" style="background-image: url(http://www.modestosanjuan.com/images/oop.jpg)">
+  
+  <nav class="main-nav overlay clearfix">
+
+
+  
+      <a class="blog-logo" href="http://www.modestosanjuan.com/"><img src="http://www.modestosanjuan.com/images/logo.jpg" alt="Home" /></a>
+  
+  
+      <a class="menu-button icon-feed" href="http://www.modestosanjuan.com/index.xml">&nbsp;&nbsp;Subscribe</a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">Redescubriendo la orientación a objetos</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2017-01-09T15:34:32&#43;01:00">
+            Jan 9, 2017
+          </time>
+        
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <h2 id="mi-introducción-en-la-orientación-a-objetos">Mi introducción en la orientación a objetos</h2>
+
+<p>La primera vez que escuché hablar de la orientación a objetos yo estaba en un momento de mi aprendizaje en el que no me cuestionaba mucho el porqué de las cosas. Estaba demasiado ocupado en asimilar la cantidad de cosas que tenía que aprender y me limitaba a tratar de ingerirlas sin indigestarme, que ya era bastante. Digamos que estaba en pleno &quot;Shu&quot; y aprendía fundamentalmente por imitación.</p>
+
+<p>Es por ello que durante mucho tiempo, para mi la orientación a objetos era básicamente repetir siempre los mismos mantras: clases, encapsulación, herencia y polimorfismo.</p>
+
+<p>Con el paso del tiempo descubrí que estos mantras eran los propios del &quot;estilo&quot; de orientación a objetos propuesto por Bjarne Stroustrup en C++ y continuado por todo un elenco de lenguajes derivados.</p>
+
+<h2 id="redescubriendo-la-orientación-a-objetos">Redescubriendo la orientación a objetos</h2>
+
+<p>Cuando pasé la fase ingerir información de manera indiscriminada me encontré con que había otros puntos de vista sobre lo que era la orientación a objetos. Podemos encontrarnos con definiciones completamente distintas y con matices respecto a las definiciones habituales que estaba acostumbrado a escuchar.</p>
+
+<p>Una de las primeras sorpresas fue descubrir que la definición de orientación a objetos propuesta por la persona que había acuñado el término en los años 70, no mencionaba las palabras encapsulacón, herencia o polimorfismo:</p>
+
+<blockquote>
+<p>&quot;OOP to me means only messaging, local retention and protection and hiding of state-process, and extreme LateBinding of all things.&quot; - Alan Kay</p>
+</blockquote>
+
+<p>Como ejemplo de lenguaje que siga fielmente esta definición tenemos Smalltalk, creado entre otros por el propio Alan Kay. Si pasamos del universo vintage a algo un poco más usado actualmente podemos encontrarnos con Objective-C o Ruby.</p>
+
+<p>Es curioso que esta definición encaja a la perfección con el modelo de actores, creo que se nota su influencia. No obstante, el modelo de actores se postula como un modelo de computación y la orientación a objetos como un paradigma de desarrollo, así que tienen ámbitos distintos.</p>
+
+<h2 id="buscando-el-consenso">Buscando el consenso</h2>
+
+<p>En el año 1995 Meilir Page-Jones escribió el libro <a href="https://www.amazon.es/dp/0932633315/">&quot;What every programmer should know about Object-Oriented design&quot;</a>. En el libro, Meilir habla precisamente sobre la falta de consenso respecto a la definición de qué era la orientación a objetos y cuenta una anécdota que voy a intentar traducir tomándome muchas libertades:</p>
+
+<blockquote>
+<p>Hace unos años, decidí resolver el asunto de una vez por todas. Agarré una docena de expertos del mundo de la orientación a objetos y los encerré en una habitación sin comida ni agua. Les dije que les dejaría salir sólo cuando se hubieran puesto de acuerdo en una definición de qué era la orientación a objetos que pudiera publicar.</p>
+
+<p>Después de una hora de gritos y golpes en la habitación se hizo el silencio. Entré en la habitación temiendo lo peor [...] y me encontré a los gurús vivos, aunque ya no hablaban entre ellos.</p>
+
+<p>Aparentemente, cada gurú había comenzado la sesión intentando establecer una definición de la orientación a objetos y, después de no llegar a ninguna parte, habían acordado que cada enumerase las propiedades que consideraban indispensables en un entorno orientado a objetos. Cada uno había creado una lista de entre 6 y 10 propiedades indispensables.</p>
+
+<p>Llegados a este punto, en lugar de crear una gran lista resultado de unirlas todas, decidieron crear una lista sólo con las palabras en común de todas las listas. El resultado fue una lista con una única palabra &quot;encapsulación&quot;.</p>
+</blockquote>
+
+<p>El resto de la historia es interesante, pero no voy a traducir el libro en este post, si os interesa podéis comprarlo ;)</p>
+
+<p>Anécdotas aparte, lo que parece que <a href="http://wiki.c2.com/?NobodyAgreesOnWhatOoIs">está claro</a> es que el consenso respecto a qué es exáctamente la orientación a objetos resulta complejo de alcanzar. Mi opinión es que al final terminamos por adoptar el consenso establecido por el lenguaje de programación que estamos utilizando.</p>
+
+<h2 id="buscando-un-estilo">Buscando un estilo</h2>
+
+<p>Cuando decimos que la orientación a objetos es un paradigma de desarrollo, estamos asumiendo que hay un estilo definido, una serie de patrones y funcionalidades proporcionadas por el lenguaje de programación que utilicemos, que nos van a guiar y van a definir la forma en la que deberíamos desarrollar.</p>
+
+<p>Todo esto es muy bonito, pero nada más lejos de la realidad. Dentro de la orientación a objetos hay muchos estilos y muchas formas de interpretar el paradigma. Y no sólo entre lenguajes distintos, también dentro del mismo lenguaje, por eso con el paso de los años se han ido imponiendo ciertos patrones y buenas prácticas, aunque algunas siguen siendo &quot;cuestión de gustos&quot;.</p>
+
+<p>Mi intención es describir en una serie de posts cómo entiendo actualmente la orientación a objetos y cómo la aplico en C#. Me han gustado mucho algunas de las explicaciones del libro de Melir Page-Jones, así que seguramente las use como hilo conductor. No se si serán dos posts o 20, escribiré mientras tenga ganas y tiempo ;)</p>
+
+<p>Por el momento, este es el listado de posts que he publicado sobre este tema:</p>
+
+<ol>
+<li><a href="/post/redescubriendo-la-orientacion-a-objetos/">Redescubriendo la orientación a objetos</a></li>
+<li><a href="/post/encapsulacion-y-visibilidad/">Encapsulación y visibilidad</a></li>
+</ol>
+
+<p>La imagen de portada pertenece a <a href="http://dilbert.com/strip/1995-10-11">esta tira de Dilbert</a></p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+    <figure class="author-image">
+        <a class="img" href="http://www.modestosanjuan.com/" style="background-image: url(http://www.modestosanjuan.com/images/logo.jpg)"><span class="hidden">Modesto San Juan's Picture</span></a>
+    </figure>
+    
+
+    
+
+
+
+
+
+<section class="author">
+  <h4><a href="http://www.modestosanjuan.com/">Modesto San Juan</a></h4>
+  
+  <p>Desarrollo software e intento hacerlo bien</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Madrid, Spain</span>
+    <span class="author-link icon-link"><a href="http://www.modestosanjuan.com">http://www.modestosanjuan.com</a></span>
+  </div>
+</section>
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Redescubriendo%20la%20orientaci%c3%b3n%20a%20objetos&nbsp;-&nbsp;Blog%20de%20Modesto%20San%20Juan&amp;url=http%3a%2f%2fwww.modestosanjuan.com%2fpost%2fredescubriendo-la-orientacion-a-objetos%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.modestosanjuan.com%2fpost%2fredescubriendo-la-orientacion-a-objetos%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.modestosanjuan.com%2fpost%2fredescubriendo-la-orientacion-a-objetos%2f&amp;description=Redescubriendo%20la%20orientaci%c3%b3n%20a%20objetos"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=http%3a%2f%2fwww.modestosanjuan.com%2fpost%2fredescubriendo-la-orientacion-a-objetos%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_shortname = 'modestosanjuan';
+  var disqus_url = 'http:\/\/www.modestosanjuan.com\/post\/redescubriendo-la-orientacion-a-objetos\/';
+  (function() {
+    if (window.location.hostname == "localhost")
+          return;
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+  </footer>
+</article>
+
+</main>
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">Blog de Modesto San Juan</a> </section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="http://www.modestosanjuan.com/js/jquery.js"></script>
+    <script type="text/javascript" src="http://www.modestosanjuan.com/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="http://www.modestosanjuan.com/js/index.js"></script>
+    
+</body>
+</html>
+
