@@ -1,0 +1,62 @@
++++
+author = ""
+title = "Redescubriendo la orientación a objetos"
+draft = false
+date = "2017-01-09T15:34:32+01:00"
+slug = "redescubriendo-la-orientacion-a-objetos"
+tags = []
+image = "images/oop.jpg"
+comments = true     # set false to hide Disqus comments
+share = true        # set false to share buttons
+menu = ""           # set "main" to add this content to the main menu
++++
+
+## Mi introducción en la orientación a objetos
+
+La primera vez que escuché hablar de la orientación a objetos yo estaba en un momento de mi aprendizaje en el que no me cuestionaba mucho el porqué de las cosas. Estaba demasiado ocupado en asimilar la cantidad de cosas que tenía que aprender y me limitaba a tratar de ingerirlas sin indigestarme, que ya era bastante. Digamos que estaba en pleno "Shu" y aprendía fundamentalmente por imitación.
+
+Es por ello que durante mucho tiempo, para mi la orientación a objetos era básicamente repetir siempre los mismos mantras: clases, encapsulación, herencia y polimorfismo.
+
+Con el paso del tiempo descubrí que estos mantras eran los propios del "estilo" de orientación a objetos propuesto por Bjarne Stroustrup en C++ y continuado por todo un elenco de lenguajes derivados. 
+
+## Redescubriendo la orientación a objetos
+
+Cuando pasé la fase ingerir información de manera indiscriminada me encontré con que había otros puntos de vista sobre lo que era la orientación a objetos. Podemos encontrarnos con definiciones completamente distintas y con matices respecto a las definiciones habituales que estaba acostumbrado a escuchar.
+
+Una de las primeras sorpresas fue descubrir que la definición de orientación a objetos propuesta por la persona que había acuñado el término en los años 70, no mencionaba las palabras encapsulacón, herencia o polimorfismo:
+
+> "OOP to me means only messaging, local retention and protection and hiding of state-process, and extreme LateBinding of all things." - Alan Kay
+
+Como ejemplo de lenguaje que siga fielmente esta definición tenemos Smalltalk, creado entre otros por el propio Alan Kay. Si pasamos del universo vintage a algo un poco más usado actualmente podemos encontrarnos con Objective-C o Ruby.
+
+Es curioso que esta definición encaja a la perfección con el modelo de actores, creo que se nota su influencia. No obstante, el modelo de actores se postula como un modelo de computación y la orientación a objetos como un paradigma de desarrollo, así que tienen ámbitos distintos.
+
+## Buscando el consenso
+
+En el año 1995 Meilir Page-Jones escribió el libro ["What every programmer should know about Object-Oriented design"](https://www.amazon.es/dp/0932633315/). En el libro, Meilir habla precisamente sobre la falta de consenso respecto a la definición de qué era la orientación a objetos y cuenta una anécdota que voy a intentar traducir tomándome muchas libertades:
+
+> Hace unos años, decidí resolver el asunto de una vez por todas. Agarré una docena de expertos del mundo de la orientación a objetos y los encerré en una habitación sin comida ni agua. Les dije que les dejaría salir sólo cuando se hubieran puesto de acuerdo en una definición de qué era la orientación a objetos que pudiera publicar.
+
+> Después de una hora de gritos y golpes en la habitación se hizo el silencio. Entré en la habitación temiendo lo peor [...] y me encontré a los gurús vivos, aunque ya no hablaban entre ellos.
+
+> Aparentemente, cada gurú había comenzado la sesión intentando establecer una definición de la orientación a objetos y, después de no llegar a ninguna parte, habían acordado que cada enumerase las propiedades que consideraban indispensables en un entorno orientado a objetos. Cada uno había creado una lista de entre 6 y 10 propiedades indispensables.
+
+> Llegados a este punto, en lugar de crear una gran lista resultado de unirlas todas, decidieron crear una lista sólo con las palabras en común de todas las listas. El resultado fue una lista con una única palabra "encapsulación".
+
+El resto de la historia es interesante, pero no voy a traducir el libro en este post, si os interesa podéis comprarlo ;)
+
+Anécdotas aparte, lo que parece que [está claro](http://wiki.c2.com/?NobodyAgreesOnWhatOoIs) es que el consenso respecto a qué es exáctamente la orientación a objetos resulta complejo de alcanzar. Mi opinión es que al final terminamos por adoptar el consenso establecido por el lenguaje de programación que estamos utilizando.
+
+## Buscando un estilo
+
+Cuando decimos que la orientación a objetos es un paradigma de desarrollo, estamos asumiendo que hay un estilo definido, una serie de patrones y funcionalidades proporcionadas por el lenguaje de programación que utilicemos, que nos van a guiar y van a definir la forma en la que deberíamos desarrollar.
+
+Todo esto es muy bonito, pero nada más lejos de la realidad. Dentro de la orientación a objetos hay muchos estilos y muchas formas de interpretar el paradigma. Y no sólo entre lenguajes distintos, también dentro del mismo lenguaje, por eso con el paso de los años se han ido imponiendo ciertos patrones y buenas prácticas, aunque algunas siguen siendo "cuestión de gustos".
+
+Mi intención es describir en una serie de posts cómo entiendo actualmente la orientación a objetos y cómo la aplico en C#. Me han gustado mucho algunas de las explicaciones del libro de Melir Page-Jones, así que seguramente las use como hilo conductor. No se si serán dos posts o 20, escribiré mientras tenga ganas y tiempo ;)
+
+{{content/includes/oop-serie.mmark}}
+
+La imagen de portada pertenece a [esta tira de Dilbert](http://dilbert.com/strip/1995-10-11)
+
+
