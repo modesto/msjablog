@@ -1,0 +1,104 @@
++++
+author = ""
+title = "Encapsulación, visibilidad y retención de estado"
+draft = false
+date = "2017-01-09T15:34:32+01:00"
+slug = "encapsulacion-visibilidad-y-retencion-de-estado"
+tags = []
+image = "images/yoda_getters_setters.png"
+comments = true     # set false to hide Disqus comments
+share = true        # set false to share buttons
+menu = ""           # set "main" to add this content to the main menu
++++
+
+Para empezar nada mejor que hablar del concepto el que se erigió como el único punto en común del comité de sabios mencionado en el anterior post la encapsulación. Después hablaremos de la visibilidad, un concepto que suele ir de la mano de la encapsulación, llegando a tratarse como si fueran lo mismo. Para finalizar, dedicaremos algunas líneas a hablar de la retención del estado, algo muy obvio pero esencial en orientación a objetos.
+
+## Encapsulación
+
+> La encapsulación permite agrupar funcionalidades (métodos) y estado (datos) de una forma cohesiva. Los métodos proporcionarán los mecanismos adecuados para modificar el estado y en algunos casos también serán la puerta de acceso a este.
+
+Así es, no es necesaria mucha más parafernalia para describir qué es la encapsulación. Es más, podríamos incluso definirlo como "tener los datos y sus funcionalidades directamente relacionadas juntitos y trazar un perímetro al que le pondremos un nombre", pero la definición quedaría más fea ;)
+
+En lenguajes como Java, la forma de acceder al estado será mediante métodos tipo getXXX(). En C# disponemos de propiedades, así que podemos recurrir a estas para acceder al estado. No obstante, en ocasiones también resultará conveniente recurrir a métodos para acceder al estado.
+
+## Visibilidad
+
+Cuando hablamos de visibilidad solemos referirnos a la ocultación o publicación tanto de la información del estado como de la implementación de la funcionalidad de una clase.
+
+> La visibilidad nos permite ocultar al exterior detalles del estado o de la implementación que no queremos que sean expuestos fuera de nuestra "unidad de encapsulación"
+
+Un ejemplo muy sencillo sería el siguiente: en un juego no queremos que se sepa la vida de los personajes, únicamente queremos que se sepa si el personaje está vivo, herido o muerto. Podríamos recurrir a una propiedad privada que almacene los puntos de vida del personaje y un método público que nos permita obtener su estado. El método calcularía el estado en función de los puntos de vida del jugador pero los puntos de vida no quedarían expuestos en ningún momento.
+
+El concepto de visibilidad suele acompañar al de encapsulación hasta el punto de que a veces se asume que encapsulación y visibilidad son sinónimos. Esto es algo que no pocos libros han descrito de este modo. Pero la palabra "encapsulación" se utiliza con significados distintos: en unos de ellos se utiliza para hablar de visibilidad, y en otros se refiere exclusivamente a las definiciones que utilizo en este post. Este tema que lo debatí bastante con Fran Reyes en su día y su punto de vista me convenció.
+
+> El propósito de la encapsulación no es la ocultación de información. 
+
+Lenguajes como Python proporcionan encapsulación a través de clases pero el concepto de visibilidad privada es en esencia una convención.
+
+## Retención de estado
+
+Cuando hablamos de programación funcional, al llamar a una función, esta no mantiene estado ninguno de una ejecución a otra. Cada vez que llamamos a una función debemos proporcionarle los datos con los que tiene que trabajar y esta a su vez nos devolverá los datos con las modificaciones pertinentes aplicadas.
+
+En orientación a objetos, a nuestros métodos no debemos proporcionarles la información de estado con la que tienen que trabajar, ya que la tienen accesible dentro del objeto. Un objeto mantiene su estado entre cada llamada.
+
+## Modelos anémicos
+
+El concepto de modelo anémico está relacionado con la incorrecta aplicación de la orientación a objetos. Cuando tenemos clases que únicamente tienen propiedades con getters y setters públicos y el código relacionado con la gestión del estado está fuera de las propias clases, estamos hablando de que tenemos un modelo anémico.
+
+Si hacemos que la lógica de gestión del estado esté fuera del objecto, no estaremos aplicando correctamente la encapsulación y por lo tanto, no estamos aplicando correctamente orientación a objetos.
+
+Un ejemplo sencillo (sacado de la wikipedia) sería:
+
+Anémico:
+
+``` csharp
+class Box
+{
+    public int Height { get; set; }
+    public int Width { get; set; }
+}
+```
+
+Orientado a objetos:
+
+``` csharp
+class Box
+{
+    public int Height { get; private set; }
+    public int Width { get; private set; }
+
+    public Box(int height, int width)
+    {
+        if (height <= 0) {
+            throw new ArgumentOutOfRangeException(nameof(height));
+        }
+        if (width <= 0) {
+            throw new ArgumentOutOfRangeException(nameof(width));
+        }
+        Height = height;
+        Width = width;
+    }
+}
+```
+
+
+## Propiedades vs campos en C#
+
+En ocasiones existe la duda de si en C# deberíamos utilizar propiedades o campos públicos para exponer el estado. Para muchos desarrolladores no hay mucha diferencia pero debermos tener en cuenta que las propiedades tienen características diferenciales respecto a los campos:
+
+* El acceso a una propiedad se considera como una llamada a un método, eso significa que podemos cambiar la implementación tanto del método Get como del Set en el futuro. Esto está relacionado con el concepto de ocultación de la implementación y para una variable no es posible.
+* Al considerar el acceso a una propiedad como un método, podemos ejecutar código al acceder a su valor.
+* Utilizando propiedades podemos gestionar el nivel de visibilidad del get y el set por separado.
+* Las propiedades no pueden ser pasadas por referencia a métodos.
+
+Sobre si se debe usar una propiedad o un método para los getter, personalmente me gusta recurrir a propiedades cuando accedo al estado "en bruto", sin tratar y por lo tanto lo voy a obtener de manera inmediata. Recurro a métodos cuando voy a realizar alguna transformación o a aplicar algún tipo de lógica, especialmente si se trata de una lógica pesada. Creo que se explicita mucho mejor que al acceder a ese dato a través de un método estamos realizando una operación que no va a ser instantánea.
+
+Recordemos además que los métodos podemos hacerlos asíncronos, pero las propiedades no.
+
+Respecto a las colecciones de datos, hay que pensar bien el tipo de colección que vamos a utilizar. Si recurrimos a colecciones que no sean "readonly", perderemos la posibilidad de interceptar con facilidad el código que modique la colección, algo muy habitual cuando queremos aplicar validaciones o cualquier otro tipo de lógica. Si exponemos una colección que no es de sólo lectura, estamos impidiendo la posibilidad de encapsular la lógica de gestión de esa propiedad.
+
+Otro concepto interesante relacionado con la retención de estado es la inmutabilidad, pero mejor lo dejamos para otro día ;)
+
+{{content/includes/oop-serie.mmark}}
+
+El dibujo de Yoda está sacado de la web [Vecteezy](https://www.vecteezy.com/people/36181-yoda-vector)
