@@ -47,7 +47,7 @@
 
 &lt;h2 id=&#34;retención-de-estado&#34;&gt;Retención de estado&lt;/h2&gt;
 
-&lt;p&gt;Cuando hablamos de programación funcional, al llamar a una función, esta no mantiene estado ninguno de una ejecución a otra. Cada vez que llamamos a una función debemos proporcionarle los datos con los que tiene que trabajar y esta a su vez nos devolverá los datos con las modificaciones pertinentes aplicadas.&lt;/p&gt;
+&lt;p&gt;En programación funcional, cada vez que llamamos a una función debemos proporcionarle los datos con los que tiene que trabajar y esta a su vez nos devolverá los datos con las modificaciones pertinentes aplicadas. Como bien me corregía Javier Neira, las funciones también pueden mantener estado haciendo uso de closures.&lt;/p&gt;
 
 &lt;p&gt;En orientación a objetos, a nuestros métodos no debemos proporcionarles la información de estado con la que tienen que trabajar, ya que la tienen accesible dentro del objeto. Un objeto mantiene su estado entre cada llamada.&lt;/p&gt;
 
