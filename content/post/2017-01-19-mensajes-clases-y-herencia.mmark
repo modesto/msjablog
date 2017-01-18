@@ -1,0 +1,62 @@
++++
+author = ""
+title = "Mensajes, clases y herencia"
+draft = false
+date = "2017-01-19T22:59:45+01:00"
+slug = "oop-mensajes-clases-y-herencia"
+tags = []
+image = "images/message-passing.jpg"
+comments = true     # set false to hide Disqus comments
+share = true        # set false to share buttons
+menu = ""           # set "main" to add this content to the main menu
++++
+
+## Mensajes
+
+Recuperando la definición de Aan Kay, uno de los aspectos fundamentales de la orientación a objetos es el intercambio de mensajes. Trasladado a los lenguajes de hoy en día, podríamos decir que:
+
+> Cuando el objeto A quiere que el objeto B ejecute uno de sus métodos, el objeto A envía un mensaje al objeto B para que esto suceda.
+
+Un mensaje se compone del nombre del método que queremos llamar y de sus parámetros, tanto de entrada como de salida. Los parámetros definen la firma del método y si hablamos de programación orientada a objetos "pura", los parámetros son también objetos en si mismos.
+
+Hay que tener en cuenta que en C# (y en otros lenguajes) esto no se cumple al 100% porque no nos limitamos únicamente a llamar a métodos a los que les pasamos objetos como parámetro:
+
+* Podemos utilizar estructuras de datos como parámetros de métodos.
+* Podemos enviar mensajes mediante otros mecanismos "azucarados" como el uso de eventos.
+* Tenemos propiedades, que son básicamente más "azucar" para lidiar con métodos de tipo "Getter" y "Setter".
+
+Pero al final siguen siendo mensajes igualmente aunque se utilizen de una forma alternativa para expresar un uso distinto en función del tipo de mensaje.
+
+### Tipos de mensajes
+
+Teniendo en cuenta la intencionalidad del mensaje, podemos establecer una clasificación bastante sencilla:
+
+* Los mensajes **informativos** se utilizan para informar de un suceso pasado. Habitualmente nos referimos a ellos como eventos.
+* También tenemos mensajes **interrogativos** que básicamente son aquellos que utilizamos para pedir al objeto algún tipo de información. El get de una propiedad o cualquier método GetXXX() sería un ejemplo.
+* Los mensajes **imperativos** los utilizamos para dar órdenes al objeto. Serían el equivalente a ejecutar comandos contra el objeto.
+
+Dependiendo del tipo de mensajes que utilicemos, podemos controlar el flujo de ejecución de una forma u otra.
+
+### Dando una vuelta a los mensajes más allá del paradigma
+
+Aunque hemos estado hablando de métodos, propiedades y eventos, si tomamos la parte conceptual podemos explorar otras interpretaciones sobre los lenguajes existentes, abriendo muchas posibilidades respecto al flujo de ejecución como pudiera ser la utilización de bus de eventos/mensajes/comandos, mediators, modelo de actores, etc. Aunque podríamos decir que esto ya iría más allá del propio paradigma de la orientación a objetos y nos meteríamos en patrones, modelos de ejecución y otras fiestas.
+
+De momento me voy a parar aquí con los mensajes porque es un tema al que sacaremos más miga en entregas posteriores, después de haber tocados temas como el polimorfismo.
+
+## Clases
+
+De las clases voy a hablar muy poquito porque creo que es un tema que ya está bastante trillado. Simplemente lo menciono para al menos sentar las bases de los conceptos que vienen después, ya que todos ellos giran alrededor de la clase. Tal vez si hablamos de otros lenguajes, hablar de clases puede ser hasta innecesario. Pero estoy usando C# como lenguaje de referencia, así que aquí tiene todo el sentido del mundo.
+
+Utilizamos las clases para definir los "planos" necesarios para construir nuestros objetos. A través de ellas diseñaremos nuestros objetos intentando aplicar con sabiduría (no siempre :P) la encapsulación, definiendo las estructuras de datos adecuadas y el catálogo de mensajes que podremos utilizar para comunicarnos con nuestros objetos.
+
+Tomando la definición rápida del post anterior, la clase es el instrumento con el que trazamos el perímetro y le ponemos nombre ;)
+
+A veces se confunde el concepto de clase con el de objeto. Las clases no son objetos. Utilizamos el operador **_new_** la clase para crear una instancia de la misma. Esa instancia es el objeto.
+
+## Herencia
+
+
+
+{{content/includes/oop-serie.mmark}}
+
+La imagen de la portada está sacada de la web de [Petabridge](https://petabridge.com/blog/akkadotnet-what-is-an-actor/)
