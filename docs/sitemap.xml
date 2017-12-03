@@ -1,479 +1,193 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/404/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/aclarando-conceptos-proyectos-pcl-universales-y-shared-source/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/bus-de-eventos-usando-reactive-extensions/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/categories/powershell/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/categories/powershell/page/1/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/categories/powershell/page/2/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/categories/sin-categor%C3%ADa/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/categories/sin-categor%C3%ADa/page/1/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/categories/sin-categor%C3%ADa/page/2/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/categories/trucos/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/categories/trucos/page/1/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/categories/web-api/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/categories/web-api/page/1/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/categories/wpf/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/categories/wpf/page/1/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/claves-primarias-inmutabilidad-y-generacion/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/como-crear-appx-para-sideloading-desde-integracion-continua/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/cuanto-cuesta-llamar-a-un-metodo/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/datos-de-ejemplo-en-el-viewmodel-para-facilitar-la-vista-de-diseno/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/desarrollador-pon-contenedores-en-tu-vida/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/eliminar-regiones-de-forma-masiva-desde-visual-studio/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/fluent-migrator-no-encuentra-migraciones/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/fonts/example/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/impresiones-sobre-pair-programming/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/includes/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/includes/oop-serie/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/includes/page/1/</loc>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
     <loc>http://www.modestosanjuan.com/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/interrumpir-la-ejecucion-cuando-import-module-no-encuentra-el-modulo/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/la-importancia-del-rojo-en-tdd/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/la-regla-del-boy-scout/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/necesitas-programar-un-servicio-para-windows-prueba-topshelf/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/nuestra-programacion-es-mala-para-el-desarrollo-de-software/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/nuevos-retos/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/page/1/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/page/2/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/page/3/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/page/4/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/palabras-malditas/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/post/arquitectura-de-software-como-habilidad/</loc>
+    <lastmod>2017-01-09T15:34:32+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://www.modestosanjuan.com/post/encapsulacion-visibilidad-y-retencion-de-estado/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/post/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/post/la-arquitectura-de-software-como-habilidad/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/post/page/1/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/post/page/2/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/post/page/3/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/post/page/4/</loc>
+    <lastmod>2017-01-09T15:34:32+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://www.modestosanjuan.com/post/redescubriendo-la-orientacion-a-objetos/</loc>
+    <lastmod>2017-01-09T15:34:32+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.modestosanjuan.com/powershell-crear-el-fichero-de-manifiesto-para-muchos-modulos-a-la-vez/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/powershell-cuidado-que-a-eq-a-no-siempre-es-true/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/powershell-devolver-un-array-vacio-desde-una-funcion/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/powershell-distinguir-entre-rutas-relativas-y-absolutas/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/powershell-la-importancia-del-set-strictmode/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/powershell-las-ventajas-de-usar-parametros-y-variables-tipados/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/powershell-ojo-que-no-hay-un-unico-null/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/powershell-pasar-de-securestring-a-string/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/powershell-saber-si-una-variable-ya-ha-sido-definida/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/powershell-sacando-partido-a-la-conversion-de-tipos/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/powershell-switch-parameters/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/powershell-variables-automaticas/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/presta-atencion-a-tus-datos-de-pruebas/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/tags/fluentmigrator/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/tags/fluentmigrator/page/1/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/truco-evitar-que-wget-invoke-webrequest-tarde-tanto-en-powershell/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/utilizando-extensionless-para-monitorizar-logs-y-excepciones/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/value-providers-y-parameter-binding-en-asp-net-web-api/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/aclarando-conceptos-proyectos-pcl-universales-y-shared-source/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/bus-de-eventos-usando-reactive-extensions/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/claves-primarias-inmutabilidad-y-generacion/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/como-crear-appx-para-sideloading-desde-integracion-continua/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/cuanto-cuesta-llamar-a-un-metodo/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/datos-de-ejemplo-en-el-viewmodel-para-facilitar-la-vista-de-diseno/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/desarrollador-pon-contenedores-en-tu-vida/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/eliminar-regiones-de-forma-masiva-desde-visual-studio/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/fluent-migrator-no-encuentra-migraciones/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/fonts/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/impresiones-sobre-pair-programming/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/includes/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/interrumpir-la-ejecucion-cuando-import-module-no-encuentra-el-modulo/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/la-importancia-del-rojo-en-tdd/</loc>
-    <priority>0</priority>
+    <loc>http://www.modestosanjuan.com/post/arquitectura-de-software-como-habilidad/</loc>
+    <lastmod>2016-12-17T15:34:32+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://www.modestosanjuan.com/la-regla-del-boy-scout/</loc>
-    <priority>0</priority>
+    <lastmod>2016-11-10T10:01:15+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.modestosanjuan.com/necesitas-programar-un-servicio-para-windows-prueba-topshelf/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/nuestra-programacion-es-mala-para-el-desarrollo-de-software/</loc>
-    <priority>0</priority>
+    <loc>http://www.modestosanjuan.com/desarrollador-pon-contenedores-en-tu-vida/</loc>
+    <lastmod>2016-11-06T23:10:11+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://www.modestosanjuan.com/nuevos-retos/</loc>
-    <priority>0</priority>
+    <lastmod>2016-10-14T15:40:53+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.modestosanjuan.com/page/</loc>
-    <priority>0</priority>
+    <loc>http://www.modestosanjuan.com/cuanto-cuesta-llamar-a-un-metodo/</loc>
+    <lastmod>2016-08-02T00:03:45+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.modestosanjuan.com/claves-primarias-inmutabilidad-y-generacion/</loc>
+    <lastmod>2016-07-30T23:39:11+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://www.modestosanjuan.com/palabras-malditas/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/post/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/powershell-crear-el-fichero-de-manifiesto-para-muchos-modulos-a-la-vez/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/powershell-cuidado-que-a-eq-a-no-siempre-es-true/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/powershell-devolver-un-array-vacio-desde-una-funcion/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/powershell-distinguir-entre-rutas-relativas-y-absolutas/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/powershell-la-importancia-del-set-strictmode/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/powershell-las-ventajas-de-usar-parametros-y-variables-tipados/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/powershell-ojo-que-no-hay-un-unico-null/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/powershell-pasar-de-securestring-a-string/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/powershell-saber-si-una-variable-ya-ha-sido-definida/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/powershell-sacando-partido-a-la-conversion-de-tipos/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/powershell-switch-parameters/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/powershell-variables-automaticas/</loc>
-    <priority>0</priority>
+    <lastmod>2016-06-13T10:02:56+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://www.modestosanjuan.com/presta-atencion-a-tus-datos-de-pruebas/</loc>
-    <priority>0</priority>
+    <lastmod>2016-02-29T23:04:10+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.modestosanjuan.com/tags/</loc>
-    <priority>0</priority>
+    <loc>http://www.modestosanjuan.com/impresiones-sobre-pair-programming/</loc>
+    <lastmod>2016-01-19T01:13:56+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.modestosanjuan.com/tags/</loc>
-    <priority>0</priority>
+    <loc>http://www.modestosanjuan.com/nuestra-programacion-es-mala-para-el-desarrollo-de-software/</loc>
+    <lastmod>2015-12-28T22:22:29+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.modestosanjuan.com/truco-evitar-que-wget-invoke-webrequest-tarde-tanto-en-powershell/</loc>
-    <priority>0</priority>
+    <loc>http://www.modestosanjuan.com/la-importancia-del-rojo-en-tdd/</loc>
+    <lastmod>2015-12-22T14:14:43+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.modestosanjuan.com/utilizando-extensionless-para-monitorizar-logs-y-excepciones/</loc>
-    <priority>0</priority>
+    <loc>http://www.modestosanjuan.com/powershell-pasar-de-securestring-a-string/</loc>
+    <lastmod>2015-11-25T09:16:48+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://www.modestosanjuan.com/value-providers-y-parameter-binding-en-asp-net-web-api/</loc>
-    <priority>0</priority>
+    <lastmod>2015-11-13T10:02:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.modestosanjuan.com/bus-de-eventos-usando-reactive-extensions/</loc>
+    <lastmod>2015-11-10T09:32:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.modestosanjuan.com/powershell-sacando-partido-a-la-conversion-de-tipos/</loc>
+    <lastmod>2015-10-22T00:27:51+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.modestosanjuan.com/powershell-distinguir-entre-rutas-relativas-y-absolutas/</loc>
+    <lastmod>2015-10-08T22:41:43+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.modestosanjuan.com/powershell-variables-automaticas/</loc>
+    <lastmod>2015-09-20T22:10:01+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.modestosanjuan.com/powershell-ojo-que-no-hay-un-unico-null/</loc>
+    <lastmod>2015-09-09T20:49:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.modestosanjuan.com/powershell-saber-si-una-variable-ya-ha-sido-definida/</loc>
+    <lastmod>2015-08-20T22:14:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.modestosanjuan.com/powershell-devolver-un-array-vacio-desde-una-funcion/</loc>
+    <lastmod>2015-08-20T15:07:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.modestosanjuan.com/powershell-las-ventajas-de-usar-parametros-y-variables-tipados/</loc>
+    <lastmod>2015-08-18T09:52:05+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.modestosanjuan.com/powershell-switch-parameters/</loc>
+    <lastmod>2015-08-17T22:37:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.modestosanjuan.com/powershell-cuidado-que-a-eq-a-no-siempre-es-true/</loc>
+    <lastmod>2015-08-07T00:22:46+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.modestosanjuan.com/powershell-crear-el-fichero-de-manifiesto-para-muchos-modulos-a-la-vez/</loc>
+    <lastmod>2015-08-05T13:50:27+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.modestosanjuan.com/powershell-la-importancia-del-set-strictmode/</loc>
+    <lastmod>2015-08-03T23:50:39+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.modestosanjuan.com/interrumpir-la-ejecucion-cuando-import-module-no-encuentra-el-modulo/</loc>
+    <lastmod>2015-06-30T18:03:02+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.modestosanjuan.com/eliminar-regiones-de-forma-masiva-desde-visual-studio/</loc>
+    <lastmod>2015-06-16T10:58:45+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.modestosanjuan.com/necesitas-programar-un-servicio-para-windows-prueba-topshelf/</loc>
+    <lastmod>2015-06-15T23:44:42+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.modestosanjuan.com/utilizando-extensionless-para-monitorizar-logs-y-excepciones/</loc>
+    <lastmod>2015-06-05T18:11:52+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.modestosanjuan.com/como-crear-appx-para-sideloading-desde-integracion-continua/</loc>
+    <lastmod>2015-05-13T06:45:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.modestosanjuan.com/truco-evitar-que-wget-invoke-webrequest-tarde-tanto-en-powershell/</loc>
+    <lastmod>2015-03-22T19:18:44+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.modestosanjuan.com/aclarando-conceptos-proyectos-pcl-universales-y-shared-source/</loc>
+    <lastmod>2015-03-08T12:22:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.modestosanjuan.com/fluent-migrator-no-encuentra-migraciones/</loc>
+    <lastmod>2015-01-19T01:23:05+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.modestosanjuan.com/datos-de-ejemplo-en-el-viewmodel-para-facilitar-la-vista-de-diseno/</loc>
+    <lastmod>2014-12-17T00:27:25+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.modestosanjuan.com/includes/oop-serie/</loc>
   </url>
   
 </urlset>

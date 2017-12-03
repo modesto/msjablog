@@ -1,23 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Includes on Blog de Modesto San Juan</title>
-    <link>http://www.modestosanjuan.com/includes/</link>
-    <description>Recent content in Includes on Blog de Modesto San Juan</description>
+    <title>Includes-rsses on Blog de Modesto San Juan</title>
+    <link>http://www.modestosanjuan.com/includes/index.xml</link>
+    <description>Recent content in Includes-rsses on Blog de Modesto San Juan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    
-	<atom:link href="http://www.modestosanjuan.com/includes/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/includes/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/includes/</guid>
-      <description>Includes &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribeIncludesPage 1 of 1Por el momento, este es el listado de posts que he publicado sobre este tema:Redescubriendo la orientación a objetos Encapsulación y visibilidad &amp;raquo;</description>
-    </item>
+    <atom:link href="http://www.modestosanjuan.com/includes/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title></title>
@@ -25,17 +14,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://www.modestosanjuan.com/includes/oop-serie/</guid>
-      <description>&amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribePor el momento, este es el listado de posts que he publicado sobre este tema:
-Redescubriendo la orientación a objetosEncapsulación y visibilidadModesto San Juan&#39;s PictureModesto San JuanDesarrollo software e intento hacerlo bien</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/includes/page/1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/includes/page/1/</guid>
-      <description>http://www.modestosanjuan.com/includes/</description>
+      <description>&lt;p&gt;Por el momento, este es el listado de posts que he publicado sobre este tema:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.modestosanjuan.com/post/redescubriendo-la-orientacion-a-objetos/&#34;&gt;Redescubriendo la orientación a objetos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.modestosanjuan.com/post/encapsulacion-visibilidad-y-retencion-de-estado/&#34;&gt;Encapsulación y visibilidad&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
     </item>
     
   </channel>

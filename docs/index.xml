@@ -2,607 +2,1113 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog de Modesto San Juan</title>
-    <link>http://www.modestosanjuan.com/</link>
+    <link>http://www.modestosanjuan.com/index.xml</link>
     <description>Recent content on Blog de Modesto San Juan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    
-	<atom:link href="http://www.modestosanjuan.com/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/404/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/404/</guid>
-      <description>404 Page not found &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;Subscribe&amp;nbsp;&amp;nbsp;Blog de Modesto San JuanDESCUBRIMIENTOS, IDEAS Y OTRAS CHORRADASScroll Down404 Not FoundSorry, but we couldn&#39;t find the page you&#39;re looking for.</description>
-    </item>
+    <lastBuildDate>Mon, 09 Jan 2017 15:34:32 +0100</lastBuildDate>
+    <atom:link href="http://www.modestosanjuan.com/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/aclarando-conceptos-proyectos-pcl-universales-y-shared-source/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/aclarando-conceptos-proyectos-pcl-universales-y-shared-source/</guid>
-      <description>Aclarando conceptos: proyectos PCL, universales y shared source &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribeAclarando conceptos: proyectos PCL, universales y shared sourceMar 8, 2015Lo habitual cuando quiero compartir código entre proyectos es recurrir a crear bibliotecas de clases.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/bus-de-eventos-usando-reactive-extensions/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/bus-de-eventos-usando-reactive-extensions/</guid>
-      <description>Bus de eventos usando Reactive Extensions &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribeBus de eventos usando Reactive ExtensionsNov 10, 2015Utilizar un bus de eventos dentro de una aplicación es algo bastante común. Un ejemplo muy sencillo podría ser desacoplar la lógica de envío de notificaciones al usuario en WPF desde los ViewModels sin necesidad de recurrir a la inyección de dependencias en el ViewModel.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/categories/powershell/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/categories/powershell/</guid>
-      <description>Powershell &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribePowershellPage 1 of 2Older Posts &amp;rarr;[PowerShell] Pasar de SecureString a StringEn ocasiones necesito usar un SecureString pero luego me veo obligado a utilizar ese string de forma no segura.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/categories/powershell/page/1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/categories/powershell/page/1/</guid>
-      <description>http://www.modestosanjuan.com/categories/powershell/</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/categories/powershell/page/2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/categories/powershell/page/2/</guid>
-      <description>Powershell &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribePowershell&amp;larr; Newer PostsPage 2 of 2[PowerShell] Crear el fichero de manifiesto para muchos módulos a la vezHoy he tenido que crear de golpe el manifest a varios módulos.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/categories/sin-categor%C3%ADa/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/categories/sin-categor%C3%ADa/</guid>
-      <description>Sin Categoría &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribeSin CategoríaPage 1 of 2Older Posts &amp;rarr;La regla del boy scoutHay discipinas en las que dicen que a largo plazo es más importante la constancia que el talento.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/categories/sin-categor%C3%ADa/page/1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/categories/sin-categor%C3%ADa/page/1/</guid>
-      <description>http://www.modestosanjuan.com/categories/sin-categor%C3%ADa/</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/categories/sin-categor%C3%ADa/page/2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/categories/sin-categor%C3%ADa/page/2/</guid>
-      <description>Sin Categoría &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribeSin Categoría&amp;larr; Newer PostsPage 2 of 2[PowerShell] Interrumpir la ejecución cuando Import-Module no encuentra el móduloEsto es un truco sencillo y muy básico de PowerShell, pero puede desconcertar bastante a quien está empezando o utiliza PowerShell de forma esporádica.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/categories/trucos/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/categories/trucos/</guid>
-      <description>Trucos &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribeTrucosPage 1 of 1[PowerShell] Evitar que wget (Invoke-WebRequest) tarde tantoMientras estaba preparando unos scripts para automatizar el proceso de sideloading de una aplicación Windows 8.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/categories/trucos/page/1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/categories/trucos/page/1/</guid>
-      <description>http://www.modestosanjuan.com/categories/trucos/</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/categories/web-api/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/categories/web-api/</guid>
-      <description>Web Api &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribeWeb ApiPage 1 of 1Value Providers y Parameter Binding en ASP.NET Web APICuando necesito acceder a información de la Request desde una acción de un controlador en ASP.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/categories/web-api/page/1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/categories/web-api/page/1/</guid>
-      <description>http://www.modestosanjuan.com/categories/web-api/</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/categories/wpf/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/categories/wpf/</guid>
-      <description>Wpf &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribeWpfPage 1 of 1Bus de eventos usando Reactive ExtensionsUtilizar un bus de eventos dentro de una aplicación es algo bastante común. Un ejemplo muy sencillo podría ser desacoplar la lógica de envío de notificaciones al usuario en WPF desde los ViewModels sin necesidad de recurrir a la inyección de dependencias en el ViewModel.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/categories/wpf/page/1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/categories/wpf/page/1/</guid>
-      <description>http://www.modestosanjuan.com/categories/wpf/</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/claves-primarias-inmutabilidad-y-generacion/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/claves-primarias-inmutabilidad-y-generacion/</guid>
-      <description>Claves primarias: inmutabilidad y generación &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribeClaves primarias: inmutabilidad y generaciónJul 30, 2016Hace unos días Pablo Iglesias tuiteó una pregunta de Stack Exchange en la que hablaban sobre la inmutabilidad de las claves primarias.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/como-crear-appx-para-sideloading-desde-integracion-continua/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/como-crear-appx-para-sideloading-desde-integracion-continua/</guid>
-      <description>Cómo crear Appx para Sideloading desde Integración Continua &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribeCómo crear Appx para Sideloading desde Integración ContinuaMay 13, 2015Cuando trabajamos con aplicaciones para la tienda de Windows, hay escenarios en los que necesitamos hacer Sideloading.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/cuanto-cuesta-llamar-a-un-metodo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/cuanto-cuesta-llamar-a-un-metodo/</guid>
-      <description>¿Cuánto cuesta llamar a un método? &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;Subscribe¿Cuánto cuesta llamar a un método?Aug 2, 2016Últimamente Twitter está siendo toda una fuente de inspiración. En esta ocasión el hilo culpable es este.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/datos-de-ejemplo-en-el-viewmodel-para-facilitar-la-vista-de-diseno/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/datos-de-ejemplo-en-el-viewmodel-para-facilitar-la-vista-de-diseno/</guid>
-      <description>Datos de ejemplo en el ViewModel para facilitar la vista de diseño &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribeDatos de ejemplo en el ViewModel para facilitar la vista de diseñoDec 17, 2014Al trabajar con XAML, especialmente si la vista tiene un listado de items, puede resultar muy complicado ajustar la vista para que se vea correctamente.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/desarrollador-pon-contenedores-en-tu-vida/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/desarrollador-pon-contenedores-en-tu-vida/</guid>
-      <description>Desarrollador, pon contenedores en tu vida &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribeDesarrollador, pon contenedores en tu vidaNov 6, 2016No, en este post no te voy a vender las virtudes de desplegar su aplicación sobre docker.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/eliminar-regiones-de-forma-masiva-desde-visual-studio/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/eliminar-regiones-de-forma-masiva-desde-visual-studio/</guid>
-      <description>Eliminar regiones (#region) de forma masiva desde Visual Studio &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribeEliminar regiones (#region) de forma masiva desde Visual StudioJun 16, 2015No voy a entrar en el debate de si el uso de #regions es una buena práctica o no, pero es algo que no utilizo y que suelo interpretar como un mal olor cuando me lo encuentro en el código.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/fluent-migrator-no-encuentra-migraciones/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/fluent-migrator-no-encuentra-migraciones/</guid>
-      <description>[Solucionado] Fluent Migrator no encuentra migraciones &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;Subscribe[Solucionado] Fluent Migrator no encuentra migracionesJan 19, 2015#FluentMigratorHace unos meses empecé a trabajar en un proyecto en el que utilizamos Fluent Migrator.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/fonts/example/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/fonts/example/</guid>
-      <description>Genericons/*** Example page CSS*/body {font-family: sans-serif;line-height: 1.5;margin: 0;color: #2f2d2c;background: #fff;font-size: 11pt;}a {color: #2f2d2c;}h4 {margin-top: 40px;}#iconlist {clear: both;margin-bottom: 20px;}#iconlist div {padding: 10px;overflow: hidden;white-space: nowrap;font-size: 32px;line-height: 1;position: relative;width: 32px;height: 32px;}#iconlist div:before {margin-right: 20px;}#iconlist div:hover {cursor: pointer;color: #e4c05c;}#primary {background: #e4c05c;overflow: hidden;}#content {position: relative;color: #fff;max-width: 980px;padding: 0 10px;margin: 0 auto;}#icons {background: #fbfbfb;}#icons #iconlist {max-width: 980px;box-sizing: border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;padding: 20px 0;margin: 0 auto;}#glyph {float: left;width: 50%;box-sizing: border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;padding: 20px 0;}#glyph .</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/impresiones-sobre-pair-programming/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/impresiones-sobre-pair-programming/</guid>
-      <description>Impresiones sobre pair programming &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribeImpresiones sobre pair programmingJan 19, 2016El viernes mantuve una conversación bastante entretenida sobre desarrollo de software con un compañero de profesión. Trabaja en una entidad financiera y al hablar de cosas como TDD, Agile, XP, etc.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/includes/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/includes/</guid>
-      <description>Includes &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribeIncludesPage 1 of 1Por el momento, este es el listado de posts que he publicado sobre este tema:Redescubriendo la orientación a objetos Encapsulación y visibilidad &amp;raquo;</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/includes/oop-serie/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/includes/oop-serie/</guid>
-      <description>&amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribePor el momento, este es el listado de posts que he publicado sobre este tema:
-Redescubriendo la orientación a objetosEncapsulación y visibilidadModesto San Juan&#39;s PictureModesto San JuanDesarrollo software e intento hacerlo bien</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/includes/page/1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/includes/page/1/</guid>
-      <description>http://www.modestosanjuan.com/includes/</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/</guid>
-      <description>Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;Subscribe&amp;nbsp;&amp;nbsp;Blog de Modesto San JuanDESCUBRIMIENTOS, IDEAS Y OTRAS CHORRADASScroll DownPage 1 of 4Older Posts &amp;rarr;Encapsulación, visibilidad y retención de estadoPara empezar nada mejor que hablar del concepto el que se erigió como el único punto en común del comité de sabios mencionado en el anterior post la encapsulación.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/interrumpir-la-ejecucion-cuando-import-module-no-encuentra-el-modulo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/interrumpir-la-ejecucion-cuando-import-module-no-encuentra-el-modulo/</guid>
-      <description>[PowerShell] Interrumpir la ejecución cuando Import-Module no encuentra el módulo &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;Subscribe[PowerShell] Interrumpir la ejecución cuando Import-Module no encuentra el móduloJun 30, 2015Esto es un truco sencillo y muy básico de PowerShell, pero puede desconcertar bastante a quien está empezando o utiliza PowerShell de forma esporádica.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/la-importancia-del-rojo-en-tdd/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/la-importancia-del-rojo-en-tdd/</guid>
-      <description>La importancia del rojo en TDD &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribeLa importancia del rojo en TDDDec 22, 2015A un desarrollador que practique TDD, el flujo rojo, verde, refactor no le resulta extraño. En este post quiero romper una lanza a favor del rojo, ese gran incomprendido.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/la-regla-del-boy-scout/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/la-regla-del-boy-scout/</guid>
-      <description>La regla del boy scout &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribeLa regla del boy scoutNov 10, 2016Hay discipinas en las que dicen que a largo plazo es más importante la constancia que el talento.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/necesitas-programar-un-servicio-para-windows-prueba-topshelf/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/necesitas-programar-un-servicio-para-windows-prueba-topshelf/</guid>
-      <description>¿Necesitas programar un servicio para Windows? Prueba Topshelf &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;Subscribe¿Necesitas programar un servicio para Windows? Prueba TopshelfJun 15, 2015Programar un servicio para Windows suele ser una tarea engorrosa y Topshelf proporciona una alternativa bastante interesante y muchísimo menos engorrosa que la plantilla por defecto que incorpora Visual Studio.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/nuestra-programacion-es-mala-para-el-desarrollo-de-software/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/nuestra-programacion-es-mala-para-el-desarrollo-de-software/</guid>
-      <description>Nuestra programación es mala para el desarrollo de software &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribeNuestra programación es mala para el desarrollo de softwareDec 28, 2015La programación de mi color favoritoEl otro día mi hija me preguntó cuál era mi color favorito.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/nuevos-retos/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/nuevos-retos/</guid>
-      <description>Nuevos retos &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribeNuevos retosOct 14, 2016Estos últimos dos meses he andado bastante liado y no he prestado mucha atención al blog. Esta vez no voy a hablar de ningún tema técnico, se trata de una post muy personal.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/page/1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/page/1/</guid>
-      <description>http://www.modestosanjuan.com/</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/page/2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/page/2/</guid>
-      <description>Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;Subscribe&amp;nbsp;&amp;nbsp;Blog de Modesto San JuanDESCUBRIMIENTOS, IDEAS Y OTRAS CHORRADASScroll Down&amp;larr; Newer PostsPage 2 of 4Older Posts &amp;rarr;Impresiones sobre pair programmingEl viernes mantuve una conversación bastante entretenida sobre desarrollo de software con un compañero de profesión.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/page/3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/page/3/</guid>
-      <description>Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;Subscribe&amp;nbsp;&amp;nbsp;Blog de Modesto San JuanDESCUBRIMIENTOS, IDEAS Y OTRAS CHORRADASScroll Down&amp;larr; Newer PostsPage 3 of 4Older Posts &amp;rarr;[PowerShell] Saber si una variable ya ha sido definidaEn ocasiones tengo la necesidad de saber si una variable ha sido previamente definida.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/page/4/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/page/4/</guid>
-      <description>Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;Subscribe&amp;nbsp;&amp;nbsp;Blog de Modesto San JuanDESCUBRIMIENTOS, IDEAS Y OTRAS CHORRADASScroll Down&amp;larr; Newer PostsPage 4 of 4Utilizando Extensionless para monitorizar logs y excepcionesCada vez que abordo un nuevo desarrollo, considero que la generación de trazas es una parte vital ya que es uno de los mecanismos que nos va a permitir diagnosticar e identificar cualquier tipo de problema cuando estemos en producción, en ocasiones incluso antes de que los propios usuarios lleguen a reportarlo.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/palabras-malditas/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/palabras-malditas/</guid>
-      <description>Palabras malditas &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribePalabras malditasJun 13, 2016Extreme programming y el desarrollo ágilA principios de siglo (dicho así parece que queda muy atrás, eh&amp;#8230; :P) trabajaba en Indra como coordinador de un equipo de desarrollo.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/post/arquitectura-de-software-como-habilidad/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/post/arquitectura-de-software-como-habilidad/</guid>
-      <description>Arquitectura de software como habilidad &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribeArquitectura de software como habilidadDec 17, 2016El pícaro en AD&amp;amp;D 2ª ediciónAdvanced Dungeons &amp;amp; Dragons 2ª edición tenía un sistema de reglas bastante restrictivo que puede ser resumido con un ejemplo bastante sencillo: el pícaro era el único tipo de personaje que tenía permitido intentar esconderse entre la sombras o moverse sigilosamente.</description>
-    </item>
-    
-    <item>
-      <title></title>
+      <title>Encapsulación, visibilidad y retención de estado</title>
       <link>http://www.modestosanjuan.com/post/encapsulacion-visibilidad-y-retencion-de-estado/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 09 Jan 2017 15:34:32 +0100</pubDate>
       
       <guid>http://www.modestosanjuan.com/post/encapsulacion-visibilidad-y-retencion-de-estado/</guid>
-      <description>Encapsulación, visibilidad y retención de estado &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribeEncapsulación, visibilidad y retención de estadoJan 9, 2017Para empezar nada mejor que hablar del concepto el que se erigió como el único punto en común del comité de sabios mencionado en el anterior post la encapsulación.</description>
+      <description>&lt;p&gt;Para empezar nada mejor que hablar del concepto el que se erigió como el único punto en común del comité de sabios mencionado en el anterior post la encapsulación. Después hablaremos de la visibilidad, un concepto que suele ir de la mano de la encapsulación, llegando a tratarse como si fueran lo mismo. Para finalizar, dedicaremos algunas líneas a hablar de la retención del estado, algo muy obvio pero esencial en orientación a objetos.&lt;/p&gt;
+
+&lt;h2 id=&#34;encapsulación&#34;&gt;Encapsulación&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;La encapsulación permite agrupar funcionalidades (métodos) y estado (datos) de una forma cohesiva. Los métodos proporcionarán los mecanismos adecuados para modificar el estado y en algunos casos también serán la puerta de acceso a este.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Así es, no es necesaria mucha más parafernalia para describir qué es la encapsulación. Es más, podríamos incluso definirlo como &amp;quot;tener los datos y sus funcionalidades directamente relacionadas juntitos y trazar un perímetro al que le pondremos un nombre&amp;quot;, pero la definición quedaría más fea ;)&lt;/p&gt;
+
+&lt;p&gt;En lenguajes como Java, la forma de acceder al estado será mediante métodos tipo getXXX(). En C# disponemos de propiedades, así que podemos recurrir a estas para acceder al estado. No obstante, en ocasiones también resultará conveniente recurrir a métodos para acceder al estado.&lt;/p&gt;
+
+&lt;h2 id=&#34;visibilidad&#34;&gt;Visibilidad&lt;/h2&gt;
+
+&lt;p&gt;Cuando hablamos de visibilidad solemos referirnos a la ocultación o publicación tanto de la información del estado como de la implementación de la funcionalidad de una clase.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;La visibilidad nos permite ocultar al exterior detalles del estado o de la implementación que no queremos que sean expuestos fuera de nuestra &amp;quot;unidad de encapsulación&amp;quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Un ejemplo muy sencillo sería el siguiente: en un juego no queremos que se sepa la vida de los personajes, únicamente queremos que se sepa si el personaje está vivo, herido o muerto. Podríamos recurrir a una propiedad privada que almacene los puntos de vida del personaje y un método público que nos permita obtener su estado. El método calcularía el estado en función de los puntos de vida del jugador pero los puntos de vida no quedarían expuestos en ningún momento.&lt;/p&gt;
+
+&lt;p&gt;El concepto de visibilidad suele acompañar al de encapsulación hasta el punto de que a veces se asume que encapsulación y visibilidad son sinónimos. Esto es algo que no pocos libros han descrito de este modo. Pero la palabra &amp;quot;encapsulación&amp;quot; se utiliza con significados distintos: en unos de ellos se utiliza para hablar de visibilidad, y en otros se refiere exclusivamente a las definiciones que utilizo en este post. Este tema que lo debatí bastante con Fran Reyes en su día y su punto de vista me convenció.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;El propósito de la encapsulación no es la ocultación de información.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Lenguajes como Python proporcionan encapsulación a través de clases pero el concepto de visibilidad privada es en esencia una convención.&lt;/p&gt;
+
+&lt;h2 id=&#34;retención-de-estado&#34;&gt;Retención de estado&lt;/h2&gt;
+
+&lt;p&gt;En programación funcional, cada vez que llamamos a una función debemos proporcionarle los datos con los que tiene que trabajar y esta a su vez nos devolverá los datos con las modificaciones pertinentes aplicadas. Como bien me corregía Javier Neira, las funciones también pueden mantener estado haciendo uso de closures.&lt;/p&gt;
+
+&lt;p&gt;En orientación a objetos, a nuestros métodos no debemos proporcionarles la información de estado con la que tienen que trabajar, ya que la tienen accesible dentro del objeto. Un objeto mantiene su estado entre cada llamada.&lt;/p&gt;
+
+&lt;h2 id=&#34;modelos-anémicos&#34;&gt;Modelos anémicos&lt;/h2&gt;
+
+&lt;p&gt;El concepto de modelo anémico está relacionado con la incorrecta aplicación de la orientación a objetos. Cuando tenemos clases que únicamente tienen propiedades con getters y setters públicos y el código relacionado con la gestión del estado está fuera de las propias clases, estamos hablando de que tenemos un modelo anémico.&lt;/p&gt;
+
+&lt;p&gt;Si hacemos que la lógica de gestión del estado esté fuera del objecto, no estaremos aplicando correctamente la encapsulación y por lo tanto, no estamos aplicando correctamente orientación a objetos.&lt;/p&gt;
+
+&lt;p&gt;Un ejemplo sencillo (sacado de la wikipedia) sería:&lt;/p&gt;
+
+&lt;p&gt;Anémico:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-csharp&#34;&gt;class Box
+{
+    public int Height { get; set; }
+    public int Width { get; set; }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Orientado a objetos:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-csharp&#34;&gt;class Box
+{
+    public int Height { get; private set; }
+    public int Width { get; private set; }
+
+    public Box(int height, int width)
+    {
+        if (height &amp;lt;= 0) {
+            throw new ArgumentOutOfRangeException(nameof(height));
+        }
+        if (width &amp;lt;= 0) {
+            throw new ArgumentOutOfRangeException(nameof(width));
+        }
+        Height = height;
+        Width = width;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;propiedades-vs-campos-en-c&#34;&gt;Propiedades vs campos en C#
+&lt;/h2&gt;
+
+&lt;p&gt;En ocasiones existe la duda de si en C# deberíamos utilizar propiedades o campos públicos para exponer el estado. Para muchos desarrolladores no hay mucha diferencia pero debermos tener en cuenta que las propiedades tienen características diferenciales respecto a los campos:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;El acceso a una propiedad se considera como una llamada a un método, eso significa que podemos cambiar la implementación tanto del método Get como del Set en el futuro. Esto está relacionado con el concepto de ocultación de la implementación y para una variable no es posible.&lt;/li&gt;
+&lt;li&gt;Al considerar el acceso a una propiedad como un método, podemos ejecutar código al acceder a su valor.&lt;/li&gt;
+&lt;li&gt;Utilizando propiedades podemos gestionar el nivel de visibilidad del get y el set por separado.&lt;/li&gt;
+&lt;li&gt;Las propiedades no pueden ser pasadas por referencia a métodos.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sobre si se debe usar una propiedad o un método para los getter, personalmente me gusta recurrir a propiedades cuando accedo al estado &amp;quot;en bruto&amp;quot;, sin tratar y por lo tanto lo voy a obtener de manera inmediata. Recurro a métodos cuando voy a realizar alguna transformación o a aplicar algún tipo de lógica, especialmente si se trata de una lógica pesada. Creo que se explicita mucho mejor que al acceder a ese dato a través de un método estamos realizando una operación que no va a ser instantánea.&lt;/p&gt;
+
+&lt;p&gt;Recordemos además que los métodos podemos hacerlos asíncronos, pero las propiedades no.&lt;/p&gt;
+
+&lt;p&gt;Respecto a las colecciones de datos, hay que pensar bien el tipo de colección que vamos a utilizar. Si recurrimos a colecciones que no sean &amp;quot;readonly&amp;quot;, perderemos la posibilidad de interceptar con facilidad el código que modique la colección, algo muy habitual cuando queremos aplicar validaciones o cualquier otro tipo de lógica. Si exponemos una colección que no es de sólo lectura, estamos impidiendo la posibilidad de encapsular la lógica de gestión de esa propiedad.&lt;/p&gt;
+
+&lt;p&gt;Otro concepto interesante relacionado con la retención de estado es la inmutabilidad, pero mejor lo dejamos para otro día ;)&lt;/p&gt;
+
+&lt;p&gt;Por el momento, este es el listado de posts que he publicado sobre este tema:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.modestosanjuan.com/post/redescubriendo-la-orientacion-a-objetos/&#34;&gt;Redescubriendo la orientación a objetos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.modestosanjuan.com/post/encapsulacion-visibilidad-y-retencion-de-estado/&#34;&gt;Encapsulación y visibilidad&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;El dibujo de Yoda está sacado de la web &lt;a href=&#34;https://www.vecteezy.com/people/36181-yoda-vector&#34;&gt;Vecteezy&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/post/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/post/</guid>
-      <description>Posts &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribePostsPage 1 of 4Older Posts &amp;rarr;Encapsulación, visibilidad y retención de estadoPara empezar nada mejor que hablar del concepto el que se erigió como el único punto en común del comité de sabios mencionado en el anterior post la encapsulación.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/post/la-arquitectura-de-software-como-habilidad/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/post/la-arquitectura-de-software-como-habilidad/</guid>
-      <description>La arquitectura de software como habilidad &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribeLa arquitectura de software como habilidadDec 17, 2016El pícaro en AD&amp;amp;D 2ª ediciónAdvanced Dungeons &amp;amp; Dragons 2ª edición tenía un sistema de reglas bastante restrictivo que puede ser resumido con un ejemplo bastante sencillo: el pícaro era el único tipo de personaje que tenía permitido intentar esconderse entre la sombras o moverse sigilosamente.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/post/page/1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/post/page/1/</guid>
-      <description>http://www.modestosanjuan.com/post/</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/post/page/2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/post/page/2/</guid>
-      <description>Posts &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribePosts&amp;larr; Newer PostsPage 2 of 4Older Posts &amp;rarr;Impresiones sobre pair programmingEl viernes mantuve una conversación bastante entretenida sobre desarrollo de software con un compañero de profesión.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/post/page/3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/post/page/3/</guid>
-      <description>Posts &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribePosts&amp;larr; Newer PostsPage 3 of 4Older Posts &amp;rarr;[PowerShell] Saber si una variable ya ha sido definidaEn ocasiones tengo la necesidad de saber si una variable ha sido previamente definida.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/post/page/4/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/post/page/4/</guid>
-      <description>Posts &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribePosts&amp;larr; Newer PostsPage 4 of 4Utilizando Extensionless para monitorizar logs y excepcionesCada vez que abordo un nuevo desarrollo, considero que la generación de trazas es una parte vital ya que es uno de los mecanismos que nos va a permitir diagnosticar e identificar cualquier tipo de problema cuando estemos en producción, en ocasiones incluso antes de que los propios usuarios lleguen a reportarlo.</description>
-    </item>
-    
-    <item>
-      <title></title>
+      <title>Redescubriendo la orientación a objetos</title>
       <link>http://www.modestosanjuan.com/post/redescubriendo-la-orientacion-a-objetos/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 09 Jan 2017 15:34:32 +0100</pubDate>
       
       <guid>http://www.modestosanjuan.com/post/redescubriendo-la-orientacion-a-objetos/</guid>
-      <description>Redescubriendo la orientación a objetos &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribeRedescubriendo la orientación a objetosJan 9, 2017Mi introducción en la orientación a objetosLa primera vez que escuché hablar de la orientación a objetos yo estaba en un momento de mi aprendizaje en el que no me cuestionaba mucho el porqué de las cosas.</description>
+      <description>&lt;h2 id=&#34;mi-introducción-en-la-orientación-a-objetos&#34;&gt;Mi introducción en la orientación a objetos&lt;/h2&gt;
+
+&lt;p&gt;La primera vez que escuché hablar de la orientación a objetos yo estaba en un momento de mi aprendizaje en el que no me cuestionaba mucho el porqué de las cosas. Estaba demasiado ocupado en asimilar la cantidad de cosas que tenía que aprender y me limitaba a tratar de ingerirlas sin indigestarme, que ya era bastante. Digamos que estaba en pleno &amp;quot;Shu&amp;quot; y aprendía fundamentalmente por imitación.&lt;/p&gt;
+
+&lt;p&gt;Es por ello que durante mucho tiempo, para mi la orientación a objetos era básicamente repetir siempre los mismos mantras: clases, encapsulación, herencia y polimorfismo.&lt;/p&gt;
+
+&lt;p&gt;Con el paso del tiempo descubrí que estos mantras eran los propios del &amp;quot;estilo&amp;quot; de orientación a objetos propuesto por Bjarne Stroustrup en C++ y continuado por todo un elenco de lenguajes derivados.&lt;/p&gt;
+
+&lt;h2 id=&#34;redescubriendo-la-orientación-a-objetos&#34;&gt;Redescubriendo la orientación a objetos&lt;/h2&gt;
+
+&lt;p&gt;Cuando pasé la fase ingerir información de manera indiscriminada me encontré con que había otros puntos de vista sobre lo que era la orientación a objetos. Podemos encontrarnos con definiciones completamente distintas y con matices respecto a las definiciones habituales que estaba acostumbrado a escuchar.&lt;/p&gt;
+
+&lt;p&gt;Una de las primeras sorpresas fue descubrir que la definición de orientación a objetos propuesta por la persona que había acuñado el término en los años 70, no mencionaba las palabras encapsulacón, herencia o polimorfismo:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;quot;OOP to me means only messaging, local retention and protection and hiding of state-process, and extreme LateBinding of all things.&amp;quot; - Alan Kay&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Como ejemplo de lenguaje que siga fielmente esta definición tenemos Smalltalk, creado entre otros por el propio Alan Kay. Si pasamos del universo vintage a algo un poco más usado actualmente podemos encontrarnos con Objective-C o Ruby.&lt;/p&gt;
+
+&lt;p&gt;Es curioso que esta definición encaja a la perfección con el modelo de actores, creo que se nota su influencia. No obstante, el modelo de actores se postula como un modelo de computación y la orientación a objetos como un paradigma de desarrollo, así que tienen ámbitos distintos.&lt;/p&gt;
+
+&lt;h2 id=&#34;buscando-el-consenso&#34;&gt;Buscando el consenso&lt;/h2&gt;
+
+&lt;p&gt;En el año 1995 Meilir Page-Jones escribió el libro &lt;a href=&#34;https://www.amazon.es/dp/0932633315/&#34;&gt;&amp;quot;What every programmer should know about Object-Oriented design&amp;quot;&lt;/a&gt;. En el libro, Meilir habla precisamente sobre la falta de consenso respecto a la definición de qué era la orientación a objetos y cuenta una anécdota que voy a intentar traducir tomándome muchas libertades:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Hace unos años, decidí resolver el asunto de una vez por todas. Agarré una docena de expertos del mundo de la orientación a objetos y los encerré en una habitación sin comida ni agua. Les dije que les dejaría salir sólo cuando se hubieran puesto de acuerdo en una definición de qué era la orientación a objetos que pudiera publicar.&lt;/p&gt;
+
+&lt;p&gt;Después de una hora de gritos y golpes en la habitación se hizo el silencio. Entré en la habitación temiendo lo peor [...] y me encontré a los gurús vivos, aunque ya no hablaban entre ellos.&lt;/p&gt;
+
+&lt;p&gt;Aparentemente, cada gurú había comenzado la sesión intentando establecer una definición de la orientación a objetos y, después de no llegar a ninguna parte, habían acordado que cada enumerase las propiedades que consideraban indispensables en un entorno orientado a objetos. Cada uno había creado una lista de entre 6 y 10 propiedades indispensables.&lt;/p&gt;
+
+&lt;p&gt;Llegados a este punto, en lugar de crear una gran lista resultado de unirlas todas, decidieron crear una lista sólo con las palabras en común de todas las listas. El resultado fue una lista con una única palabra &amp;quot;encapsulación&amp;quot;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;El resto de la historia es interesante, pero no voy a traducir el libro en este post, si os interesa podéis comprarlo ;)&lt;/p&gt;
+
+&lt;p&gt;Anécdotas aparte, lo que parece que &lt;a href=&#34;http://wiki.c2.com/?NobodyAgreesOnWhatOoIs&#34;&gt;está claro&lt;/a&gt; es que el consenso respecto a qué es exáctamente la orientación a objetos resulta complejo de alcanzar. Mi opinión es que al final terminamos por adoptar el consenso establecido por el lenguaje de programación que estamos utilizando.&lt;/p&gt;
+
+&lt;h2 id=&#34;buscando-un-estilo&#34;&gt;Buscando un estilo&lt;/h2&gt;
+
+&lt;p&gt;Cuando decimos que la orientación a objetos es un paradigma de desarrollo, estamos asumiendo que hay un estilo definido, una serie de patrones y funcionalidades proporcionadas por el lenguaje de programación que utilicemos, que nos van a guiar y van a definir la forma en la que deberíamos desarrollar.&lt;/p&gt;
+
+&lt;p&gt;Todo esto es muy bonito, pero nada más lejos de la realidad. Dentro de la orientación a objetos hay muchos estilos y muchas formas de interpretar el paradigma. Y no sólo entre lenguajes distintos, también dentro del mismo lenguaje, por eso con el paso de los años se han ido imponiendo ciertos patrones y buenas prácticas, aunque algunas siguen siendo &amp;quot;cuestión de gustos&amp;quot;.&lt;/p&gt;
+
+&lt;p&gt;Mi intención es describir en una serie de posts cómo entiendo actualmente la orientación a objetos y cómo la aplico en C#. Me han gustado mucho algunas de las explicaciones del libro de Melir Page-Jones, así que seguramente las use como hilo conductor. No se si serán dos posts o 20, escribiré mientras tenga ganas y tiempo ;)&lt;/p&gt;
+
+&lt;p&gt;Por el momento, este es el listado de posts que he publicado sobre este tema:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.modestosanjuan.com/post/redescubriendo-la-orientacion-a-objetos/&#34;&gt;Redescubriendo la orientación a objetos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.modestosanjuan.com/post/encapsulacion-visibilidad-y-retencion-de-estado/&#34;&gt;Encapsulación y visibilidad&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;La imagen de portada pertenece a &lt;a href=&#34;http://dilbert.com/strip/1995-10-11&#34;&gt;esta tira de Dilbert&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/powershell-crear-el-fichero-de-manifiesto-para-muchos-modulos-a-la-vez/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>Arquitectura de software como habilidad</title>
+      <link>http://www.modestosanjuan.com/post/arquitectura-de-software-como-habilidad/</link>
+      <pubDate>Sat, 17 Dec 2016 15:34:32 +0100</pubDate>
       
-      <guid>http://www.modestosanjuan.com/powershell-crear-el-fichero-de-manifiesto-para-muchos-modulos-a-la-vez/</guid>
-      <description>[PowerShell] Crear el fichero de manifiesto para muchos módulos a la vez &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;Subscribe[PowerShell] Crear el fichero de manifiesto para muchos módulos a la vezAug 5, 2015Hoy he tenido que crear de golpe el manifest a varios módulos.</description>
+      <guid>http://www.modestosanjuan.com/post/arquitectura-de-software-como-habilidad/</guid>
+      <description>
+
+&lt;h2 id=&#34;el-pícaro-en-ad-d-2ª-edición&#34;&gt;El pícaro en AD&amp;amp;D 2ª edición&lt;/h2&gt;
+
+&lt;p&gt;Advanced Dungeons &amp;amp; Dragons 2ª edición tenía un sistema de reglas bastante restrictivo que puede ser resumido con un ejemplo bastante sencillo: el pícaro era el único tipo de personaje que tenía permitido intentar esconderse entre la sombras o moverse sigilosamente.&lt;/p&gt;
+
+&lt;p&gt;Si, es así de fácil. Si no eras un pícaro, esas dos habilidades estaban fuera de tu alcance.&lt;/p&gt;
+
+&lt;p&gt;En su disculpa he de decir que AD&amp;amp;D 2ªed. es del año 1989 y las reglas originales son del 74. Algunos años después, este despropósito se corrigío porque no tenía ningún sentido.&lt;/p&gt;
+
+&lt;p&gt;Y es que resulta mucho más interesante jugar bajo un sistema de reglas en el que cualquier jugador puede intentar moverse sigilosamente, dependiendo esta acción de su nivel de habilidad y de su contexto. Evidentemente, no es lo mismo intentarlo si llevas una armadura de placas metálica que si vas desnudo con calcetines de felpa.&lt;/p&gt;
+
+&lt;h2 id=&#34;el-arquitecto-de-software&#34;&gt;El arquitecto de software&lt;/h2&gt;
+
+&lt;p&gt;A día de hoy, a las puertas del año 2017, muchas empresas se empeñan en establecer sistemas de reglas que rigen el funcionamiento de sus equipos de desarrollo como si de partidas de AD&amp;amp;D 2ªed. se tratase.&lt;/p&gt;
+
+&lt;p&gt;Me refiero especialmente a esos equipos en los que existe una figura de &amp;ldquo;arquitecto&amp;rdquo; que, en la línea del pícaro, es el único que tiene permitido desempeñar tareas relacionadas con la arquitectura del software.&lt;/p&gt;
+
+&lt;h2 id=&#34;la-arquitectura-como-habilidad&#34;&gt;La arquitectura como habilidad&lt;/h2&gt;
+
+&lt;p&gt;Estoy totalmente convencido de que la arquitectura de software debería tratarse como una habilidad en lugar de como un rol.&lt;/p&gt;
+
+&lt;p&gt;Como toda habilidad, es posible aprenderla, cultivarla y ponerla en práctica sea cual sea nuestro nivel en ella. Por supuesto, dependiendo de nuestro nivel, los resultados podrán ser desde desastrosos a plenamente satisfactorios, como pasa con la práctica de cualquier otra habilidad.&lt;/p&gt;
+
+&lt;p&gt;Enfocar la arquitectura de software como una habilidad en lugar de como un rol tiene muchas ventajas, tanto para el proyecto como para los integrantes del equipo.&lt;/p&gt;
+
+&lt;h3 id=&#34;propiedad-colectiva-del-código&#34;&gt;Propiedad colectiva del código&lt;/h3&gt;
+
+&lt;p&gt;Extreme Programming nos habla de la &lt;a href=&#34;http://www.extremeprogramming.org/rules/collective.html&#34;&gt;propiedad colectiva del código&lt;/a&gt; como una forma de alentar a todos los miembros del equipo a participar en cualquier parte del código, sin limitarse a aquellas partes que ellos han desarrollado.&lt;/p&gt;
+
+&lt;p&gt;Nos invita a cuestionar el diseño, la arquitectura, a modificar cualquier parte del código, siempre con responsabilidad, por supuesto.&lt;/p&gt;
+
+&lt;p&gt;Las ventajas son múltiples y los beneficios compensan con creces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Elimina cuellos de botella.- Dejar la arquitectura en manos de una única persona no escala y además es malísimo para el bus factor.&lt;/li&gt;
+&lt;li&gt;Reduce silos de conocimiento.&lt;/li&gt;
+&lt;li&gt;Ayuda a crear equipo.- Cuando un equipo se construye a base de un sistema de castas, dificulta tener sensación de pertenencia.&lt;/li&gt;
+&lt;li&gt;Promueve el incremento de la calidad del software. Evidentemente no lo garantiza, pero es que no hay NADA que lo garantice.&lt;/li&gt;
+&lt;li&gt;Facilita que suba el nivel del equipo.- Promover la propiedad colectiva del código hace que aquellos que tienen su &amp;ldquo;skill&amp;rdquo; más baja, tiendan a subirla si realmente tienen interés.&lt;/li&gt;
+&lt;li&gt;Mejora el crecimiento del equipo.- Cuando el negocio necesite que el equipo crezca, nada como que la mayoría del equipo tenga un conocimiento amplio del software. Situaciones del tipo &amp;ldquo;esto lo tenemos que ver con el arquitecto&amp;rdquo; desaparecen por completo. Esto está totalmente relacionado con la existencia de silos de conocimiento.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;solucionando-un-problema-que-no-es-de-software&#34;&gt;Solucionando un problema que no es de software&lt;/h2&gt;
+
+&lt;p&gt;Muchas veces se dan casos como estos:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Soy arquitecto porque así gano mas dinero.- En este caso estamos hablando de solucionar un problema económico del ámbito personal, no del software. Esto es algo típico en grandes corps en las que el crecimiento económico está vinculado a una tabla de roles clásica. Como anécdota curiosa, hace muchos años fuí contratado como director de arte por una razón similar. Aún así, que te te denominen &amp;ldquo;arquitecto&amp;rdquo; no implica que debas ejercer de dictador de la arquitectura, se pueden seguir aplicando los criterios de la propiedad colectiva del código.&lt;/li&gt;
+&lt;li&gt;El cliente demanda esa figura.- Una posible respuesta sería: &amp;ldquo;pues no trabajes con ese cliente&amp;rdquo;. Evidentemente es una respuesta válida, pero no siempre es realista. En esos casos nada te impide hacer lo mismo que en el punto anterior, es simplemente una fachada de cara a trabajar con un cliente.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;El equipo está muy verde.- El problema ha sido montar un equipo mal balanceado. Puede que esta sea una buena solución a corto plazo, pero un equipo no puede estar verde para siempre, se debería hacer un ejercicio proactivo en balancear el equipo y buscar su madurez.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Los dos primeros puntos tienen mucho que ver con una cuestión de &amp;ldquo;hacking cultural&amp;rdquo;. Para mi es vital regular bien la cantidad de energía empleada para realizar estas acciones de hacking. En ocasiones puede merecer la pena cambiar de cliente/trabajo y dedicar esa energía a activades más provechosas.&lt;/p&gt;
+
+&lt;h2 id=&#34;una-cuestión-cultural&#34;&gt;Una cuestión cultural&lt;/h2&gt;
+
+&lt;p&gt;¿Quiero decir con esto que todo el mundo debería hacer de todo y saber de todo?&lt;/p&gt;
+
+&lt;p&gt;No necesariamente. Todo equipo está compuesto por personas cuyas habilidades están a diferentes niveles. Puede que unos sean más fuertes en un punto que otros, es normal. Pero también es normal que emerjan figuras de liderazgo de facto, algo muy diferente a la figura del arquitecto que ya he mencionado.&lt;/p&gt;
+
+&lt;p&gt;Un problema habitual es que, en el momento en el que responsabilizas a una persona de un aspecto del desarrollo, automáticamente el resto de los miembros del equipo pasan a tener una actitud totalmente pasiva respecto a ese aspecto.&lt;/p&gt;
+
+&lt;h2 id=&#34;no-es-fácil&#34;&gt;No es fácil&lt;/h2&gt;
+
+&lt;p&gt;Por supuesto, hay mil casos y situaciones que pueden llevar a que tener una figura de este tipo sea una buena idea, no lo niego. Pero creo que todos ellos son siempre casos coyunturales con fecha de caducidad que deberían tender a evolucionar en forma de un equipo sólido, maduro y equilibrado.&lt;/p&gt;
+
+&lt;p&gt;Está claro que no es fácil tener un equipo equilibrado, en el que la mayoría de sus integrantes no sólo se preocupen de la arquitectura, sino que además tengan la capacidad de hacerlo. ¿Pero quién ha dicho que sea fácil? Hacer software que perdure en el tiempo, que se mantenga estable y con un nivel de mantenilibilidad adecuado no es fácil.&lt;/p&gt;
+
+&lt;p&gt;Si el enfoque de tu empresa es tener una máquina de hacer churros en la que se contrata programadores a kilo, tal vez la idea de tener arquitectos que sobrevuelan por los proyectos tallando la arquitectura sobre tablas de piedra resulte lo más normal. Pero es que esto nos lleva al punto anterior, adoptar una solución para un problema que no debería existir.&lt;/p&gt;
+
+&lt;p&gt;** La imagen de la cabecera es de &lt;a href=&#34;http://svetlaya777.deviantart.com/&#34;&gt;Svetlana Vorobyeva&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/powershell-cuidado-que-a-eq-a-no-siempre-es-true/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>La regla del boy scout</title>
+      <link>http://www.modestosanjuan.com/la-regla-del-boy-scout/</link>
+      <pubDate>Thu, 10 Nov 2016 10:01:15 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com/powershell-cuidado-que-a-eq-a-no-siempre-es-true/</guid>
-      <description>[PowerShell] Cuidado que ($a -eq $a) no siempre es $true &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;Subscribe[PowerShell] Cuidado que ($a -eq $a) no siempre es $trueAug 7, 2015Este es uno de esos ejemplos en los que es importante intentar documentarse todo lo posible al desarrollar en un lenguaje/plataforma que no conocemos.</description>
+      <guid>http://www.modestosanjuan.com/la-regla-del-boy-scout/</guid>
+      <description>
+
+&lt;p&gt;Hay discipinas en las que dicen que a largo plazo es más importante la constancia que el talento. Creo que en el desarrollo de software tener constancia es una virtud.&lt;/p&gt;
+
+&lt;p&gt;Conforme va avanzando un proyecto, es normal que el diseño sufra cambios (preferiblemente pequeños) y a la vez el código puede sufrir altibajos de calidad.&lt;/p&gt;
+
+&lt;p&gt;Tener un conocimiento escaso del problema, equivocarnos al enfocar la solución y muchos otros factores pueden llevarnos a una circunstancia muy habitual: estamos enfocando una historia de usuario y pasamos por una parte de nuestro código que no se entiende bien, está mal enfocada, es complicada de extender, en general, nos está impidiendo avanzar de forma fluida hacia nuestro objetivo, entregar valor.&lt;/p&gt;
+
+&lt;h2 id=&#34;patadón-palante&#34;&gt;Patadón palante&lt;/h2&gt;
+
+&lt;p&gt;Un intento de solución que he visto con frecuencia es el del &amp;#8220;patadón palante&amp;#8221; haciendo una ñapa para sacar la historia lo antes posible y luego, cada cierto tiempo, se mete una historia técnia en el sprint para eliminar deuda técnica y listo. Ron Jeffries describe muy bien este problema en &lt;a href=&#34;http://ronjeffries.com/xprog/articles/refactoring-not-on-the-backlog/&#34;&gt;Refactoring not on the backlog&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;No voy a negar que hay veces que es una solución perfectamente válida en circunstancias en las que es realmente importante cumplir con un plazo. El problema lo veo cuando se convierte en práctica habitual. Si tu proyecto requiere constantemente recurrir al &amp;#8220;patadón palante&amp;#8221;, tal vez deberías replantearte las fechas, el alcance y/o la forma en la que estás enfocando el desarrollo de tu software.&lt;/p&gt;
+
+&lt;h2 id=&#34;la-regla-del-boy-scout&#34;&gt;La regla del boy scout&lt;/h2&gt;
+
+&lt;p&gt;Otra opción es asegurarnos de que en cada historia de usuario que entregamos y en cada incidencia que resolvemos, el código está mejor de como lo encontramos. Uncle Bob lo llama aplicar la &amp;#8220;regla del boy scout&amp;#8221;, Fowler lo llama &lt;a href=&#34;http://martinfowler.com/bliki/OpportunisticRefactoring.html&#34;&gt;refactor oportunista&lt;/a&gt;, pero en esencia vienen a decir lo mismo.&lt;/p&gt;
+
+&lt;p&gt;Una de las grandes ventajas de aplicar esta regla es que se dedican más cuiadados a las zonas que más se tocan, lo que nos ayuda a no terminar teniendo una &lt;a href=&#34;https://blog.codinghorror.com/the-big-ball-of-mud-and-other-architectural-disasters/&#34;&gt;big ball of mud&lt;/a&gt; y terminar con un desastre inmantenible.&lt;/p&gt;
+
+&lt;p&gt;Alguno podrá pensar &amp;#8220;pero entonces te estás dejando partes de tu software sin &amp;#8216;limpiar&amp;rsquo;&amp;#8221;. En efecto, pero son partes que no están dando problemas (no tienen incidencias) y que no estamos necesitando tocar (no hay HU), así que, por el momento, ¡no hay necesidad de dedicarles ni un minuto!&lt;/p&gt;
+
+&lt;h2 id=&#34;poco-a-poco&#34;&gt;Poco a poco&lt;/h2&gt;
+
+&lt;p&gt;Da igual el estado en el que se encuentre nuestro software, si de manera constante terminamos nuestra jornada y está un poco mejor que cuando la empezamos, a largo plazo veremos que nuestro flujo de entrega de valor es muchísimo mejor que antes.&lt;/p&gt;
+
+&lt;p&gt;No es necesario tardar tres veces más en hacer una historia de usuario porque nos embarcamos en un refactor de dimensiones monstruosas, con que esté un poco mejor es suficiente.&lt;/p&gt;
+
+&lt;h2 id=&#34;la-excusa-del-tiempo&#34;&gt;La excusa del tiempo&lt;/h2&gt;
+
+&lt;p&gt;Habitualmente escucho la excusa de &amp;#8220;es que no tenemos tiempo para eso, tenemos que entregar las historias de usuario lo antes posible&amp;#8221;. Esa afirmación es un arma de doble filo porque si no prestamos a nuestro código la atención necesaria, el tiempo que tardaremos en terminar las historias de usuario será cada vez mayor y es muy probable que el número de incidencias se incremente.&lt;/p&gt;
+
+&lt;h2 id=&#34;mantenernos-en-una-solución-simple&#34;&gt;Mantenernos en una solución simple&lt;/h2&gt;
+
+&lt;p&gt;Recurrir a arquitecturas y diseños demasiado complejos tiende a crear software rígido que pierde capacidad de maniobra de cara al futuro. No olvidemos de que es precisamente en el futuro cuando tendremos más conocimiento del problema y, por lo tanto, estaremos más cualificados para ofrecer mejores soluciones. Anclarnos a arquitectures encorsetadas desde el principio puede dar una sensación muy &amp;#8220;enterprise&amp;#8221;, pero se convierte en un problema en el futuro.&lt;/p&gt;
+
+&lt;p&gt;En esta línea recomiendo leer &lt;a href=&#34;https://leanpub.com/4rulesofsimpledesign&#34;&gt;Understanding the Four Rules of Simple Design&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;el-coste-de-deshacer&#34;&gt;El coste de deshacer&lt;/h2&gt;
+
+&lt;p&gt;A menudo tenemos en cuenta únicamente el coste de hacer, pero es muy importante tener en cuenta también el coste de deshacer.&lt;/p&gt;
+
+&lt;p&gt;Recurrir a código de terceros no es malo, puede ahorrarnos muchísimas horas de trabajo en aspectos que posiblemente no tengan nada que ver con nuestro negocio. Pero al hacerlo debemos escoger muy bien la forma en la que lo hacemos.&lt;/p&gt;
+
+&lt;p&gt;Esta es una de las razones por las que se suele hablar de la preferencia de usar librerías vs frameworks. El coste de deshacer cuando hablamos de una librería puede ser relativamente bajo si además hemos creado las abstracciones necesarias. Cuando escogemos acoplarnos a un Framework, el coste de deshacer es más alto.&lt;/p&gt;
+
+&lt;p&gt;Por supuesto, es una cuestión de equilibrio y hay muchas veces en las que el coste a pagar por utilizar un framework merece completamente la pena.&lt;/p&gt;
+
+&lt;p&gt;Aunque no habla exáctamente de este tema, me gusta mucho el vídeo &lt;a href=&#34;https://www.infoq.com/presentations/8-lines-code-refactoring&#34;&gt;&amp;#8220;8 Lines of Code&amp;#8221;&lt;/a&gt; de Greg Young, en el que habla del coste de atarnos a soluciones mágicas.&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h2&gt;
+
+&lt;p&gt;Debemos intentar que nuestro código sea siempre un poquito mejor. La única forma de hacer que nuestro código sea mejor es mejorar nosotros. Si identificamos que tomamos malas decisiones con demasiada frecuencia, tenemos que deshacer mucho de lo que hacemos, no somos capaces de alcanzar un flujo de entrega adecuado, tal vez tengamos que plantearnos invertir un poco de tiempo en mejorar. Existen multitud de recursos que nos pueden ayudar a desarrollar mejor, tenemos las comunidades y los eventos de comunidad, cursos online y presenciales, blogs de un nivel bestial&amp;#8230; lo que no tenemos es excusa.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;##&lt;/p&gt;
+</description>
     </item>
     
     <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/powershell-devolver-un-array-vacio-desde-una-funcion/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>Desarrollador, pon contenedores en tu vida</title>
+      <link>http://www.modestosanjuan.com/desarrollador-pon-contenedores-en-tu-vida/</link>
+      <pubDate>Sun, 06 Nov 2016 23:10:11 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com/powershell-devolver-un-array-vacio-desde-una-funcion/</guid>
-      <description>[PowerShell] Devolver un array vacío desde una función &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;Subscribe[PowerShell] Devolver un array vacío desde una funciónAug 20, 2015Esto es un truco rápido muy chorra pero que puede volver loco a más de un desarrollador que no esté acostumbrado a las peculiaridades de PowerShell.</description>
+      <guid>http://www.modestosanjuan.com/desarrollador-pon-contenedores-en-tu-vida/</guid>
+      <description>&lt;p&gt;No, en este post no te voy a vender las virtudes de desplegar su aplicación sobre docker. Mucho se ha escrito sobre el tema y mucho se seguirá escribiendo. También se ha escrito de &lt;a href=&#34;https://thehftguy.wordpress.com/2016/11/01/docker-in-production-an-history-of-failure/&#34;&gt;lo malo que es&lt;/a&gt; docker y de lo &lt;a href=&#34;http://patrobinson.github.io/2016/11/05/docker-in-production/&#34;&gt;no tan malo que es&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Este post está destinado especialmente a todos aquellos desarrolladores que no desplegáis vuestras aplicaciones con Docker. Porque los que ya usáis docker en el ciclo de entrega ya sabéis lo que voy a contar y además os parece obvio.&lt;/p&gt;
+
+&lt;p&gt;Seguro que alguna vez has tenido que instalarte Redis, Mongo, Couchbase, MySql, ElasticSearch, RabbitMq o cualquier otro software similar para hacer una prueba puntual, por requisitos de un proyecto fugaz o para hacer un spike y decidir si finalmente introduces esa pieza o no en tu infraestructura.&lt;/p&gt;
+
+&lt;p&gt;Lo normal antes de tener contenedores era instalar el software en cuestión en nuestra máquina o tal vez recurrir a una máquina virtual. Lo de la máquina virtual era práctica habitual cuando sabíamos que el software a instalar iba a causar estragos en nuestra máquina, ya fuera en forma de mierda repartida por todo el sistema o en forma de losa de 500kg para el rendimiento.&lt;/p&gt;
+
+&lt;p&gt;Pues ahora tenemos una opción más, con las ventajas de aislamiento de las máquinas virtuales pero muchísimo más sencillo. Gracias al &lt;a href=&#34;https://hub.docker.com/&#34;&gt;hub de docker&lt;/a&gt; tenemos al alcance de un &amp;#8220;docker run&amp;#8221; imágenes oficiales de todos los programas mencionados antes y muchos más. Incluso tenemos algunas no oficiales que pueden ser de mucha ayuda, como Oracle. Si, Oracle, porque quién narices quiere instalarse Oracle para hacer 4 pruebas pudiendo tirar de una imagen preconfigurada!.&lt;/p&gt;
+
+&lt;p&gt;Si las imágenes están curradas (suelen estarlo), podrás incluso personalizar aspectos del funcionamiento de la aplicación. Por ejemplo, la &lt;a href=&#34;https://hub.docker.com/_/redis/&#34;&gt;imagen de Redis&lt;/a&gt; está preparada para poder usar tu propio &amp;#8220;redis.conf&amp;#8221; o simplemente para usar redis con contraseña.&lt;/p&gt;
+
+&lt;p&gt;Por cierto, aunque las imágenes del &lt;a href=&#34;https://hub.docker.com/r/microsoft/&#34;&gt;repositorio de Microsoft&lt;/a&gt; aún no se consideran oficiales dentro del hub de Docker, son las oficiales de Microsoft, son de fiar 😉&lt;/p&gt;
+
+&lt;p&gt;Tal como lo he mencionado parece que esto de usar Docker durante el desarrollo es algo que sólo vale para hacer pruebas. Pues no, puedes usarlo en tu día a día y así evitar contaminar tu sistema con instalaciones que luego tienes que actualizar cada cierto tiempo, acumulando cada vez más y más &amp;#8220;restos&amp;#8221;.&lt;/p&gt;
+
+&lt;p&gt;Un último briconsejo: Si tienes la oportunidad, intenta usar las versiones tageadas como &amp;#8220;alpine&amp;#8221;. Evidentemente, las versiones &amp;#8220;alpine&amp;#8221; están basadas en &lt;a href=&#34;https://alpinelinux.org/&#34;&gt;Alpine Linux&lt;/a&gt;, una distribución &amp;#8220;security-oriented&amp;#8221; que pesa sólo 5Mb. En la mayoría de los casos, teniendo en cuenta que lo que queremos probar es únicamente el software de la imagen que hemos bajado, será suficiente. Como referencia, la imagen &amp;#8220;latest&amp;#8221; de Redis ocupa 74Mb y la &amp;#8220;alpine&amp;#8221; ocupa sólo 8Mb.&lt;/p&gt;
+</description>
     </item>
     
     <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/powershell-distinguir-entre-rutas-relativas-y-absolutas/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>Nuevos retos</title>
+      <link>http://www.modestosanjuan.com/nuevos-retos/</link>
+      <pubDate>Fri, 14 Oct 2016 15:40:53 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com/powershell-distinguir-entre-rutas-relativas-y-absolutas/</guid>
-      <description>[PowerShell] Distinguir entre rutas relativas y absolutas &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;Subscribe[PowerShell] Distinguir entre rutas relativas y absolutasOct 8, 2015Esta vez toca un truco muy simple pero muy útil cuando tengo un script que recibe una ruta como parámetro.</description>
+      <guid>http://www.modestosanjuan.com/nuevos-retos/</guid>
+      <description>&lt;p&gt;Estos últimos dos meses he andado bastante liado y no he prestado mucha atención al blog. Esta vez no voy a hablar de ningún tema técnico, se trata de una post muy personal. Si no te interesa mi vida, deja de leer. Si te interesa, eres un poco cotilla ;P&lt;/p&gt;
+
+&lt;p&gt;Este mes cierro una etapa profesional maravillosa que me ha dado muchas alegrías, me ha permitido trabajar con un equipo genial, aprender como no lo hacía en muchos años y divertirme haciendo lo que más me gusta, desarrollar software.&lt;/p&gt;
+
+&lt;p&gt;Para mi estos dos últimos años han sido muy importantes. Hace dos años terminaba otra etapa muy importante en mi vida que duró 10 años y durante la que intenté sacar adelante una empresa de desarrollo. Las cosas no terminaron bien y tuve que hacer algo a lo que no estoy acostumbrado, buscar trabajo.&lt;/p&gt;
+
+&lt;p&gt;Y fue precisamente cuando Carlos Blé se cruzó en mi camino. Casualmente Carlos estaba en Madrid por trabajo y coincidimos en un par de eventos de MSCoders. Me comentó que tal vez saliese un proyecto chulo en las Palmas y me preguntó si me interesaría ayudarles dedicando unos días de consultoría como experto en .Net.&lt;/p&gt;
+
+&lt;p&gt;Al final el proyecto salió y, en lugar de unos días, terminó siendo una propuesta para un proyecto de un año, incluyendo los primeros 3 meses en presencial en Las Palmas y con visitas frecuentes el resto del año.&lt;/p&gt;
+
+&lt;p&gt;Así que me vi de no tener curro, a tener dos ofertas: una de una entidad bancaria &amp;#8220;cerca&amp;#8221; de casa y la otra para un proyecto de un año, como autónomo, pasando un periodo bastante largo fuera de casa y teniendo que viajar bastante.&lt;/p&gt;
+
+&lt;p&gt;El caso es que el proyecto de Canarias era muy interesante, para mi iba a ser todo un reto y se planteaba como una oportunidad única. Así que acepté la propuesta de Carlos y un mes después estaba compartiendo piso con él y con Fran en Las Palmas.&lt;/p&gt;
+
+&lt;p&gt;Pasó el año en un suspiro y el proyecto se renovó para otro año, que ha vuelto a pasar en un suspiro.&lt;/p&gt;
+
+&lt;p&gt;Han sido dos años muy intensos en los que he aprendido muchísimo y he desaprendido más todavía. Creo que nunca he aprendido tanto concentrado en tan poco tiempo. Y eso es algo que tengo que agradecerle a mucha gente:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A Alfredo, Carlos y Fran (que no ronca) por subir tanto el listón. Gracias a vosotros me siento como los hobbits al volver a la comarca. He crecido, mis estadísticas han subido y ahora tengo varios niveles más. Pero además tengo a tres compañeros de aventuras.&lt;/li&gt;
+&lt;li&gt;A los trabajadores de Aida, la empresa que ha confiado en nosotros los últimos dos años. La evolución que hemos podido experimentar en todos ha sido un gran aliciente para seguir mejorando. No quiero hacerle el feo a nadie así que no daré nombres 😉&lt;/li&gt;
+&lt;li&gt;Por orden de aparición, a Ronny, Miguel, Dani y Jose. Teneros como aprendices ha sido todo un reto. Tenéis tanta inquietud que rejuvenezco cuando paso tiempo con vosotros. Compartir piso con vosotros cuando voy a Canarias es como hacer un hackathon diario, pero me ha encantado.&lt;/li&gt;
+&lt;li&gt;A Luis Rovirosa, aunque hemos podido compartir poco tiempo juntos, cada vez que lo hemos hecho me has hecho crecer un poquito.&lt;/li&gt;
+&lt;li&gt;A Antonio de la Torre. Aunque nuestros caminos prácticamente se han cruzado, ha sido genial. Sólo lamento no haber podido coincidir más tiempo, porque no muchos pueden jactarse de haberme hecho cambiar de opinión tantas veces en tan poco tiempo. Tenemos que volver a compartir vagón bar en el tren camino de algún evento 😉&lt;/li&gt;
+&lt;li&gt;A mi familia por tener tanta paciencia. Ha habido meses en los que he pasado mucho tiempo fuera de casa entre el trabajo y los eventos de la comunidad, pero me han apoyado siempre.&lt;/li&gt;
+&lt;li&gt;A la comunidad, por ella conseguí trabajo hace dos años y por ella lo cambio ahora.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Me resulta raro dejar una empresa en la que soy feliz. Puede sonar raro que lo explique así, pero el cuerpo me pide aprovechar la oportunidad laboral que se me ha presentado. Salgo de Codesai orgulloso de haber formado parte de sus comienzos y con la convicción de que nuestros caminos se volverán a cruzar de una forma u otra.&lt;/p&gt;
+
+&lt;p&gt;Lo mejor de todo, gracias a la comunidad podremos vernos y compartir teclado.&lt;/p&gt;
+
+&lt;p&gt;Actualización: Mis compañeros de Codesai me han dedicado un [Estos últimos dos meses he andado bastante liado y no he prestado mucha atención al blog. Esta vez no voy a hablar de ningún tema técnico, se trata de una post muy personal. Si no te interesa mi vida, deja de leer. Si te interesa, eres un poco cotilla ;P&lt;/p&gt;
+
+&lt;p&gt;Este mes cierro una etapa profesional maravillosa que me ha dado muchas alegrías, me ha permitido trabajar con un equipo genial, aprender como no lo hacía en muchos años y divertirme haciendo lo que más me gusta, desarrollar software.&lt;/p&gt;
+
+&lt;p&gt;Para mi estos dos últimos años han sido muy importantes. Hace dos años terminaba otra etapa muy importante en mi vida que duró 10 años y durante la que intenté sacar adelante una empresa de desarrollo. Las cosas no terminaron bien y tuve que hacer algo a lo que no estoy acostumbrado, buscar trabajo.&lt;/p&gt;
+
+&lt;p&gt;Y fue precisamente cuando Carlos Blé se cruzó en mi camino. Casualmente Carlos estaba en Madrid por trabajo y coincidimos en un par de eventos de MSCoders. Me comentó que tal vez saliese un proyecto chulo en las Palmas y me preguntó si me interesaría ayudarles dedicando unos días de consultoría como experto en .Net.&lt;/p&gt;
+
+&lt;p&gt;Al final el proyecto salió y, en lugar de unos días, terminó siendo una propuesta para un proyecto de un año, incluyendo los primeros 3 meses en presencial en Las Palmas y con visitas frecuentes el resto del año.&lt;/p&gt;
+
+&lt;p&gt;Así que me vi de no tener curro, a tener dos ofertas: una de una entidad bancaria &amp;#8220;cerca&amp;#8221; de casa y la otra para un proyecto de un año, como autónomo, pasando un periodo bastante largo fuera de casa y teniendo que viajar bastante.&lt;/p&gt;
+
+&lt;p&gt;El caso es que el proyecto de Canarias era muy interesante, para mi iba a ser todo un reto y se planteaba como una oportunidad única. Así que acepté la propuesta de Carlos y un mes después estaba compartiendo piso con él y con Fran en Las Palmas.&lt;/p&gt;
+
+&lt;p&gt;Pasó el año en un suspiro y el proyecto se renovó para otro año, que ha vuelto a pasar en un suspiro.&lt;/p&gt;
+
+&lt;p&gt;Han sido dos años muy intensos en los que he aprendido muchísimo y he desaprendido más todavía. Creo que nunca he aprendido tanto concentrado en tan poco tiempo. Y eso es algo que tengo que agradecerle a mucha gente:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A Alfredo, Carlos y Fran (que no ronca) por subir tanto el listón. Gracias a vosotros me siento como los hobbits al volver a la comarca. He crecido, mis estadísticas han subido y ahora tengo varios niveles más. Pero además tengo a tres compañeros de aventuras.&lt;/li&gt;
+&lt;li&gt;A los trabajadores de Aida, la empresa que ha confiado en nosotros los últimos dos años. La evolución que hemos podido experimentar en todos ha sido un gran aliciente para seguir mejorando. No quiero hacerle el feo a nadie así que no daré nombres 😉&lt;/li&gt;
+&lt;li&gt;Por orden de aparición, a Ronny, Miguel, Dani y Jose. Teneros como aprendices ha sido todo un reto. Tenéis tanta inquietud que rejuvenezco cuando paso tiempo con vosotros. Compartir piso con vosotros cuando voy a Canarias es como hacer un hackathon diario, pero me ha encantado.&lt;/li&gt;
+&lt;li&gt;A Luis Rovirosa, aunque hemos podido compartir poco tiempo juntos, cada vez que lo hemos hecho me has hecho crecer un poquito.&lt;/li&gt;
+&lt;li&gt;A Antonio de la Torre. Aunque nuestros caminos prácticamente se han cruzado, ha sido genial. Sólo lamento no haber podido coincidir más tiempo, porque no muchos pueden jactarse de haberme hecho cambiar de opinión tantas veces en tan poco tiempo. Tenemos que volver a compartir vagón bar en el tren camino de algún evento 😉&lt;/li&gt;
+&lt;li&gt;A mi familia por tener tanta paciencia. Ha habido meses en los que he pasado mucho tiempo fuera de casa entre el trabajo y los eventos de la comunidad, pero me han apoyado siempre.&lt;/li&gt;
+&lt;li&gt;A la comunidad, por ella conseguí trabajo hace dos años y por ella lo cambio ahora.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Me resulta raro dejar una empresa en la que soy feliz. Puede sonar raro que lo explique así, pero el cuerpo me pide aprovechar la oportunidad laboral que se me ha presentado. Salgo de Codesai orgulloso de haber formado parte de sus comienzos y con la convicción de que nuestros caminos se volverán a cruzar de una forma u otra.&lt;/p&gt;
+
+&lt;p&gt;Lo mejor de todo, gracias a la comunidad podremos vernos y compartir teclado.&lt;/p&gt;
+
+&lt;p&gt;Actualización: Mis compañeros de Codesai me han dedicado un]&lt;a href=&#34;http://www.codesai.com/2016/10/muchas-gracias-modesto/&#34;&gt;1&lt;/a&gt; de despedida. No puedo hacer otra cosa más que reiterar mi agradecimiento. Sois la bomba 😉&lt;/p&gt;
+</description>
     </item>
     
     <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/powershell-la-importancia-del-set-strictmode/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>¿Cuánto cuesta llamar a un método?</title>
+      <link>http://www.modestosanjuan.com/cuanto-cuesta-llamar-a-un-metodo/</link>
+      <pubDate>Tue, 02 Aug 2016 00:03:45 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com/powershell-la-importancia-del-set-strictmode/</guid>
-      <description>[PowerShell] La importancia del Set-StrictMode &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;Subscribe[PowerShell] La importancia del Set-StrictModeAug 3, 2015Cuando empecé a programar scripts en PowerShell, cometía muchísimos fallos fruto de mi intoxicación con otros lenguajes, especialmente C#, con el que trabajo habitualmente.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/powershell-las-ventajas-de-usar-parametros-y-variables-tipados/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://www.modestosanjuan.com/cuanto-cuesta-llamar-a-un-metodo/</guid>
+      <description>
+
+&lt;p&gt;Últimamente Twitter está siendo toda una fuente de inspiración. En esta ocasión el hilo culpable es &lt;a href=&#34;https://twitter.com/jcant0n/status/759081339098464257&#34;&gt;este&lt;/a&gt;. &lt;a href=&#34;https://twitter.com/jcant0n&#34;&gt;Javier Cantón&lt;/a&gt; hace un comentario respecto a la diferencia de rendimiento existente entre llamar a un método virtual versus llamar al mismo método a través de un interface.&lt;/p&gt;
+
+&lt;p&gt;En este post no pienso hablar de lo malvadas que son las optimizaciones prematuras, asumo que el comentario de Javier tenía su contexto, así que me voy a quedar con la parte que me ha resultado curiosa. &lt;a href=&#34;https://twitter.com/luisruizpavon/status/759366097497886720&#34;&gt;Luis Ruiz Pavón nos comentó&lt;/a&gt; que hiciéramos este tipo de mediciones utilizando &lt;a href=&#34;https://github.com/PerfDotNet/BenchmarkDotNet&#34;&gt;BenchmarkDotNet&lt;/a&gt; y, como me habían surgido un par de dudas, me puse manos a la obra.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Aviso importante:&lt;/strong&gt; las cifras de las mediciones como tal no tienen importancia, cada ordenador tardará una cantidad distinta de nanosegundos en efectuar cada operación, lo que es importante en este caso es observar el diferencial de tiempo que es necesario para ejecutar el método en cada circunstancia.&lt;/p&gt;
+
+&lt;h2 id=&#34;llamada-directa-a-método-no-virtual&#34;&gt;Llamada directa a método no virtual&lt;/h2&gt;
+
+&lt;p&gt;Javier comentaba que en su contexto le interesaban las llamadas a métodos virtuales vs interfaces, descartando las llamadas directas a un método no virtual. No obstante, por dar un poco de contexto respecto al rendimiento,  me parecía intersante medirlo. Una llamada directa a un método no virtual tarda tan poco que hay veces que no es capaz de medirlo y me dice que tarda 0.0000 nanosegundos. En algunas de las pruebas la mediana era de &lt;strong&gt;0.0025 ns&lt;/strong&gt;. En realidad este resultado se debe a que el Jit está haciendo un inline del método. Si decoramos el método con el atributo &lt;strong&gt;[MethodImpl(MethodImplOptions.NoInlining)]&lt;/strong&gt; para que &lt;strong&gt;no haga inline&lt;/strong&gt; (gracias Juanma), la mediana es de &lt;strong&gt;1.96 ns&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;directa-virtual-vs-interface&#34;&gt;Directa virtual vs Interface&lt;/h2&gt;
+
+&lt;p&gt;En mi máquina, una llamada directa a un &lt;strong&gt;método virtual&lt;/strong&gt; tarda unos &lt;strong&gt;2.91 nanosegundos&lt;/strong&gt;. SI realizamos la misma llamada a través de un &lt;strong&gt;interface&lt;/strong&gt;, necesita &lt;strong&gt;3.82 nanosegundos&lt;/strong&gt; para cada operación.&lt;/p&gt;
+
+&lt;p&gt;Como he dicho antes, no voy a entrar a valorar si ahorrar 1 nanosegundo por cada llamada a un método es algo importante o no, es una cuestión de contexto y estoy seguro de que hay contextos en los que puede ser importante.&lt;/p&gt;
+
+&lt;p&gt;Si asumimos que estamos en un contexto en el que realmente nos importa no sufrir esta penalización, podríamos descartar el uso de interfaces, pero esto puede condicionarnos el diseño en muchos aspectos.&lt;/p&gt;
+
+&lt;h2 id=&#34;clases-abstractas&#34;&gt;Clases abstractas&lt;/h2&gt;
+
+&lt;p&gt;Pensando en cómo podría salvar ese problema y obtener un rendimiento como el de una llamada directa pero con las ventajas que da tener un interface, se me ocurrió la posibilidad de utilizar una clase abstracta. Es cierto que no es exactamente lo mismo utilizar una clase abstracta que un interface, pero aún así creo que demuestra mucho más la intencionalidad que recurrir a un método virtual.&lt;/p&gt;
+
+&lt;p&gt;La duda era cuál sería el rendimiento de la llamada a través de una clase abstracta. ¿Sería equivalente al de un interface?&lt;/p&gt;
+
+&lt;p&gt;Pues resultó que no. Según mis mediciones, cada llamada tarda unos &lt;strong&gt;2.88 nanosegundos&lt;/strong&gt;. Es más, tanto si llamaba a través de la clase abstracta como si llamaba a través de la implementación de la clase abstracta, los tiempos eran los mismos.&lt;/p&gt;
+
+&lt;p&gt;Ojo, aunque en principio parece que es incluso más rápido que la llamada directa a un método virtual, creo que la diferencia es despreciable y que si repitiese las mediciones varias veces, se turnarían por ser la más rápida 😉&lt;/p&gt;
+
+&lt;h2 id=&#34;reflection&#34;&gt;Reflection&lt;/h2&gt;
+
+&lt;p&gt;Ya que estaba, por curiosidad medí el tiempo de hacer las llamadas utilizando reflexión, asumiendo que tenía cacheado el MethodInfo y midiendo únicamente el Invoke del método. Cada llamada tardaba &lt;strong&gt;272.87 nanosegundos&lt;/strong&gt;, un abismo comparado con los otros mecanismos.&lt;/p&gt;
+
+&lt;h2 id=&#34;un-poco-más-de-detalle&#34;&gt;Un poco más de detalle&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/gulnor?lang=en&#34;&gt;Juanma&lt;/a&gt; me ha comentado, con toda la razón del mundo, que para este tipo de mediciones tan pequeñas resulta útil recurrir a histogramas. BenchmarkDotNet no tiene actualmente esta funcionalidad, pero lo que si proporciona es la desviación típica, que puede resultar útil para interpretar lo datos. Aquí están los resultados de la última medición efectuada:&lt;/p&gt;
+
+&lt;div class=&#34;table-responsive&#34;&gt;
+  &lt;table  style=&#34;width:100%; &#34;  class=&#34;easy-table easy-table-default &#34; border=&#34;0&#34;&gt;
+    &lt;tr&gt;
+      &lt;th &gt;
+        Método
+      &lt;/th&gt;
       
-      <guid>http://www.modestosanjuan.com/powershell-las-ventajas-de-usar-parametros-y-variables-tipados/</guid>
-      <description>[PowerShell] Las ventajas de usar parámetros y variables tipados &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;Subscribe[PowerShell] Las ventajas de usar parámetros y variables tipadosAug 18, 2015Cuanto más uso PowerShell más convencido estoy de lo importante que es tipar las variables y los parámetros de las funciones.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/powershell-ojo-que-no-hay-un-unico-null/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      &lt;th &gt;
+        Mediana
+      &lt;/th&gt;
       
-      <guid>http://www.modestosanjuan.com/powershell-ojo-que-no-hay-un-unico-null/</guid>
-      <description>[PowerShell] Ojo que no hay un único $null &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;Subscribe[PowerShell] Ojo que no hay un único $nullSep 9, 2015Este es un ejemplo curioso de esos que me ha vuelto loco hasta que me he dado cuenta.</description>
-    </item>
+      &lt;th &gt;
+        Desviación
+      &lt;/th&gt;
+    &lt;/tr&gt;
     
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/powershell-pasar-de-securestring-a-string/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+    &lt;tr&gt;
+      &lt;td &gt;
+        Directo no virtual
+      &lt;/td&gt;
       
-      <guid>http://www.modestosanjuan.com/powershell-pasar-de-securestring-a-string/</guid>
-      <description>[PowerShell] Pasar de SecureString a String &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;Subscribe[PowerShell] Pasar de SecureString a StringNov 25, 2015En ocasiones necesito usar un SecureString pero luego me veo obligado a utilizar ese string de forma no segura.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/powershell-saber-si-una-variable-ya-ha-sido-definida/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      &lt;td &gt;
+        0.0025 ns
+      &lt;/td&gt;
       
-      <guid>http://www.modestosanjuan.com/powershell-saber-si-una-variable-ya-ha-sido-definida/</guid>
-      <description>[PowerShell] Saber si una variable ya ha sido definida &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;Subscribe[PowerShell] Saber si una variable ya ha sido definidaAug 20, 2015En ocasiones tengo la necesidad de saber si una variable ha sido previamente definida.</description>
-    </item>
+      &lt;td &gt;
+        0.0853 ns
+      &lt;/td&gt;
+    &lt;/tr&gt;
     
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/powershell-sacando-partido-a-la-conversion-de-tipos/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+    &lt;tr&gt;
+      &lt;td &gt;
+        Direct no virtual no inline
+      &lt;/td&gt;
       
-      <guid>http://www.modestosanjuan.com/powershell-sacando-partido-a-la-conversion-de-tipos/</guid>
-      <description>[PowerShell] Sacando partido a la conversión de tipos &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;Subscribe[PowerShell] Sacando partido a la conversión de tiposOct 22, 2015PowerShell ETS (Extended Type System) forma parte de las tripas de PowerShell y es la parte que permite que convivan tipos de .</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/powershell-switch-parameters/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      &lt;td &gt;
+        1.9673 ns
+      &lt;/td&gt;
       
-      <guid>http://www.modestosanjuan.com/powershell-switch-parameters/</guid>
-      <description>[PowerShell] Switch parameters &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;Subscribe[PowerShell] Switch parametersAug 17, 2015En PowerShell es muy común usar parámetros de tipo switch. La peculiaridad de estos parámetros es que al usarlos, se especifica el nombre del parámetro pero no se proporciona ningún valor, ya que se asume que al usarlo su valor será $true y $false si no se especifica.</description>
-    </item>
+      &lt;td &gt;
+        0.1040 ns
+      &lt;/td&gt;
+    &lt;/tr&gt;
     
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/powershell-variables-automaticas/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+    &lt;tr&gt;
+      &lt;td &gt;
+        Directo virtual
+      &lt;/td&gt;
       
-      <guid>http://www.modestosanjuan.com/powershell-variables-automaticas/</guid>
-      <description>[PowerShell] Variables automáticas &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;Subscribe[PowerShell] Variables automáticasSep 20, 2015PowerShell dispone de una serie de variables gestionadas de forma automática que permiten obtener información relacionada con la ejecución de código actual.</description>
+      &lt;td &gt;
+        2.9151 ns
+      &lt;/td&gt;
+      
+      &lt;td &gt;
+        0.0917 ns
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td &gt;
+        Interface
+      &lt;/td&gt;
+      
+      &lt;td &gt;
+        3.8213 ns
+      &lt;/td&gt;
+      
+      &lt;td &gt;
+        0.1464 ns
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td &gt;
+        Abstract
+      &lt;/td&gt;
+      
+      &lt;td &gt;
+        2.8829 ns
+      &lt;/td&gt;
+      
+      &lt;td &gt;
+        0.1113 ns
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td &gt;
+        Directo con reflexión
+      &lt;/td&gt;
+      
+      &lt;td &gt;
+        272.8738 ns
+      &lt;/td&gt;
+      
+      &lt;td &gt;
+        17.7846 ns
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h1&gt;
+
+&lt;p&gt;Si alguna vez nos preocupa tantísimo el rendimiento, podemos utilizar una clase abstracta en lugar de un interface (ya, ya he dicho antes que no es lo mismo).&lt;/p&gt;
+
+&lt;p&gt;Cualquier excusa es buena para calentarse un poco la cabeza y sacar unos cuantos datos peculiares.&lt;/p&gt;
+
+&lt;p&gt;Este tipo de posts no valen prácticamente para nada, pero el datap0rn tiene su gracia y me ha resultado muy entretenido escribirlo.&lt;/p&gt;
+
+&lt;p&gt;BenchmarkDotNet mola, aunque tarda cojón y medio en hacer cada medición 😀&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+</description>
     </item>
     
     <item>
-      <title></title>
+      <title>Claves primarias: inmutabilidad y generación</title>
+      <link>http://www.modestosanjuan.com/claves-primarias-inmutabilidad-y-generacion/</link>
+      <pubDate>Sat, 30 Jul 2016 23:39:11 +0000</pubDate>
+      
+      <guid>http://www.modestosanjuan.com/claves-primarias-inmutabilidad-y-generacion/</guid>
+      <description>
+
+&lt;p&gt;Hace unos días &lt;a href=&#34;https://twitter.com/Pablyte/status/754056720666730500&#34;&gt;Pablo Iglesias&lt;/a&gt; &lt;a href=&#34;https://twitter.com/Pablyte/status/754056720666730500&#34;&gt;tuiteó&lt;/a&gt; una pregunta de Stack Exchange en la que hablaban sobre la inmutabilidad de las claves primarias. Se generó un debate bastante interesante en Twitter que se extendió más allá de la cuestión de la inmutabilidad. Este es un intento de recopilar y explicar algunos de los conceptos que se mencionaron durante ese debate.&lt;/p&gt;
+
+&lt;h1 id=&#34;claves-primarias-mutables-o-inmutables&#34;&gt;Claves primarias mutables o inmutables&lt;/h1&gt;
+
+&lt;p&gt;Para el que ande un poco perdido con el concepto, básicamente se trata de determinar si la clave primaria de una entidad debería poder cambiar o no una vez establecida. Por ejemplo: si me registro en un servicio online y utilizan mi email como PK, si el servicio me da la opción de cambiar mi cuenta de correo, la PK es mutable. Esto significa que en todos los sitios en los que el servicio se esté persistiendo mi email como PK va a tener que actualizar el dato para constatar el cambio. Independientemente de que usemos o no foreign keys, esto es un foco de dolor, especialmente si utilizamos distintos mecanismos de persistencia de datos. Si además nuestro software cuenta con funcionalidades como con auditar los cambios o cualquier tipo de integración con sistemas externos como herramientas de CRM y similar, tener PKs mutables se puede convertir en algo imposible.&lt;/p&gt;
+
+&lt;p&gt;Parece que hubo un consenso generalizado respecto a que las PK deberían ser inmutables, así que no me voy a extender más en este punto.&lt;/p&gt;
+
+&lt;h1 id=&#34;claves-subrogadas-o-naturales&#34;&gt;Claves subrogadas o naturales&lt;/h1&gt;
+
+&lt;p&gt;Cuando usamos una clave natural, el valor de la clave está relacionado con los datos que identifica. Por ejemplo, si estamos identificando libros, el ISBN podría ser un candidato a PK. El número de bastidor para un coche, número de serie de un ordenador, la MAC de una tarjeta de red, el número de una factura, etc. En resumen, utilizamos un dato del negocio para identificar nuestras entidades al persistirlas.&lt;/p&gt;
+
+&lt;p&gt;Si, por otro lado, elegimos usar una clave subrogada, lo que estamos haciendo es generar un identificador único que no tiene nada que ver con los datos que identifica, pero se garantiza a nivel infraestructura que el dato es único.&lt;/p&gt;
+
+&lt;p&gt;Aunque siempre pongo un gran &amp;#8220;depende&amp;#8221; y no soy muy amigo de las afirmaciones absolutas, la realidad es que llevo años utilizando claves subrogadas porque la experiencia me ha demostrado que suele ser una mala idea utilizar datos del negocio. La razón es muy sencilla: el negocio cambia.&lt;/p&gt;
+
+&lt;p&gt;Ejemplos hay miles. Por tomar uno, &lt;a href=&#34;https://twitter.com/panicoenlaxbox&#34;&gt;Sergio León&lt;/a&gt; mencionaba los ISBN de los libros. Desarrollando un software para gestionar liberías podríamos pensar que el ISBN debería valernos, pero los libros muy viejos no tienen ISBN. Así que si de repente al librero le diese por dedicarse a vender libros antiguos de colección, tendríamos un problema importante. Ese tipo de situaciones se dan con mucha frecuencia y siempre cuando el desarrollo ya está bastante avanzado, que es cuando más daño hacen.&lt;/p&gt;
+
+&lt;p&gt;Como el ejemplo del ISBN hay muchos y debemos tener en cuenta el coste del cambio. Hay quién podría utilizar el argumento de que es un error pensar en el futuro y que usar una clave subrogada es una decisión prematura basada en anticiparse a un posible cambio de negocio que no sabemos si alguna vez va a suceder. En esas circunstancias suele ser un buen ejercicio pensar en cuál sería el coste del cambio en el futuro frente al coste de usar una clave subrogada en el presente. Si lo pensamos en términos económicos, utilizar una clave natural podría implicar estar firmando una hipoteca muy cara.&lt;/p&gt;
+
+&lt;p&gt;Además, como indicaba &lt;a href=&#34;https://twitter.com/pmolinam&#34;&gt;Pedro J. Molina&lt;/a&gt;, &amp;#8220;Si vas por clave natural acaba uno fácilmente con claves compuestas. Las de 4 campos ya no hacen gracia&amp;#8221;. Pero es que encima eso termina tocando mucho las narices cuando llega el momento de &amp;#8220;enchufarte&amp;#8221; a otras cosas. Es típico que el servicio que te permite asociar comentarios, likes, etc. te pida que le des un identificador único de tu entidad y nos podríamos volver locos buscando ejemplos que nos llevan a desear trabajar siempre con una clave subrogada.&lt;/p&gt;
+
+&lt;h2 id=&#34;generación-de-las-claves-subrogadas&#34;&gt;Generación de las claves subrogadas&lt;/h2&gt;
+
+&lt;p&gt;Venga, vamos a suponer que a estas alturas ya estamos convencidos de que vamos a identificar a nuestras entidades con claves inmutables y subrogadas al menos algunas veces. ¿Cómo las generamos? Este punto también generó debate y en este caso no había unanimidad ni de lejos.&lt;/p&gt;
+
+&lt;p&gt;Para generar una clave subrogada podemos optar por dejar que la base de datos la genere por nosotros automáticamente cuando insertamos el registro o podemos ser nosotros desde el código los que proporcionemos la clave a la base de datos.&lt;/p&gt;
+
+&lt;p&gt;La opción clásica es que la base de datos genere el identificador por ti y listo. Podemos usar un identity, secuencia o lo que nos proporcione la base de datos que utilicemos y no nos complicamos mucho la vida. Pero hay escenarios en los que nos podría interesar recurrir a otro tipo de mecanismos.&lt;/p&gt;
+
+&lt;h2 id=&#34;mecanismos-para-la-generación-de-claves-subrogadas&#34;&gt;Mecanismos para la generación de claves subrogadas&lt;/h2&gt;
+
+&lt;p&gt;Aunque podríamos ponernos muy creativos de cara a la generación de nuestras claves, hay ciertos mecanismos predominantes. No voy a posicionarme respecto a ninguno porque creo que su utilización depende mucho de los requisitos del negocio y de la infraestructura de la aplicación.&lt;/p&gt;
+
+&lt;h3 id=&#34;guids&#34;&gt;Guids&lt;/h3&gt;
+
+&lt;p&gt;Generar Guids es algo sencillo, se puede hacer desde cualquier sitio y las posibilidades de colisión son absolutamente despreciables. En principio es un mecanismo interesante ya que nos permite tener el control desde el negocio y no depender de la base de datos para su generación. Además, entre sus virtudes podemos considerar que al usar un Guid estamos utilizando un identificador no sólo a la tabla, también entre todas las tablas e incluso entre varias bases de datos. Esto habilita con mucha más facilidad escenarios de &amp;#8220;merge&amp;#8221; en los que queremos juntar datos que provienen de varias fuentes.&lt;/p&gt;
+
+&lt;p&gt;Por supuesto, también tiene sus contras, entre ellos que un Guid ocupa muchísimo más que una clave numérica y además &lt;a href=&#34;http://sqlmag.com/database-performance-tuning/clustered-indexes-based-upon-guids&#34;&gt;afecta negativamente&lt;/a&gt; al rendimiento de los índices clustered.&lt;/p&gt;
+
+&lt;p&gt;Hay mucha literatura sobre este tema en internet, incluyendo algunos intentos de análisis sobre la diferencia desde el punto de vista de rendimiento. Además debemos tener en cuenta que la implementación de base de datos que utilicemos influye muchísimo. Como ejemplo, no es lo mismo usar &lt;a href=&#34;http://krow.livejournal.com/497839.html&#34;&gt;MySQL&lt;/a&gt; que &lt;a href=&#34;http://www.informit.com/articles/printerfriendly/25862&#34;&gt;SQL Server&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;numérico-autoincrementado&#34;&gt;Numérico autoincrementado&lt;/h3&gt;
+
+&lt;p&gt;Este mecanismo es uno de los más frecuentes y creo que no necesita mucha explicación. El standard SQL:2003 define los tipos IDENTITY y SEQUENCE pero dependemos de la base de datos que estemos utilizando. Por ejemplo, en MySQL está el AUTO_INCREMENT y en PostgreSQL también está el SERIAL (creo que es &amp;#8220;azucar sintáctico&amp;#8221; para definir un SEQUENCE).&lt;/p&gt;
+
+&lt;h3 id=&#34;hilo&#34;&gt;HiLo&lt;/h3&gt;
+
+&lt;p&gt;A grandes rasos, con HiLo la aplicación reserva con antelación en la base de datos un rango de identificadores que serán utilizados necesite insertar nuevos registros en la base de datos. Cuando la aplicación ha usado todos los identificadores, va a la base de datos y reserva más. NHibernate usa esta técnica y también es posible usarla en Entity Framework. Entre sus ventajas está que nos permite utilizar identificadores de tipo numérico (para los que demandan rendimiento) y entre las desventajas que genera &amp;#8220;lagunas&amp;#8221; entre los identificadores generados. Si una aplicación reserva los identificadores del 1 al 10 y luego usa únicamente 5, los identificadores de 6 al 10 quedarán sin usar.&lt;/p&gt;
+
+&lt;h3 id=&#34;dependiendo-de-un-tercero&#34;&gt;Dependiendo de un tercero&lt;/h3&gt;
+
+&lt;p&gt;Consiste en delegar en un tercero la estrategia de generación de nuestra clave. Desde nuestra aplicación, cuando queramos identificar una entidad, llamaremos a este servicio externo y nos proporcionará una identidad que será la que luego persistiremos.&lt;/p&gt;
+
+&lt;p&gt;Cuando estamos haciendo HiLo, en parte estamos utilizando este mecanismo. Aunque sea nuestra base de datos la que genera los identificadores, en realidad es un tercero (la clase que gestiona el algoritmo) el que nos los está proporcionando.&lt;/p&gt;
+
+&lt;p&gt;Un ejemplo (raro pero real) es utilizarlo cuando la persistencia se realiza sobre mecanismos que no tienen soporte de autonuméricos, delegando la generación del autonumérico sobre un tercero para luego persistir el dato. Otro escenario de uso sería si necesitamos asegurarnos de que nuestros identificadores son únicos entre varios sistemas y además queremos aplicar reglas especiales para su generación.&lt;/p&gt;
+
+&lt;p&gt;Siendo realistas, es un mecanismo que añade complejidad y no es necesario la mayoría de las veces, pero no deja de ser interesante mencionarlo.&lt;/p&gt;
+
+&lt;h2 id=&#34;cuál-uso&#34;&gt;¿Cuál uso?&lt;/h2&gt;
+
+&lt;p&gt;Según las respuestas a la conversación que originó el debate, una gran mayoría respondería &amp;#8220;secuencias numéricas autoincrementadas y no me complico&amp;#8221;. No les falta razón, pero hay veces que complicarnos es la opción menos complicada. Complicado, eh? 😉&lt;/p&gt;
+
+&lt;p&gt;Existen muchas razones que podrían llevarnos a querer complicarnos la vida y no pretendo hacer un estudio detallado, pero al menos quiero poner algunos ejempos comunes.&lt;/p&gt;
+
+&lt;h3 id=&#34;cqs&#34;&gt;CQS&lt;/h3&gt;
+
+&lt;p&gt;Si queremos usar &lt;a href=&#34;http://martinfowler.com/bliki/CommandQuerySeparation.html&#34;&gt;CQS&lt;/a&gt; (Command-Query Separation) partimos del principio de que nuestros comandos no devuelven nada. Si tenemos un comando que inserta una entidad, deberíamos saber el id de la entidad que estamos insertando antes de llamar al propio comando, ya que el comando no va a devolvernos nada.&lt;/p&gt;
+
+&lt;p&gt;Podríamos pensar que tampoco pasa nada porque un comando de inserción devuelva un valor y ya está. No voy a entrar a valorar esto, pero en cuanto queramos que el modelo de ejecución de nuestros comandos sea asíncrono (a través de una cola o similar), volvemos al problema inicial.&lt;/p&gt;
+
+&lt;h3 id=&#34;modo-offline&#34;&gt;Modo offline&lt;/h3&gt;
+
+&lt;p&gt;Si nuestra aplicación tiene como requisito de negocio proporcionar la posibilidad trabajar offline, recurrir al servidor de base de datos para obtener el id de una entidad no es una opción.&lt;/p&gt;
+
+&lt;p&gt;Imaginemos una aplicación como Evernote. Cuando creemos una nueva nota y no tengamos conexión, ¿qué identificador tendrá esa nota entonces? Si generamos ese identificador desde el código (mediante, por ejemplo, un GUID) podremos realizar la sincronización fácilmente una vez tengamos conexión.&lt;/p&gt;
+
+&lt;p&gt;Aunque en el caso de CQS, HiLo podría ser una opción perfectamente válida, en este caso sería la opción menos recomendada ya que tendríamos la necesidad de conectarnos al servidor de base de datos si creamos tantas entidades que agotamos nuestro &amp;#8220;cupo&amp;#8221; de identificadores.&lt;/p&gt;
+
+&lt;h3 id=&#34;si-no-usamos-sql&#34;&gt;Si no usamos SQL&lt;/h3&gt;
+
+&lt;p&gt;Este caso es ignorado por muchos desarrolladores cuyo contexto profesional se limita a bases de datos SQL para persistir información. Cuando salimos del mundo SQL, muchísimos mecanismos de persistencia piden que seamos nosotros desde el código los que proporcionemos nuestros identificadores. Como ejemplo &amp;#8220;primitivo&amp;#8221; a la par que útil, si persistimos en disco tendremos que proporcionar nosotros el identificador de nuestra entidad (nombre del archivo).&lt;/p&gt;
+
+&lt;h1 id=&#34;conclusiones&#34;&gt;Conclusiones&lt;/h1&gt;
+
+&lt;p&gt;Tenemos multitud de mecanismos para identificar nuestras entidades. Debemos conocerlos bien y hacer un uso inteligente de ellos en función de nuestros requisitos de negocio, pero nunca complicarnos la vida innecesariamente.Y muy importante, que el rendimiento únicamente sea un argumento cuando tenemos requisitos no funcionales que nos hablan de rendimiento. Hablar de rendimiento cuando no tienes requisitos relacionados con el rendimiento suele ser foco de optimizaciones prematuras.&lt;/p&gt;
+
+&lt;p&gt;Y con esto creo que termino el &amp;#8220;resumen&amp;#8221; de las cosas que se comentaron en el hilo de Twitter y algunas de las que pasaron por mi cabeza. Seguro que me dejo en el tintero muchas observaciones y muchos matices, me conformo si a alguien le vale para entender que hay vida más allá de los identificadores mutables naturales 😀&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Palabras malditas</title>
+      <link>http://www.modestosanjuan.com/palabras-malditas/</link>
+      <pubDate>Mon, 13 Jun 2016 10:02:56 +0000</pubDate>
+      
+      <guid>http://www.modestosanjuan.com/palabras-malditas/</guid>
+      <description>
+
+&lt;h1 id=&#34;extreme-programming-y-el-desarrollo-ágil&#34;&gt;Extreme programming y el desarrollo ágil&lt;/h1&gt;
+
+&lt;p&gt;A principios de siglo (dicho así parece que queda muy atrás, eh&amp;#8230; :P) trabajaba en Indra como coordinador de un equipo de desarrollo. En mi entorno profesional era un poco como un bicho raro porque, además de ser 10 años más joven que la media de mi puesto, era de los pocos que se negaba a abandonar el desarrollo para dedicarme plenamente a la gestión.&lt;/p&gt;
+
+&lt;p&gt;Recuerdo que en esa época leí sobre Extreme Programming y me pareció muy interesante. He de reconocer que por aquel entonces no entendí bien la parte de programar en pareja y seguro que malentendí otras partes, pero empaticé con los valores que promovía y algunas prácticas casualmente ya las llevábamos aplicando en nuestro día a día desde los inicios del equipo.&lt;/p&gt;
+
+&lt;p&gt;En una ocasión un compañero me vino a buscar y justo estaba leyendo sobre el tema. Sus primeras reacciones al leer las palabras &amp;#8220;Extreme Programming&amp;#8221; fueron del tipo: &amp;#8220;¿programación extrema? ¡aquí no queremos cosas extremas!&amp;#8221;. Le comenté que era un proceso ágil que&amp;#8230; &amp;#8220;ágil, ah! vale, eso ya me gusta más&amp;#8221; y el resto de la historia ya da igual.&lt;/p&gt;
+
+&lt;h1 id=&#34;el-freelance-y-el-profesional-independiente&#34;&gt;El freelance y el profesional independiente&lt;/h1&gt;
+
+&lt;p&gt;El año pasado di una charla en una comunidad de desarrollo y puse en mi bio que era desarrollador freelance. Tengo un conflicto personal con este tipo de &amp;#8220;biografías&amp;#8221; porque me obligan a definirme y es algo que me suele resultar incómodo, especialmente cuando estoy en un periodo de transición en el que lo que soy no lo termino de tener claro ni yo mismo. El caso es que alguien me comentó: &amp;#8220;no pongas freelance, que es una palabra que tiene connotaciones negativas, pon mejor que eres profesional independiente&amp;#8221;.&lt;/p&gt;
+
+&lt;h1 id=&#34;el-problema-de-discutir-sobre-la-palabra&#34;&gt;El problema de discutir sobre la palabra&lt;/h1&gt;
+
+&lt;p&gt;He mencionado estas dos anécdotas precisamente porque para mi son dos ejemplos del mismo problema con 15 años de separación. Cargamos de tanto significado, connotaciones y prejuicios ciertas palabras que al final terminamos adorando u odiando las palabras en si mismas independientemente del significado que tengan para la persona que las utiliza.&lt;/p&gt;
+
+&lt;p&gt;Durante el fin de semana vi la charla de David Bonilla sobre &amp;#8220;El programador Moderno&amp;#8221; y me gustó bastante, aunque no coincidí para nada con él respecto a su interpretación de la metáfora del Software Craftsmanship. Básicamente David interpreta que la escuela craftsman dice que &amp;#8220;los programadores de verdad son los que hacen un código que podría pasar cualquier tipo de inspección, que lo que importa es que perfecciones tu práctica de la programación hasta llegar a ser un artesano del software&amp;#8221;. El problema es que para mi está haciendo una interpretación que diverge completamente de la que yo hago sobre la metáfora del Software Craftsmanship.&lt;/p&gt;
+
+&lt;p&gt;¿Está David equivocado?¿Lo estoy yo? Creo que la equivocación es discutir sobre la metáfora. Estoy seguro de que hay personas que interpretan el movimiento de Software Craftsmanship como lo hace David en su vídeo, otras que lo interpretan como yo muchas otras que lo interpretan de formas completamente distintas.&lt;/p&gt;
+
+&lt;p&gt;Lo curioso es que el manifiesto del Software Craftsmanship dice únicamente esto:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;div class=&#34;left&#34;&gt;
+  Not only working software,
+&lt;/div&gt;
+
+&lt;div class=&#34;right&#34; style=&#34;padding-left: 60px;&#34;&gt;
+  but also &lt;strong&gt;&lt;span class=&#34;value&#34;&gt;well-crafted software&lt;/span&gt;&lt;/strong&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;left&#34;&gt;
+  Not only responding to change,
+&lt;/div&gt;
+
+&lt;div class=&#34;right&#34; style=&#34;padding-left: 60px;&#34;&gt;
+  but also &lt;strong&gt;&lt;span class=&#34;value&#34;&gt;steadily adding value&lt;/span&gt;&lt;/strong&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;left&#34;&gt;
+  Not only individuals and interactions,
+&lt;/div&gt;
+
+&lt;div class=&#34;right&#34; style=&#34;padding-left: 60px;&#34;&gt;
+  but also &lt;strong&gt;&lt;span class=&#34;value&#34;&gt;a community of professionals&lt;/span&gt;&lt;/strong&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;left&#34;&gt;
+  Not only customer collaboration,
+&lt;/div&gt;
+
+&lt;div class=&#34;right&#34; style=&#34;padding-left: 60px;&#34;&gt;
+  but also &lt;strong&gt;&lt;span class=&#34;value&#34;&gt;productive partnerships&lt;/span&gt;&lt;/strong&gt;
+&lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;¿Quién no puede estar de acuerdo con este manifiesto? ¡Sólo le falta un &amp;#8220;making the world a better place&amp;#8221;! 😉&lt;/p&gt;
+
+&lt;h1 id=&#34;el-peligro-de-criticar-la-palabra-en-lugar-de-las-prácticas&#34;&gt;El peligro de criticar la palabra en lugar de las prácticas&lt;/h1&gt;
+
+&lt;p&gt;Desde mi punto de vista, el mayor problema que suele acompañar a la crítica de una metáfora, es que no criticas algo concreto, criticas la interpretación que cada persona tenga de esa palabra. Y el mayor problema es el daño que puedes estar haciendo al colectivo que se identifica con esa metáfora, pero que interpreta la metáfora de una forma distinta a la que tú lo haces.&lt;/p&gt;
+
+&lt;p&gt;El ejemplo de David no es el primero ni será el último. En la CAS del 2015, Leo Antoli hace referencia en &lt;a href=&#34;https://www.youtube.com/watch?v=XSUaoBdfmsY&#34;&gt;su keynote&lt;/a&gt; a varias metáforas, la del Software Craftsmanship entre ellas. Lo curioso es que en este caso puso una foto de Manolo y Benito, de la serie &amp;#8220;Manos a la obra&amp;#8221;. No se realmente cuál era el mensaje que quería dar Leo en este caso, pero imagino que si alguien pone en una presentación un slide con su empresa, su nombre, o el de un colectivo con el que se identifica y debajo la imagen de un par de chapuzas, no le haría mucha gracia.&lt;/p&gt;
+
+&lt;p&gt;Volviendo al vídeo de David, cualquiera que vea su charla y no tenga idea de qué es eso del Software Craftsmanship, puede que herede el pensamiento de que son un grupo de gente que sólo se preocupan de que su código sea tan limpio que se pueda comer encima. Un poco más adelante David anima al público a que se involucren en la comunidad, asistan a meetups, etc. Supongo pocos asistentes de esa charla se animarán a ir a estos &lt;a href=&#34;http://www.meetup.com/topics/software-craftsmanship/&#34;&gt;meetups&lt;/a&gt; 🙁&lt;/p&gt;
+
+&lt;h1 id=&#34;da-feedback-útil-que-no-te-ciegue-la-ira&#34;&gt;Da feedback útil, que no te ciegue la ira 😉&lt;/h1&gt;
+
+&lt;p&gt;¿Leo o David son malas personas y habría que sacrificarlas ante el dios del Software Craftsmanship? Pues tampoco. Al final son dos personas que han tenido la oportunidad de enviar un mensaje importante y lo han hecho de la mejor manera que han sabido/podido. No me he visto nunca en la tesitura de dar una charla de este tipo, pero imagino que no tiene que ser fácil.&lt;/p&gt;
+
+&lt;p&gt;Comunicar no es fácil, muestra de ello es este post, que seguro que me ha quedado un coñazo infumable que no expresa ni la mitad de lo que quería decir. Por eso creo que es muy importante el feedback. Si tienes la oportunidad de dar feedback, no lo dudes, pero desde el respeto. Por ejemplo, a David le respondí a través de &lt;a href=&#34;https://twitter.com/david_bonilla/status/741555880404082689&#34;&gt;Twitter&lt;/a&gt; y espero poder continuar la charla un día con unas cervezas. A Leo se lo di en la CAS, justo después de la keynote, y creo que fue un error porque seguro que ni se acuerda de lo que hablamos xD&lt;/p&gt;
+
+&lt;p&gt;A todo esto, a mi en realidad la metáfora del Software Craftsmanship tampoco me va, yo soy jardinero del software! 😉&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Presta atención a tus datos de pruebas</title>
       <link>http://www.modestosanjuan.com/presta-atencion-a-tus-datos-de-pruebas/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 29 Feb 2016 23:04:10 +0000</pubDate>
       
       <guid>http://www.modestosanjuan.com/presta-atencion-a-tus-datos-de-pruebas/</guid>
-      <description>Presta atención a tus datos de pruebas &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribePresta atención a tus datos de pruebasFeb 29, 2016Los datos utilizados en las pruebas son muy importantes y, aunque el tema de este post parece muy obvio, no son pocas la veces que me he encontrado con problemas debido a este tema, así que creo que merece la pena dedicarle al menos unas líneas.</description>
+      <description>
+
+&lt;p&gt;Los datos utilizados en las pruebas son muy importantes y, aunque el tema de este post parece muy obvio, no son pocas la veces que me he encontrado con problemas debido a este tema, así que creo que merece la pena dedicarle al menos unas líneas.&lt;/p&gt;
+
+&lt;p&gt;Hay varios aspectos que son importantes a tener en cuenta al definir datos para nuestras pruebas automáticas. En este post me voy a centrar en tres errores que me encuentro con frecuencia:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Datos diferentes con los mismos valores&lt;/li&gt;
+&lt;li&gt;Exceso de datos innecesarios para el test&lt;/li&gt;
+&lt;li&gt;Utilización de datos que dan lugar a confusión&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;datos-diferentes-con-los-mismos-valores&#34;&gt;Datos diferentes con los mismos valores&lt;/h2&gt;
+
+&lt;p&gt;Este problema se da especialmente cuando hablamos de datos numéricos, ya que son los más susceptibles de ser repetidos en los tests. Supongamos que queremos probar un método que nos permite dividir dos números y obtener el resultado (un ejemplo muy original, eh? ;P). Un claro ejemplo de una prueba con datos incorrectos sería este:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:c# decode:true &#34;&gt;[Test]
+public void Divide() {
+    var result = Divide(2, 2);
+    result.Should().Be(1);
+}&lt;/pre&gt;
+
+&lt;p&gt;Teniendo en cuenta los datos de este test, es perfectamente posible confundir el dividendo y el divisor porque al invertirlos el resultado es el mismo. No sólo se dificulta la lectura del test, es que una implementación podría darnos un falso verde.&lt;/p&gt;
+
+&lt;p&gt;Evidentemente este ejemplo es muy básico, pero este tipo de errores se comete con bastante frecuencia cuando tenemos identificadores numéricos, valores para expresar cantidades o fechas. Es típico utilizar &amp;#8220;1&amp;#8221; como identificador numérico pero cuando tenemos que hacer una prueba con el usuario con id 1 de la empresa 1 es muy importante pararnos unos segundos y buscar datos que no puedan ser confundidos.&lt;/p&gt;
+
+&lt;h2 id=&#34;exceso-de-datos-innecesarios-para-el-test&#34;&gt;Exceso de datos innecesarios para el test&lt;/h2&gt;
+
+&lt;p&gt;Otro de los problemas habituales es proporcionar más datos de los estrictamente necesarios para el objetivo de nuestro test. Si estamos escribiendo un tests para verificar el funcionamiento de un API que puede recibir varios parámetros pero algunos son obligatorios y otros opcionales, lo recomendable es que creemos varios tests para contemplar desde el escenario más básico a los escenarios más complejos. Supongamos que tenemos una calculadora de descuentos para clientes que necesita recibir como parámetro un cliente que tenga un identificador, país de procedencia y actividad para poder calcular su descuento correspondiente.&lt;/p&gt;
+
+&lt;pre class=&#34;lang:default decode:true&#34;&gt;var client = GivenAClient (Id:1, Name:&#34;Peter&#34;, Country:&#34;Spain&#34;, Activity:&#34;Development&#34;, Sector:&#34;Software&#34;);
+discountCalculator.CalculateFor(client);&lt;/pre&gt;
+
+&lt;p&gt;Leyendo este ejemplo parece que un cliente necesita todos los campos para poder calcular un descuento, pero estamos especificando el &lt;em&gt;sector&lt;/em&gt; y resulta que era irrelevante, lo que pasa es que nuestro afán de reutilización nos ha jugado una mala pasada. Si asumimos que nuestros tests pueden servir como documentación para otros desarrolladores (o incluso para nuestro yo del futuro), cuanto más concisos seamos con esta información, mejor.&lt;/p&gt;
+
+&lt;h2 id=&#34;utilización-de-datos-que-dan-lugar-a-confusión&#34;&gt;Utilización de datos que dan lugar a confusión&lt;/h2&gt;
+
+&lt;p&gt;En otras ocasiones tenemos datos de presencia necesaria pero de valor irrelevante para la ejecución del test. Es importante que en el test quede claro que el valor nos da igual y que no influye en la ejecución del test. En este caso las consecuencias pueden ser similares al punto anterior ya que el test puede generar confusión al leerlo.&lt;/p&gt;
+
+&lt;pre class=&#34;lang:c# decode:true&#34;&gt;var client = GivenAClient (Id:1, Name:&#34;Peter&#34;, Country:&#34;Spain&#34;, Activity:&#34;Development&#34;);
+discountCalculator.CalculateFor(client);&lt;/pre&gt;
+
+&lt;p&gt;Al leer este código podríamos pensar que el país y la actividad son relevantes para el cálculo del descuento únicamente porque estamos utilizando valores específicos. Pero, ¿qué pasa si recurrimos a valores genéricos excepto cuando realmente el valor es relevante?&lt;/p&gt;
+
+&lt;pre class=&#34;lang:c# decode:true&#34;&gt;var client = GivenAClient (Id:Any.Id, Name:Any.Name, Country:&#34;Spain&#34;, Activity:Any.Activity);
+discountCalculator.CalculateFor(client);&lt;/pre&gt;
+
+&lt;p&gt;Con este pequeño cambio queda mucho más clara la información relevante para el test y tanto los compañeros como nuestro yo del futuro lo agradecerá mucho.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+</description>
     </item>
     
     <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/tags/fluentmigrator/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>Impresiones sobre pair programming</title>
+      <link>http://www.modestosanjuan.com/impresiones-sobre-pair-programming/</link>
+      <pubDate>Tue, 19 Jan 2016 01:13:56 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com/tags/fluentmigrator/</guid>
-      <description>Fluentmigrator &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribeFluentmigratorPage 1 of 1[Solucionado] Fluent Migrator no encuentra migracionesHace unos meses empecé a trabajar en un proyecto en el que utilizamos Fluent Migrator. Todo funciona bien el proyecto tiene bastantes migraciones funcionando sin problema.</description>
+      <guid>http://www.modestosanjuan.com/impresiones-sobre-pair-programming/</guid>
+      <description>
+
+&lt;p&gt;El viernes mantuve una conversación bastante entretenida sobre desarrollo de software con un compañero de profesión. Trabaja en una entidad financiera y al hablar de cosas como TDD, Agile, XP, etc. tenía ciertos sentimientos enfrentados. Precisamente uno de los temas que le causaban controversia era el pair programming. Su opinión básicamente se resumía en una frase: &amp;#8220;yo lo que no compro es que dos tíos senior sentados juntos a programar van a ser más productivos que si programan por separado&amp;#8221;.&lt;/p&gt;
+
+&lt;p&gt;Así que me he animado a escribir un post con mi opinión sobre este tema y aportar así mi punto de vista (aunque a nadie le importe xD).&lt;/p&gt;
+
+&lt;h1 id=&#34;antecedentes&#34;&gt;Antecedentes&lt;/h1&gt;
+
+&lt;p&gt;Me encanta programar solo. Disfruto muchísimo sentado delante del teclado mientras me enfrento a un reto técnico o busco una aproximación de diseño que me convenza. También me encanta pasarme horas leyendo código de proyectos open source para ver cómo hacen las cosas otros equipos de desarrollo. Disfruto haciendo generadores de código que generan código para generar generadores de código. En resumen, me encanta liarme la manta a la cabeza y perderme las horas muertas en todo lo que tenga que ver con el desarrollo de software.&lt;/p&gt;
+
+&lt;p&gt;Pero que me guste no significa que piense que sea lo mejor cuando hablo de un contexto profesional. El desarrollo de software no es únicamente mi profesión, es mi afición. Por eso todas estas cosas que me gustan, las hago principalmente cuando tengo libre y, cuando estoy trabajando, decido lo que hacer buscando el criterio que más le convenga al proyecto.&lt;/p&gt;
+
+&lt;p&gt;Actualmente llevo algo más de un año trabajando en un proyecto en el que hacemos mucho pair programming, así que no puedo decir que sea un veterano en esto, pero creo que ha pasado un tiempo lo suficientemente grande como para tener una opinión desde la experiencia.&lt;/p&gt;
+
+&lt;h1 id=&#34;lo-bueno&#34;&gt;Lo bueno&lt;/h1&gt;
+
+&lt;p&gt;Para mi los aspectos positivos más interesantes de esta práctica son:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Beneficia a la &lt;strong&gt;propiedad colectiva del código&lt;/strong&gt;.- Esto facilita la eliminación del efecto &amp;#8220;es que eso lo hizo fulanito y sólo él puede meterle mano&amp;#8221;. Si además de pair programming, introducimos rotación dentro de los equipos, el beneficio es aún mayor.&lt;/li&gt;
+&lt;li&gt;El &lt;strong&gt;código es mejor&lt;/strong&gt;.- Nada como 4 ojos pendientes del código que se está generando. Como mínimo, permitirá garantizar que al menos que ha existido consenso entre dos de cara a la legibilidad, diseño y estructura del código.&lt;/li&gt;
+&lt;li&gt;Las &lt;strong&gt;pruebas&lt;/strong&gt; son &lt;strong&gt;mejores&lt;/strong&gt;.- Me cuesta recordar una sesión de pair programming en la que, fruto del diálogo entre ambas partes, no haya surgido algún test de triangulación para probar un caso límite.&lt;/li&gt;
+&lt;li&gt;Promueve la definición y utilización del &lt;strong&gt;lenguaje ubícuo&lt;/strong&gt;.- Cuando programas solo prestas menos atención a los nombres y, aunque se la prestes, careces de una figura muy importante de cara a encontrar el nombre más adecuado, el debate.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;lo-malo&#34;&gt;Lo malo&lt;/h1&gt;
+
+&lt;p&gt;Como todo, también tiene algunos aspectos negativos, para mi estos son los principales:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Es &lt;strong&gt;difícil&lt;/strong&gt; practicarlo correctamente.- Quien piense que el pair programming se limita a que dos tíos se sienten al lado y se intercambien el teclado, va muy desorientado. Al final pondré algunos enlaces con consejos al respecto.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fatiga&lt;/strong&gt;.- Si, 4 horas de pairing cansan mucho. Y más si no se practica bien. Un truco, es importante respetar los descansos o el cerebro termina frito.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;cuándo&#34;&gt;¿Cuándo?&lt;/h1&gt;
+
+&lt;p&gt;Dicho esto, tampoco creo que deba hacerse el 100% del tiempo. Creo que esta práctica aporta mucho valor cuando estamos hablando de escribir código de negocio y mucho menos cuando hablamos de UI e infraestructura. Cuando hablamos de dominios que estamos explorando y es evidente que el cuello de botella no va a ser el ritmo al que escribamos código, es precisamente uno de los escenarios en los que más beneficios nos va a proporcionar esta práctica.&lt;/p&gt;
+
+&lt;p&gt;Normalmente no me parece práctico recurrir al pair programming para escribir código de infraestructura o código de una vista. A no ser que estemos haciendo mentoring, pero eso sería otro tema.&lt;/p&gt;
+
+&lt;p&gt;Por supuesto, siempre hay excepciones y ya sabemos que la respuesta casi siempre es &amp;#8220;depende&amp;#8221;.&lt;/p&gt;
+
+&lt;h1 id=&#34;más-información&#34;&gt;Más información&lt;/h1&gt;
+
+&lt;p&gt;Sobre el tema hay mucho escrito, pero tengo recientes en mi cabeza estos dos posts que a su vez enlazan a otro montón de ellos:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://juandavidvega.es/blog/?p=194&#34; target=&#34;_blank&#34;&gt;Pair programming: Mi guía práctica&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.carlosble.com/2015/07/productive-pair-programming/&#34; target=&#34;_blank&#34;&gt;Productive Pair Programming&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+</description>
     </item>
     
     <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/tags/fluentmigrator/page/1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>Nuestra programación es mala para el desarrollo de software</title>
+      <link>http://www.modestosanjuan.com/nuestra-programacion-es-mala-para-el-desarrollo-de-software/</link>
+      <pubDate>Mon, 28 Dec 2015 22:22:29 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com/tags/fluentmigrator/page/1/</guid>
-      <description>http://www.modestosanjuan.com/tags/fluentmigrator/</description>
+      <guid>http://www.modestosanjuan.com/nuestra-programacion-es-mala-para-el-desarrollo-de-software/</guid>
+      <description>
+
+&lt;h1 id=&#34;la-programación-de-mi-color-favorito&#34;&gt;La programación de mi color favorito&lt;/h1&gt;
+
+&lt;p&gt;El otro día mi hija me preguntó cuál era mi color favorito. Respondí inmediatamente sin pensarlo: &amp;#8220;el azul&amp;#8221;. No era la primera vez que me lo preguntaban y es un dato que tengo claro desde que era niño. O no.&lt;/p&gt;
+
+&lt;p&gt;En esta ocasión, no se exactamente porqué, después de responder a mi hija algo en mi cabeza empezó a retorcerse: &amp;#8220;¿es el azul mi color favorito?&amp;#8221;. De repente me vi cuestionando algo que estaba grabado a fuego en mi cerebro desde hace tanto tiempo que no soy capaz de recordar cuando decidí que el azul era mi color favorito.&lt;/p&gt;
+
+&lt;p&gt;Si me paro a pensar detenidamente, en mi caso esta respuesta está completamente programada desde mi infancia y ha perdurado hasta hace unos días como una verdad absoluta e incuestionable. Pero si lo analizo, cada vez que tengo que tomar una decisión que implique decantarme por un color, el azul nunca es mi elección. Seguro que en algún momento de mi infancia el azul era mi color favorito y este dato se hizo hueco en mi cerebro, acomodándose de tal modo que no había vuelto a cuestionarme su vigencia hasta ahora.&lt;/p&gt;
+
+&lt;p&gt;Alguno podría estarse preguntando ahora mismo: &amp;#8220;¿y qué carajo tiene esto que ver con el desarrollo del software?&amp;#8221;&lt;/p&gt;
+
+&lt;p&gt;Personalmente creo que tiene mucho que ver, porque es algo que me encuentro constantemente cuando trabajo con equipos de desarrollo. Cada cierto tiempo me enfrento a &amp;#8220;programaciones&amp;#8221; de este tipo que, en lugar de estar relacionadas con el color favorito o el equipo de fútbol preferidos, están relacionadas con el uso de una tecnología, la aplicación de un patrón o la preferencia a la hora de aplicar una determinada práctica en detrimento de otra.&lt;/p&gt;
+
+&lt;h1 id=&#34;los-principios-sobre-las-prácticas&#34;&gt;Los principios sobre las prácticas&lt;/h1&gt;
+
+&lt;p&gt;Es frecuente que, después de que un equipo de desarrollo tome una decisión, se olviden las razones que llevaron la toma de esa decisión. Es más, es frecuente que esa decisión se convierta en una verdad inamovible e incuestionable hasta tal punto que, aunque las razones que originaron esa decisión sean modificadas, da igual, nadie se plantea si la decisión debe replantearse o no.&lt;/p&gt;
+
+&lt;p&gt;Es importante poder recurrir siempre a los principios que originan la decisión de aplicar las prácticas. Cuando el debate gira entorno a la práctica, olvidando el principio, estamos perdidos. Es como debatir sobre una solución sin recordar el problema. Cuando esto sucede, lo habitual termina siendo un debate en el que se pierde completamente el foco y terminamos en una espiral en la que lo que debatimos es cómo solucionar el nuevo problema que ha generado la solución propuesta, en lugar de pensar si es posible buscar una solución alternativa al problema original sin que ello conlleve una reacción en cadena de problemas.&lt;/p&gt;
+
+&lt;h1 id=&#34;localiza-bien-el-problema&#34;&gt;Localiza bien el problema&lt;/h1&gt;
+
+&lt;p&gt;Cuando llega el momento de enfrentarse a un problema, funciona muy bien dedicar unos minutos a poner por escrito cuál es exactamente el problema que queremos resolver. Una vez hecho esto, mi recomendación dedicar unos minutos más a pensar si ese es realmente es el problema a resolver o en realidad estamos condicionados por un problema generado por la solución actual. Una vez que hemos salido de la espiral de los problemas generados por las soluciones, estaremos en verdadera disposición de debatir sobre el problema.&lt;/p&gt;
+
+&lt;p&gt;En ocasiones tendremos que adoptar soluciones a problemas grandes que generan problemas pequeños y nos veremos obligados a trabajar sobre esas bases, pero lo más importante es no olvidar nunca los principios o perderemos la capacidad de cuestionar dichas soluciones porque la respuesta siempre será: &amp;#8220;no se, se decidió así y así lo hemos hecho desde entonces. Mejor no tocarlo por si acaso&amp;#8221;.&lt;/p&gt;
+
+&lt;h1 id=&#34;no-sólo-a-nivel-de-código&#34;&gt;No sólo a nivel de código&lt;/h1&gt;
+
+&lt;p&gt;Este tipo de problemas nos los encontramos constantemente en otras facetas del desarrollo de software. Es común terminar con procesos de despliegue enrevesados, en los que mitigamos el dolor complicando el proceso con soluciones que a la larga generan más focos de dolor y que nos sumergen en la espiral de la que ya he hablado. Esto es frecuente cuando llega el momento de plantear despliegues automáticos de sistemas complejos o en el desarrollo de los propios procesos de negocio.&lt;/p&gt;
+
+&lt;h1 id=&#34;cuidado-con-el-diagnóstico&#34;&gt;Cuidado con el diagnóstico&lt;/h1&gt;
+
+&lt;p&gt;Otro de los problemas comunes es criticar el principio después de tener una experiencia traumática aplicando la práctica. Otro es justo el contrario, estigmatizar la práctica cuando el error fue tratar de aplicarla sobre un problema para el que no era adecuada. Algunos ejemplos podrían ser:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Enfocar de forma errónea un entorno de integración continua y que la conclusión sea que la integración continua no funciona.&lt;/li&gt;
+&lt;li&gt;Invertir la &lt;a href=&#34;http://martinfowler.com/bliki/TestPyramid.html&#34; target=&#34;_blank&#34;&gt;pirámide de test&lt;/a&gt; y llegar a un punto en el que los tests son muy frágiles y caros de mantener, pero concluir que hacer tests automáticos no merece la pena.&lt;/li&gt;
+&lt;li&gt;Decidir utilizar una base de datos no relacional para solucionar un problema más adecuado para una relacional y descartar el uso de base de datos no relacionales para cualquier cosa.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;no-nos-olvidemos-de-entregar-software&#34;&gt;No nos olvidemos de entregar software&lt;/h1&gt;
+
+&lt;p&gt;La realidad de todo proyecto es que siempre hay algo que se puede hacer mejor. Siempre hay un proceso que se puede optimizar, los tests pueden ser más completos y legibles, el código se puede refactorizar o se puede buscar otro enfoque. Pero no hay que volverse loco, no hay que olvidar que desarrollamos software con una finalidad y, si no lo entregamos, los usuarios no lo podrán utilizar. Desarrollar software y no entregarlo es lo mismo que no desarrollar software.&lt;/p&gt;
+</description>
     </item>
     
     <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/truco-evitar-que-wget-invoke-webrequest-tarde-tanto-en-powershell/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>La importancia del rojo en TDD</title>
+      <link>http://www.modestosanjuan.com/la-importancia-del-rojo-en-tdd/</link>
+      <pubDate>Tue, 22 Dec 2015 14:14:43 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com/truco-evitar-que-wget-invoke-webrequest-tarde-tanto-en-powershell/</guid>
-      <description>[PowerShell] Evitar que wget (Invoke-WebRequest) tarde tanto &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;Subscribe[PowerShell] Evitar que wget (Invoke-WebRequest) tarde tantoMar 22, 2015Mientras estaba preparando unos scripts para automatizar el proceso de sideloading de una aplicación Windows 8.</description>
+      <guid>http://www.modestosanjuan.com/la-importancia-del-rojo-en-tdd/</guid>
+      <description>&lt;p&gt;A un desarrollador que practique TDD, el flujo &lt;strong&gt;rojo, verde, refactor&lt;/strong&gt; no le resulta extraño. En este post quiero romper una lanza a favor del &lt;strong&gt;rojo&lt;/strong&gt;, ese gran incomprendido. Para ilustrarlo voy a recurrir a un ejemplo muy sencillo:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:c# decode:true&#34;&gt;[TestMethod]
+public void sample_test()
+{
+    var messagingService = GivenAMessagingServiceStub();
+    var unreadMessages = messagingService.UnreadMessages();
+    unreadMessages.Count.Should().Be(1)
+}&lt;/pre&gt;
+
+&lt;p&gt;Este ejemplo esta simplificado, pero me permite mostrar un test con una estructura de tipo &lt;strong&gt;given/when/then o AAA&lt;/strong&gt; (según gustos). Con el objetivo de obtener ese primer rojo, me encuentro a veces con esto:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:default decode:true&#34;&gt;public IEnumerable&amp;lt;Message&amp;gt; UnreadMessages()
+{
+    throw new NotImplementedException();
+}&lt;/pre&gt;
+
+&lt;p&gt;Creo que hacer esto desvirtúa el objetivo de buscar el rojo. Uno de los objetivos de buscar el primer rojo es verificar el test, pero es imposible verificar el test si no se llega a ejecutar completo. Es cierto que al lanzar el test va a dar un rojo, pero ese rojo es equivalente a haber lanzado la excepción en lugar de la llamada al código de producción, así que de poco vale. Otras veces se llega un poco más en la búsqueda del rojo con un código similar a este:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:default decode:true&#34;&gt;public IEnumerable&amp;lt;Message&amp;gt; UnreadMessages()
+{
+    return null;
+}&lt;/pre&gt;
+
+&lt;p&gt;En este caso es cierto que el test falla en la línea del &lt;strong&gt;then&lt;/strong&gt;, pero personalmente sigue sin convencerme porque en realidad el rojo no se produce a causa del assert. La razón es sencilla y se ilustra bastante bien diseccionando el test de esta forma:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:default decode:true&#34;&gt;[TestMethod]
+public void sample_test()
+{
+    var messagingService = GivenAMessagingServiceStub();
+    var unreadMessages = messagingService.UnreadMessages();
+    var count = unreadMessages.Count;
+    count.Should().Be(1)
+}&lt;/pre&gt;
+
+&lt;p&gt;Con este ejemplo se puede ver claramente que el rojo no da debido al assert, da debido a una &lt;strong&gt;NullPointerException&lt;/strong&gt; en la asignación de la variable &lt;strong&gt;count&lt;/strong&gt;, lo que sigue alejado del objetivo de probar primero el test. En este caso, no cuesta mucho buscar un rojo que además permita probar el test completo:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:default decode:true &#34;&gt;public IEnumerable&amp;lt;Message&amp;gt; UnreadMessages()
+{
+    return new List&amp;lt;Message&amp;gt;();
+}&lt;/pre&gt;
+
+&lt;p&gt;Por supuesto, es importante no olvidar que el primer paso nunca es el rojo, es pensar.&lt;/p&gt;
+</description>
     </item>
     
     <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/utilizando-extensionless-para-monitorizar-logs-y-excepciones/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>[PowerShell] Pasar de SecureString a String</title>
+      <link>http://www.modestosanjuan.com/powershell-pasar-de-securestring-a-string/</link>
+      <pubDate>Wed, 25 Nov 2015 09:16:48 +0000</pubDate>
       
-      <guid>http://www.modestosanjuan.com/utilizando-extensionless-para-monitorizar-logs-y-excepciones/</guid>
-      <description>Utilizando Extensionless para monitorizar logs y excepciones &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribeUtilizando Extensionless para monitorizar logs y excepcionesJun 5, 2015Cada vez que abordo un nuevo desarrollo, considero que la generación de trazas es una parte vital ya que es uno de los mecanismos que nos va a permitir diagnosticar e identificar cualquier tipo de problema cuando estemos en producción, en ocasiones incluso antes de que los propios usuarios lleguen a reportarlo.</description>
+      <guid>http://www.modestosanjuan.com/powershell-pasar-de-securestring-a-string/</guid>
+      <description>&lt;p&gt;En ocasiones necesito usar un &lt;strong&gt;SecureString&lt;/strong&gt; pero luego me veo obligado a utilizar ese string de forma no segura. Aunque la recomendación es no hacer esto, la realidad es que hay muchos escenarios en los que es necesario. Un ejemplo sencillo es el caso en el que necesito que el usuario meta un dato sensible por consola y pero luego necesito utilizar ese dato como texto plano para pasarlo como parámetro a un ejecutable de Windows. Este es un ejemplo de cómo hacerlo:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:ps decode:true&#34;&gt;Param(
+   [Parameter(Mandatory=$True)]
+   [SecureString]$password
+)
+
+function Decrypt-SecureString($secureString) {
+    $BSTR = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($password)
+    return [System.Runtime.InteropServices.Marshal]::PtrToStringAuto($BSTR)
+}
+
+$nonSecure = Decrypt-SecureString $password&lt;/pre&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+</description>
     </item>
     
     <item>
-      <title></title>
+      <title>Value Providers y Parameter Binding en ASP.NET Web API</title>
       <link>http://www.modestosanjuan.com/value-providers-y-parameter-binding-en-asp-net-web-api/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 13 Nov 2015 10:02:22 +0000</pubDate>
       
       <guid>http://www.modestosanjuan.com/value-providers-y-parameter-binding-en-asp-net-web-api/</guid>
-      <description>Value Providers y Parameter Binding en ASP.NET Web API &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribeValue Providers y Parameter Binding en ASP.NET Web APINov 13, 2015Cuando necesito acceder a información de la Request desde una acción de un controlador en ASP.</description>
+      <description>&lt;p&gt;Cuando necesito acceder a información de la &lt;strong&gt;Request&lt;/strong&gt; desde una acción de un controlador en ASP.NET Web API, la primera tentación es acceder directamente al objeto request y buscar lo que necesito. El principal problema de hacer esto es que convierte en un infierno hacer cualquier tipo de prueba automatizada para esta acción. Por ejemplo:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:c# decode:true&#34;&gt;[HttpGet] 
+[Route(&#34;doAnything&#34;)] 
+public IHttpActionResult Get() 
+{ 
+    var referrer = request.Headers.Referrer
+    var resul = .....
+    // DO ANY STUFF WITH THE REFERRER    
+    return result; 
+}&lt;/pre&gt;
+
+&lt;p&gt;El mecanismo más sencillo que se me ocurre para hacer que esta acción sea fácil de probar es hacer que el dato que necesito de la request, le llegue como parámetro a la acción:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:c# decode:true&#34;&gt;public IHttpActionResult Get(string referrer) 
+&lt;/pre&gt;
+
+&lt;p&gt;Con esta modificación puedo programar sin problemas un test para esta acción y me quedo tan ancho. Pero claro, ¿qué pasa cuando ejecuto el código en Web API? Evidentemente falla. En este punto es donde Web API me echa un cable y me permite hacer algo como esto:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:c# decode:true&#34;&gt;public IHttpActionResult Get([ValueProvider(typeof(ReferrerValueProviderFactory))]string referrer) 
+&lt;/pre&gt;
+
+&lt;p&gt;Gracias a los &lt;strong&gt;Value Providers&lt;/strong&gt; Web aPI puede inyectar en el parámetro el valor que necesito. El código sería este:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:c# decode:true&#34;&gt;public class RefererValueProviderFactory : ValueProviderFactory {
+    public override IValueProvider GetValueProvider(HttpActionContext actionContext) {
+        return new RefererValueProvider(actionContext.Request.Headers);
+    }
+}
+
+public class RefererValueProvider : IValueProvider {
+    private readonly HttpRequestHeaders headers;
+
+    public RefererValueProvider(HttpRequestHeaders headers) {
+        this.headers = headers;
+    }
+
+    public bool ContainsPrefix(string prefix) {
+        return true;
+    }
+
+    public ValueProviderResult GetValue(string key) {
+        return new ValueProviderResult(headers.Referrer, headers.Referrer.ToString(), CultureInfo.InvariantCulture);
+    }
+}&lt;/pre&gt;
+
+&lt;p&gt;El código está simplificado para el ejemplo, pero es necesario aplicar control de errores. Por ejemplo, es posible que la cabecera sea nula, lo que lanzaría una excepción al intentar hacer el &lt;strong&gt;ToString()&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Para que lo que llevo de ejemplo funcione faltaría únicamente registrar el nuevo value provider  en el &lt;strong&gt;Register&lt;/strong&gt; de &lt;strong&gt;WebApiConfig&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:default decode:true&#34;&gt;public static void Register(HttpConfiguration config)
+{
+    config.Services.Add(typeof(ValueProviderFactory), new ReferrerValueProviderFactory());
+
+    ...&lt;/pre&gt;
+
+&lt;p&gt;El problema que le veo hasta este punto es que el uso de el atributo [ValueProvide] dificulta la lectura y tener que registrarlo añade un poco de complejidad al setup y algo de lo que me tendría que acordar en el próximo proyecto. Teniendo en cuenta cómo se hacen las cosas en Web API, preferiría tener algo como esto:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:c# decode:true&#34;&gt;public IHttpActionResult Get([FromReferrerHeader]string referrer)&lt;/pre&gt;
+
+&lt;p&gt;Algo como esto resulta mucho más legible y alineado con lo que ya estoy acostumbrado cuando recurro a atributos como &lt;strong&gt;[FromBody]&lt;/strong&gt; o &lt;strong&gt;[FromUri]&lt;/strong&gt;. Aquí es donde Web API me invita a utilizar &lt;strong&gt;Parameter Binding&lt;/strong&gt;. Básicamente lo que voy a hacer es crear un atributo que herede de &lt;strong&gt;HttpParameterBinding&lt;/strong&gt; y a utilizar el ValueProvider que he creado justo antes para obtener este dato:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:c# decode:true &#34;&gt;public class FromReferrerHeaderAttribute : ParameterBindingAttribute {
+    public override HttpParameterBinding GetBinding(HttpParameterDescriptor parameter) {
+        var httpConfig = parameter.Configuration;
+        var binder = new ModelBinderAttribute()
+            .GetModelBinder(httpConfig, parameter.ParameterType);
+        return new ModelBinderParameterBinding(
+            parameter, binder,
+            new ValueProviderFactory[] { new ReferrerValueProviderFactory() });
+    }
+} 
+&lt;/pre&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;Además, al utilizar parameter binding, ya no es necesario registrar el value provider, lo que simplifica su uso.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

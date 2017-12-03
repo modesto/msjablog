@@ -8,28 +8,33 @@
     
 
 
-    <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:image" content="http://www.modestosanjuan.com/images/cover.png"/>
+    
+        <meta name="twitter:card" content="summary"/>
+    
 
 
 
-<meta name="twitter:title" content="Powershell-pasar-de-securestring-a-strings"/>
-<meta name="twitter:description" content="DESCUBRIMIENTOS, IDEAS Y OTRAS CHORRADAS"/>
+<meta name="twitter:title" content="[PowerShell] Pasar de SecureString a String"/>
+<meta name="twitter:description" content="En ocasiones necesito usar un SecureString pero luego me veo obligado a utilizar ese string de forma no segura. Aunque la recomendación es no hacer esto, la realidad es que hay muchos escenarios en los que es necesario. Un ejemplo sencillo es el caso en el que necesito que el usuario meta un dato sensible por consola y pero luego necesito utilizar ese dato como texto plano para pasarlo como parámetro a un ejecutable de Windows."/>
 
     <meta name="twitter:site" content="@msanjuan"/>
 
 
 
-  	<meta property="og:title" content=" Powershell-pasar-de-securestring-a-strings &middot;  Blog de Modesto San Juan" />
+  	<meta property="og:title" content=" [PowerShell] Pasar de SecureString a String &middot;  Blog de Modesto San Juan" />
   	<meta property="og:site_name" content="Blog de Modesto San Juan" />
   	<meta property="og:url" content="http://www.modestosanjuan.com/powershell-pasar-de-securestring-a-string/" />
 
     
-    <meta property="og:type" content="website" />
+  	<meta property="og:type" content="article" />
+
+    <meta property="og:article:published_time" content="2015-11-25T09:16:48Z" />
+
+    
     
 
     <title>
-       Powershell-pasar-de-securestring-a-strings &middot;  Blog de Modesto San Juan
+       [PowerShell] Pasar de SecureString a String &middot;  Blog de Modesto San Juan
     </title>
 
     <meta name="description" content="DESCUBRIMIENTOS, IDEAS Y OTRAS CHORRADAS" />
@@ -50,10 +55,8 @@
           <link href="http://www.modestosanjuan.com/index.xml" rel="alternate" type="application/rss+xml" title="Blog de Modesto San Juan" />
       
       
-        <link href="http://www.modestosanjuan.com/powershell-pasar-de-securestring-a-string/index.xml" rel="alternate" type="application/rss+xml" title="Powershell-pasar-de-securestring-a-strings &middot; Blog de Modesto San Juan" />
-      
     
-    <meta name="generator" content="Hugo 0.31.1" />
+    <meta name="generator" content="Hugo 0.17" />
 
     <link rel="canonical" href="http://www.modestosanjuan.com/powershell-pasar-de-securestring-a-string/" />
 
@@ -88,7 +91,7 @@
     </ul>
     
     
-    <a class="subscribe-button icon-feed" href="http://www.modestosanjuan.com/powershell-pasar-de-securestring-a-string/index.xml">Subscribe</a>
+    <a class="subscribe-button icon-feed" href="http://www.modestosanjuan.com/index.xml">Subscribe</a>
     
 </div>
 <span class="nav-cover"></span>
@@ -99,80 +102,136 @@
 
 
 
-	 
-  <header class="main-header tag-head" style="background-image: url(http://www.modestosanjuan.com/images/cover.png)">
-  
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
 
-    <nav class="main-nav overlay clearfix">
-      
-        <a class="blog-logo" href="http://www.modestosanjuan.com/"><img src="http://www.modestosanjuan.com/images/logo.jpg" alt="Home" /></a>
-      
-      
-        
-          <a class="menu-button icon-feed" href="http://www.modestosanjuan.com/powershell-pasar-de-securestring-a-string/index.xml">&nbsp;&nbsp;Subscribe</a>
-        
-      
-    </nav>
-    <div class="vertical">
-        <div class="main-header-content inner">
-            <h1 class="page-title">Powershell-pasar-de-securestring-a-strings</h1>
-            <h2 class="page-description">
-                
-            </h2>
-        </div>
-    </div>
+
+  
+      <a class="blog-logo" href="http://www.modestosanjuan.com/"><img src="http://www.modestosanjuan.com/images/logo.jpg" alt="Home" /></a>
+  
+  
+      <a class="menu-button icon-feed" href="http://www.modestosanjuan.com/index.xml">&nbsp;&nbsp;Subscribe</a>
+  
+  </nav>
 </header>
 
+
+
 <main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">[PowerShell] Pasar de SecureString a String</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2015-11-25T09:16:48Z">
+            Nov 25, 2015
+          </time>
+        
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <p>En ocasiones necesito usar un <strong>SecureString</strong> pero luego me veo obligado a utilizar ese string de forma no segura. Aunque la recomendación es no hacer esto, la realidad es que hay muchos escenarios en los que es necesario. Un ejemplo sencillo es el caso en el que necesito que el usuario meta un dato sensible por consola y pero luego necesito utilizar ese dato como texto plano para pasarlo como parámetro a un ejecutable de Windows. Este es un ejemplo de cómo hacerlo:</p>
+
+<pre class="lang:ps decode:true">Param(
+   [Parameter(Mandatory=$True)]
+   [SecureString]$password
+)
+
+function Decrypt-SecureString($secureString) {
+    $BSTR = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($password)
+    return [System.Runtime.InteropServices.Marshal]::PtrToStringAuto($BSTR)
+}
+
+$nonSecure = Decrypt-SecureString $password</pre>
+
+<p>&nbsp;</p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+    <figure class="author-image">
+        <a class="img" href="http://www.modestosanjuan.com/" style="background-image: url(http://www.modestosanjuan.com/images/logo.jpg)"><span class="hidden">Modesto San Juan's Picture</span></a>
+    </figure>
     
 
-	<div class="extra-pagination inner">
-    <nav class="pagination" role="navigation">
-	
-	<span class="page-number">Page 1 of 1</span>
-	
-</nav>
+    
 
-	</div>
 
-	
-	   
-<article class="post powershell-pasar-de-securestring-a-string">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/powershell-pasar-de-securestring-a-string/"></a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>[PowerShell] Pasar de SecureString a String &middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-58663898-1', 'auto');ga('send', 'pageview');hljs.initHighlightingOnLoad();MenuCloseSubscribe&nbsp;&nbsp;Subscribe[PowerShell] Pasar de SecureString a StringNov 25, 2015En ocasiones necesito usar un SecureString pero luego me veo obligado a utilizar ese string de forma no segura. <a class="read-more" href="/powershell-pasar-de-securestring-a-string/">&raquo;</a></p>
-    </section>
-    <footer class="post-meta">
-        
-        
 
-        
-            <img class="author-thumb" src="http://www.modestosanjuan.com/images/logo.jpg" alt="Author image" nopin="nopin" />
-        
-        
-            Modesto San Juan
-        
-        
-        <time class="post-date" datetime="0001-01-01T00:00:00Z">
-            1 Jan 0001
-        </time>
-    </footer>
+
+
+<section class="author">
+  <h4><a href="http://www.modestosanjuan.com/">Modesto San Juan</a></h4>
+  
+  <p>Desarrollo software e intento hacerlo bien</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Madrid, Spain</span>
+    <span class="author-link icon-link"><a href="http://www.modestosanjuan.com">http://www.modestosanjuan.com</a></span>
+  </div>
+</section>
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=%5bPowerShell%5d%20Pasar%20de%20SecureString%20a%20String&nbsp;-&nbsp;Blog%20de%20Modesto%20San%20Juan&amp;url=http%3a%2f%2fwww.modestosanjuan.com%2fpowershell-pasar-de-securestring-a-string%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.modestosanjuan.com%2fpowershell-pasar-de-securestring-a-string%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.modestosanjuan.com%2fpowershell-pasar-de-securestring-a-string%2f&amp;description=%5bPowerShell%5d%20Pasar%20de%20SecureString%20a%20String"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=http%3a%2f%2fwww.modestosanjuan.com%2fpowershell-pasar-de-securestring-a-string%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_shortname = 'modestosanjuan';
+  var disqus_url = 'http:\/\/www.modestosanjuan.com\/powershell-pasar-de-securestring-a-string\/';
+  (function() {
+    if (window.location.hostname == "localhost")
+          return;
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+  </footer>
 </article>
 
-	
-
-	<nav class="pagination" role="navigation">
-	
-	<span class="page-number">Page 1 of 1</span>
-	
-</nav>
-
 </main>
-
-
-
     <footer class="site-footer clearfix">
         <section class="copyright"><a href="">Blog de Modesto San Juan</a> </section>
         
@@ -186,3 +245,4 @@
     
 </body>
 </html>
+

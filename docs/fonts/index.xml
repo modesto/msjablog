@@ -1,23 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Fonts on Blog de Modesto San Juan</title>
-    <link>http://www.modestosanjuan.com/fonts/</link>
-    <description>Recent content in Fonts on Blog de Modesto San Juan</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-es</language>
-    
-	<atom:link href="http://www.modestosanjuan.com/fonts/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title></title>
-      <link>http://www.modestosanjuan.com/fonts/example/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.modestosanjuan.com/fonts/example/</guid>
-      <description>Genericons/*** Example page CSS*/body {font-family: sans-serif;line-height: 1.5;margin: 0;color: #2f2d2c;background: #fff;font-size: 11pt;}a {color: #2f2d2c;}h4 {margin-top: 40px;}#iconlist {clear: both;margin-bottom: 20px;}#iconlist div {padding: 10px;overflow: hidden;white-space: nowrap;font-size: 32px;line-height: 1;position: relative;width: 32px;height: 32px;}#iconlist div:before {margin-right: 20px;}#iconlist div:hover {cursor: pointer;color: #e4c05c;}#primary {background: #e4c05c;overflow: hidden;}#content {position: relative;color: #fff;max-width: 980px;padding: 0 10px;margin: 0 auto;}#icons {background: #fbfbfb;}#icons #iconlist {max-width: 980px;box-sizing: border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;padding: 20px 0;margin: 0 auto;}#glyph {float: left;width: 50%;box-sizing: border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;padding: 20px 0;}#glyph .</description>
-    </item>
-    
-  </channel>
-</rss>

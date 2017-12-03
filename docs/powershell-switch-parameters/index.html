@@ -8,28 +8,35 @@
     
 
 
-    <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:image" content="http://www.modestosanjuan.com/images/cover.png"/>
+    
+        <meta name="twitter:card" content="summary"/>
+    
 
 
 
-<meta name="twitter:title" content="Powershell-switch-parameters"/>
-<meta name="twitter:description" content="DESCUBRIMIENTOS, IDEAS Y OTRAS CHORRADAS"/>
+<meta name="twitter:title" content="[PowerShell] Switch parameters"/>
+<meta name="twitter:description" content="En PowerShell es muy común usar parámetros de tipo switch. La peculiaridad de estos parámetros es que al usarlos, se especifica el nombre del parámetro pero no se proporciona ningún valor, ya que se asume que al usarlo su valor será $true y $false si no se especifica. Ejemplos típicos son el uso de &#8211;Recurse o -Force. 
+Este sería un ejemplo de con este tipo de parámetros:
+Function Do-Something([Switch]$Recurse) { Write-Host $Recurse } Do-Something -Recurse Do-Something  Si ejecuto este script, veré por pantalla $True y $False, como podría esperar."/>
 
     <meta name="twitter:site" content="@msanjuan"/>
 
 
 
-  	<meta property="og:title" content=" Powershell-switch-parameters &middot;  Blog de Modesto San Juan" />
+  	<meta property="og:title" content=" [PowerShell] Switch parameters &middot;  Blog de Modesto San Juan" />
   	<meta property="og:site_name" content="Blog de Modesto San Juan" />
   	<meta property="og:url" content="http://www.modestosanjuan.com/powershell-switch-parameters/" />
 
     
-    <meta property="og:type" content="website" />
+  	<meta property="og:type" content="article" />
+
+    <meta property="og:article:published_time" content="2015-08-17T22:37:14Z" />
+
+    
     
 
     <title>
-       Powershell-switch-parameters &middot;  Blog de Modesto San Juan
+       [PowerShell] Switch parameters &middot;  Blog de Modesto San Juan
     </title>
 
     <meta name="description" content="DESCUBRIMIENTOS, IDEAS Y OTRAS CHORRADAS" />
@@ -50,10 +57,8 @@
           <link href="http://www.modestosanjuan.com/index.xml" rel="alternate" type="application/rss+xml" title="Blog de Modesto San Juan" />
       
       
-        <link href="http://www.modestosanjuan.com/powershell-switch-parameters/index.xml" rel="alternate" type="application/rss+xml" title="Powershell-switch-parameters &middot; Blog de Modesto San Juan" />
-      
     
-    <meta name="generator" content="Hugo 0.31.1" />
+    <meta name="generator" content="Hugo 0.17" />
 
     <link rel="canonical" href="http://www.modestosanjuan.com/powershell-switch-parameters/" />
 
@@ -88,7 +93,7 @@
     </ul>
     
     
-    <a class="subscribe-button icon-feed" href="http://www.modestosanjuan.com/powershell-switch-parameters/index.xml">Subscribe</a>
+    <a class="subscribe-button icon-feed" href="http://www.modestosanjuan.com/index.xml">Subscribe</a>
     
 </div>
 <span class="nav-cover"></span>
@@ -99,80 +104,159 @@
 
 
 
-	 
-  <header class="main-header tag-head" style="background-image: url(http://www.modestosanjuan.com/images/cover.png)">
-  
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
 
-    <nav class="main-nav overlay clearfix">
-      
-        <a class="blog-logo" href="http://www.modestosanjuan.com/"><img src="http://www.modestosanjuan.com/images/logo.jpg" alt="Home" /></a>
-      
-      
-        
-          <a class="menu-button icon-feed" href="http://www.modestosanjuan.com/powershell-switch-parameters/index.xml">&nbsp;&nbsp;Subscribe</a>
-        
-      
-    </nav>
-    <div class="vertical">
-        <div class="main-header-content inner">
-            <h1 class="page-title">Powershell-switch-parameters</h1>
-            <h2 class="page-description">
-                
-            </h2>
-        </div>
-    </div>
+
+  
+      <a class="blog-logo" href="http://www.modestosanjuan.com/"><img src="http://www.modestosanjuan.com/images/logo.jpg" alt="Home" /></a>
+  
+  
+      <a class="menu-button icon-feed" href="http://www.modestosanjuan.com/index.xml">&nbsp;&nbsp;Subscribe</a>
+  
+  </nav>
 </header>
 
+
+
 <main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">[PowerShell] Switch parameters</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2015-08-17T22:37:14Z">
+            Aug 17, 2015
+          </time>
+        
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <p>En PowerShell es muy común usar parámetros de tipo <em>switch</em>. La peculiaridad de estos parámetros es que al usarlos, se especifica el nombre del parámetro pero no se proporciona ningún valor, ya que se asume que al usarlo su valor será <em>$true</em> y <em>$false</em> si no se especifica. Ejemplos típicos son el uso de &#8211;<em>Recurse o -Force. </em></p>
+
+<p>Este sería un ejemplo de con este tipo de parámetros:</p>
+
+<pre class="lang:ps decode:true">Function Do-Something([Switch]$Recurse) {
+    Write-Host $Recurse
+}
+
+Do-Something -Recurse
+Do-Something
+</pre>
+
+<p>Si ejecuto este script, veré por pantalla <em>$True</em> y <em>$False, como podría esperar. Si le añado algunas modificaciones al código, el resultado sigue siendo el esperado:</em></p>
+
+<pre class="lang:ps decode:true">Function Do-Something([Switch]$Recurse) {
+    if ($Recurse.IsPresent) { 
+        Write-Host "Lo haré recursivo"
+    } Else {
+        Write-Host "No lo haré recursivo"
+    }
+}
+
+Do-Something -Recurse
+Do-Something
+</pre>
+
+<p>Hasta aquí todo bien, pero en realidad no lo he estado haciendo como está recomendado. Si me diese por hacer una prueba en Pester en la que me viese obligado a verificar el _$Recurse_ de este modo:</p>
+
+<pre class="lang:ps decode:true">$Recurse | Should Be $True
+</pre>
+
+<p>Obtendría un resultado inesperado, ya que en realidad <em>$Recurse</em> no es de tipo Boolean. Al hacer un GetType() es posible ver que en realidad es de tipo <em>System.Management.Automation.SwitchParameter</em>. En realidad la forma correcta de verificar si me han pasado el parámetro es así:</p>
+
+<pre class="lang:default decode:true ">$Recurse.IsPresent | Should Be $True</pre>
+
+<p>Y si alguna vez es necesario tratarlo como un boolean, siempre es posible recurrir al método <em>ToBool()</em>.</p>
+
+<p>&nbsp;</p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+    <figure class="author-image">
+        <a class="img" href="http://www.modestosanjuan.com/" style="background-image: url(http://www.modestosanjuan.com/images/logo.jpg)"><span class="hidden">Modesto San Juan's Picture</span></a>
+    </figure>
     
 
-	<div class="extra-pagination inner">
-    <nav class="pagination" role="navigation">
-	
-	<span class="page-number">Page 1 of 1</span>
-	
-</nav>
+    
 
-	</div>
 
-	
-	   
-<article class="post powershell-switch-parameters">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/powershell-switch-parameters/"></a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>[PowerShell] Switch parameters &middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-58663898-1', 'auto');ga('send', 'pageview');hljs.initHighlightingOnLoad();MenuCloseSubscribe&nbsp;&nbsp;Subscribe[PowerShell] Switch parametersAug 17, 2015En PowerShell es muy común usar parámetros de tipo switch. La peculiaridad de estos parámetros es que al usarlos, se especifica el nombre del parámetro pero no se proporciona ningún valor, ya que se asume que al usarlo su valor será $true y $false si no se especifica. <a class="read-more" href="/powershell-switch-parameters/">&raquo;</a></p>
-    </section>
-    <footer class="post-meta">
-        
-        
 
-        
-            <img class="author-thumb" src="http://www.modestosanjuan.com/images/logo.jpg" alt="Author image" nopin="nopin" />
-        
-        
-            Modesto San Juan
-        
-        
-        <time class="post-date" datetime="0001-01-01T00:00:00Z">
-            1 Jan 0001
-        </time>
-    </footer>
+
+
+<section class="author">
+  <h4><a href="http://www.modestosanjuan.com/">Modesto San Juan</a></h4>
+  
+  <p>Desarrollo software e intento hacerlo bien</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Madrid, Spain</span>
+    <span class="author-link icon-link"><a href="http://www.modestosanjuan.com">http://www.modestosanjuan.com</a></span>
+  </div>
+</section>
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=%5bPowerShell%5d%20Switch%20parameters&nbsp;-&nbsp;Blog%20de%20Modesto%20San%20Juan&amp;url=http%3a%2f%2fwww.modestosanjuan.com%2fpowershell-switch-parameters%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.modestosanjuan.com%2fpowershell-switch-parameters%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.modestosanjuan.com%2fpowershell-switch-parameters%2f&amp;description=%5bPowerShell%5d%20Switch%20parameters"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=http%3a%2f%2fwww.modestosanjuan.com%2fpowershell-switch-parameters%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_shortname = 'modestosanjuan';
+  var disqus_url = 'http:\/\/www.modestosanjuan.com\/powershell-switch-parameters\/';
+  (function() {
+    if (window.location.hostname == "localhost")
+          return;
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+  </footer>
 </article>
 
-	
-
-	<nav class="pagination" role="navigation">
-	
-	<span class="page-number">Page 1 of 1</span>
-	
-</nav>
-
 </main>
-
-
-
     <footer class="site-footer clearfix">
         <section class="copyright"><a href="">Blog de Modesto San Juan</a> </section>
         
@@ -186,3 +270,4 @@
     
 </body>
 </html>
+

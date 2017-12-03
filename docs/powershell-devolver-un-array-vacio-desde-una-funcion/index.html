@@ -8,28 +8,34 @@
     
 
 
-    <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:image" content="http://www.modestosanjuan.com/images/cover.png"/>
+    
+        <meta name="twitter:card" content="summary"/>
+    
 
 
 
-<meta name="twitter:title" content="Powershell-devolver-un-array-vacio-desde-una-funcions"/>
-<meta name="twitter:description" content="DESCUBRIMIENTOS, IDEAS Y OTRAS CHORRADAS"/>
+<meta name="twitter:title" content="[PowerShell] Devolver un array vacío desde una función"/>
+<meta name="twitter:description" content="Esto es un truco rápido muy chorra pero que puede volver loco a más de un desarrollador que no esté acostumbrado a las peculiaridades de PowerShell. Tomando este código como ejemplo:
+function Get-EmptyArray { [System.Collections.ArrayList]$anyArray = @() return $anyArray } Write-Host (Get-EmptyArray).GetType() En principio podría resultar bastante evidente que el resultado de la ejecución será ver por pantalla la cadena &#8220;System.Collections.Arraylist&#8221;. Pues no, el resultado será un error como una casa del estilo de &#8220;You cannot call a method on a null-valued expression&#8221;"/>
 
     <meta name="twitter:site" content="@msanjuan"/>
 
 
 
-  	<meta property="og:title" content=" Powershell-devolver-un-array-vacio-desde-una-funcions &middot;  Blog de Modesto San Juan" />
+  	<meta property="og:title" content=" [PowerShell] Devolver un array vacío desde una función &middot;  Blog de Modesto San Juan" />
   	<meta property="og:site_name" content="Blog de Modesto San Juan" />
   	<meta property="og:url" content="http://www.modestosanjuan.com/powershell-devolver-un-array-vacio-desde-una-funcion/" />
 
     
-    <meta property="og:type" content="website" />
+  	<meta property="og:type" content="article" />
+
+    <meta property="og:article:published_time" content="2015-08-20T15:07:23Z" />
+
+    
     
 
     <title>
-       Powershell-devolver-un-array-vacio-desde-una-funcions &middot;  Blog de Modesto San Juan
+       [PowerShell] Devolver un array vacío desde una función &middot;  Blog de Modesto San Juan
     </title>
 
     <meta name="description" content="DESCUBRIMIENTOS, IDEAS Y OTRAS CHORRADAS" />
@@ -50,10 +56,8 @@
           <link href="http://www.modestosanjuan.com/index.xml" rel="alternate" type="application/rss+xml" title="Blog de Modesto San Juan" />
       
       
-        <link href="http://www.modestosanjuan.com/powershell-devolver-un-array-vacio-desde-una-funcion/index.xml" rel="alternate" type="application/rss+xml" title="Powershell-devolver-un-array-vacio-desde-una-funcions &middot; Blog de Modesto San Juan" />
-      
     
-    <meta name="generator" content="Hugo 0.31.1" />
+    <meta name="generator" content="Hugo 0.17" />
 
     <link rel="canonical" href="http://www.modestosanjuan.com/powershell-devolver-un-array-vacio-desde-una-funcion/" />
 
@@ -88,7 +92,7 @@
     </ul>
     
     
-    <a class="subscribe-button icon-feed" href="http://www.modestosanjuan.com/powershell-devolver-un-array-vacio-desde-una-funcion/index.xml">Subscribe</a>
+    <a class="subscribe-button icon-feed" href="http://www.modestosanjuan.com/index.xml">Subscribe</a>
     
 </div>
 <span class="nav-cover"></span>
@@ -99,80 +103,142 @@
 
 
 
-	 
-  <header class="main-header tag-head" style="background-image: url(http://www.modestosanjuan.com/images/cover.png)">
-  
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
 
-    <nav class="main-nav overlay clearfix">
-      
-        <a class="blog-logo" href="http://www.modestosanjuan.com/"><img src="http://www.modestosanjuan.com/images/logo.jpg" alt="Home" /></a>
-      
-      
-        
-          <a class="menu-button icon-feed" href="http://www.modestosanjuan.com/powershell-devolver-un-array-vacio-desde-una-funcion/index.xml">&nbsp;&nbsp;Subscribe</a>
-        
-      
-    </nav>
-    <div class="vertical">
-        <div class="main-header-content inner">
-            <h1 class="page-title">Powershell-devolver-un-array-vacio-desde-una-funcions</h1>
-            <h2 class="page-description">
-                
-            </h2>
-        </div>
-    </div>
+
+  
+      <a class="blog-logo" href="http://www.modestosanjuan.com/"><img src="http://www.modestosanjuan.com/images/logo.jpg" alt="Home" /></a>
+  
+  
+      <a class="menu-button icon-feed" href="http://www.modestosanjuan.com/index.xml">&nbsp;&nbsp;Subscribe</a>
+  
+  </nav>
 </header>
 
+
+
 <main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">[PowerShell] Devolver un array vacío desde una función</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2015-08-20T15:07:23Z">
+            Aug 20, 2015
+          </time>
+        
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <p>Esto es un truco rápido muy chorra pero que puede volver loco a más de un desarrollador que no esté acostumbrado a las peculiaridades de PowerShell. Tomando este código como ejemplo:</p>
+
+<pre class="lang:ps decode:true">function Get-EmptyArray {
+ [System.Collections.ArrayList]$anyArray = @()
+ return $anyArray 
+}
+
+Write-Host (Get-EmptyArray).GetType()</pre>
+
+<p>En principio podría resultar bastante evidente que el resultado de la ejecución será ver por pantalla la cadena &#8220;System.Collections.Arraylist&#8221;. Pues no, el resultado será un error como una casa del estilo de &#8220;<span style="color: #ff0000;">You cannot call a method on a null-valued expression</span>&#8221;</p>
+
+<p>La explicación de este funcionamiento tiene que ver con la forma que tiene PowerShell de gestionar qué se retorna en una función y creo que da para otro minipost. Como el objetivo en este caso es saber la solución, el truco es sencillo:</p>
+
+<pre class="lang:ps decode:true ">function Get-EmptyArray {
+ [System.Collections.ArrayList]$anyArray = @()
+ return ,$anyArray 
+}
+
+Write-Host (Get-EmptyArray).GetType()</pre>
+
+<p>Por si la diferencia no se aprecia, el truco es poner una coma delante de la variable _$anyArray_ cuando se hace el return. Fácil, sencillo y feo, pero funciona 😉</p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+    <figure class="author-image">
+        <a class="img" href="http://www.modestosanjuan.com/" style="background-image: url(http://www.modestosanjuan.com/images/logo.jpg)"><span class="hidden">Modesto San Juan's Picture</span></a>
+    </figure>
     
 
-	<div class="extra-pagination inner">
-    <nav class="pagination" role="navigation">
-	
-	<span class="page-number">Page 1 of 1</span>
-	
-</nav>
+    
 
-	</div>
 
-	
-	   
-<article class="post powershell-devolver-un-array-vacio-desde-una-funcion">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/powershell-devolver-un-array-vacio-desde-una-funcion/"></a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>[PowerShell] Devolver un array vacío desde una función &middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-58663898-1', 'auto');ga('send', 'pageview');hljs.initHighlightingOnLoad();MenuCloseSubscribe&nbsp;&nbsp;Subscribe[PowerShell] Devolver un array vacío desde una funciónAug 20, 2015Esto es un truco rápido muy chorra pero que puede volver loco a más de un desarrollador que no esté acostumbrado a las peculiaridades de PowerShell. <a class="read-more" href="/powershell-devolver-un-array-vacio-desde-una-funcion/">&raquo;</a></p>
-    </section>
-    <footer class="post-meta">
-        
-        
 
-        
-            <img class="author-thumb" src="http://www.modestosanjuan.com/images/logo.jpg" alt="Author image" nopin="nopin" />
-        
-        
-            Modesto San Juan
-        
-        
-        <time class="post-date" datetime="0001-01-01T00:00:00Z">
-            1 Jan 0001
-        </time>
-    </footer>
+
+
+<section class="author">
+  <h4><a href="http://www.modestosanjuan.com/">Modesto San Juan</a></h4>
+  
+  <p>Desarrollo software e intento hacerlo bien</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Madrid, Spain</span>
+    <span class="author-link icon-link"><a href="http://www.modestosanjuan.com">http://www.modestosanjuan.com</a></span>
+  </div>
+</section>
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=%5bPowerShell%5d%20Devolver%20un%20array%20vac%c3%ado%20desde%20una%20funci%c3%b3n&nbsp;-&nbsp;Blog%20de%20Modesto%20San%20Juan&amp;url=http%3a%2f%2fwww.modestosanjuan.com%2fpowershell-devolver-un-array-vacio-desde-una-funcion%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.modestosanjuan.com%2fpowershell-devolver-un-array-vacio-desde-una-funcion%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.modestosanjuan.com%2fpowershell-devolver-un-array-vacio-desde-una-funcion%2f&amp;description=%5bPowerShell%5d%20Devolver%20un%20array%20vac%c3%ado%20desde%20una%20funci%c3%b3n"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=http%3a%2f%2fwww.modestosanjuan.com%2fpowershell-devolver-un-array-vacio-desde-una-funcion%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_shortname = 'modestosanjuan';
+  var disqus_url = 'http:\/\/www.modestosanjuan.com\/powershell-devolver-un-array-vacio-desde-una-funcion\/';
+  (function() {
+    if (window.location.hostname == "localhost")
+          return;
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+  </footer>
 </article>
 
-	
-
-	<nav class="pagination" role="navigation">
-	
-	<span class="page-number">Page 1 of 1</span>
-	
-</nav>
-
 </main>
-
-
-
     <footer class="site-footer clearfix">
         <section class="copyright"><a href="">Blog de Modesto San Juan</a> </section>
         
@@ -186,3 +252,4 @@
     
 </body>
 </html>
+
