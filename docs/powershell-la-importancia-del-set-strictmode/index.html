@@ -8,33 +8,28 @@
     
 
 
-    
-        <meta name="twitter:card" content="summary"/>
-    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:image" content="http://www.modestosanjuan.com/images/cover.png"/>
 
 
 
-<meta name="twitter:title" content="[PowerShell] La importancia del Set-StrictMode"/>
-<meta name="twitter:description" content="Cuando empecé a programar scripts en PowerShell, cometía muchísimos fallos fruto de mi intoxicación con otros lenguajes, especialmente C#, con el que trabajo habitualmente. Después de un tiempo, me di cuenta que PowerShell tiene muchas más similitudes con JavaScript que con C# ya que es un lenguaje interpretado y de tipado débil. Y un tiempo después, aprendí que podía programar en PowerShell de una manera más próxima a TypeScript."/>
+<meta name="twitter:title" content="Powershell-la-importancia-del-set-strictmodes"/>
+<meta name="twitter:description" content="DESCUBRIMIENTOS, IDEAS Y OTRAS CHORRADAS"/>
 
     <meta name="twitter:site" content="@msanjuan"/>
 
 
 
-  	<meta property="og:title" content=" [PowerShell] La importancia del Set-StrictMode &middot;  Blog de Modesto San Juan" />
+  	<meta property="og:title" content=" Powershell-la-importancia-del-set-strictmodes &middot;  Blog de Modesto San Juan" />
   	<meta property="og:site_name" content="Blog de Modesto San Juan" />
   	<meta property="og:url" content="http://www.modestosanjuan.com/powershell-la-importancia-del-set-strictmode/" />
 
     
-  	<meta property="og:type" content="article" />
-
-    <meta property="og:article:published_time" content="2015-08-03T23:50:39Z" />
-
-    
+    <meta property="og:type" content="website" />
     
 
     <title>
-       [PowerShell] La importancia del Set-StrictMode &middot;  Blog de Modesto San Juan
+       Powershell-la-importancia-del-set-strictmodes &middot;  Blog de Modesto San Juan
     </title>
 
     <meta name="description" content="DESCUBRIMIENTOS, IDEAS Y OTRAS CHORRADAS" />
@@ -55,8 +50,10 @@
           <link href="http://www.modestosanjuan.com/index.xml" rel="alternate" type="application/rss+xml" title="Blog de Modesto San Juan" />
       
       
+        <link href="http://www.modestosanjuan.com/powershell-la-importancia-del-set-strictmode/index.xml" rel="alternate" type="application/rss+xml" title="Powershell-la-importancia-del-set-strictmodes &middot; Blog de Modesto San Juan" />
+      
     
-    <meta name="generator" content="Hugo 0.17" />
+    <meta name="generator" content="Hugo 0.31.1" />
 
     <link rel="canonical" href="http://www.modestosanjuan.com/powershell-la-importancia-del-set-strictmode/" />
 
@@ -91,7 +88,7 @@
     </ul>
     
     
-    <a class="subscribe-button icon-feed" href="http://www.modestosanjuan.com/index.xml">Subscribe</a>
+    <a class="subscribe-button icon-feed" href="http://www.modestosanjuan.com/powershell-la-importancia-del-set-strictmode/index.xml">Subscribe</a>
     
 </div>
 <span class="nav-cover"></span>
@@ -102,200 +99,80 @@
 
 
 
-<header class="main-header post-head no-cover">
-  <nav class="main-nav clearfix">
+	 
+  <header class="main-header tag-head" style="background-image: url(http://www.modestosanjuan.com/images/cover.png)">
+  
 
-
-  
-      <a class="blog-logo" href="http://www.modestosanjuan.com/"><img src="http://www.modestosanjuan.com/images/logo.jpg" alt="Home" /></a>
-  
-  
-      <a class="menu-button icon-feed" href="http://www.modestosanjuan.com/index.xml">&nbsp;&nbsp;Subscribe</a>
-  
-  </nav>
+    <nav class="main-nav overlay clearfix">
+      
+        <a class="blog-logo" href="http://www.modestosanjuan.com/"><img src="http://www.modestosanjuan.com/images/logo.jpg" alt="Home" /></a>
+      
+      
+        
+          <a class="menu-button icon-feed" href="http://www.modestosanjuan.com/powershell-la-importancia-del-set-strictmode/index.xml">&nbsp;&nbsp;Subscribe</a>
+        
+      
+    </nav>
+    <div class="vertical">
+        <div class="main-header-content inner">
+            <h1 class="page-title">Powershell-la-importancia-del-set-strictmodes</h1>
+            <h2 class="page-description">
+                
+            </h2>
+        </div>
+    </div>
 </header>
 
-
-
 <main class="content" role="main">
+    
 
+	<div class="extra-pagination inner">
+    <nav class="pagination" role="navigation">
+	
+	<span class="page-number">Page 1 of 1</span>
+	
+</nav>
 
+	</div>
 
-
-  <article class="post post">
-
+	
+	   
+<article class="post powershell-la-importancia-del-set-strictmode">
     <header class="post-header">
-        <h1 class="post-title">[PowerShell] La importancia del Set-StrictMode</h1>
-        <small></small>
-
-        <section class="post-meta">
-        
-          <time class="post-date" datetime="2015-08-03T23:50:39Z">
-            Aug 3, 2015
-          </time>
-        
-         
-        </section>
+        <h2 class="post-title"><a href="/powershell-la-importancia-del-set-strictmode/"></a></h2>
     </header>
-
-    <section class="post-content">
-      
-
-<p>Cuando empecé a programar scripts en PowerShell, cometía muchísimos fallos fruto de mi intoxicación con otros lenguajes, especialmente C#, con el que trabajo habitualmente. Después de un tiempo, me di cuenta que PowerShell tiene muchas más similitudes con JavaScript que con C# ya que es un lenguaje interpretado y de tipado débil. Y un tiempo después, aprendí que podía programar en PowerShell de una manera más próxima a TypeScript.</p>
-
-<p>Lo explico de esta forma porque a mi cerebro le resulta más sencillo recurrir a este paralelismo. Cuando estoy programando en PowerShell, a mi cerebro le cuesta mucho menos si llevo puesto el sombrero de programador en TypeScript/Javascript) que si estoy pensando en C#. Cometo menos errores y el código me sale de forma más fluida.</p>
-
-<p>Aún así hay un cmdlet que me ayuda muchísimo y que creo que permite generar un código mucho más robusto. Se trata del cmdlet <strong>Set-StrictMode</strong>. Este cmdlet permite establecer una serie de restricciones de cara al código que escribimos en PowerShell. Generalmente siempre añado esta línea al principio de mis scripts:</p>
-
-<pre class="lang:ps decode:true">Set-StrictMode -Version 2</pre>
-
-<p>La versión 2 determina exactamente qué restricciones se van a aplicar. Las opciones son 1, 2 o Latest. Resumiendo lo que explican en la <a href="https://technet.microsoft.com/es-es/library/hh849692.aspx" target="_blank">documentación</a> de Microsoft:</p>
-
-<p>1.0 &#8211; Prohíbe referencias a variables no inicializadas.</p>
-
-<p>2.0 &#8211; Prohíbe:</p>
-
-<ul>
-<li>Referencias a variables no inicializadas</li>
-<li>Referencias a propiedades de un objeto que no existen.</li>
-<li>Llamadas a fuciones utilizando la sintaxis de llamadas a métodos (usando los parñentesis)</li>
-<li>El uso de variables sin nombre (${})</li>
-</ul>
-
-<p>Latest &#8211; Aplica la versión más estricta de las disponibles. Dependerá de la versión de PowerShell que se esté utilizando, pero a día de hoy (PowerShell 5.0) el valor más alto sigue siendo 2.</p>
-
-<p>Aunque la tentación puede ser recurrir al parámetro <strong>Latest</strong>, no lo recomiendo ya que podría implicar que se rompan scripts que funcionan bien si se incrementa el nivel de restricciones en una futura versión de PowerShell.</p>
-
-<p>Dicho todo esto, qué mejor que un ejemplo:</p>
-
-<pre class="lang:ps decode:true">function Suma($valor1, $valor2) {
-    return $valr1 + $valor2
-}
-
-$resultado = Suma(1, 2)
-Write-Host $resultado</pre>
-
-<p>Si ejecuto este script con <strong>Set-StrictMode -Off</strong> el resutado será que no se pinta nada en pantalla. La razón es que me se hace referencia a la variable <em>$valr1</em> en lugar de a <em>$valor1</em>. Si corrijo este fallo, aún así obtendré un resultado indeseado, ya que en pantalla se pintará &#8220;1 2&#8221; sin las comillas. En este caso es un error típico cuando tengo puesto el sombrero de C#, el error es que estoy llamando a la función <em>Suma</em> como si fuese un método. Para que el script funcionase como deseo, debería ser así:</p>
-
-<pre class="lang:ps decode:true">Set-StrictMode -Version 2
-
-function Suma($valor1, $valor2) {
-    return $valor1 + $valor2
-}
-
-$resultado = Suma 1 2
-Write-Host $resultado</pre>
-
-<h1 id="sus-similitudes-con-typescript">Sus similitudes con TypeScript</h1>
-
-<p>Al principio del post he mencionado que con el tiempo me he acostumbrado a la proximidad con TypeScript. Salvando las distancias, este podría ser una muestra basada en el ejemplo anterior:</p>
-
-<pre class="lang:ps decode:true">Set-StrictMode -Version 2
-
-function Suma([int]$valor1, [int]$valor2) { 
-   return $valor1 + $valor2 
-}
-
-$resultado = Suma 1 2
-Write-Host $resultado</pre>
-
-<p>Incluso podría retorcerlo un poco más y ponerme más estricto:</p>
-
-<pre class="lang:ps decode:true">Set-StrictMode -Version 2
-
-function Suma {
-     Param(
-       [Parameter(Mandatory=$true)][int]$valor1,
-       [Parameter(Mandatory=$true)][int]$valor2
-    )
-    return $valor1 + $valor2
-}
-
-$resultado = Suma (1, 2)
-Write-Host $resultado
-</pre>
-
-<p>Normalmente no llego tan lejos ya que creo que dificulta demasiado la lectura del código y, en la mayoría de los casos, no necesito recurrir a tantas restricciones en el código.</p>
-
-<p>Además de recurrir al <strong>Set-StrictMode</strong>, aplico TDD para desarrollar mis scripts, algo que también resulta de muchísima ayuda, especialmente cuando empiezas a manejar mucho código. Pero lo explicaré en otro post.</p>
-
+    <section class="post-excerpt">
+        <p>[PowerShell] La importancia del Set-StrictMode &middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-58663898-1', 'auto');ga('send', 'pageview');hljs.initHighlightingOnLoad();MenuCloseSubscribe&nbsp;&nbsp;Subscribe[PowerShell] La importancia del Set-StrictModeAug 3, 2015Cuando empecé a programar scripts en PowerShell, cometía muchísimos fallos fruto de mi intoxicación con otros lenguajes, especialmente C#, con el que trabajo habitualmente. <a class="read-more" href="/powershell-la-importancia-del-set-strictmode/">&raquo;</a></p>
     </section>
+    <footer class="post-meta">
+        
+        
 
-
-  <footer class="post-footer">
-
-
-    
-    <figure class="author-image">
-        <a class="img" href="http://www.modestosanjuan.com/" style="background-image: url(http://www.modestosanjuan.com/images/logo.jpg)"><span class="hidden">Modesto San Juan's Picture</span></a>
-    </figure>
-    
-
-    
-
-
-
-
-
-<section class="author">
-  <h4><a href="http://www.modestosanjuan.com/">Modesto San Juan</a></h4>
-  
-  <p>Desarrollo software e intento hacerlo bien</p>
-  
-  <div class="author-meta">
-    <span class="author-location icon-location">Madrid, Spain</span>
-    <span class="author-link icon-link"><a href="http://www.modestosanjuan.com">http://www.modestosanjuan.com</a></span>
-  </div>
-</section>
-
-
-
-    
-<section class="share">
-  <h4>Share this post</h4>
-  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=%5bPowerShell%5d%20La%20importancia%20del%20Set-StrictMode&nbsp;-&nbsp;Blog%20de%20Modesto%20San%20Juan&amp;url=http%3a%2f%2fwww.modestosanjuan.com%2fpowershell-la-importancia-del-set-strictmode%2f"
-      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-      <span class="hidden">Twitter</span>
-  </a>
-  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.modestosanjuan.com%2fpowershell-la-importancia-del-set-strictmode%2f"
-      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-      <span class="hidden">Facebook</span>
-  </a>
-  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.modestosanjuan.com%2fpowershell-la-importancia-del-set-strictmode%2f&amp;description=%5bPowerShell%5d%20La%20importancia%20del%20Set-StrictMode"
-      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
-      <span class="hidden">Pinterest</span>
-  </a>
-  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=http%3a%2f%2fwww.modestosanjuan.com%2fpowershell-la-importancia-del-set-strictmode%2f"
-     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-      <span class="hidden">Google+</span>
-  </a>
-</section>
-
-
-
-    
-
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-  var disqus_shortname = 'modestosanjuan';
-  var disqus_url = 'http:\/\/www.modestosanjuan.com\/powershell-la-importancia-del-set-strictmode\/';
-  (function() {
-    if (window.location.hostname == "localhost")
-          return;
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
-
-
-  </footer>
+        
+            <img class="author-thumb" src="http://www.modestosanjuan.com/images/logo.jpg" alt="Author image" nopin="nopin" />
+        
+        
+            Modesto San Juan
+        
+        
+        <time class="post-date" datetime="0001-01-01T00:00:00Z">
+            1 Jan 0001
+        </time>
+    </footer>
 </article>
 
+	
+
+	<nav class="pagination" role="navigation">
+	
+	<span class="page-number">Page 1 of 1</span>
+	
+</nav>
+
 </main>
+
+
+
     <footer class="site-footer clearfix">
         <section class="copyright"><a href="">Blog de Modesto San Juan</a> </section>
         
@@ -309,4 +186,3 @@ Write-Host $resultado
     
 </body>
 </html>
-

@@ -8,33 +8,28 @@
     
 
 
-    
-        <meta name="twitter:card" content="summary"/>
-    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:image" content="http://www.modestosanjuan.com/images/cover.png"/>
 
 
 
-<meta name="twitter:title" content="Bus de eventos usando Reactive Extensions"/>
-<meta name="twitter:description" content="Utilizar un bus de eventos dentro de una aplicación es algo bastante común. Un ejemplo muy sencillo podría ser desacoplar la lógica de envío de notificaciones al usuario en WPF desde los ViewModels sin necesidad de recurrir a la inyección de dependencias en el ViewModel. Aunque hasta ahora había recurrido siempre a programar mi propio bus de eventos, utilizar Reactive Extensions me ha resultado muy interesante, útil y sencillo. Este sería un ejemplo de bus de eventos utilizando RX:"/>
+<meta name="twitter:title" content="Bus-de-eventos-usando-reactive-extensions"/>
+<meta name="twitter:description" content="DESCUBRIMIENTOS, IDEAS Y OTRAS CHORRADAS"/>
 
     <meta name="twitter:site" content="@msanjuan"/>
 
 
 
-  	<meta property="og:title" content=" Bus de eventos usando Reactive Extensions &middot;  Blog de Modesto San Juan" />
+  	<meta property="og:title" content=" Bus-de-eventos-usando-reactive-extensions &middot;  Blog de Modesto San Juan" />
   	<meta property="og:site_name" content="Blog de Modesto San Juan" />
   	<meta property="og:url" content="http://www.modestosanjuan.com/bus-de-eventos-usando-reactive-extensions/" />
 
     
-  	<meta property="og:type" content="article" />
-
-    <meta property="og:article:published_time" content="2015-11-10T09:32:59Z" />
-
-    
+    <meta property="og:type" content="website" />
     
 
     <title>
-       Bus de eventos usando Reactive Extensions &middot;  Blog de Modesto San Juan
+       Bus-de-eventos-usando-reactive-extensions &middot;  Blog de Modesto San Juan
     </title>
 
     <meta name="description" content="DESCUBRIMIENTOS, IDEAS Y OTRAS CHORRADAS" />
@@ -55,8 +50,10 @@
           <link href="http://www.modestosanjuan.com/index.xml" rel="alternate" type="application/rss+xml" title="Blog de Modesto San Juan" />
       
       
+        <link href="http://www.modestosanjuan.com/bus-de-eventos-usando-reactive-extensions/index.xml" rel="alternate" type="application/rss+xml" title="Bus-de-eventos-usando-reactive-extensions &middot; Blog de Modesto San Juan" />
+      
     
-    <meta name="generator" content="Hugo 0.17" />
+    <meta name="generator" content="Hugo 0.31.1" />
 
     <link rel="canonical" href="http://www.modestosanjuan.com/bus-de-eventos-usando-reactive-extensions/" />
 
@@ -91,7 +88,7 @@
     </ul>
     
     
-    <a class="subscribe-button icon-feed" href="http://www.modestosanjuan.com/index.xml">Subscribe</a>
+    <a class="subscribe-button icon-feed" href="http://www.modestosanjuan.com/bus-de-eventos-usando-reactive-extensions/index.xml">Subscribe</a>
     
 </div>
 <span class="nav-cover"></span>
@@ -102,164 +99,80 @@
 
 
 
-<header class="main-header post-head no-cover">
-  <nav class="main-nav clearfix">
+	 
+  <header class="main-header tag-head" style="background-image: url(http://www.modestosanjuan.com/images/cover.png)">
+  
 
-
-  
-      <a class="blog-logo" href="http://www.modestosanjuan.com/"><img src="http://www.modestosanjuan.com/images/logo.jpg" alt="Home" /></a>
-  
-  
-      <a class="menu-button icon-feed" href="http://www.modestosanjuan.com/index.xml">&nbsp;&nbsp;Subscribe</a>
-  
-  </nav>
+    <nav class="main-nav overlay clearfix">
+      
+        <a class="blog-logo" href="http://www.modestosanjuan.com/"><img src="http://www.modestosanjuan.com/images/logo.jpg" alt="Home" /></a>
+      
+      
+        
+          <a class="menu-button icon-feed" href="http://www.modestosanjuan.com/bus-de-eventos-usando-reactive-extensions/index.xml">&nbsp;&nbsp;Subscribe</a>
+        
+      
+    </nav>
+    <div class="vertical">
+        <div class="main-header-content inner">
+            <h1 class="page-title">Bus-de-eventos-usando-reactive-extensions</h1>
+            <h2 class="page-description">
+                
+            </h2>
+        </div>
+    </div>
 </header>
 
-
-
 <main class="content" role="main">
+    
 
+	<div class="extra-pagination inner">
+    <nav class="pagination" role="navigation">
+	
+	<span class="page-number">Page 1 of 1</span>
+	
+</nav>
 
+	</div>
 
-
-  <article class="post post">
-
+	
+	   
+<article class="post bus-de-eventos-usando-reactive-extensions">
     <header class="post-header">
-        <h1 class="post-title">Bus de eventos usando Reactive Extensions</h1>
-        <small></small>
-
-        <section class="post-meta">
-        
-          <time class="post-date" datetime="2015-11-10T09:32:59Z">
-            Nov 10, 2015
-          </time>
-        
-         
-        </section>
+        <h2 class="post-title"><a href="/bus-de-eventos-usando-reactive-extensions/"></a></h2>
     </header>
-
-    <section class="post-content">
-      <p>Utilizar un bus de eventos dentro de una aplicación es algo bastante común. Un ejemplo muy sencillo podría ser desacoplar la lógica de envío de notificaciones al usuario en WPF desde los ViewModels sin necesidad de recurrir a la inyección de dependencias en el ViewModel. Aunque hasta ahora había recurrido siempre a programar mi propio bus de eventos, utilizar <a href="https://github.com/Reactive-Extensions/Rx.NET" target="_blank">Reactive Extensions</a> me ha resultado muy interesante, útil y sencillo. Este sería un ejemplo de bus de eventos utilizando RX:</p>
-
-<pre class="lang:c# decode:true">public static class ReactiveEventBus {
-    private static readonly Subject&lt;object&gt; messageSubject = new Subject&lt;object&gt;();
-
-    public static void Send&lt;T&gt;(T message) {
-        messageSubject.OnNext(message);
-    }
-
-    public static IObservable&lt;T&gt; AsObservable&lt;T&gt;() { return messageSubject.OfType&lt;T&gt;(); }
-}</pre>
-
-<p>Este código lo encontré <a href="http://rogeralsing.com/2010/01/23/rx-framework-building-a-message-bus/" target="_blank">aquí</a>.</p>
-
-<p>Lo habitual en un bus de eventos es tener un mecanismo para enviar eventos y otro para suscribirnos a ellos. En este caso, en lugar de habilitar la suscripción, lo que me proporciona es la posibilidad de obtener un <strong>IObservable<T></strong>, siendo <strong>T</strong> el tipo del mensaje que quiero observar.</p>
-
-<p>Aplicado al ejemplo de las notificaciones, en la MainWindow (o donde sea) podría añadir este código:</p>
-
-<pre class="lang:c# decode:true">var subscription = ReactiveEventBus.AsObservable&lt;GlobalMessage&gt;().Subscribe(message =&gt; MessageBox.Show(message.Message));
-Closed += (sender, args) =&gt; subscription.Dispose();
-</pre>
-
-<p>Y eso me permitiría poder enviar mensajes desde cualquier ViewModel (o cualquier otro sitio) con este código:</p>
-
-<pre class="lang:c# decode:true">ReactiveEventBus.Send(new GlobalMessage("Hola!"));
-</pre>
-
-<p>Es muy importante tener en cuenta la llamada al <strong>Dispose()</strong> de la suscripción para evitar problemas de liberación de recursos.</p>
-
-<p>Lo interesante de que el bus de eventos me de un <strong>IObservable<T></strong> es que, combinado con RX puedo hacer cosas más complejas de una forma muy sencilla, como:</p>
-
-<pre class="lang:c# decode:true ">ReactiveEventBus.AsObservable&lt;ScopedEvent&gt;()
-    .Where(evt =&gt; evt.Scope == "Scope1")
-    .Subscribe(evt =&gt; PUT YOUR CODE FOR Scope1 HERE);
-
-ReactiveEventBus.AsObservable&lt;ScopedEvent&gt;()
-    .Where(evt =&gt; evt.Scope == "Scope2")
-    .Subscribe(evt =&gt; PUT YOUR CODE FOR Scope2 HERE);
-</pre>
-
-<p>Respecto a si tiene sentido el uso de una propiedad para determinar el scope o sería más adecuado utilizar un objeto de distinto tipo, la respuesta es la de siempre: <strong>depende</strong> 😉</p>
-
-<p>Algunos casos en los que me parece interesante son el envío un evento destinado únicamente a los UserControl que están mostrando una entidad concreta en un interfaz MDI o hacer que el scope de un evento sea una ventana concreta.</p>
-
+    <section class="post-excerpt">
+        <p>Bus de eventos usando Reactive Extensions &middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-58663898-1', 'auto');ga('send', 'pageview');hljs.initHighlightingOnLoad();MenuCloseSubscribe&nbsp;&nbsp;SubscribeBus de eventos usando Reactive ExtensionsNov 10, 2015Utilizar un bus de eventos dentro de una aplicación es algo bastante común. Un ejemplo muy sencillo podría ser desacoplar la lógica de envío de notificaciones al usuario en WPF desde los ViewModels sin necesidad de recurrir a la inyección de dependencias en el ViewModel. <a class="read-more" href="/bus-de-eventos-usando-reactive-extensions/">&raquo;</a></p>
     </section>
+    <footer class="post-meta">
+        
+        
 
-
-  <footer class="post-footer">
-
-
-    
-    <figure class="author-image">
-        <a class="img" href="http://www.modestosanjuan.com/" style="background-image: url(http://www.modestosanjuan.com/images/logo.jpg)"><span class="hidden">Modesto San Juan's Picture</span></a>
-    </figure>
-    
-
-    
-
-
-
-
-
-<section class="author">
-  <h4><a href="http://www.modestosanjuan.com/">Modesto San Juan</a></h4>
-  
-  <p>Desarrollo software e intento hacerlo bien</p>
-  
-  <div class="author-meta">
-    <span class="author-location icon-location">Madrid, Spain</span>
-    <span class="author-link icon-link"><a href="http://www.modestosanjuan.com">http://www.modestosanjuan.com</a></span>
-  </div>
-</section>
-
-
-
-    
-<section class="share">
-  <h4>Share this post</h4>
-  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Bus%20de%20eventos%20usando%20Reactive%20Extensions&nbsp;-&nbsp;Blog%20de%20Modesto%20San%20Juan&amp;url=http%3a%2f%2fwww.modestosanjuan.com%2fbus-de-eventos-usando-reactive-extensions%2f"
-      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-      <span class="hidden">Twitter</span>
-  </a>
-  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.modestosanjuan.com%2fbus-de-eventos-usando-reactive-extensions%2f"
-      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-      <span class="hidden">Facebook</span>
-  </a>
-  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.modestosanjuan.com%2fbus-de-eventos-usando-reactive-extensions%2f&amp;description=Bus%20de%20eventos%20usando%20Reactive%20Extensions"
-      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
-      <span class="hidden">Pinterest</span>
-  </a>
-  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=http%3a%2f%2fwww.modestosanjuan.com%2fbus-de-eventos-usando-reactive-extensions%2f"
-     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-      <span class="hidden">Google+</span>
-  </a>
-</section>
-
-
-
-    
-
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-  var disqus_shortname = 'modestosanjuan';
-  var disqus_url = 'http:\/\/www.modestosanjuan.com\/bus-de-eventos-usando-reactive-extensions\/';
-  (function() {
-    if (window.location.hostname == "localhost")
-          return;
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
-
-
-  </footer>
+        
+            <img class="author-thumb" src="http://www.modestosanjuan.com/images/logo.jpg" alt="Author image" nopin="nopin" />
+        
+        
+            Modesto San Juan
+        
+        
+        <time class="post-date" datetime="0001-01-01T00:00:00Z">
+            1 Jan 0001
+        </time>
+    </footer>
 </article>
 
+	
+
+	<nav class="pagination" role="navigation">
+	
+	<span class="page-number">Page 1 of 1</span>
+	
+</nav>
+
 </main>
+
+
+
     <footer class="site-footer clearfix">
         <section class="copyright"><a href="">Blog de Modesto San Juan</a> </section>
         
@@ -273,4 +186,3 @@ ReactiveEventBus.AsObservable&lt;ScopedEvent&gt;()
     
 </body>
 </html>
-

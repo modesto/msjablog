@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bus-de-eventos-usando-reactive-extensions on Blog de Modesto San Juan</title>
+    <link>http://www.modestosanjuan.com/bus-de-eventos-usando-reactive-extensions/</link>
+    <description>Recent content in Bus-de-eventos-usando-reactive-extensions on Blog de Modesto San Juan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-es</language>
+    
+	<atom:link href="http://www.modestosanjuan.com/bus-de-eventos-usando-reactive-extensions/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>http://www.modestosanjuan.com/bus-de-eventos-usando-reactive-extensions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.modestosanjuan.com/bus-de-eventos-usando-reactive-extensions/</guid>
+      <description>Bus de eventos usando Reactive Extensions &amp;middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-58663898-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);hljs.initHighlightingOnLoad();MenuCloseSubscribe&amp;nbsp;&amp;nbsp;SubscribeBus de eventos usando Reactive ExtensionsNov 10, 2015Utilizar un bus de eventos dentro de una aplicación es algo bastante común. Un ejemplo muy sencillo podría ser desacoplar la lógica de envío de notificaciones al usuario en WPF desde los ViewModels sin necesidad de recurrir a la inyección de dependencias en el ViewModel.</description>
+    </item>
+    
+  </channel>
+</rss>

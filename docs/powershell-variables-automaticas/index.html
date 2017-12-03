@@ -8,34 +8,28 @@
     
 
 
-    
-        <meta name="twitter:card" content="summary"/>
-    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:image" content="http://www.modestosanjuan.com/images/cover.png"/>
 
 
 
-<meta name="twitter:title" content="[PowerShell] Variables automáticas"/>
-<meta name="twitter:description" content="PowerShell dispone de una serie de variables gestionadas de forma automática que permiten obtener información relacionada con la ejecución de código actual. Su propósito y utilidad es variado, siendo algunas de uso muy frecuente y otras de uso marginal. En cualquier caso, no está mal conocer unas cuantas y que suene dentro de la cabeza que hay otras que tal vez sea útiles en el futuro.
-Tanto la documentación oficial como el comando _&#8220;get-help about_automatic_variables&#8220;_ contienen el listado completo, pero me gustaría enumerar por aquí algunas que me resultan interesantes o que tienen truco."/>
+<meta name="twitter:title" content="Powershell-variables-automaticas"/>
+<meta name="twitter:description" content="DESCUBRIMIENTOS, IDEAS Y OTRAS CHORRADAS"/>
 
     <meta name="twitter:site" content="@msanjuan"/>
 
 
 
-  	<meta property="og:title" content=" [PowerShell] Variables automáticas &middot;  Blog de Modesto San Juan" />
+  	<meta property="og:title" content=" Powershell-variables-automaticas &middot;  Blog de Modesto San Juan" />
   	<meta property="og:site_name" content="Blog de Modesto San Juan" />
   	<meta property="og:url" content="http://www.modestosanjuan.com/powershell-variables-automaticas/" />
 
     
-  	<meta property="og:type" content="article" />
-
-    <meta property="og:article:published_time" content="2015-09-20T22:10:01Z" />
-
-    
+    <meta property="og:type" content="website" />
     
 
     <title>
-       [PowerShell] Variables automáticas &middot;  Blog de Modesto San Juan
+       Powershell-variables-automaticas &middot;  Blog de Modesto San Juan
     </title>
 
     <meta name="description" content="DESCUBRIMIENTOS, IDEAS Y OTRAS CHORRADAS" />
@@ -56,8 +50,10 @@ Tanto la documentación oficial como el comando _&#8220;get-help about_automat
           <link href="http://www.modestosanjuan.com/index.xml" rel="alternate" type="application/rss+xml" title="Blog de Modesto San Juan" />
       
       
+        <link href="http://www.modestosanjuan.com/powershell-variables-automaticas/index.xml" rel="alternate" type="application/rss+xml" title="Powershell-variables-automaticas &middot; Blog de Modesto San Juan" />
+      
     
-    <meta name="generator" content="Hugo 0.17" />
+    <meta name="generator" content="Hugo 0.31.1" />
 
     <link rel="canonical" href="http://www.modestosanjuan.com/powershell-variables-automaticas/" />
 
@@ -92,7 +88,7 @@ Tanto la documentación oficial como el comando _&#8220;get-help about_automat
     </ul>
     
     
-    <a class="subscribe-button icon-feed" href="http://www.modestosanjuan.com/index.xml">Subscribe</a>
+    <a class="subscribe-button icon-feed" href="http://www.modestosanjuan.com/powershell-variables-automaticas/index.xml">Subscribe</a>
     
 </div>
 <span class="nav-cover"></span>
@@ -103,142 +99,80 @@ Tanto la documentación oficial como el comando _&#8220;get-help about_automat
 
 
 
-<header class="main-header post-head no-cover">
-  <nav class="main-nav clearfix">
+	 
+  <header class="main-header tag-head" style="background-image: url(http://www.modestosanjuan.com/images/cover.png)">
+  
 
-
-  
-      <a class="blog-logo" href="http://www.modestosanjuan.com/"><img src="http://www.modestosanjuan.com/images/logo.jpg" alt="Home" /></a>
-  
-  
-      <a class="menu-button icon-feed" href="http://www.modestosanjuan.com/index.xml">&nbsp;&nbsp;Subscribe</a>
-  
-  </nav>
+    <nav class="main-nav overlay clearfix">
+      
+        <a class="blog-logo" href="http://www.modestosanjuan.com/"><img src="http://www.modestosanjuan.com/images/logo.jpg" alt="Home" /></a>
+      
+      
+        
+          <a class="menu-button icon-feed" href="http://www.modestosanjuan.com/powershell-variables-automaticas/index.xml">&nbsp;&nbsp;Subscribe</a>
+        
+      
+    </nav>
+    <div class="vertical">
+        <div class="main-header-content inner">
+            <h1 class="page-title">Powershell-variables-automaticas</h1>
+            <h2 class="page-description">
+                
+            </h2>
+        </div>
+    </div>
 </header>
 
-
-
 <main class="content" role="main">
+    
 
+	<div class="extra-pagination inner">
+    <nav class="pagination" role="navigation">
+	
+	<span class="page-number">Page 1 of 1</span>
+	
+</nav>
 
+	</div>
 
-
-  <article class="post post">
-
+	
+	   
+<article class="post powershell-variables-automaticas">
     <header class="post-header">
-        <h1 class="post-title">[PowerShell] Variables automáticas</h1>
-        <small></small>
-
-        <section class="post-meta">
-        
-          <time class="post-date" datetime="2015-09-20T22:10:01Z">
-            Sep 20, 2015
-          </time>
-        
-         
-        </section>
+        <h2 class="post-title"><a href="/powershell-variables-automaticas/"></a></h2>
     </header>
-
-    <section class="post-content">
-      <p>PowerShell dispone de una serie de variables gestionadas de forma automática que permiten obtener información relacionada con la ejecución de código actual. Su propósito y utilidad es variado, siendo algunas de uso muy frecuente y otras de uso marginal. En cualquier caso, no está mal conocer unas cuantas y que suene dentro de la cabeza que hay otras que tal vez sea útiles en el futuro.</p>
-
-<p>Tanto la <a href="https://technet.microsoft.com/en-us/library/hh847768.aspx" target="_blank">documentación oficial</a> como el comando _&#8220;<span style="color: #3366ff;">get-help</span> <span style="color: #cc99ff;">about_automatic_variables</span>&#8220;_ contienen el listado completo, pero me gustaría enumerar por aquí algunas que me resultan interesantes o que tienen truco.</p>
-
-<p>Algunas variables son de sobra conocidas para cualquiera que conozca medianamente PowerShell. Variables como <strong>$_, $true, $false, $Args, $NULL</strong> son de uso común incluso antes de saber siquiera qué es eso de las variables automáticas.</p>
-
-<p>Relacionadas con la gestión de errores, las variables <strong>$?</strong> y <strong>$Error</strong> podrían ser útiles, aunque hay que tratarlas con cuidado. En el primer caso, <strong>$?</strong> devuelve TRUE si la última operación se realizó correctamente o FALSE en caso contrario. La variable <strong>$Error</strong> en principio se trata de un array que contiene los errores más recientes. El problema que le veo a este array es que únicamente contiene los errores de PowerShell. Es decir, tomando este código como ejemplo:</p>
-
-<pre class="lang:ps decode:true">ping error_forzado
-$?
-$Error</pre>
-
-<p>En un caso como este, la variable <strong>$?</strong> será <em>False</em> pero <strong>$Error</strong> no contendrá el error que ha dado el comando <em>ping</em>. La razón es que no se trata de un error de PowerShell. Cuando hacemos <em>ping</em> estamos invocando un ejecutable, no una función o cmdlet de PowerShell. Por eso hay que tener cuidado y normalmente es más conveniente capturar los errores mediante otros mecanismos.</p>
-
-<p>Relacionado también la captura de errores está la variable <strong>$LastExitCode</strong>, que almacena el código de salida del último programa de windows ejecutado. en el ejemplo anterior, <strong>$LastExitCode</strong> tendría un valor de 1.</p>
-
-<p>Otra variable muy interesante es <strong>$MyInvocation</strong>. Esta variable proporciona información sobre el comando que se está ejecutando actualmente, incluyendo el nombre del script, la función, la ruta, los parámetros, etc. Por ejemplo, las propiedades <em>BoundParameters</em> y <em>UnboundArguments</em> permiten acceder al listado de argumentos pasados a la función. <em>UnboundArguments</em> es algo así como <strong>$Args</strong>, aunque el tipo de <strong>$Args</strong> es Object[] y _UnboundArguments_  es de tipo List<Object>.</p>
-
-<p>Otra variable interesante, relacionada con la anterior es <strong>$PSBoundParameters</strong>. En este caso la explicación es sencilla, llamar a esta variable es lo mismo que llamar a <strong>$MyInvocation.BoundParameters</strong>. Al menos así es en mi máquina, en la que <em>$PSBoundParameters.Equals($MyInvocation.BoundParameters)</em> devuelve <em>True</em>. Y recurro al clásico &#8220;en mi máquina funciona&#8221; porque me he encontrado por <a href="https://gist.github.com/anderssonjohan/4738733" target="_blank">ahí</a> quien dice lo contrario en función de la versión de PowerShell que se ejecute.</p>
-
-<p>Y por último, dos que dan mucho juego: <strong>$PSCommmandPath</strong> y <strong>$PSScriptRoot</strong>. Estas dos variables proporcionan respectivamente la ruta completa y el directorio del script desde el que se está ejecutando el código. Estas variables pueden resultar muy útiles para hacer referencias a rutas relativas a un script en concreto, independientemente del cual sea el valor de <em>Get-Location</em>. Eso si, es importante tener en cuenta que son de tipo string, si queremos manipularlas lo más conveniente suele ser crear variables de tipo <em>DirectoryInfo</em> o <em>FileInfo</em> a partir de sus valores.</p>
-
+    <section class="post-excerpt">
+        <p>[PowerShell] Variables automáticas &middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-58663898-1', 'auto');ga('send', 'pageview');hljs.initHighlightingOnLoad();MenuCloseSubscribe&nbsp;&nbsp;Subscribe[PowerShell] Variables automáticasSep 20, 2015PowerShell dispone de una serie de variables gestionadas de forma automática que permiten obtener información relacionada con la ejecución de código actual. <a class="read-more" href="/powershell-variables-automaticas/">&raquo;</a></p>
     </section>
+    <footer class="post-meta">
+        
+        
 
-
-  <footer class="post-footer">
-
-
-    
-    <figure class="author-image">
-        <a class="img" href="http://www.modestosanjuan.com/" style="background-image: url(http://www.modestosanjuan.com/images/logo.jpg)"><span class="hidden">Modesto San Juan's Picture</span></a>
-    </figure>
-    
-
-    
-
-
-
-
-
-<section class="author">
-  <h4><a href="http://www.modestosanjuan.com/">Modesto San Juan</a></h4>
-  
-  <p>Desarrollo software e intento hacerlo bien</p>
-  
-  <div class="author-meta">
-    <span class="author-location icon-location">Madrid, Spain</span>
-    <span class="author-link icon-link"><a href="http://www.modestosanjuan.com">http://www.modestosanjuan.com</a></span>
-  </div>
-</section>
-
-
-
-    
-<section class="share">
-  <h4>Share this post</h4>
-  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=%5bPowerShell%5d%20Variables%20autom%c3%a1ticas&nbsp;-&nbsp;Blog%20de%20Modesto%20San%20Juan&amp;url=http%3a%2f%2fwww.modestosanjuan.com%2fpowershell-variables-automaticas%2f"
-      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-      <span class="hidden">Twitter</span>
-  </a>
-  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.modestosanjuan.com%2fpowershell-variables-automaticas%2f"
-      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-      <span class="hidden">Facebook</span>
-  </a>
-  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.modestosanjuan.com%2fpowershell-variables-automaticas%2f&amp;description=%5bPowerShell%5d%20Variables%20autom%c3%a1ticas"
-      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
-      <span class="hidden">Pinterest</span>
-  </a>
-  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=http%3a%2f%2fwww.modestosanjuan.com%2fpowershell-variables-automaticas%2f"
-     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-      <span class="hidden">Google+</span>
-  </a>
-</section>
-
-
-
-    
-
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-  var disqus_shortname = 'modestosanjuan';
-  var disqus_url = 'http:\/\/www.modestosanjuan.com\/powershell-variables-automaticas\/';
-  (function() {
-    if (window.location.hostname == "localhost")
-          return;
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
-
-
-  </footer>
+        
+            <img class="author-thumb" src="http://www.modestosanjuan.com/images/logo.jpg" alt="Author image" nopin="nopin" />
+        
+        
+            Modesto San Juan
+        
+        
+        <time class="post-date" datetime="0001-01-01T00:00:00Z">
+            1 Jan 0001
+        </time>
+    </footer>
 </article>
 
+	
+
+	<nav class="pagination" role="navigation">
+	
+	<span class="page-number">Page 1 of 1</span>
+	
+</nav>
+
 </main>
+
+
+
     <footer class="site-footer clearfix">
         <section class="copyright"><a href="">Blog de Modesto San Juan</a> </section>
         
@@ -252,4 +186,3 @@ $Error</pre>
     
 </body>
 </html>
-

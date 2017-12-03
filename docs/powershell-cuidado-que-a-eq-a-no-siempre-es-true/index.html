@@ -8,33 +8,28 @@
     
 
 
-    
-        <meta name="twitter:card" content="summary"/>
-    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:image" content="http://www.modestosanjuan.com/images/cover.png"/>
 
 
 
-<meta name="twitter:title" content="[PowerShell] Cuidado que ($a -eq $a) no siempre es $true"/>
-<meta name="twitter:description" content="Este es uno de esos ejemplos en los que es importante intentar documentarse todo lo posible al desarrollar en un lenguaje/plataforma que no conocemos. Es frecuente asumir conceptos basados en nuestros conocimientos previos de otros lenguajes, pero en ocasiones nos puede jugar malas pasadas. En este caso voy a mostrar un ejemplo muy sencillo en el que yo asumí erróneamente el funcionamiento de algo tan sencillo como un operador de comparación."/>
+<meta name="twitter:title" content="Powershell-cuidado-que-a-eq-a-no-siempre-es-trues"/>
+<meta name="twitter:description" content="DESCUBRIMIENTOS, IDEAS Y OTRAS CHORRADAS"/>
 
     <meta name="twitter:site" content="@msanjuan"/>
 
 
 
-  	<meta property="og:title" content=" [PowerShell] Cuidado que ($a -eq $a) no siempre es $true &middot;  Blog de Modesto San Juan" />
+  	<meta property="og:title" content=" Powershell-cuidado-que-a-eq-a-no-siempre-es-trues &middot;  Blog de Modesto San Juan" />
   	<meta property="og:site_name" content="Blog de Modesto San Juan" />
   	<meta property="og:url" content="http://www.modestosanjuan.com/powershell-cuidado-que-a-eq-a-no-siempre-es-true/" />
 
     
-  	<meta property="og:type" content="article" />
-
-    <meta property="og:article:published_time" content="2015-08-07T00:22:46Z" />
-
-    
+    <meta property="og:type" content="website" />
     
 
     <title>
-       [PowerShell] Cuidado que ($a -eq $a) no siempre es $true &middot;  Blog de Modesto San Juan
+       Powershell-cuidado-que-a-eq-a-no-siempre-es-trues &middot;  Blog de Modesto San Juan
     </title>
 
     <meta name="description" content="DESCUBRIMIENTOS, IDEAS Y OTRAS CHORRADAS" />
@@ -55,8 +50,10 @@
           <link href="http://www.modestosanjuan.com/index.xml" rel="alternate" type="application/rss+xml" title="Blog de Modesto San Juan" />
       
       
+        <link href="http://www.modestosanjuan.com/powershell-cuidado-que-a-eq-a-no-siempre-es-true/index.xml" rel="alternate" type="application/rss+xml" title="Powershell-cuidado-que-a-eq-a-no-siempre-es-trues &middot; Blog de Modesto San Juan" />
+      
     
-    <meta name="generator" content="Hugo 0.17" />
+    <meta name="generator" content="Hugo 0.31.1" />
 
     <link rel="canonical" href="http://www.modestosanjuan.com/powershell-cuidado-que-a-eq-a-no-siempre-es-true/" />
 
@@ -91,7 +88,7 @@
     </ul>
     
     
-    <a class="subscribe-button icon-feed" href="http://www.modestosanjuan.com/index.xml">Subscribe</a>
+    <a class="subscribe-button icon-feed" href="http://www.modestosanjuan.com/powershell-cuidado-que-a-eq-a-no-siempre-es-true/index.xml">Subscribe</a>
     
 </div>
 <span class="nav-cover"></span>
@@ -102,144 +99,80 @@
 
 
 
-<header class="main-header post-head no-cover">
-  <nav class="main-nav clearfix">
+	 
+  <header class="main-header tag-head" style="background-image: url(http://www.modestosanjuan.com/images/cover.png)">
+  
 
-
-  
-      <a class="blog-logo" href="http://www.modestosanjuan.com/"><img src="http://www.modestosanjuan.com/images/logo.jpg" alt="Home" /></a>
-  
-  
-      <a class="menu-button icon-feed" href="http://www.modestosanjuan.com/index.xml">&nbsp;&nbsp;Subscribe</a>
-  
-  </nav>
+    <nav class="main-nav overlay clearfix">
+      
+        <a class="blog-logo" href="http://www.modestosanjuan.com/"><img src="http://www.modestosanjuan.com/images/logo.jpg" alt="Home" /></a>
+      
+      
+        
+          <a class="menu-button icon-feed" href="http://www.modestosanjuan.com/powershell-cuidado-que-a-eq-a-no-siempre-es-true/index.xml">&nbsp;&nbsp;Subscribe</a>
+        
+      
+    </nav>
+    <div class="vertical">
+        <div class="main-header-content inner">
+            <h1 class="page-title">Powershell-cuidado-que-a-eq-a-no-siempre-es-trues</h1>
+            <h2 class="page-description">
+                
+            </h2>
+        </div>
+    </div>
 </header>
 
-
-
 <main class="content" role="main">
+    
 
+	<div class="extra-pagination inner">
+    <nav class="pagination" role="navigation">
+	
+	<span class="page-number">Page 1 of 1</span>
+	
+</nav>
 
+	</div>
 
-
-  <article class="post post">
-
+	
+	   
+<article class="post powershell-cuidado-que-a-eq-a-no-siempre-es-true">
     <header class="post-header">
-        <h1 class="post-title">[PowerShell] Cuidado que ($a -eq $a) no siempre es $true</h1>
-        <small></small>
-
-        <section class="post-meta">
-        
-          <time class="post-date" datetime="2015-08-07T00:22:46Z">
-            Aug 7, 2015
-          </time>
-        
-         
-        </section>
+        <h2 class="post-title"><a href="/powershell-cuidado-que-a-eq-a-no-siempre-es-true/"></a></h2>
     </header>
-
-    <section class="post-content">
-      <p>Este es uno de esos ejemplos en los que es importante intentar documentarse todo lo posible al desarrollar en un lenguaje/plataforma que no conocemos. Es frecuente asumir conceptos basados en nuestros conocimientos previos de otros lenguajes, pero en ocasiones nos puede jugar malas pasadas. En este caso voy a mostrar un ejemplo muy sencillo en el que yo asumí erróneamente el funcionamiento de algo tan sencillo como un operador de comparación.</p>
-
-<p>Este problema lo encontré desarrollando una prueba mientras practicaba TDD. Por hacerlo fácil, este es el ejemplo más simple que se me ocurre para describir lo equivocado que estaba:</p>
-
-<pre class="lang:ps decode:true">$a = @("item1", "item2")
-if ($a -eq $a) { Write-Host "$a es igual que $a" }
-else { Write-Host "$a no es igual que $a" }</pre>
-
-<p>Asumiendo que <strong>-eq</strong> es el operador de igualdad, alguien que no conozca PowerShell pero si conozca otros lenguajes de programación podría asumir que este script de ejemplo entraría por el if en lugar de por el else. Mi error fue precisamente ese. Si ejecuto este script en powershell, pintará en pantalla <em><strong>&#8220;item1 item2 no es igual que item1 item2&#8221;</strong>.</em></p>
-
-<p>Si me hubiera molestado en leer la <a href="https://technet.microsoft.com/en-us/library/hh847759.aspx" target="_blank">documentación</a> de PowerShell hubiera visto que el operador <strong>-eq</strong> es bastante peculiar y en realidad hace algo más complicado. Aunque recomiendo leer la fuente original, estes es un pequeño resumen:</p>
-
-<ul>
-<li>Si ambas variables son de tipo string, aplicará una comparación &#8220;case-insensitive&#8221; retornando $true o $false</li>
-<li>Si la de la izquierda es un array de strings @(&#8220;item1&#8221;, &#8220;item2&#8221;) y la de la derecha es un string &#8220;item1&#8221;, buscará si el array contiene &#8220;item1&#8221; y retornará @(&#8220;item1&#8221;)</li>
-<li>Si a la izquierda tenemos un array de strings @(&#8220;item1&#8221;, &#8220;item2&#8221;) y a la derecha un array de strings con un único item @(&#8220;item1&#8221;), retornará @(&#8220;item1&#8221;)</li>
-<li>Como ya hemos visto al principio, si tenemos un dos arrays de strings, aunque sean iguales, retornará @()</li>
-<li>Algunos ejemplos anteriores darán resultados distintos si invertimos las variables y cambiamos izquierda por derecha, si quieres saberlos, prueba! 😉</li>
-</ul>
-
-<p>Conclusión, hay que leer más. Para mi es de mucha ayuda leer código de otros. Estudiar cómo están desarrollados Pester o Psake me ha permitido entender mucho mejor las bondades de PowerShell.</p>
-
-<p>&nbsp;</p>
-
+    <section class="post-excerpt">
+        <p>[PowerShell] Cuidado que ($a -eq $a) no siempre es $true &middot; Blog de Modesto San Juan(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-58663898-1', 'auto');ga('send', 'pageview');hljs.initHighlightingOnLoad();MenuCloseSubscribe&nbsp;&nbsp;Subscribe[PowerShell] Cuidado que ($a -eq $a) no siempre es $trueAug 7, 2015Este es uno de esos ejemplos en los que es importante intentar documentarse todo lo posible al desarrollar en un lenguaje/plataforma que no conocemos. <a class="read-more" href="/powershell-cuidado-que-a-eq-a-no-siempre-es-true/">&raquo;</a></p>
     </section>
+    <footer class="post-meta">
+        
+        
 
-
-  <footer class="post-footer">
-
-
-    
-    <figure class="author-image">
-        <a class="img" href="http://www.modestosanjuan.com/" style="background-image: url(http://www.modestosanjuan.com/images/logo.jpg)"><span class="hidden">Modesto San Juan's Picture</span></a>
-    </figure>
-    
-
-    
-
-
-
-
-
-<section class="author">
-  <h4><a href="http://www.modestosanjuan.com/">Modesto San Juan</a></h4>
-  
-  <p>Desarrollo software e intento hacerlo bien</p>
-  
-  <div class="author-meta">
-    <span class="author-location icon-location">Madrid, Spain</span>
-    <span class="author-link icon-link"><a href="http://www.modestosanjuan.com">http://www.modestosanjuan.com</a></span>
-  </div>
-</section>
-
-
-
-    
-<section class="share">
-  <h4>Share this post</h4>
-  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=%5bPowerShell%5d%20Cuidado%20que%20%28%24a%20-eq%20%24a%29%20no%20siempre%20es%20%24true&nbsp;-&nbsp;Blog%20de%20Modesto%20San%20Juan&amp;url=http%3a%2f%2fwww.modestosanjuan.com%2fpowershell-cuidado-que-a-eq-a-no-siempre-es-true%2f"
-      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-      <span class="hidden">Twitter</span>
-  </a>
-  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.modestosanjuan.com%2fpowershell-cuidado-que-a-eq-a-no-siempre-es-true%2f"
-      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-      <span class="hidden">Facebook</span>
-  </a>
-  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.modestosanjuan.com%2fpowershell-cuidado-que-a-eq-a-no-siempre-es-true%2f&amp;description=%5bPowerShell%5d%20Cuidado%20que%20%28%24a%20-eq%20%24a%29%20no%20siempre%20es%20%24true"
-      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
-      <span class="hidden">Pinterest</span>
-  </a>
-  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=http%3a%2f%2fwww.modestosanjuan.com%2fpowershell-cuidado-que-a-eq-a-no-siempre-es-true%2f"
-     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-      <span class="hidden">Google+</span>
-  </a>
-</section>
-
-
-
-    
-
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-  var disqus_shortname = 'modestosanjuan';
-  var disqus_url = 'http:\/\/www.modestosanjuan.com\/powershell-cuidado-que-a-eq-a-no-siempre-es-true\/';
-  (function() {
-    if (window.location.hostname == "localhost")
-          return;
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
-
-
-  </footer>
+        
+            <img class="author-thumb" src="http://www.modestosanjuan.com/images/logo.jpg" alt="Author image" nopin="nopin" />
+        
+        
+            Modesto San Juan
+        
+        
+        <time class="post-date" datetime="0001-01-01T00:00:00Z">
+            1 Jan 0001
+        </time>
+    </footer>
 </article>
 
+	
+
+	<nav class="pagination" role="navigation">
+	
+	<span class="page-number">Page 1 of 1</span>
+	
+</nav>
+
 </main>
+
+
+
     <footer class="site-footer clearfix">
         <section class="copyright"><a href="">Blog de Modesto San Juan</a> </section>
         
@@ -253,4 +186,3 @@ else { Write-Host "$a no es igual que $a" }</pre>
     
 </body>
 </html>
-
