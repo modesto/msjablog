@@ -51,7 +51,7 @@
         <link href="http://www.modestosanjuan.com/index.xml" rel="alternate" type="application/rss+xml" title="Blog de Modesto San Juan" />
       
     
-    <meta name="generator" content="Hugo 0.17" />
+    <meta name="generator" content="Hugo 0.31.1" />
 
     <link rel="canonical" href="http://www.modestosanjuan.com/" />
 
@@ -216,11 +216,9 @@
     
         
     
-
+        
     
-        
-            
-        
+
     
 
     
@@ -239,6 +237,36 @@
 </nav>
 
     </div>
+
+    
+        
+<article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/powershell-ojo-que-no-hay-un-unico-null/">[PowerShell] Ojo que no hay un único $null</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>Este es un ejemplo curioso de esos que me ha vuelto loco hasta que me he dado cuenta. Si parto de este código:
+$item1 = Get-ChildItem | Where-Object {$_ -eq "no encuentras esto ni de coña"} "item1 es nulo? {0}" -f ($null -eq $item1) $item2 = $null "item2 es nulo? {0}" -f ($null -eq $item2) Al ejecutarlo el resultado es &#8220;True&#8221; en ambos casos. Vamos, que tanto item1 como item2 son $null. <a class="read-more" href="/powershell-ojo-que-no-hay-un-unico-null/">&raquo;</a></p>
+    </section>
+    <footer class="post-meta">
+        
+        
+            
+            
+        
+
+        
+            <img class="author-thumb" src="http://www.modestosanjuan.com/images/logo.jpg" alt="Author image" nopin="nopin" />
+        
+        
+            Modesto San Juan
+        
+        
+        <time class="post-date" datetime="2015-09-09T20:49:56Z">
+            9 Sep 2015
+        </time>
+    </footer>
+</article>
 
     
         
@@ -505,36 +533,6 @@ En PowerShell existen los llamados &#8220;terminating errors&#8221; y los &#8220
         
         <time class="post-date" datetime="2015-06-16T10:58:45Z">
             16 Jun 2015
-        </time>
-    </footer>
-</article>
-
-    
-        
-<article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/necesitas-programar-un-servicio-para-windows-prueba-topshelf/">¿Necesitas programar un servicio para Windows? Prueba Topshelf</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>Programar un servicio para Windows suele ser una tarea engorrosa y Topshelf proporciona una alternativa bastante interesante y muchísimo menos engorrosa que la plantilla por defecto que incorpora Visual Studio.
-Aunque podría enumerar bastantes aspectos interesantes de Topshelf, me quedo con uno que para mi es fundamental, permite que una aplicación de consola sea un servicio de Windows. Esto significa que es posible recurrir a la aplicación de consola durante la fase de desarrollo o para su ejecución de forma independiente, pero que además es posible instalar esa aplicación de consola como un servicio Windows simplemente pasando un parámetro en su ejecución. <a class="read-more" href="/necesitas-programar-un-servicio-para-windows-prueba-topshelf/">&raquo;</a></p>
-    </section>
-    <footer class="post-meta">
-        
-        
-            
-            
-        
-
-        
-            <img class="author-thumb" src="http://www.modestosanjuan.com/images/logo.jpg" alt="Author image" nopin="nopin" />
-        
-        
-            Modesto San Juan
-        
-        
-        <time class="post-date" datetime="2015-06-15T23:44:42Z">
-            15 Jun 2015
         </time>
     </footer>
 </article>

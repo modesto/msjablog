@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog de Modesto San Juan</title>
-    <link>http://www.modestosanjuan.com/categories/wpf/index.xml</link>
-    <description>Recent content on Blog de Modesto San Juan</description>
+    <title>Wpf on Blog de Modesto San Juan</title>
+    <link>http://www.modestosanjuan.com/categories/wpf/</link>
+    <description>Recent content in Wpf on Blog de Modesto San Juan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <atom:link href="http://www.modestosanjuan.com/categories/wpf/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Nov 2015 09:32:59 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.modestosanjuan.com/categories/wpf/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Bus de eventos usando Reactive Extensions</title>
@@ -14,50 +17,7 @@
       <pubDate>Tue, 10 Nov 2015 09:32:59 +0000</pubDate>
       
       <guid>http://www.modestosanjuan.com/bus-de-eventos-usando-reactive-extensions/</guid>
-      <description>&lt;p&gt;Utilizar un bus de eventos dentro de una aplicación es algo bastante común. Un ejemplo muy sencillo podría ser desacoplar la lógica de envío de notificaciones al usuario en WPF desde los ViewModels sin necesidad de recurrir a la inyección de dependencias en el ViewModel. Aunque hasta ahora había recurrido siempre a programar mi propio bus de eventos, utilizar &lt;a href=&#34;https://github.com/Reactive-Extensions/Rx.NET&#34; target=&#34;_blank&#34;&gt;Reactive Extensions&lt;/a&gt; me ha resultado muy interesante, útil y sencillo. Este sería un ejemplo de bus de eventos utilizando RX:&lt;/p&gt;
-
-&lt;pre class=&#34;lang:c# decode:true&#34;&gt;public static class ReactiveEventBus {
-    private static readonly Subject&amp;lt;object&amp;gt; messageSubject = new Subject&amp;lt;object&amp;gt;();
-
-    public static void Send&amp;lt;T&amp;gt;(T message) {
-        messageSubject.OnNext(message);
-    }
-
-    public static IObservable&amp;lt;T&amp;gt; AsObservable&amp;lt;T&amp;gt;() { return messageSubject.OfType&amp;lt;T&amp;gt;(); }
-}&lt;/pre&gt;
-
-&lt;p&gt;Este código lo encontré &lt;a href=&#34;http://rogeralsing.com/2010/01/23/rx-framework-building-a-message-bus/&#34; target=&#34;_blank&#34;&gt;aquí&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Lo habitual en un bus de eventos es tener un mecanismo para enviar eventos y otro para suscribirnos a ellos. En este caso, en lugar de habilitar la suscripción, lo que me proporciona es la posibilidad de obtener un &lt;strong&gt;IObservable&lt;T&gt;&lt;/strong&gt;, siendo &lt;strong&gt;T&lt;/strong&gt; el tipo del mensaje que quiero observar.&lt;/p&gt;
-
-&lt;p&gt;Aplicado al ejemplo de las notificaciones, en la MainWindow (o donde sea) podría añadir este código:&lt;/p&gt;
-
-&lt;pre class=&#34;lang:c# decode:true&#34;&gt;var subscription = ReactiveEventBus.AsObservable&amp;lt;GlobalMessage&amp;gt;().Subscribe(message =&amp;gt; MessageBox.Show(message.Message));
-Closed += (sender, args) =&amp;gt; subscription.Dispose();
-&lt;/pre&gt;
-
-&lt;p&gt;Y eso me permitiría poder enviar mensajes desde cualquier ViewModel (o cualquier otro sitio) con este código:&lt;/p&gt;
-
-&lt;pre class=&#34;lang:c# decode:true&#34;&gt;ReactiveEventBus.Send(new GlobalMessage(&#34;Hola!&#34;));
-&lt;/pre&gt;
-
-&lt;p&gt;Es muy importante tener en cuenta la llamada al &lt;strong&gt;Dispose()&lt;/strong&gt; de la suscripción para evitar problemas de liberación de recursos.&lt;/p&gt;
-
-&lt;p&gt;Lo interesante de que el bus de eventos me de un &lt;strong&gt;IObservable&lt;T&gt;&lt;/strong&gt; es que, combinado con RX puedo hacer cosas más complejas de una forma muy sencilla, como:&lt;/p&gt;
-
-&lt;pre class=&#34;lang:c# decode:true &#34;&gt;ReactiveEventBus.AsObservable&amp;lt;ScopedEvent&amp;gt;()
-    .Where(evt =&amp;gt; evt.Scope == &#34;Scope1&#34;)
-    .Subscribe(evt =&amp;gt; PUT YOUR CODE FOR Scope1 HERE);
-
-ReactiveEventBus.AsObservable&amp;lt;ScopedEvent&amp;gt;()
-    .Where(evt =&amp;gt; evt.Scope == &#34;Scope2&#34;)
-    .Subscribe(evt =&amp;gt; PUT YOUR CODE FOR Scope2 HERE);
-&lt;/pre&gt;
-
-&lt;p&gt;Respecto a si tiene sentido el uso de una propiedad para determinar el scope o sería más adecuado utilizar un objeto de distinto tipo, la respuesta es la de siempre: &lt;strong&gt;depende&lt;/strong&gt; 😉&lt;/p&gt;
-
-&lt;p&gt;Algunos casos en los que me parece interesante son el envío un evento destinado únicamente a los UserControl que están mostrando una entidad concreta en un interfaz MDI o hacer que el scope de un evento sea una ventana concreta.&lt;/p&gt;
-</description>
+      <description>Utilizar un bus de eventos dentro de una aplicación es algo bastante común. Un ejemplo muy sencillo podría ser desacoplar la lógica de envío de notificaciones al usuario en WPF desde los ViewModels sin necesidad de recurrir a la inyección de dependencias en el ViewModel. Aunque hasta ahora había recurrido siempre a programar mi propio bus de eventos, utilizar Reactive Extensions me ha resultado muy interesante, útil y sencillo. Este sería un ejemplo de bus de eventos utilizando RX:</description>
     </item>
     
     <item>
@@ -66,95 +26,8 @@ ReactiveEventBus.AsObservable&amp;lt;ScopedEvent&amp;gt;()
       <pubDate>Wed, 17 Dec 2014 00:27:25 +0000</pubDate>
       
       <guid>http://www.modestosanjuan.com/datos-de-ejemplo-en-el-viewmodel-para-facilitar-la-vista-de-diseno/</guid>
-      <description>&lt;p&gt;Al trabajar con XAML, especialmente si la vista tiene un listado de items, puede resultar muy complicado ajustar la vista para que se vea correctamente. Tareas como ajustar los márgenes, la posición de los elementos o cualquier tipo de cambio en los estilos se pueden convertir en algo bastante pesado.&lt;/p&gt;
-
-&lt;p&gt;Este es un ejemplo de una vista de que contiene un ListView sin datos de ejemplo en vista de diseño:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.modestosanjuan.com/wp-content/uploads/2015/01/ventana-con-listview-vacío.png&#34;&gt;&lt;img class=&#34;  aligncenter wp-image-32 size-full&#34; src=&#34;http://www.modestosanjuan.com/wp-content/uploads/2015/01/ventana-con-listview-vacío.png&#34; alt=&#34;ventana con listview vacío&#34; width=&#34;538&#34; height=&#34;366&#34; srcset=&#34;http://www.modestosanjuan.com/wp-content/uploads/2015/01/ventana-con-listview-vacío.png 538w, http://www.modestosanjuan.com/wp-content/uploads/2015/01/ventana-con-listview-vacío-300x204.png 300w&#34; sizes=&#34;(max-width: 538px) 100vw, 538px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;La imagen corresponde a la vista de diseño de un código como este:&lt;/p&gt;
-
-&lt;pre class=&#34;lang:xhtml decode:true&#34;&gt;&amp;lt;ListBox ItemsSource=&#34;{Binding SampleData}&#34;&amp;gt;
-    &amp;lt;ListBox.ItemTemplate&amp;gt;
-        &amp;lt;DataTemplate&amp;gt;
-            &amp;lt;TextBlock Text=&#34;{Binding Name}&#34;&amp;gt;&amp;lt;/TextBlock&amp;gt;
-        &amp;lt;/DataTemplate&amp;gt;
-    &amp;lt;/ListBox.ItemTemplate&amp;gt;
-&amp;lt;/ListBox&amp;gt;&lt;/pre&gt;
-
-&lt;p&gt;Este es un ejemplo que ilustra bastante bien el problema, no se ve nada. Se trata de un fragmento de XAML muy sencillo y no presenta grandes problemas para intuir lo que se va a pintar, pero en cuanto la cosa se complica un poco más, ir a ciegas no resulta nada agradable. Como no tenemos datos de ejemplo, no somos capaces de saber cómo van a mostrarse los items de la lista y cualquier tipo de cambio se hace a ciegas. Para cambios pequeños, se recurre al ensayo y error, pero esto es una solución muy engorrosa y poco fluida. Para evitar ir a ciegas tenemos que hacer dos cosas:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Paso 1&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Decirle a la vista que cree una instancia del ViewModel en vista de diseño:&lt;/p&gt;
-
-&lt;pre class=&#34;lang:xhtml decode:true&#34;&gt;xmlns:mc=&#34;http://schemas.openxmlformats.org/markup-compatibility/2006&#34;
-xmlns:d=&#34;http://schemas.microsoft.com/expression/blend/2008&#34;
-xmlns:wpfApplication1=&#34;clr-namespace:WpfApplication1&#34;
-mc:Ignorable=&#34;d&#34;
-d:DataContext=&#34;{d:DesignInstance Type=wpfApplication1:SampleViewModel, IsDesignTimeCreatable=True}&#34;
-&lt;/pre&gt;
-
-&lt;p&gt;La clave está en la última línea. El tipo del ViewModel es &lt;strong&gt;SampleViewmodel&lt;/strong&gt; y al poner a _true &lt;strong&gt;el&lt;/strong&gt;_ &lt;strong&gt;IsDesignTimeCreatablele,&lt;/strong&gt; se hablilita la creación de una instancia del viewmodel en vista de diseño.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Paso 2&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Para hacer que el ViewModel tenga datos de ejemplo, lo único necesario es asignar los datos en el constructor. En la vista de ejemplo se puede llamar desde el constructor a un método que haga algo como esto:&lt;/p&gt;
-
-&lt;pre class=&#34;lang:c# decode:true&#34;&gt;if (DesignerProperties.GetIsInDesignMode(new DependencyObject()))
-{
-    var sampleData = new List&amp;lt;ClientData&amp;gt;();
-    sampleData.Add(new ClientData() { Name = &#34;Sample Client 1&#34;, Email = &#34;email@domain.com&#34; });
-    sampleData.Add(new ClientData() { Name = &#34;Sample Client 2&#34;, Email = &#34;email@domain.com&#34; });
-    sampleData.Add(new ClientData() { Name = &#34;Sample Client 3&#34;, Email = &#34;email@domain.com&#34; });
-    sampleData.Add(new ClientData() { Name = &#34;Sample Client 4&#34;, Email = &#34;email@domain.com&#34; });
-    sampleData.Add(new ClientData() { Name = &#34;Sample Client 5&#34;, Email = &#34;email@domain.com&#34; });
-    sampleData.Add(new ClientData() { Name = &#34;Sample Client 6&#34;, Email = &#34;email@domain.com&#34; });
-
-    SampleData = new ObservableCollection&amp;lt;ClientData&amp;gt;(sampleData);
-}
-&lt;/pre&gt;
-
-&lt;p&gt;Es muy importante que únicamente se rellenen los datos en vista de diseño, para que no se rellenen durante la ejecución de la aplicación. Por eso el &lt;em&gt;if&lt;/em&gt; de la primera línea.&lt;/p&gt;
-
-&lt;p&gt;Una vez hecho esto, todos los bindings de datos con el ViewModel mostrarán los datos de ejemplo en vista de diseño, pudiendo así hacer los ajustes de estilos sin necesidad de ejecutar la aplicación. Por ejemplo:&lt;/p&gt;
-
-&lt;pre class=&#34;lang:xhtml decode:true&#34;&gt;&amp;lt;Window x:Class=&#34;WpfApplication1.MainWindow&#34;
-        xmlns=&#34;http://schemas.microsoft.com/winfx/2006/xaml/presentation&#34;
-        xmlns:x=&#34;http://schemas.microsoft.com/winfx/2006/xaml&#34;
-        xmlns:mc=&#34;http://schemas.openxmlformats.org/markup-compatibility/2006&#34;
-        xmlns:d=&#34;http://schemas.microsoft.com/expression/blend/2008&#34;
-        xmlns:wpfApplication1=&#34;clr-namespace:WpfApplication1&#34;
-        mc:Ignorable=&#34;d&#34;
-        d:DataContext=&#34;{d:DesignInstance Type=wpfApplication1:SampleViewModel, IsDesignTimeCreatable=True}&#34;
-        Title=&#34;MainWindow&#34; Height=&#34;350&#34; Width=&#34;525&#34;&amp;gt;
-    &amp;lt;Grid&amp;gt;
-        &amp;lt;ListBox ItemsSource=&#34;{Binding SampleData}&#34;&amp;gt;
-            &amp;lt;ListBox.ItemTemplate&amp;gt;
-                &amp;lt;DataTemplate&amp;gt;
-                    &amp;lt;StackPanel Orientation=&#34;Horizontal&#34;&amp;gt;
-                        &amp;lt;TextBlock Text=&#34;{Binding Name}&#34;&amp;gt;&amp;lt;/TextBlock&amp;gt;
-                        &amp;lt;TextBlock Text=&#34;{Binding Email}&#34; Margin=&#34;15,0,0,0&#34;&amp;gt;&amp;lt;/TextBlock&amp;gt;
-                    &amp;lt;/StackPanel&amp;gt;
-                &amp;lt;/DataTemplate&amp;gt;
-            &amp;lt;/ListBox.ItemTemplate&amp;gt;
-        &amp;lt;/ListBox&amp;gt;
-    &amp;lt;/Grid&amp;gt;
-&amp;lt;/Window&amp;gt;
-&lt;/pre&gt;
-
-&lt;p&gt;Y así es como se vería en vista de diseño:&lt;/p&gt;
-
-&lt;p style=&#34;text-align: center;&#34;&gt;
-  &lt;a href=&#34;http://www.modestosanjuan.com/wp-content/uploads/2015/01/ventana-con-listview-con-datos-de-ejemplo.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-35&#34; src=&#34;http://www.modestosanjuan.com/wp-content/uploads/2015/01/ventana-con-listview-con-datos-de-ejemplo.png&#34; alt=&#34;ventana con listview con datos de ejemplo&#34; width=&#34;540&#34; height=&#34;361&#34; srcset=&#34;http://www.modestosanjuan.com/wp-content/uploads/2015/01/ventana-con-listview-con-datos-de-ejemplo.png 540w, http://www.modestosanjuan.com/wp-content/uploads/2015/01/ventana-con-listview-con-datos-de-ejemplo-300x201.png 300w&#34; sizes=&#34;(max-width: 540px) 100vw, 540px&#34; /&gt;&lt;/a&gt;
-&lt;/p&gt;
-
-&lt;p&gt;Si no quieres meter los datos de ejemplo en tu clase de ViewModel, siempre puedes crear una clase específica para el ViewModel en tiempo de diseño. Sólo hay que cambiar el valor del _DesignInstance_ en el archivo XAML y darle el nombre del tipo para la vista de diseño. Eso si, mejor que recurras a interfaces o algo similar para asegurarte de que ambos ViewModel (el de vista de diseño y el que se ejecutará en real) compartan el mismo contrato.&lt;/p&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-
-&lt;p&gt;**IMPORTANTE:** Para que las vistas tomen los datos de ejemplo debemos compilar el proyecto para que se compile el ViewModel. Si hacemos cambios en el conjunto de datos de ejemplos del ViewModel, deberemos compilar de nuevo, así que lo mejor es crear primero un conjunto de datos de ejemplo dignos y así luego podemos centrarnos en el trabajo de la vista.&lt;/p&gt;
-</description>
+      <description>Al trabajar con XAML, especialmente si la vista tiene un listado de items, puede resultar muy complicado ajustar la vista para que se vea correctamente. Tareas como ajustar los márgenes, la posición de los elementos o cualquier tipo de cambio en los estilos se pueden convertir en algo bastante pesado.
+Este es un ejemplo de una vista de que contiene un ListView sin datos de ejemplo en vista de diseño:</description>
     </item>
     
   </channel>

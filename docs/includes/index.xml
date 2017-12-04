@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Includes-rsses on Blog de Modesto San Juan</title>
-    <link>http://www.modestosanjuan.com/includes/index.xml</link>
-    <description>Recent content in Includes-rsses on Blog de Modesto San Juan</description>
+    <title>Includes on Blog de Modesto San Juan</title>
+    <link>http://www.modestosanjuan.com/includes/</link>
+    <description>Recent content in Includes on Blog de Modesto San Juan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <atom:link href="http://www.modestosanjuan.com/includes/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://www.modestosanjuan.com/includes/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title></title>
@@ -14,13 +16,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://www.modestosanjuan.com/includes/oop-serie/</guid>
-      <description>&lt;p&gt;Por el momento, este es el listado de posts que he publicado sobre este tema:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.modestosanjuan.com/post/redescubriendo-la-orientacion-a-objetos/&#34;&gt;Redescubriendo la orientación a objetos&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.modestosanjuan.com/post/encapsulacion-visibilidad-y-retencion-de-estado/&#34;&gt;Encapsulación y visibilidad&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+      <description>Por el momento, este es el listado de posts que he publicado sobre este tema:
+ Redescubriendo la orientación a objetos Encapsulación, visibilidad y retención de estado Mensajes, clases y herencia  </description>
     </item>
     
   </channel>

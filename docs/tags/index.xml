@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Blog de Modesto San Juan</title>
+    <link>http://www.modestosanjuan.com/tags/</link>
+    <description>Recent content in Tags on Blog de Modesto San Juan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-es</language>
+    <lastBuildDate>Mon, 19 Jan 2015 01:23:05 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.modestosanjuan.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fluentmigrator</title>
+      <link>http://www.modestosanjuan.com/tags/fluentmigrator/</link>
+      <pubDate>Mon, 19 Jan 2015 01:23:05 +0000</pubDate>
+      
+      <guid>http://www.modestosanjuan.com/tags/fluentmigrator/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
