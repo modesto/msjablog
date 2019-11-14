@@ -1,2 +1,1 @@
-# msjablog
-My blog - modestosanjuan.com
+My blog at www.modestosanjuan.com
