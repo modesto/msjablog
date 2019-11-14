@@ -1,0 +1,1 @@
+.\hugo.exe -c content -d docs -t casper -b http://www.modestosanjuan.com/

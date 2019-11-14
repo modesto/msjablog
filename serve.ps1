@@ -1,0 +1,1 @@
+.\hugo.exe server -c content docs -t casper
