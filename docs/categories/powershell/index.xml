@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Powershell on Blog de Modesto San Juan</title>
+    <title>PowerShell on Blog de Modesto San Juan</title>
     <link>http://www.modestosanjuan.com/categories/powershell/</link>
-    <description>Recent content in Powershell on Blog de Modesto San Juan</description>
+    <description>Recent content in PowerShell on Blog de Modesto San Juan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
     <lastBuildDate>Wed, 25 Nov 2015 09:16:48 +0000</lastBuildDate>

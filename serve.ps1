@@ -1,1 +1,1 @@
-.\hugo.exe server -c content docs -t casper
+hugo server -c content docs -t casper

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Fluentmigrator on Blog de Modesto San Juan</title>
+    <title>FluentMigrator on Blog de Modesto San Juan</title>
     <link>http://www.modestosanjuan.com/tags/fluentmigrator/</link>
-    <description>Recent content in Fluentmigrator on Blog de Modesto San Juan</description>
+    <description>Recent content in FluentMigrator on Blog de Modesto San Juan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
     <lastBuildDate>Mon, 19 Jan 2015 01:23:05 +0000</lastBuildDate>

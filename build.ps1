@@ -1,1 +1,1 @@
-.\hugo.exe -c content -d docs -t casper -b http://www.modestosanjuan.com/
+hugo -c content -d docs -t casper -b http://www.modestosanjuan.com/

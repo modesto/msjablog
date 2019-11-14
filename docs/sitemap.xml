@@ -1,6 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://www.modestosanjuan.com/</loc>
+    <lastmod>2017-12-03T12:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.modestosanjuan.com/post/</loc>
+    <lastmod>2017-12-03T12:00:00+01:00</lastmod>
+  </url>
   
   <url>
     <loc>http://www.modestosanjuan.com/post/recordando-de-que-va-esto/</loc>
@@ -23,7 +33,17 @@
   </url>
   
   <url>
+    <loc>http://www.modestosanjuan.com/categories/</loc>
+    <lastmod>2016-11-10T10:01:15+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.modestosanjuan.com/la-regla-del-boy-scout/</loc>
+    <lastmod>2016-11-10T10:01:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.modestosanjuan.com/categories/sin-categor%C3%ADa/</loc>
     <lastmod>2016-11-10T10:01:15+00:00</lastmod>
   </url>
   
@@ -68,6 +88,11 @@
   </url>
   
   <url>
+    <loc>http://www.modestosanjuan.com/categories/.net/</loc>
+    <lastmod>2015-12-22T14:14:43+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.modestosanjuan.com/la-importancia-del-rojo-en-tdd/</loc>
     <lastmod>2015-12-22T14:14:43+00:00</lastmod>
   </url>
@@ -78,12 +103,27 @@
   </url>
   
   <url>
+    <loc>http://www.modestosanjuan.com/categories/powershell/</loc>
+    <lastmod>2015-11-25T09:16:48+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.modestosanjuan.com/value-providers-y-parameter-binding-en-asp-net-web-api/</loc>
     <lastmod>2015-11-13T10:02:22+00:00</lastmod>
   </url>
   
   <url>
+    <loc>http://www.modestosanjuan.com/categories/web-api/</loc>
+    <lastmod>2015-11-13T10:02:22+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.modestosanjuan.com/bus-de-eventos-usando-reactive-extensions/</loc>
+    <lastmod>2015-11-10T09:32:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.modestosanjuan.com/categories/wpf/</loc>
     <lastmod>2015-11-10T09:32:59+00:00</lastmod>
   </url>
   
@@ -173,6 +213,11 @@
   </url>
   
   <url>
+    <loc>http://www.modestosanjuan.com/categories/trucos/</loc>
+    <lastmod>2015-03-22T19:18:44+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.modestosanjuan.com/aclarando-conceptos-proyectos-pcl-universales-y-shared-source/</loc>
     <lastmod>2015-03-08T12:22:55+00:00</lastmod>
   </url>
@@ -183,83 +228,27 @@
   </url>
   
   <url>
+    <loc>http://www.modestosanjuan.com/tags/fluentmigrator/</loc>
+    <lastmod>2015-01-19T01:23:05+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.modestosanjuan.com/tags/</loc>
+    <lastmod>2015-01-19T01:23:05+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.modestosanjuan.com/datos-de-ejemplo-en-el-viewmodel-para-facilitar-la-vista-de-diseno/</loc>
     <lastmod>2014-12-17T00:27:25+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://www.modestosanjuan.com/includes/oop-serie/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/categories/.net/</loc>
-    <lastmod>2015-12-22T14:14:43+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/</loc>
-    <lastmod>2017-12-03T12:00:00+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/categories/</loc>
-    <lastmod>2015-12-22T14:14:43+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/tags/fluentmigrator/</loc>
-    <lastmod>2015-01-19T01:23:05+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.modestosanjuan.com/includes/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/post/</loc>
-    <lastmod>2017-12-03T12:00:00+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/categories/powershell/</loc>
-    <lastmod>2015-11-25T09:16:48+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/categories/sin-categor%C3%ADa/</loc>
-    <lastmod>2016-11-10T10:01:15+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/tags/</loc>
-    <lastmod>2015-01-19T01:23:05+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/categories/trucos/</loc>
-    <lastmod>2015-03-22T19:18:44+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/categories/web-api/</loc>
-    <lastmod>2015-11-13T10:02:22+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.modestosanjuan.com/categories/wpf/</loc>
-    <lastmod>2015-11-10T09:32:59+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
 </urlset>
