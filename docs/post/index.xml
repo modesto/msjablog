@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Blog de Modesto San Juan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <lastBuildDate>Sun, 03 Dec 2017 12:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 28 Feb 2020 12:00:00 +0100</lastBuildDate>
     
 	<atom:link href="http://www.modestosanjuan.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Validaciones, ¿dónde os pongo?</title>
+      <link>http://www.modestosanjuan.com/post/validaciones-donde-os-pongo/</link>
+      <pubDate>Fri, 28 Feb 2020 12:00:00 +0100</pubDate>
+      
+      <guid>http://www.modestosanjuan.com/post/validaciones-donde-os-pongo/</guid>
+      <description>No, no estás soñando Pues si, me ha dado por ponerme a escribir, así, ¡a lo loco! Y la &amp;ldquo;culpa&amp;rdquo; de esto la tienen dos tweets.
+Vicenç lanzó esta pregunta por twitter: @iceoverflow @msanjuan @luisruizpavon cuando utilizáis MediatR y le ponéis validaciones, pasáis entonces de poner validaciones en el controlador? Las duplicáis? Validáis cosas diferentes? Y en las entidades? Volvéis a poner validaciones en el constructor?
+&amp;mdash; Vicenç García-Altés (@vgaltes) February 26, 2020  Y, cuando la respuesta se estaba convirtiendo en una ristra de tweets, me acordé de este otro: Otro día en el q Modesto justifica los hilos de Twitter.</description>
+    </item>
     
     <item>
       <title>Recordando de qué va esto</title>

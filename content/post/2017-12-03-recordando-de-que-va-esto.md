@@ -33,7 +33,7 @@ Con todo, si tengo que hacer balance, creo que puedo considerarme una personas f
 
 A finales de 2016 dejé Codesai para empezar a trabajar en PlainConcepts. Conocía Plain de varios eventos, es una empresa muy conocida entre el mundillo de desarrollo con tecnologías Microsoft y conozco a varias personas que trabajaban allí. Septiembre de 2017 fue el último mes que trabajé en Plain.
 
-Actualmente trabajo en AIDA, una empresa a la que ayudédurante dos años en su proceso de transformación a XP y que me contrató para el puesto de CTO. Da gusto llegar a una empresa en la que la mayoría yas nos conocemos y sabemos cómo trabajamos.
+Actualmente trabajo en AIDA, una empresa a la que ayudé durante dos años en su proceso de transformación a XP y que me contrató para el puesto de CTO. Da gusto llegar a una empresa en la que la mayoría yas nos conocemos y sabemos cómo trabajamos.
 
 En los dos meses que llevo en AIDA no he parado. Actualmente estamos en un momento interesante, con muchas expectativas de futuro y con mucho trabajo por delante. Y lo más importante: me divierte mi trabajo, siento que vale para algo y que hay sintonía con nuestra forma de trabajar en todos los estratos de la empresa.
 

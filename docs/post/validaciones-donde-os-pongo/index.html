@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es-es">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+
+
+    
+        
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:image" content="http://www.modestosanjuan.com/images/gandalf-balrog.jpg"/>
+    
+
+
+
+<meta name="twitter:title" content="Validaciones, ¿dónde os pongo?"/>
+<meta name="twitter:description" content="No, no estás soñando Pues si, me ha dado por ponerme a escribir, así, ¡a lo loco! Y la &ldquo;culpa&rdquo; de esto la tienen dos tweets.
+Vicenç lanzó esta pregunta por twitter: @iceoverflow @msanjuan @luisruizpavon cuando utilizáis MediatR y le ponéis validaciones, pasáis entonces de poner validaciones en el controlador? Las duplicáis? Validáis cosas diferentes? Y en las entidades? Volvéis a poner validaciones en el constructor?
+&mdash; Vicenç García-Altés (@vgaltes) February 26, 2020  Y, cuando la respuesta se estaba convirtiendo en una ristra de tweets, me acordé de este otro: Otro día en el q Modesto justifica los hilos de Twitter."/>
+
+    <meta name="twitter:site" content="@msanjuan"/>
+
+
+
+  	<meta property="og:title" content=" Validaciones, ¿dónde os pongo? &middot;  Blog de Modesto San Juan" />
+  	<meta property="og:site_name" content="Blog de Modesto San Juan" />
+  	<meta property="og:url" content="http://www.modestosanjuan.com/post/validaciones-donde-os-pongo/" />
+
+    
+  	<meta property="og:type" content="article" />
+
+    <meta property="og:article:published_time" content="2020-02-28T12:00:00&#43;01:00" />
+
+    
+    
+
+    <title>
+       Validaciones, ¿dónde os pongo? &middot;  Blog de Modesto San Juan
+    </title>
+
+    <meta name="description" content="DESCUBRIMIENTOS, IDEAS Y OTRAS CHORRADAS" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="http://www.modestosanjuan.com/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="http://www.modestosanjuan.com/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="http://www.modestosanjuan.com/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.modestosanjuan.com/css/nav.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/arta.min.css">
+
+    
+      
+          <link href="http://www.modestosanjuan.com/index.xml" rel="alternate" type="application/rss+xml" title="Blog de Modesto San Juan" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.59.1" />
+
+    <link rel="canonical" href="http://www.modestosanjuan.com/post/validaciones-donde-os-pongo/" />
+
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-58663898-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    
+
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+        
+    </ul>
+    
+    
+    <a class="subscribe-button icon-feed" href="http://www.modestosanjuan.com/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+
+  
+  <header class="main-header post-head" style="background-image: url(http://www.modestosanjuan.com/images/gandalf-balrog.jpg)">
+  
+  <nav class="main-nav overlay clearfix">
+
+
+  
+      <a class="blog-logo" href="http://www.modestosanjuan.com/"><img src="http://www.modestosanjuan.com/images/logo.jpg" alt="Home" /></a>
+  
+  
+      <a class="menu-button icon-feed" href="http://www.modestosanjuan.com/index.xml">&nbsp;&nbsp;Subscribe</a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">Validaciones, ¿dónde os pongo?</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2020-02-28T12:00:00&#43;01:00">
+            Feb 28, 2020
+          </time>
+        
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      
+
+<h2 id="no-no-estás-soñando">No, no estás soñando</h2>
+
+<p>Pues si, me ha dado por ponerme a escribir, así, ¡a lo loco! Y la &ldquo;culpa&rdquo; de esto la tienen dos tweets.</p>
+
+<p>Vicenç lanzó esta pregunta por twitter:
+<blockquote class="twitter-tweet"><p lang="es" dir="ltr"><a href="https://twitter.com/iceoverflow?ref_src=twsrc%5Etfw">@iceoverflow</a> <a href="https://twitter.com/msanjuan?ref_src=twsrc%5Etfw">@msanjuan</a> <a href="https://twitter.com/luisruizpavon?ref_src=twsrc%5Etfw">@luisruizpavon</a> cuando utilizáis MediatR y le ponéis validaciones, pasáis entonces de poner validaciones en el controlador? Las duplicáis? Validáis cosas diferentes? Y en las entidades? Volvéis a poner validaciones en el constructor?</p>&mdash; Vicenç García-Altés (@vgaltes) <a href="https://twitter.com/vgaltes/status/1232616521983283201?ref_src=twsrc%5Etfw">February 26, 2020</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</p>
+
+<p>Y, cuando la respuesta se estaba convirtiendo en una ristra de tweets, me acordé de este otro:
+<blockquote class="twitter-tweet"><p lang="es" dir="ltr">Otro día en el q Modesto justifica los hilos de Twitter. Colecta para un blog? <a href="https://t.co/zpGHgn4EGi">https://t.co/zpGHgn4EGi</a></p>&mdash; Jorge J &#39;Jorhell&#39; (@flipper83) <a href="https://twitter.com/flipper83/status/1229164559761629189?ref_src=twsrc%5Etfw">February 16, 2020</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</p>
+
+<p>Dejando a un lado que Jorge es un troll profesional, a veces tiene razón. Y este creo que es uno de esos casos en los que me voy a sentir más cómodo plasmando mi respuesta por escrito en un medio que me permita liarme un poco más la manta a la cabeza.</p>
+
+<h2 id="vale-pero-y-de-las-validaciones-qué">Vale pero, y de las validaciones, ¿qué?</h2>
+
+<p>Lo primero de todo es la respuesta de rigor: DEPENDE</p>
+
+<p>Y depende sobre todo de cómo estés enfocando la arquitectura de tu aplicación, de qué necesites y de hasta donde te quieras &ldquo;complicar&rdquo; la vida.</p>
+
+<p>Así que, para convertir ese &ldquo;depende&rdquo; en algo un poco más concreto, voy a intentar explicarlo basándome en un modelo de arquitectura de referencia, de rabiosa actualidad y ya cada cual que extrapole a su escenario y saque sus conclusiones.</p>
+
+<h2 id="ejemplo-con-clean-architecture">Ejemplo con Clean Architecture</h2>
+
+<p>Cuando hablamos de Clean Architecture, lo habitual es mostrar este diagrama o alguna de sus variantes:
+<img src="/images/CleanArchitecture.jpg" alt="Diagrama típico de Clean Architecture" /></p>
+
+<p>En Clean Architecture se establece una delimitación de responsabilidades que fija expectativas respecto a qué debe suceder en cada corte del diagrama. Por ejemplo:</p>
+
+<ul>
+<li>Cuando estamos hablando de negocio, se presupone que estamos en un entorno seguro en el que no tienen cabida aspectos relacionados con la autenticación o autorización.</li>
+<li>Ningún objeto de negocio debería poderse construir incumpliendo las invariantes del negocio.</li>
+<li>La capa de aplicación no entiende del mecanismo de entrega. Un caso de uso bien podría invocarse desde un controllador o desde una aplicación de línea de comandos.</li>
+<li>La autenticación generalmente será responsabilidad del framework web, pero la autorización lo será del caso de uso.</li>
+</ul>
+
+<p>Y así podríamos seguir enumerando características de este tipo de patrones arquitectónicos, pero no es el objetivo de este post, sólo quería dar un poco de contexto.</p>
+
+<p>Si además estamos aplicando DDD, tendremos que añadir más reglas, limitaciones y heurísticas a la lista, pero lo importane es que seamos conscientes de cuáles son, para que podamos evaluar en cada caso si las estamos cumpliendo. Incluso podríamos llegar a verificarlas de forma automática mediante tests de arquitectura.</p>
+
+<p>Ojo, para el caso, me da igual Clean Architecture, Ports&amp;Adapters, Onion Architecture o la que sea. También me da más o menos igual qué combinación de lenguaje y framework estemos utilizando. Al final lo importante es que estamos hablando, en esencia, de enfoques en los que se separa negocio de mecanismos de entrega y de los casos de uso.</p>
+
+<h2 id="y-eso-de-mediatr">¿Y eso de Mediatr?</h2>
+
+<p>Mediatr es una implementación del patron mediator para .Net que nos va a permitir ejecutar nuestros casos de uso beneficiándonos del contenedor de dependencias de .Net y además con las posibilidad de introducir comportamientos previos y posteriores a la ejecución del propio caso de uso.</p>
+
+<p>Si tomamos como referencia el anterior diagrama, la pregunta de Vicenç y nos movemos en un nivel de abstracción relativamente alto, podríamos suponer que una llamada típica a nuestra API sería algo así como esto:</p>
+
+<blockquote>
+<p>Llamada al API -&gt; Asp.Net -&gt; Controlador -&gt; Mediatr -&gt; Caso de uso -&gt; Entidad</p>
+</blockquote>
+
+<p>A veces puede resultar un poco raro porque lo que estamos haciendo es recurrir a un pipeline dentro de otro pipeline (el propio de Asp.Net). Pero tengamos en cuenta que podemos perfectamente recurrir a mediator en otros ámbitos, como parte de un procesador de mensajes de una cola. Esto tendría esta pinta:</p>
+
+<blockquote>
+<p>Queue Subscriptor -&gt; Message processor -&gt; Mediatr -&gt; Caso de uso -&gt; Entidad</p>
+</blockquote>
+
+<p>Personalmente, me resulta muy útil imaginar dos escenarios distintos desde la perspectiva del mecanismo de entrega, así me ayuda a evaluar si estoy poniendo las cosas en el lugar que les corresponde.</p>
+
+<h2 id="mira-que-te-haces-de-rogar-pero-dónde-pongo-las-validaciones">Mira que te haces de rogar&hellip; ¿pero dónde pongo las validaciones?</h2>
+
+<p>Después de todo este peñazo intentando aportar un poco de contexto, la respuesta sigue siendo DEPENDE. Recordemos las preguntas, partiendo de la base de que usamos validaciones con Mediatr.</p>
+
+<h3 id="pasamos-de-poner-validaciones-en-el-controlador">¿Pasamos de poner validaciones en el controlador?</h3>
+
+<p>En el controlador pongo las validaciones relativas al mecanismo de entrega. Por ejemplo, la autenticación es un tipo de validación y a Mediatr esa comprobación ya debe llegarle realizada.</p>
+
+<p>Aunque ese es un ejemplo, normalmente pondriámos pocas validaciones en el controlador, ya que la mayoría de las validaciones se suelen dar en el ámbito de la aplicación, es decir, en el de los casos de uso.</p>
+
+<p>Otra cosa es que me digas que estás utilizando el framework de turno, que te pone muy fácil validar según que datos llegún te llegan en el controlador y que te interesa poner ciertas validaciones ahí. Pues bueno, ahí ya entramos en los trade-offs de siempre. Lo importante es siempre que tengas en cuenta que tu caso de uso no tiene porqué ser llamado siempre a través de un controlador, recuerda el ejemplo que ponía más arriba recurriendo a una cola de mensajes.</p>
+
+<p>Personalmente, esto último es algo que prefiero no hacer. Estoy seguro de que, puestos a comprar magia, puedes comprarla en la capa correcta de tu arquitectura y al menos estás respetando las fronteras.</p>
+
+<h3 id="las-duplicamos">¿Las duplicamos?</h3>
+
+<p>No, a no ser que sea por motivos de UX y de forma muy excepcional (ver explicación más abajo)</p>
+
+<h3 id="validamos-cosas-diferentes">¿Validamos cosas diferentes?</h3>
+
+<p>Esa es la clave. Lo normal es que validemos cosas diferentes y por eso las pongamos en una parte u otra.</p>
+
+<p>Siguiendo con el ejemplo anterior, la autorización es algo que normalmente haremos en capa de aplicación. Si es relevante, a nuestro caso de uso nos llegará la información del usuario que está autenticado y ahí podremos realizar las verificaciones de seguridad que consideremos adecuadas.</p>
+
+<p>Otro ejemplo típico se da cuando tenemos que recurrir a validaciones que requieren interactuar con repositorios o similar. Este tipo de validaciones deben ir claramente en la capa de aplicación, por lo que entrarían dentro de las validaciones que realizamos en el ámbito de Mediatr.</p>
+
+<h3 id="qué-hacemos-en-las-entidades-las-volvemos-a-poner">¿Qué hacemos en las entidades?¿Las volvemos a poner?</h3>
+
+<p>Al final tenemos que volver a aplicar las mismas heurísticas. En las entidades debemos poner únicamente las validaciones que sean propias del negocio.</p>
+
+<p>Por ejemplo, si el negocio no permite que se creen facturas sin líneas de factura, esta validación debería ir en la entidad correspondiente y no deberíamos redundarla en controladores o capa de aplicación.</p>
+
+<p>Una vez más, la UX puede venir a destruir nuestros sueños perfectos.</p>
+
+<h2 id="y-qué-pasa-con-la-ux">¿Y qué pasa con la UX?</h2>
+
+<p>No debemos perder de vista que desarrollamos software para que sea utilizado por personas. A nuestros usuarios les importa un carajo si estamos recurriendo a una arquitectura hexagonal de libro o tenemos controladores del tamaño de un bombardero ruso.</p>
+
+<p>Y por eso hay ocasiones en las que puede que tengamos que tirar todo lo descrito anteriormente a la basura sólo con el objetivo de proporcionar una mejor experiencia de usuario.</p>
+
+<p>Aún así, cuando duplicamos validaciones en distintas capas de nuestra aplicación, estamos entrando en el maravilloso mundo del connascence de algoritmo. Cualquiera que lleve un tiempo en esto se ha enfrentado a las problemáticas que esto conlleva y, la verdad, tiende a ser peor que un dolor de muelas.</p>
+
+<h3 id="una-opción-respetuosa-con-la-ux-y-la-arquitectura">Una opción respetuosa con la UX y la arquitectura</h3>
+
+<p>Si en nuestra aplicación vemos que tenemos que estar realizando muchas concesiones respecto a las validaciones por cuestiones de UX, deberíamos plantearnos si las validaciones son en si mismas casos de uso.</p>
+
+<p>Dependiendo de cómo sea nuestro diseño, esto no sería muy difícil de conseguir y nos permitiría mantenernos respetuosos con la UX a la vez que respetamos nuestra aproximación de arquitectura. Sería algo así como lo que nos da el parámetro &ldquo;-WhatIf&rdquo; de PowerShell, pero aplicado a llamadas de API.</p>
+
+<p>Esto, combinado con Ajax, Sockets o lo que sea que queramos/podamos utilizar, nos proporcionaría la UX deseada sin comprometer nuestra arquitectura.</p>
+
+<h2 id="conclusión">Conclusión</h2>
+
+<p>Piensa bien en las responsabilidades del área en el que estás metiendo validaciones para ver si estas encajan o estás meando fuera del tiesto.</p>
+
+<p>Te has comido un post más largo que un día sin pan para decirte cuatro chorradas. Si no te ha aportado mucho, lo siento, seguramente esté oxidado en esto de escribir ;)</p>
+
+<h2 id="algunos-enlaces">Algunos enlaces</h2>
+
+<p>Imagen y post original sobre Clean Architecture: <a href="https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html">https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html</a></p>
+
+<p>Mediatr, la librería que menciona Vicenç:  <a href="https://github.com/jbogard/MediatR">https://github.com/jbogard/MediatR</a></p>
+
+<p>Un poco de magia de validaciones para .Net: <a href="https://github.com/FluentValidation/FluentValidation/">https://github.com/FluentValidation/FluentValidation/</a></p>
+
+<p>Foto de la cabecera: <a href="https://www.reddit.com/r/lotr/comments/alyty3/you_shall_not_pass_gandalf_confronting_the_balrog/">https://www.reddit.com/r/lotr/comments/alyty3/you_shall_not_pass_gandalf_confronting_the_balrog/</a></p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+    <figure class="author-image">
+        <a class="img" href="http://www.modestosanjuan.com/" style="background-image: url(http://www.modestosanjuan.com/images/logo.jpg)"><span class="hidden">Modesto San Juan's Picture</span></a>
+    </figure>
+    
+
+    
+
+
+
+
+
+<section class="author">
+  <h4><a href="http://www.modestosanjuan.com/">Modesto San Juan</a></h4>
+  
+  <p>Desarrollo software e intento hacerlo bien</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Madrid, Spain</span>
+    <span class="author-link icon-link"><a href="http://www.modestosanjuan.com">http://www.modestosanjuan.com</a></span>
+  </div>
+</section>
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Validaciones%2c%20%c2%bfd%c3%b3nde%20os%20pongo%3f&nbsp;-&nbsp;Blog%20de%20Modesto%20San%20Juan&amp;url=http%3a%2f%2fwww.modestosanjuan.com%2fpost%2fvalidaciones-donde-os-pongo%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.modestosanjuan.com%2fpost%2fvalidaciones-donde-os-pongo%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.modestosanjuan.com%2fpost%2fvalidaciones-donde-os-pongo%2f&amp;description=Validaciones%2c%20%c2%bfd%c3%b3nde%20os%20pongo%3f"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=http%3a%2f%2fwww.modestosanjuan.com%2fpost%2fvalidaciones-donde-os-pongo%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_shortname = 'modestosanjuan';
+  var disqus_url = 'http:\/\/www.modestosanjuan.com\/post\/validaciones-donde-os-pongo\/';
+  (function() {
+    if (window.location.hostname == "localhost")
+          return;
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+  </footer>
+</article>
+
+</main>
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">Blog de Modesto San Juan</a> </section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="http://www.modestosanjuan.com/js/jquery.js"></script>
+    <script type="text/javascript" src="http://www.modestosanjuan.com/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="http://www.modestosanjuan.com/js/index.js"></script>
+    
+</body>
+</html>
+
