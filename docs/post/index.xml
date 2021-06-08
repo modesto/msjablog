@@ -6,10 +6,16 @@
     <description>Recent content in Posts on Blog de Modesto San Juan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <lastBuildDate>Fri, 28 Feb 2020 12:00:00 +0100</lastBuildDate>
-    
-	<atom:link href="http://www.modestosanjuan.com/post/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Wed, 09 Jun 2021 00:00:00 +0100</lastBuildDate><atom:link href="http://www.modestosanjuan.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Consejos para una sesión de Event Storming</title>
+      <link>http://www.modestosanjuan.com/post/consejos-para-una-sesion-de-event-storming/</link>
+      <pubDate>Wed, 09 Jun 2021 00:00:00 +0100</pubDate>
+      
+      <guid>http://www.modestosanjuan.com/post/consejos-para-una-sesion-de-event-storming/</guid>
+      <description>Hace unos días, algunos compañeros de trabajo realizaron unas sesiones de Event Storming y me gustaría recopilar algunos consejos que les ayudaron a hacer las sesiones más productivas y a eliminar ciertos bloqueos mentales. También añadiré algunos que no les di en ese momento pero que creo que pueden ser de utilidad ;)
+Lo primero, ¿Qué es Event Storming? Para quien no conozca este tipo de sesión, podríamos resumirlo como un tipo de dinámica muy flexible que ayuda a explorar/descubrir/visualizar fácilmente aspectos complejos del negocio.</description>
+    </item>
     
     <item>
       <title>Validaciones, ¿dónde os pongo?</title>
@@ -19,7 +25,7 @@
       <guid>http://www.modestosanjuan.com/post/validaciones-donde-os-pongo/</guid>
       <description>No, no estás soñando Pues si, me ha dado por ponerme a escribir, así, ¡a lo loco! Y la &amp;ldquo;culpa&amp;rdquo; de esto la tienen dos tweets.
 Vicenç lanzó esta pregunta por twitter: @iceoverflow @msanjuan @luisruizpavon cuando utilizáis MediatR y le ponéis validaciones, pasáis entonces de poner validaciones en el controlador? Las duplicáis? Validáis cosas diferentes? Y en las entidades? Volvéis a poner validaciones en el constructor?
-&amp;mdash; Vicenç García-Altés (@vgaltes) February 26, 2020  Y, cuando la respuesta se estaba convirtiendo en una ristra de tweets, me acordé de este otro: Otro día en el q Modesto justifica los hilos de Twitter.</description>
+&amp;mdash; Vicenç Garcia (@vgaltes) February 26, 2020  Y, cuando la respuesta se estaba convirtiendo en una ristra de tweets, me acordé de este otro: Otro día en el q Modesto justifica los hilos de Twitter.</description>
     </item>
     
     <item>
@@ -118,7 +124,7 @@ Claves primarias mutables o inmutables Para el que ande un poco perdido con el c
       <pubDate>Mon, 13 Jun 2016 10:02:56 +0000</pubDate>
       
       <guid>http://www.modestosanjuan.com/palabras-malditas/</guid>
-      <description>Extreme programming y el desarrollo ágil A principios de siglo (dicho así parece que queda muy atrás, eh&amp;#8230; :P) trabajaba en Indra como coordinador de un equipo de desarrollo. En mi entorno profesional era un poco como un bicho raro porque, además de ser 10 años más joven que la media de mi puesto, era de los pocos que se negaba a abandonar el desarrollo para dedicarme plenamente a la gestión.</description>
+      <description>Extreme programming y el desarrollo ágil A principios de siglo (dicho así parece que queda muy atrás, eh… :P) trabajaba en Indra como coordinador de un equipo de desarrollo. En mi entorno profesional era un poco como un bicho raro porque, además de ser 10 años más joven que la media de mi puesto, era de los pocos que se negaba a abandonar el desarrollo para dedicarme plenamente a la gestión.</description>
     </item>
     
     <item>
@@ -137,7 +143,7 @@ Hay varios aspectos que son importantes a tener en cuenta al definir datos para 
       <pubDate>Tue, 19 Jan 2016 01:13:56 +0000</pubDate>
       
       <guid>http://www.modestosanjuan.com/impresiones-sobre-pair-programming/</guid>
-      <description>El viernes mantuve una conversación bastante entretenida sobre desarrollo de software con un compañero de profesión. Trabaja en una entidad financiera y al hablar de cosas como TDD, Agile, XP, etc. tenía ciertos sentimientos enfrentados. Precisamente uno de los temas que le causaban controversia era el pair programming. Su opinión básicamente se resumía en una frase: &amp;#8220;yo lo que no compro es que dos tíos senior sentados juntos a programar van a ser más productivos que si programan por separado&amp;#8221;.</description>
+      <description>El viernes mantuve una conversación bastante entretenida sobre desarrollo de software con un compañero de profesión. Trabaja en una entidad financiera y al hablar de cosas como TDD, Agile, XP, etc. tenía ciertos sentimientos enfrentados. Precisamente uno de los temas que le causaban controversia era el pair programming. Su opinión básicamente se resumía en una frase: “yo lo que no compro es que dos tíos senior sentados juntos a programar van a ser más productivos que si programan por separado”.</description>
     </item>
     
     <item>
@@ -146,8 +152,8 @@ Hay varios aspectos que son importantes a tener en cuenta al definir datos para 
       <pubDate>Mon, 28 Dec 2015 22:22:29 +0000</pubDate>
       
       <guid>http://www.modestosanjuan.com/nuestra-programacion-es-mala-para-el-desarrollo-de-software/</guid>
-      <description>La programación de mi color favorito El otro día mi hija me preguntó cuál era mi color favorito. Respondí inmediatamente sin pensarlo: &amp;#8220;el azul&amp;#8221;. No era la primera vez que me lo preguntaban y es un dato que tengo claro desde que era niño. O no.
-En esta ocasión, no se exactamente porqué, después de responder a mi hija algo en mi cabeza empezó a retorcerse: &amp;#8220;¿es el azul mi color favorito?</description>
+      <description>La programación de mi color favorito El otro día mi hija me preguntó cuál era mi color favorito. Respondí inmediatamente sin pensarlo: “el azul”. No era la primera vez que me lo preguntaban y es un dato que tengo claro desde que era niño. O no.
+En esta ocasión, no se exactamente porqué, después de responder a mi hija algo en mi cabeza empezó a retorcerse: “¿es el azul mi color favorito?</description>
     </item>
     
     <item>
@@ -157,7 +163,7 @@ En esta ocasión, no se exactamente porqué, después de responder a mi hija alg
       
       <guid>http://www.modestosanjuan.com/la-importancia-del-rojo-en-tdd/</guid>
       <description>A un desarrollador que practique TDD, el flujo rojo, verde, refactor no le resulta extraño. En este post quiero romper una lanza a favor del rojo, ese gran incomprendido. Para ilustrarlo voy a recurrir a un ejemplo muy sencillo:
-[TestMethod] public void sample_test() { var messagingService = GivenAMessagingServiceStub(); var unreadMessages = messagingService.UnreadMessages(); unreadMessages.Count.Should().Be(1) } Este ejemplo esta simplificado, pero me permite mostrar un test con una estructura de tipo given/when/then o AAA (según gustos).</description>
+[TestMethod]public void sample_test(){var messagingService = GivenAMessagingServiceStub();var unreadMessages = messagingService.UnreadMessages();unreadMessages.Count.Should().Be(1)}Este ejemplo esta simplificado, pero me permite mostrar un test con una estructura de tipo given/when/then o AAA (según gustos).</description>
     </item>
     
     <item>
@@ -176,7 +182,7 @@ En esta ocasión, no se exactamente porqué, después de responder a mi hija alg
       
       <guid>http://www.modestosanjuan.com/value-providers-y-parameter-binding-en-asp-net-web-api/</guid>
       <description>Cuando necesito acceder a información de la Request desde una acción de un controlador en ASP.NET Web API, la primera tentación es acceder directamente al objeto request y buscar lo que necesito. El principal problema de hacer esto es que convierte en un infierno hacer cualquier tipo de prueba automatizada para esta acción. Por ejemplo:
-[HttpGet] [Route(&#34;doAnything&#34;)] public IHttpActionResult Get() { var referrer = request.Headers.Referrer var resul = ..... // DO ANY STUFF WITH THE REFERRER return result; } El mecanismo más sencillo que se me ocurre para hacer que esta acción sea fácil de probar es hacer que el dato que necesito de la request, le llegue como parámetro a la acción:</description>
+[HttpGet] [Route(&#34;doAnything&#34;)] public IHttpActionResult Get() { var referrer = request.Headers.Referrervar resul = .....// DO ANY STUFF WITH THE REFERRER return result; }El mecanismo más sencillo que se me ocurre para hacer que esta acción sea fácil de probar es hacer que el dato que necesito de la request, le llegue como parámetro a la acción:</description>
     </item>
     
     <item>
@@ -215,7 +221,7 @@ En ocasiones me olvido de que PowerShell tiene a su disposición toda la potenci
       
       <guid>http://www.modestosanjuan.com/powershell-variables-automaticas/</guid>
       <description>PowerShell dispone de una serie de variables gestionadas de forma automática que permiten obtener información relacionada con la ejecución de código actual. Su propósito y utilidad es variado, siendo algunas de uso muy frecuente y otras de uso marginal. En cualquier caso, no está mal conocer unas cuantas y que suene dentro de la cabeza que hay otras que tal vez sea útiles en el futuro.
-Tanto la documentación oficial como el comando _&amp;#8220;get-help about_automatic_variables&amp;#8220;_ contienen el listado completo, pero me gustaría enumerar por aquí algunas que me resultan interesantes o que tienen truco.</description>
+Tanto la documentación oficial como el comando “get-help about_automatic_variables“ contienen el listado completo, pero me gustaría enumerar por aquí algunas que me resultan interesantes o que tienen truco.</description>
     </item>
     
     <item>
@@ -225,7 +231,7 @@ Tanto la documentación oficial como el comando _&amp;#8220;get-help about_aut
       
       <guid>http://www.modestosanjuan.com/powershell-ojo-que-no-hay-un-unico-null/</guid>
       <description>Este es un ejemplo curioso de esos que me ha vuelto loco hasta que me he dado cuenta. Si parto de este código:
-$item1 = Get-ChildItem | Where-Object {$_ -eq &#34;no encuentras esto ni de coña&#34;} &#34;item1 es nulo? {0}&#34; -f ($null -eq $item1) $item2 = $null &#34;item2 es nulo? {0}&#34; -f ($null -eq $item2) Al ejecutarlo el resultado es &amp;#8220;True&amp;#8221; en ambos casos. Vamos, que tanto item1 como item2 son $null.</description>
+$item1 = Get-ChildItem | Where-Object {$_ -eq &#34;no encuentras esto ni de coña&#34;}&#34;item1 es nulo? {0}&#34; -f ($null -eq $item1)$item2 = $null&#34;item2 es nulo? {0}&#34; -f ($null -eq $item2)Al ejecutarlo el resultado es “True” en ambos casos. Vamos, que tanto item1 como item2 son $null.</description>
     </item>
     
     <item>
@@ -234,7 +240,7 @@ $item1 = Get-ChildItem | Where-Object {$_ -eq &#34;no encuentras esto ni de coñ
       <pubDate>Thu, 20 Aug 2015 22:14:23 +0000</pubDate>
       
       <guid>http://www.modestosanjuan.com/powershell-saber-si-una-variable-ya-ha-sido-definida/</guid>
-      <description>En ocasiones tengo la necesidad de saber si una variable ha sido previamente definida. Esto es especialmente importante porque utilizo siempre el &amp;#8220;Set-StrictMode -Version 2&amp;#8221; y, si necesito recurrir a variables de otros scopes, cuando intento acceder a una variable no definida obtengo un error. Aunque generalmente intento no recurrir a otros scopes, especialmente el $global, en ocasiones los necesito, especialmente el $script.
+      <description>En ocasiones tengo la necesidad de saber si una variable ha sido previamente definida. Esto es especialmente importante porque utilizo siempre el “Set-StrictMode -Version 2” y, si necesito recurrir a variables de otros scopes, cuando intento acceder a una variable no definida obtengo un error. Aunque generalmente intento no recurrir a otros scopes, especialmente el $global, en ocasiones los necesito, especialmente el $script.
 Un ejemplo podría ser querer verificar si una variable que contiene un array ha sido inicializada o no, para poder añadirle ítems.</description>
     </item>
     
@@ -245,7 +251,7 @@ Un ejemplo podría ser querer verificar si una variable que contiene un array h
       
       <guid>http://www.modestosanjuan.com/powershell-devolver-un-array-vacio-desde-una-funcion/</guid>
       <description>Esto es un truco rápido muy chorra pero que puede volver loco a más de un desarrollador que no esté acostumbrado a las peculiaridades de PowerShell. Tomando este código como ejemplo:
-function Get-EmptyArray { [System.Collections.ArrayList]$anyArray = @() return $anyArray } Write-Host (Get-EmptyArray).GetType() En principio podría resultar bastante evidente que el resultado de la ejecución será ver por pantalla la cadena &amp;#8220;System.Collections.Arraylist&amp;#8221;. Pues no, el resultado será un error como una casa del estilo de &amp;#8220;You cannot call a method on a null-valued expression&amp;#8221;</description>
+function Get-EmptyArray {[System.Collections.ArrayList]$anyArray = @()return $anyArray }Write-Host (Get-EmptyArray).GetType()En principio podría resultar bastante evidente que el resultado de la ejecución será ver por pantalla la cadena “System.Collections.Arraylist”. Pues no, el resultado será un error como una casa del estilo de “You cannot call a method on a null-valued expression”</description>
     </item>
     
     <item>
@@ -256,7 +262,7 @@ function Get-EmptyArray { [System.Collections.ArrayList]$anyArray = @() return $
       <guid>http://www.modestosanjuan.com/powershell-las-ventajas-de-usar-parametros-y-variables-tipados/</guid>
       <description>Cuanto más uso PowerShell más convencido estoy de lo importante que es tipar las variables y los parámetros de las funciones. Debido a la forma en que trabaja PowerShell, especificar los tipos me ayuda a evitar comportamientos indeseados.
 Por ejemplo, dado este script:
-Set-StrictMode -Version 2 $items = Get-ChildItem if ($items) { $items.Count }  Si lo ejecuto estando en un directorio con varios archivos o carpetas, mostrará en pantalla el número de items.</description>
+Set-StrictMode -Version 2$items = Get-ChildItemif ($items) {$items.Count}Si lo ejecuto estando en un directorio con varios archivos o carpetas, mostrará en pantalla el número de items.</description>
     </item>
     
     <item>
@@ -265,9 +271,9 @@ Set-StrictMode -Version 2 $items = Get-ChildItem if ($items) { $items.Count }  S
       <pubDate>Mon, 17 Aug 2015 22:37:14 +0000</pubDate>
       
       <guid>http://www.modestosanjuan.com/powershell-switch-parameters/</guid>
-      <description>En PowerShell es muy común usar parámetros de tipo switch. La peculiaridad de estos parámetros es que al usarlos, se especifica el nombre del parámetro pero no se proporciona ningún valor, ya que se asume que al usarlo su valor será $true y $false si no se especifica. Ejemplos típicos son el uso de &amp;#8211;Recurse o -Force. 
+      <description>En PowerShell es muy común usar parámetros de tipo switch. La peculiaridad de estos parámetros es que al usarlos, se especifica el nombre del parámetro pero no se proporciona ningún valor, ya que se asume que al usarlo su valor será $true y $false si no se especifica. Ejemplos típicos son el uso de –_Recurse o -Force. _
 Este sería un ejemplo de con este tipo de parámetros:
-Function Do-Something([Switch]$Recurse) { Write-Host $Recurse } Do-Something -Recurse Do-Something  Si ejecuto este script, veré por pantalla $True y $False, como podría esperar.</description>
+Function Do-Something([Switch]$Recurse) {Write-Host $Recurse}Do-Something -RecurseDo-SomethingSi ejecuto este script, veré por pantalla $True y $False, como podría esperar.</description>
     </item>
     
     <item>
@@ -286,7 +292,7 @@ Function Do-Something([Switch]$Recurse) { Write-Host $Recurse } Do-Something -Re
       
       <guid>http://www.modestosanjuan.com/powershell-crear-el-fichero-de-manifiesto-para-muchos-modulos-a-la-vez/</guid>
       <description>Hoy he tenido que crear de golpe el manifest a varios módulos. Teníamos más de 10 módulos (.psm1), cada uno en su propia carpeta y necesitaba añadirles el manifest para poder definir la empresa de cada módulo. Gracias al pipeline de PowerShell, no he tenido que esforzarme mucho para conseguirlo:
-ls *.psm1 -Recurse | ForEach-Object { $manifestFileName = $_.BaseName + &#34;.psd1&#34; $manifestPath = Join-Path $_.Directory $manifestFileName $companyConstant = &#34;AnyCompany&#34; New-ModuleManifest -Path $manifestPath -RootModule $_.</description>
+ls *.psm1 -Recurse | ForEach-Object { $manifestFileName = $_.BaseName + &#34;.psd1&#34;$manifestPath = Join-Path $_.Directory $manifestFileName$companyConstant = &#34;AnyCompany&#34;New-ModuleManifest -Path $manifestPath -RootModule $_.</description>
     </item>
     
     <item>
@@ -295,7 +301,8 @@ ls *.psm1 -Recurse | ForEach-Object { $manifestFileName = $_.BaseName + &#34;.ps
       <pubDate>Mon, 03 Aug 2015 23:50:39 +0000</pubDate>
       
       <guid>http://www.modestosanjuan.com/powershell-la-importancia-del-set-strictmode/</guid>
-      <description>Cuando empecé a programar scripts en PowerShell, cometía muchísimos fallos fruto de mi intoxicación con otros lenguajes, especialmente C#, con el que trabajo habitualmente. Después de un tiempo, me di cuenta que PowerShell tiene muchas más similitudes con JavaScript que con C# ya que es un lenguaje interpretado y de tipado débil. Y un tiempo después, aprendí que podía programar en PowerShell de una manera más próxima a TypeScript.</description>
+      <description>Cuando empecé a programar scripts en PowerShell, cometía muchísimos fallos fruto de mi intoxicación con otros lenguajes, especialmente C#, con el que trabajo habitualmente. Después de un tiempo, me di cuenta que PowerShell tiene muchas más similitudes con JavaScript que con C# ya que es un lenguaje interpretado y de tipado débil. Y un tiempo después, aprendí que podía programar en PowerShell de una manera más próxima a TypeScript.
+Lo explico de esta forma porque a mi cerebro le resulta más sencillo recurrir a este paralelismo.</description>
     </item>
     
     <item>
@@ -305,7 +312,7 @@ ls *.psm1 -Recurse | ForEach-Object { $manifestFileName = $_.BaseName + &#34;.ps
       
       <guid>http://www.modestosanjuan.com/interrumpir-la-ejecucion-cuando-import-module-no-encuentra-el-modulo/</guid>
       <description>Esto es un truco sencillo y muy básico de PowerShell, pero puede desconcertar bastante a quien está empezando o utiliza PowerShell de forma esporádica.
-En PowerShell existen los llamados &amp;#8220;terminating errors&amp;#8221; y los &amp;#8220;non-terminating errors&amp;#8221;. Como su nombre permite intuir, unos finalizan la ejecución del script en curso cuando se producen y los otros no, limitándose a informar del error. Hasta aquí he descrito el comportamiento por defecto. Que un error sea del tipo &amp;#8220;terminating&amp;#8221; o del tipo &amp;#8220;non-terminating&amp;#8221;, no es algo que nosotros podamos controlar, y eso puede dar algún que otro quebradero de cabeza en algunas ocasiones.</description>
+En PowerShell existen los llamados “terminating errors” y los “non-terminating errors”. Como su nombre permite intuir, unos finalizan la ejecución del script en curso cuando se producen y los otros no, limitándose a informar del error. Hasta aquí he descrito el comportamiento por defecto. Que un error sea del tipo “terminating” o del tipo “non-terminating”, no es algo que nosotros podamos controlar, y eso puede dar algún que otro quebradero de cabeza en algunas ocasiones.</description>
     </item>
     
     <item>

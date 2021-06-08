@@ -57,7 +57,7 @@ Hacer que nuestra aplicación genere las trazas adecuadas es una gran herramient
       
       
     
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.81.0" />
 
     <link rel="canonical" href="http://www.modestosanjuan.com/utilizando-extensionless-para-monitorizar-logs-y-excepciones/" />
 
@@ -140,16 +140,10 @@ Hacer que nuestra aplicación genere las trazas adecuadas es una gran herramient
     </header>
 
     <section class="post-content">
-      
-
-<p>Cada vez que abordo un nuevo desarrollo, considero que la generación de trazas es una parte vital ya que es uno de los mecanismos que nos va a permitir diagnosticar e identificar cualquier tipo de problema cuando estemos en producción, en ocasiones incluso antes de que los propios usuarios lleguen a reportarlo.</p>
-
+      <p>Cada vez que abordo un nuevo desarrollo, considero que la generación de trazas es una parte vital ya que es uno de los mecanismos que nos va a permitir diagnosticar e identificar cualquier tipo de problema cuando estemos en producción, en ocasiones incluso antes de que los propios usuarios lleguen a reportarlo.</p>
 <p>Hacer que nuestra aplicación genere las trazas adecuadas es una gran herramienta, no sólo para diagnosticar bugs, también permite identificar problemas relacionados con el rendimiento y otro tipo de funcionamientos anómalos de nuestras aplicaciones.</p>
-
 <p>Durante los últimos años he utilizado <a href="http://nlog-project.org/">NLog</a>, la librería de <a href="http://www.theobjectguy.com/dotnetlog/">The Object Guy</a>, desarrollos propios y estos últimos meses he utilizado <a href="http://serilog.net/">Serilog</a> en proyectos WPF, Web y WinRT. Pero siempre hay algo que no termina de convencerme, los interfaces para explorar los logs. He probado aplicaciones para Windows como <a href="http://www.log-expert.de/">LogExpert</a>, <a href="http://www.baremetalsoft.com/baretail/">BareTail</a>, <a href="http://cbaxter.github.io/Harvester/">Harvester</a>, <a href="http://tailforwin32.sourceforge.net/">Tail for Win32</a>, o soluciones más trabajadas como <a href="http://www.splunk.com/">Splunk</a> o <a href="https://logentries.com/">LogEntries</a>, pero al final ninguna me ha convencido por funcionalidad o por coste.</p>
-
 <p>Hace unos meses me encontré con <a href="https://exceptionless.com/">ExceptionLess</a> y me pareció un proyecto bastante interesante. A modo de resumen, estos son algunos de los puntos que me parecieron interesantes:</p>
-
 <ul>
 <li>Puedo utilizarlos como servicio o montarlo sobre mi propia infraestructura.</li>
 <li>Dispone de librerías PCL con soporte offline. Lo que significa que puedo utilizarlo en la tablet y, cuando no tenga conexión, guarda los logs en local para enviarlos cuando la conexión vuelva.</li>
@@ -158,27 +152,18 @@ Hacer que nuestra aplicación genere las trazas adecuadas es una gran herramient
 <li>Me intenta facilitar la identificación de problemas/patrones agrupando las trazas o mostrando las que más se producen.</li>
 <li>Es Open Source. Y esto me parece especialmente importante porque me permite solucionar algunas de las carencias menores que estoy encontrando (ya sólo me falta aprender Angular ;P).</li>
 </ul>
-
 <p>Y como no todo son cosas buenas, me parece importante remarcar algunas cosas que no me han gustado durante su uso:</p>
-
 <ul>
 <li>El interfaz de usuario aún está un poco verde. Tiene algunos detalles de interfaz que desorientan un poco. Cosas tontas como que al darle a buscar no te mande al listado con los resultados de la búsqueda si estás en el detalle de un log. Simplemente establece el filtro como el filtro activo, pero tienes tú que irte al listado de logs para poder verlos.</li>
 <li>Está muy orientado a que lo uses con su plataforma. Esto se nota muchísimo al configurarlo en un servidor propio en detalles como que las configuraciones por defecto apunten a su dominio (exceptionless.io) o que aspectos de la configuración de servidor y de los clientes son distintos.</li>
 </ul>
-
 <h2 id="ojo-si-quieres-configurar-exceptionless-en-tu-propio-servidor">Ojo si quieres configurar ExceptionLess en tu propio servidor</h2>
-
 <p>No tiene sentido hacer un tutorial sobre cómo configurarlo en local porque en github están las instrucciones y no son complicadas. Únicamente es necesario tener MongoDB y ElasticSearch. En caso de montar varios servidores de API, es necesario Redis, pero para un único nodo no es necesario y utiliza una implementación en memoria.</p>
-
-<p>Ten en cuenta que necesitas instalar dos proyectos, el <a href="https://github.com/exceptionless/Exceptionless">API</a> y la <a href="https://github.com/exceptionless/Exceptionless.UI">UI</a>. Para este ejemplo, supongamos una configuración local de pruebas con el API instalado en: <a href="http://localhost/ExceptionLess.API">http://localhost/ExceptionLess.API</a></p>
-
-<p>Al instalar la UI, es necesario editar el fichero <strong><em>app.config</em></strong> para especificar en la clave <strong>BASE_URL</strong> la url del API. Pues bien, aunque la primera opción parece que sería poner la url &#8216;<a href="http://localhost/ExceptionLess.API&amp;#8217">http://localhost/ExceptionLess.API&amp;#8217</a>;, al hacer esto no va a funcionar. La url correcta que hay que configurar es: <strong>&#8216;<a href="http://localhost/ExceptionLess.API/api/v2&amp;#8217">http://localhost/ExceptionLess.API/api/v2&amp;#8217</a>;</strong></p>
-
-<p>Sin embargo, para enviar logs a ese servidor desde una <strong>aplicación .Net</strong>, la url que debo configurar si que es <strong>&#8216;<a href="http://localhost/ExceptionLess.API&amp;#8217">http://localhost/ExceptionLess.API&amp;#8217</a>;</strong>. Esto me volvió un poco loco al principio.</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
+<p>Ten en cuenta que necesitas instalar dos proyectos, el <a href="https://github.com/exceptionless/Exceptionless">API</a> y la <a href="https://github.com/exceptionless/Exceptionless.UI">UI</a>. Para este ejemplo, supongamos una configuración local de pruebas con el API instalado en: http://localhost/ExceptionLess.API</p>
+<p>Al instalar la UI, es necesario editar el fichero <strong><em>app.config</em></strong> para especificar en la clave <strong>BASE_URL</strong> la url del API. Pues bien, aunque la primera opción parece que sería poner la url ‘http://localhost/ExceptionLess.API’, al hacer esto no va a funcionar. La url correcta que hay que configurar es: <strong>‘http://localhost/ExceptionLess.API/api/v2’</strong></p>
+<p>Sin embargo, para enviar logs a ese servidor desde una <strong>aplicación .Net</strong>, la url que debo configurar si que es <strong>‘http://localhost/ExceptionLess.API’</strong>. Esto me volvió un poco loco al principio.</p>
+<p> </p>
+<p> </p>
 
     </section>
 

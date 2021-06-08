@@ -57,7 +57,7 @@ En este post no pienso hablar de lo malvadas que son las optimizaciones prematu
       
       
     
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.81.0" />
 
     <link rel="canonical" href="http://www.modestosanjuan.com/cuanto-cuesta-llamar-a-un-metodo/" />
 
@@ -140,157 +140,131 @@ En este post no pienso hablar de lo malvadas que son las optimizaciones prematu
     </header>
 
     <section class="post-content">
-      
-
-<p>Últimamente Twitter está siendo toda una fuente de inspiración. En esta ocasión el hilo culpable es <a href="https://twitter.com/jcant0n/status/759081339098464257">este</a>. <a href="https://twitter.com/jcant0n">Javier Cantón</a> hace un comentario respecto a la diferencia de rendimiento existente entre llamar a un método virtual versus llamar al mismo método a través de un interface.</p>
-
+      <p>Últimamente Twitter está siendo toda una fuente de inspiración. En esta ocasión el hilo culpable es <a href="https://twitter.com/jcant0n/status/759081339098464257">este</a>. <a href="https://twitter.com/jcant0n">Javier Cantón</a> hace un comentario respecto a la diferencia de rendimiento existente entre llamar a un método virtual versus llamar al mismo método a través de un interface.</p>
 <p>En este post no pienso hablar de lo malvadas que son las optimizaciones prematuras, asumo que el comentario de Javier tenía su contexto, así que me voy a quedar con la parte que me ha resultado curiosa. <a href="https://twitter.com/luisruizpavon/status/759366097497886720">Luis Ruiz Pavón nos comentó</a> que hiciéramos este tipo de mediciones utilizando <a href="https://github.com/PerfDotNet/BenchmarkDotNet">BenchmarkDotNet</a> y, como me habían surgido un par de dudas, me puse manos a la obra.</p>
-
 <p><strong>Aviso importante:</strong> las cifras de las mediciones como tal no tienen importancia, cada ordenador tardará una cantidad distinta de nanosegundos en efectuar cada operación, lo que es importante en este caso es observar el diferencial de tiempo que es necesario para ejecutar el método en cada circunstancia.</p>
-
 <h2 id="llamada-directa-a-método-no-virtual">Llamada directa a método no virtual</h2>
-
 <p>Javier comentaba que en su contexto le interesaban las llamadas a métodos virtuales vs interfaces, descartando las llamadas directas a un método no virtual. No obstante, por dar un poco de contexto respecto al rendimiento,  me parecía intersante medirlo. Una llamada directa a un método no virtual tarda tan poco que hay veces que no es capaz de medirlo y me dice que tarda 0.0000 nanosegundos. En algunas de las pruebas la mediana era de <strong>0.0025 ns</strong>. En realidad este resultado se debe a que el Jit está haciendo un inline del método. Si decoramos el método con el atributo <strong>[MethodImpl(MethodImplOptions.NoInlining)]</strong> para que <strong>no haga inline</strong> (gracias Juanma), la mediana es de <strong>1.96 ns</strong>.</p>
-
 <h2 id="directa-virtual-vs-interface">Directa virtual vs Interface</h2>
-
 <p>En mi máquina, una llamada directa a un <strong>método virtual</strong> tarda unos <strong>2.91 nanosegundos</strong>. SI realizamos la misma llamada a través de un <strong>interface</strong>, necesita <strong>3.82 nanosegundos</strong> para cada operación.</p>
-
 <p>Como he dicho antes, no voy a entrar a valorar si ahorrar 1 nanosegundo por cada llamada a un método es algo importante o no, es una cuestión de contexto y estoy seguro de que hay contextos en los que puede ser importante.</p>
-
 <p>Si asumimos que estamos en un contexto en el que realmente nos importa no sufrir esta penalización, podríamos descartar el uso de interfaces, pero esto puede condicionarnos el diseño en muchos aspectos.</p>
-
 <h2 id="clases-abstractas">Clases abstractas</h2>
-
 <p>Pensando en cómo podría salvar ese problema y obtener un rendimiento como el de una llamada directa pero con las ventajas que da tener un interface, se me ocurrió la posibilidad de utilizar una clase abstracta. Es cierto que no es exactamente lo mismo utilizar una clase abstracta que un interface, pero aún así creo que demuestra mucho más la intencionalidad que recurrir a un método virtual.</p>
-
 <p>La duda era cuál sería el rendimiento de la llamada a través de una clase abstracta. ¿Sería equivalente al de un interface?</p>
-
 <p>Pues resultó que no. Según mis mediciones, cada llamada tarda unos <strong>2.88 nanosegundos</strong>. Es más, tanto si llamaba a través de la clase abstracta como si llamaba a través de la implementación de la clase abstracta, los tiempos eran los mismos.</p>
-
 <p>Ojo, aunque en principio parece que es incluso más rápido que la llamada directa a un método virtual, creo que la diferencia es despreciable y que si repitiese las mediciones varias veces, se turnarían por ser la más rápida 😉</p>
-
 <h2 id="reflection">Reflection</h2>
-
 <p>Ya que estaba, por curiosidad medí el tiempo de hacer las llamadas utilizando reflexión, asumiendo que tenía cacheado el MethodInfo y midiendo únicamente el Invoke del método. Cada llamada tardaba <strong>272.87 nanosegundos</strong>, un abismo comparado con los otros mecanismos.</p>
-
 <h2 id="un-poco-más-de-detalle">Un poco más de detalle</h2>
-
 <p><a href="https://twitter.com/gulnor?lang=en">Juanma</a> me ha comentado, con toda la razón del mundo, que para este tipo de mediciones tan pequeñas resulta útil recurrir a histogramas. BenchmarkDotNet no tiene actualmente esta funcionalidad, pero lo que si proporciona es la desviación típica, que puede resultar útil para interpretar lo datos. Aquí están los resultados de la última medición efectuada:</p>
-
 <div class="table-responsive">
   <table  style="width:100%; "  class="easy-table easy-table-default " border="0">
     <tr>
       <th >
         Método
       </th>
-      
-      <th >
-        Mediana
-      </th>
-      
-      <th >
-        Desviación
-      </th>
-    </tr>
-    
-    <tr>
-      <td >
-        Directo no virtual
-      </td>
-      
-      <td >
-        0.0025 ns
-      </td>
-      
-      <td >
-        0.0853 ns
-      </td>
-    </tr>
-    
-    <tr>
-      <td >
-        Direct no virtual no inline
-      </td>
-      
-      <td >
-        1.9673 ns
-      </td>
-      
-      <td >
-        0.1040 ns
-      </td>
-    </tr>
-    
-    <tr>
-      <td >
-        Directo virtual
-      </td>
-      
-      <td >
-        2.9151 ns
-      </td>
-      
-      <td >
-        0.0917 ns
-      </td>
-    </tr>
-    
-    <tr>
-      <td >
-        Interface
-      </td>
-      
-      <td >
-        3.8213 ns
-      </td>
-      
-      <td >
-        0.1464 ns
-      </td>
-    </tr>
-    
-    <tr>
-      <td >
-        Abstract
-      </td>
-      
-      <td >
-        2.8829 ns
-      </td>
-      
-      <td >
-        0.1113 ns
-      </td>
-    </tr>
-    
-    <tr>
-      <td >
-        Directo con reflexión
-      </td>
-      
-      <td >
-        272.8738 ns
-      </td>
-      
-      <td >
-        17.7846 ns
-      </td>
-    </tr>
+<pre><code>  &lt;th &gt;
+    Mediana
+  &lt;/th&gt;
+  
+  &lt;th &gt;
+    Desviación
+  &lt;/th&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+  &lt;td &gt;
+    Directo no virtual
+  &lt;/td&gt;
+  
+  &lt;td &gt;
+    0.0025 ns
+  &lt;/td&gt;
+  
+  &lt;td &gt;
+    0.0853 ns
+  &lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+  &lt;td &gt;
+    Direct no virtual no inline
+  &lt;/td&gt;
+  
+  &lt;td &gt;
+    1.9673 ns
+  &lt;/td&gt;
+  
+  &lt;td &gt;
+    0.1040 ns
+  &lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+  &lt;td &gt;
+    Directo virtual
+  &lt;/td&gt;
+  
+  &lt;td &gt;
+    2.9151 ns
+  &lt;/td&gt;
+  
+  &lt;td &gt;
+    0.0917 ns
+  &lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+  &lt;td &gt;
+    Interface
+  &lt;/td&gt;
+  
+  &lt;td &gt;
+    3.8213 ns
+  &lt;/td&gt;
+  
+  &lt;td &gt;
+    0.1464 ns
+  &lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+  &lt;td &gt;
+    Abstract
+  &lt;/td&gt;
+  
+  &lt;td &gt;
+    2.8829 ns
+  &lt;/td&gt;
+  
+  &lt;td &gt;
+    0.1113 ns
+  &lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+  &lt;td &gt;
+    Directo con reflexión
+  &lt;/td&gt;
+  
+  &lt;td &gt;
+    272.8738 ns
+  &lt;/td&gt;
+  
+  &lt;td &gt;
+    17.7846 ns
+  &lt;/td&gt;
+&lt;/tr&gt;
+</code></pre>
   </table>
 </div>
-
 <h1 id="conclusión">Conclusión</h1>
-
 <p>Si alguna vez nos preocupa tantísimo el rendimiento, podemos utilizar una clase abstracta en lugar de un interface (ya, ya he dicho antes que no es lo mismo).</p>
-
 <p>Cualquier excusa es buena para calentarse un poco la cabeza y sacar unos cuantos datos peculiares.</p>
-
 <p>Este tipo de posts no valen prácticamente para nada, pero el datap0rn tiene su gracia y me ha resultado muy entretenido escribirlo.</p>
-
 <p>BenchmarkDotNet mola, aunque tarda cojón y medio en hacer cada medición 😀</p>
-
-<p>&nbsp;</p>
+<p> </p>
 
     </section>
 

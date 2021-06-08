@@ -15,9 +15,9 @@
 
 
 <meta name="twitter:title" content="[PowerShell] Switch parameters"/>
-<meta name="twitter:description" content="En PowerShell es muy común usar parámetros de tipo switch. La peculiaridad de estos parámetros es que al usarlos, se especifica el nombre del parámetro pero no se proporciona ningún valor, ya que se asume que al usarlo su valor será $true y $false si no se especifica. Ejemplos típicos son el uso de &#8211;Recurse o -Force. 
+<meta name="twitter:description" content="En PowerShell es muy común usar parámetros de tipo switch. La peculiaridad de estos parámetros es que al usarlos, se especifica el nombre del parámetro pero no se proporciona ningún valor, ya que se asume que al usarlo su valor será $true y $false si no se especifica. Ejemplos típicos son el uso de –_Recurse o -Force. _
 Este sería un ejemplo de con este tipo de parámetros:
-Function Do-Something([Switch]$Recurse) { Write-Host $Recurse } Do-Something -Recurse Do-Something  Si ejecuto este script, veré por pantalla $True y $False, como podría esperar."/>
+Function Do-Something([Switch]$Recurse) {Write-Host $Recurse}Do-Something -RecurseDo-SomethingSi ejecuto este script, veré por pantalla $True y $False, como podría esperar."/>
 
     <meta name="twitter:site" content="@msanjuan"/>
 
@@ -58,7 +58,7 @@ Function Do-Something([Switch]$Recurse) { Write-Host $Recurse } Do-Something -Re
       
       
     
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.81.0" />
 
     <link rel="canonical" href="http://www.modestosanjuan.com/powershell-switch-parameters/" />
 
@@ -141,10 +141,8 @@ Function Do-Something([Switch]$Recurse) { Write-Host $Recurse } Do-Something -Re
     </header>
 
     <section class="post-content">
-      <p>En PowerShell es muy común usar parámetros de tipo <em>switch</em>. La peculiaridad de estos parámetros es que al usarlos, se especifica el nombre del parámetro pero no se proporciona ningún valor, ya que se asume que al usarlo su valor será <em>$true</em> y <em>$false</em> si no se especifica. Ejemplos típicos son el uso de &#8211;<em>Recurse o -Force. </em></p>
-
+      <p>En PowerShell es muy común usar parámetros de tipo <em>switch</em>. La peculiaridad de estos parámetros es que al usarlos, se especifica el nombre del parámetro pero no se proporciona ningún valor, ya que se asume que al usarlo su valor será <em>$true</em> y <em>$false</em> si no se especifica. Ejemplos típicos son el uso de –_Recurse o -Force. _</p>
 <p>Este sería un ejemplo de con este tipo de parámetros:</p>
-
 <pre class="lang:ps decode:true">Function Do-Something([Switch]$Recurse) {
     Write-Host $Recurse
 }
@@ -152,9 +150,7 @@ Function Do-Something([Switch]$Recurse) { Write-Host $Recurse } Do-Something -Re
 Do-Something -Recurse
 Do-Something
 </pre>
-
 <p>Si ejecuto este script, veré por pantalla <em>$True</em> y <em>$False, como podría esperar. Si le añado algunas modificaciones al código, el resultado sigue siendo el esperado:</em></p>
-
 <pre class="lang:ps decode:true">Function Do-Something([Switch]$Recurse) {
     if ($Recurse.IsPresent) { 
         Write-Host "Lo haré recursivo"
@@ -166,19 +162,13 @@ Do-Something
 Do-Something -Recurse
 Do-Something
 </pre>
-
-<p>Hasta aquí todo bien, pero en realidad no lo he estado haciendo como está recomendado. Si me diese por hacer una prueba en Pester en la que me viese obligado a verificar el _$Recurse_ de este modo:</p>
-
+<p>Hasta aquí todo bien, pero en realidad no lo he estado haciendo como está recomendado. Si me diese por hacer una prueba en Pester en la que me viese obligado a verificar el <em>$Recurse</em> de este modo:</p>
 <pre class="lang:ps decode:true">$Recurse | Should Be $True
 </pre>
-
 <p>Obtendría un resultado inesperado, ya que en realidad <em>$Recurse</em> no es de tipo Boolean. Al hacer un GetType() es posible ver que en realidad es de tipo <em>System.Management.Automation.SwitchParameter</em>. En realidad la forma correcta de verificar si me han pasado el parámetro es así:</p>
-
 <pre class="lang:default decode:true ">$Recurse.IsPresent | Should Be $True</pre>
-
 <p>Y si alguna vez es necesario tratarlo como un boolean, siempre es posible recurrir al método <em>ToBool()</em>.</p>
-
-<p>&nbsp;</p>
+<p> </p>
 
     </section>
 

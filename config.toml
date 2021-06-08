@@ -3,6 +3,8 @@ title = "Blog de Modesto San Juan"
 languageCode = "es-es"
 disqusShortname = "modestosanjuan"
 
+[markup.goldmark.renderer]
+unsafe= true
 [params]
   description = "DESCUBRIMIENTOS, IDEAS Y OTRAS CHORRADAS"
   cover = "images/cover.png"

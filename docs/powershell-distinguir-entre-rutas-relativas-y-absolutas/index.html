@@ -57,7 +57,7 @@ En ocasiones me olvido de que PowerShell tiene a su disposición toda la potenci
       
       
     
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.81.0" />
 
     <link rel="canonical" href="http://www.modestosanjuan.com/powershell-distinguir-entre-rutas-relativas-y-absolutas/" />
 
@@ -141,22 +141,19 @@ En ocasiones me olvido de que PowerShell tiene a su disposición toda la potenci
 
     <section class="post-content">
       <p>Esta vez toca un truco muy simple pero muy útil cuando tengo un script que recibe una ruta como parámetro. Es muy típico no saber si la ruta es absoluta o relativa y muy frecuente querer hacer un <strong>Join-Path</strong> con la ruta actual (o cualquier otra) en caso de que la ruta sea relativa.</p>
-
 <p>En ocasiones me olvido de que PowerShell tiene a su disposición toda la potencia de .Net y en este caso es precisamente útil. Utilizando el método <strong>IsPathRooted</strong> de <strong>System.IO.Path</strong> puedo saber si la ruta es absoluta o relativa y actuar en consecuencia. Este sería un ejemplo típico de estos casos.</p>
-
 <pre class="lang:ps decode:true">param([string]$Path) 
 
 $targetPath = pwd
 
 if (-not [string]::IsNullOrWhiteSpace($Path)) { 
-    if ([System.IO.Path]::IsPathRooted($Path)) {
-        $targetPath = $Path
-    } else{
-        $targetPath = Join-Path (pwd) $Path
-    }
+	if ([System.IO.Path]::IsPathRooted($Path)) {
+		$targetPath = $Path
+	} else{
+		$targetPath = Join-Path (pwd) $Path
+	}
 }</pre>
-
-<p>De regalo este script trae otro ejemplo en el que recurrir a .Net es muy útil, el método <strong>IsNullOrWhiteSpace</strong><strong>()</strong></p>
+<p>De regalo este script trae otro ejemplo en el que recurrir a .Net es muy útil, el método <strong>IsNullOrWhiteSpace</strong>**()**</p>
 
     </section>
 

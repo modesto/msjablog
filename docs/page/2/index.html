@@ -51,7 +51,7 @@
         <link href="http://www.modestosanjuan.com/index.xml" rel="alternate" type="application/rss+xml" title="Blog de Modesto San Juan" />
       
     
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.81.0" />
 
     <link rel="canonical" href="http://www.modestosanjuan.com/" />
 
@@ -141,10 +141,40 @@
 	   
 <article class="post post">
     <header class="post-header">
+        <h2 class="post-title"><a href="/claves-primarias-inmutabilidad-y-generacion/">Claves primarias: inmutabilidad y generación</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>Hace unos días Pablo Iglesias tuiteó una pregunta de Stack Exchange en la que hablaban sobre la inmutabilidad de las claves primarias. Se generó un debate bastante interesante en Twitter que se extendió más allá de la cuestión de la inmutabilidad. Este es un intento de recopilar y explicar algunos de los conceptos que se mencionaron durante ese debate.
+Claves primarias mutables o inmutables Para el que ande un poco perdido con el concepto, básicamente se trata de determinar si la clave primaria de una entidad debería poder cambiar o no una vez establecida. <a class="read-more" href="/claves-primarias-inmutabilidad-y-generacion/">&raquo;</a></p>
+    </section>
+    <footer class="post-meta">
+        
+        
+            
+            
+        
+
+        
+            <img class="author-thumb" src="http://www.modestosanjuan.com/images/logo.jpg" alt="Author image" nopin="nopin" />
+        
+        
+            Modesto San Juan
+        
+        
+        <time class="post-date" datetime="2016-07-30T23:39:11Z">
+            30 Jul 2016
+        </time>
+    </footer>
+</article>
+
+	
+	   
+<article class="post post">
+    <header class="post-header">
         <h2 class="post-title"><a href="/palabras-malditas/">Palabras malditas</a></h2>
     </header>
     <section class="post-excerpt">
-        <p>Extreme programming y el desarrollo ágil A principios de siglo (dicho así parece que queda muy atrás, eh&#8230; :P) trabajaba en Indra como coordinador de un equipo de desarrollo. En mi entorno profesional era un poco como un bicho raro porque, además de ser 10 años más joven que la media de mi puesto, era de los pocos que se negaba a abandonar el desarrollo para dedicarme plenamente a la gestión. <a class="read-more" href="/palabras-malditas/">&raquo;</a></p>
+        <p>Extreme programming y el desarrollo ágil A principios de siglo (dicho así parece que queda muy atrás, eh… :P) trabajaba en Indra como coordinador de un equipo de desarrollo. En mi entorno profesional era un poco como un bicho raro porque, además de ser 10 años más joven que la media de mi puesto, era de los pocos que se negaba a abandonar el desarrollo para dedicarme plenamente a la gestión. <a class="read-more" href="/palabras-malditas/">&raquo;</a></p>
     </section>
     <footer class="post-meta">
         
@@ -203,7 +233,7 @@ Hay varios aspectos que son importantes a tener en cuenta al definir datos para 
         <h2 class="post-title"><a href="/impresiones-sobre-pair-programming/">Impresiones sobre pair programming</a></h2>
     </header>
     <section class="post-excerpt">
-        <p>El viernes mantuve una conversación bastante entretenida sobre desarrollo de software con un compañero de profesión. Trabaja en una entidad financiera y al hablar de cosas como TDD, Agile, XP, etc. tenía ciertos sentimientos enfrentados. Precisamente uno de los temas que le causaban controversia era el pair programming. Su opinión básicamente se resumía en una frase: &#8220;yo lo que no compro es que dos tíos senior sentados juntos a programar van a ser más productivos que si programan por separado&#8221;. <a class="read-more" href="/impresiones-sobre-pair-programming/">&raquo;</a></p>
+        <p>El viernes mantuve una conversación bastante entretenida sobre desarrollo de software con un compañero de profesión. Trabaja en una entidad financiera y al hablar de cosas como TDD, Agile, XP, etc. tenía ciertos sentimientos enfrentados. Precisamente uno de los temas que le causaban controversia era el pair programming. Su opinión básicamente se resumía en una frase: “yo lo que no compro es que dos tíos senior sentados juntos a programar van a ser más productivos que si programan por separado”. <a class="read-more" href="/impresiones-sobre-pair-programming/">&raquo;</a></p>
     </section>
     <footer class="post-meta">
         
@@ -232,8 +262,8 @@ Hay varios aspectos que son importantes a tener en cuenta al definir datos para 
         <h2 class="post-title"><a href="/nuestra-programacion-es-mala-para-el-desarrollo-de-software/">Nuestra programación es mala para el desarrollo de software</a></h2>
     </header>
     <section class="post-excerpt">
-        <p>La programación de mi color favorito El otro día mi hija me preguntó cuál era mi color favorito. Respondí inmediatamente sin pensarlo: &#8220;el azul&#8221;. No era la primera vez que me lo preguntaban y es un dato que tengo claro desde que era niño. O no.
-En esta ocasión, no se exactamente porqué, después de responder a mi hija algo en mi cabeza empezó a retorcerse: &#8220;¿es el azul mi color favorito? <a class="read-more" href="/nuestra-programacion-es-mala-para-el-desarrollo-de-software/">&raquo;</a></p>
+        <p>La programación de mi color favorito El otro día mi hija me preguntó cuál era mi color favorito. Respondí inmediatamente sin pensarlo: “el azul”. No era la primera vez que me lo preguntaban y es un dato que tengo claro desde que era niño. O no.
+En esta ocasión, no se exactamente porqué, después de responder a mi hija algo en mi cabeza empezó a retorcerse: “¿es el azul mi color favorito? <a class="read-more" href="/nuestra-programacion-es-mala-para-el-desarrollo-de-software/">&raquo;</a></p>
     </section>
     <footer class="post-meta">
         
@@ -263,7 +293,7 @@ En esta ocasión, no se exactamente porqué, después de responder a mi hija alg
     </header>
     <section class="post-excerpt">
         <p>A un desarrollador que practique TDD, el flujo rojo, verde, refactor no le resulta extraño. En este post quiero romper una lanza a favor del rojo, ese gran incomprendido. Para ilustrarlo voy a recurrir a un ejemplo muy sencillo:
-[TestMethod] public void sample_test() { var messagingService = GivenAMessagingServiceStub(); var unreadMessages = messagingService.UnreadMessages(); unreadMessages.Count.Should().Be(1) } Este ejemplo esta simplificado, pero me permite mostrar un test con una estructura de tipo given/when/then o AAA (según gustos). <a class="read-more" href="/la-importancia-del-rojo-en-tdd/">&raquo;</a></p>
+[TestMethod]public void sample_test(){var messagingService = GivenAMessagingServiceStub();var unreadMessages = messagingService.UnreadMessages();unreadMessages.Count.Should().Be(1)}Este ejemplo esta simplificado, pero me permite mostrar un test con una estructura de tipo given/when/then o AAA (según gustos). <a class="read-more" href="/la-importancia-del-rojo-en-tdd/">&raquo;</a></p>
     </section>
     <footer class="post-meta">
         
@@ -322,7 +352,7 @@ En esta ocasión, no se exactamente porqué, después de responder a mi hija alg
     </header>
     <section class="post-excerpt">
         <p>Cuando necesito acceder a información de la Request desde una acción de un controlador en ASP.NET Web API, la primera tentación es acceder directamente al objeto request y buscar lo que necesito. El principal problema de hacer esto es que convierte en un infierno hacer cualquier tipo de prueba automatizada para esta acción. Por ejemplo:
-[HttpGet] [Route("doAnything")] public IHttpActionResult Get() { var referrer = request.Headers.Referrer var resul = ..... // DO ANY STUFF WITH THE REFERRER return result; } El mecanismo más sencillo que se me ocurre para hacer que esta acción sea fácil de probar es hacer que el dato que necesito de la request, le llegue como parámetro a la acción: <a class="read-more" href="/value-providers-y-parameter-binding-en-asp-net-web-api/">&raquo;</a></p>
+[HttpGet] [Route("doAnything")] public IHttpActionResult Get() { var referrer = request.Headers.Referrervar resul = .....// DO ANY STUFF WITH THE REFERRER return result; }El mecanismo más sencillo que se me ocurre para hacer que esta acción sea fácil de probar es hacer que el dato que necesito de la request, le llegue como parámetro a la acción: <a class="read-more" href="/value-providers-y-parameter-binding-en-asp-net-web-api/">&raquo;</a></p>
     </section>
     <footer class="post-meta">
         
@@ -399,36 +429,6 @@ ETS tiene mucha potencia y no siempre es fácil obtener documentación sobre có
         
         <time class="post-date" datetime="2015-10-22T00:27:51Z">
             22 Oct 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/powershell-distinguir-entre-rutas-relativas-y-absolutas/">[PowerShell] Distinguir entre rutas relativas y absolutas</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>Esta vez toca un truco muy simple pero muy útil cuando tengo un script que recibe una ruta como parámetro. Es muy típico no saber si la ruta es absoluta o relativa y muy frecuente querer hacer un Join-Path con la ruta actual (o cualquier otra) en caso de que la ruta sea relativa.
-En ocasiones me olvido de que PowerShell tiene a su disposición toda la potencia de .Net y en este caso es precisamente útil. <a class="read-more" href="/powershell-distinguir-entre-rutas-relativas-y-absolutas/">&raquo;</a></p>
-    </section>
-    <footer class="post-meta">
-        
-        
-            
-            
-        
-
-        
-            <img class="author-thumb" src="http://www.modestosanjuan.com/images/logo.jpg" alt="Author image" nopin="nopin" />
-        
-        
-            Modesto San Juan
-        
-        
-        <time class="post-date" datetime="2015-10-08T22:41:43Z">
-            8 Oct 2015
         </time>
     </footer>
 </article>

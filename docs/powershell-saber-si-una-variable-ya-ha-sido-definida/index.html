@@ -15,7 +15,7 @@
 
 
 <meta name="twitter:title" content="[PowerShell] Saber si una variable ya ha sido definida"/>
-<meta name="twitter:description" content="En ocasiones tengo la necesidad de saber si una variable ha sido previamente definida. Esto es especialmente importante porque utilizo siempre el &#8220;Set-StrictMode -Version 2&#8221; y, si necesito recurrir a variables de otros scopes, cuando intento acceder a una variable no definida obtengo un error. Aunque generalmente intento no recurrir a otros scopes, especialmente el $global, en ocasiones los necesito, especialmente el $script.
+<meta name="twitter:description" content="En ocasiones tengo la necesidad de saber si una variable ha sido previamente definida. Esto es especialmente importante porque utilizo siempre el “Set-StrictMode -Version 2” y, si necesito recurrir a variables de otros scopes, cuando intento acceder a una variable no definida obtengo un error. Aunque generalmente intento no recurrir a otros scopes, especialmente el $global, en ocasiones los necesito, especialmente el $script.
 Un ejemplo podría ser querer verificar si una variable que contiene un array ha sido inicializada o no, para poder añadirle ítems."/>
 
     <meta name="twitter:site" content="@msanjuan"/>
@@ -57,7 +57,7 @@ Un ejemplo podría ser querer verificar si una variable que contiene un array h
       
       
     
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.81.0" />
 
     <link rel="canonical" href="http://www.modestosanjuan.com/powershell-saber-si-una-variable-ya-ha-sido-definida/" />
 
@@ -140,14 +140,12 @@ Un ejemplo podría ser querer verificar si una variable que contiene un array h
     </header>
 
     <section class="post-content">
-      <p>En ocasiones tengo la necesidad de saber si una variable ha sido previamente definida. Esto es especialmente importante porque utilizo siempre el &#8220;Set-StrictMode -Version 2&#8221; y, si necesito recurrir a variables de otros scopes, cuando intento acceder a una variable no definida obtengo un error. Aunque generalmente intento no recurrir a otros scopes, especialmente el <em>$global</em>, en ocasiones los necesito, especialmente el <em>$script</em>.</p>
-
+      <p>En ocasiones tengo la necesidad de saber si una variable ha sido previamente definida. Esto es especialmente importante porque utilizo siempre el “Set-StrictMode -Version 2” y, si necesito recurrir a variables de otros scopes, cuando intento acceder a una variable no definida obtengo un error. Aunque generalmente intento no recurrir a otros scopes, especialmente el <em>$global</em>, en ocasiones los necesito, especialmente el <em>$script</em>.</p>
 <p>Un ejemplo podría ser querer verificar si una variable que contiene un array ha sido inicializada o no, para poder añadirle ítems. El código quedaría de la siguiente forma:</p>
-
 <pre class="lang:ps decode:true">Function Add-ItemToScriptVariable($item) {
-    if (-not (Test-Path variable:script:anyVariable)) {
-        [System.Collections.ArrayList]$script:anyVariable = @()
-    }
+	if (-not (Test-Path variable:script:anyVariable)) {
+		[System.Collections.ArrayList]$script:anyVariable = @()
+	}
     $script:anyVariable += $item
 }
 
@@ -156,10 +154,8 @@ Add-ItemToScriptVariable "item 2"
 Add-ItemToScriptVariable "item 3"
 
 Write-Host $script:anyVariable</pre>
-
 <p>Como es costumbre en PowerShell, un mismo comando vale aparentemente para múltiples propósitos. En este caso, <em><strong>Test-Path</strong></em> nos permite verificar si una variable existe en un ámbito determinado. Aunque choque, es importante fijarse en que el habitual símbolo del dolar no aparece por ningún lado en este caso.</p>
-
-<p>Por si alguien se lo pregunta, al igual que el <em><strong>Test-Path</strong></em> funciona, también es posible utilizar el comando <em><strong>&#8220;Get-ChildItem variable:&#8221;</strong></em>. No obstante, si el objetivo es enumerar las variables, es mucho más apropiado utilizar el comando <em><strong>Get-Variable</strong></em>.</p>
+<p>Por si alguien se lo pregunta, al igual que el <em><strong>Test-Path</strong></em> funciona, también es posible utilizar el comando <em><strong>“Get-ChildItem variable:”</strong></em>. No obstante, si el objetivo es enumerar las variables, es mucho más apropiado utilizar el comando <em><strong>Get-Variable</strong></em>.</p>
 
     </section>
 

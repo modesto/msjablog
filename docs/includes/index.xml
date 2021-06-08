@@ -5,11 +5,7 @@
     <link>http://www.modestosanjuan.com/includes/</link>
     <description>Recent content in Includes on Blog de Modesto San Juan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>es-es</language>
-    
-	<atom:link href="http://www.modestosanjuan.com/includes/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>es-es</language><atom:link href="http://www.modestosanjuan.com/includes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
       <link>http://www.modestosanjuan.com/includes/oop-serie/</link>

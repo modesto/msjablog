@@ -6,11 +6,7 @@
     <description>Recent content in Web API on Blog de Modesto San Juan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <lastBuildDate>Fri, 13 Nov 2015 10:02:22 +0000</lastBuildDate>
-    
-	<atom:link href="http://www.modestosanjuan.com/categories/web-api/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 13 Nov 2015 10:02:22 +0000</lastBuildDate><atom:link href="http://www.modestosanjuan.com/categories/web-api/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Value Providers y Parameter Binding en ASP.NET Web API</title>
       <link>http://www.modestosanjuan.com/value-providers-y-parameter-binding-en-asp-net-web-api/</link>
@@ -18,7 +14,7 @@
       
       <guid>http://www.modestosanjuan.com/value-providers-y-parameter-binding-en-asp-net-web-api/</guid>
       <description>Cuando necesito acceder a información de la Request desde una acción de un controlador en ASP.NET Web API, la primera tentación es acceder directamente al objeto request y buscar lo que necesito. El principal problema de hacer esto es que convierte en un infierno hacer cualquier tipo de prueba automatizada para esta acción. Por ejemplo:
-[HttpGet] [Route(&#34;doAnything&#34;)] public IHttpActionResult Get() { var referrer = request.Headers.Referrer var resul = ..... // DO ANY STUFF WITH THE REFERRER return result; } El mecanismo más sencillo que se me ocurre para hacer que esta acción sea fácil de probar es hacer que el dato que necesito de la request, le llegue como parámetro a la acción:</description>
+[HttpGet] [Route(&#34;doAnything&#34;)] public IHttpActionResult Get() { var referrer = request.Headers.Referrervar resul = .....// DO ANY STUFF WITH THE REFERRER return result; }El mecanismo más sencillo que se me ocurre para hacer que esta acción sea fácil de probar es hacer que el dato que necesito de la request, le llegue como parámetro a la acción:</description>
     </item>
     
   </channel>

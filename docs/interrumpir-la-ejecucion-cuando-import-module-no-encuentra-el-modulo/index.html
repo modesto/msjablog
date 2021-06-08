@@ -16,7 +16,7 @@
 
 <meta name="twitter:title" content="[PowerShell] Interrumpir la ejecución cuando Import-Module no encuentra el módulo"/>
 <meta name="twitter:description" content="Esto es un truco sencillo y muy básico de PowerShell, pero puede desconcertar bastante a quien está empezando o utiliza PowerShell de forma esporádica.
-En PowerShell existen los llamados &#8220;terminating errors&#8221; y los &#8220;non-terminating errors&#8221;. Como su nombre permite intuir, unos finalizan la ejecución del script en curso cuando se producen y los otros no, limitándose a informar del error. Hasta aquí he descrito el comportamiento por defecto. Que un error sea del tipo &#8220;terminating&#8221; o del tipo &#8220;non-terminating&#8221;, no es algo que nosotros podamos controlar, y eso puede dar algún que otro quebradero de cabeza en algunas ocasiones."/>
+En PowerShell existen los llamados “terminating errors” y los “non-terminating errors”. Como su nombre permite intuir, unos finalizan la ejecución del script en curso cuando se producen y los otros no, limitándose a informar del error. Hasta aquí he descrito el comportamiento por defecto. Que un error sea del tipo “terminating” o del tipo “non-terminating”, no es algo que nosotros podamos controlar, y eso puede dar algún que otro quebradero de cabeza en algunas ocasiones."/>
 
     <meta name="twitter:site" content="@msanjuan"/>
 
@@ -57,7 +57,7 @@ En PowerShell existen los llamados &#8220;terminating errors&#8221; y los &#8220
       
       
     
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.81.0" />
 
     <link rel="canonical" href="http://www.modestosanjuan.com/interrumpir-la-ejecucion-cuando-import-module-no-encuentra-el-modulo/" />
 
@@ -141,38 +141,25 @@ En PowerShell existen los llamados &#8220;terminating errors&#8221; y los &#8220
 
     <section class="post-content">
       <p>Esto es un truco sencillo y muy básico de PowerShell, pero puede desconcertar bastante a quien está empezando o utiliza PowerShell de forma esporádica.</p>
-
-<p>En PowerShell existen los llamados &#8220;terminating errors&#8221; y los &#8220;non-terminating errors&#8221;. Como su nombre permite intuir, unos finalizan la ejecución del script en curso cuando se producen y los otros no, limitándose a informar del error. Hasta aquí he descrito el comportamiento por defecto. Que un error sea del tipo &#8220;terminating&#8221; o del tipo &#8220;non-terminating&#8221;, no es algo que nosotros podamos controlar, y eso puede dar algún que otro quebradero de cabeza en algunas ocasiones.</p>
-
+<p>En PowerShell existen los llamados “terminating errors” y los “non-terminating errors”. Como su nombre permite intuir, unos finalizan la ejecución del script en curso cuando se producen y los otros no, limitándose a informar del error. Hasta aquí he descrito el comportamiento por defecto. Que un error sea del tipo “terminating” o del tipo “non-terminating”, no es algo que nosotros podamos controlar, y eso puede dar algún que otro quebradero de cabeza en algunas ocasiones.</p>
 <p>Hoy estaba trabajando con un script en el que hacía un Import-Module y luego ejecutaba otra serie de scripts, algunos relacionados con el módulo que trataba de importar y otros no. Por simplificar, imaginemos que tenía un código como este:</p>
-
 <pre class="lang:ps decode:true">Import-Module NombreDeModuloQueNoExiste
 Write-Host "Aquí ejecutaría código NO relacionado con el módulo"
 Write-Host "Aquí ejecutaría código relacionado con el módulo"</pre>
-
 <p>En este caso el módulo que estaba intentando importar resulta que no existía en mi máquina, por lo que al intentar hacer un Import-Module, obtenía un error que me indicaba que el módulo no se encontraba. El problema es que el comportamiento de PowerShell no era exáctamente como yo quería:</p>
-
 <p><a href="/wp-content/uploads/2015/06/Error-Import-Module.png" target="_blank"><img class="alignnone wp-image-109 size-full" src="/wp-content/uploads/2015/06/Error-Import-Module.png" alt="Error-Import-Module" width="997" height="276" srcset="/wp-content/uploads/2015/06/Error-Import-Module.png 997w, /wp-content/uploads/2015/06/Error-Import-Module-300x83.png 300w" sizes="(max-width: 997px) 100vw, 997px" /></a></p>
-
-<p>&nbsp;</p>
-
+<p> </p>
 <p>Como se puede ver, el resultado era que me salía el error, pero además se estaba ejecutando las dos líneas de código posteriores, y ese no era el comportamiento que yo quería. Como no estoy todo el día con PowerShell, a veces me pasan este tipo de cosas y me desorientan un poco, pero en este caso me acordaba de este tipo de problemas y lo pude atajar rápido.</p>
-
-<p>Resulta que PowerShell tiene una variable llamada <strong>$ErrorActionPreference</strong> que determina el comportamiento a seguir en caso de errores &#8220;non-terminating&#8221;. El valor por defecto es <strong>Continue</strong> así que es algo así como el <strong>On Error Resume Next</strong> de Visual Basic.</p>
-
+<p>Resulta que PowerShell tiene una variable llamada <strong>$ErrorActionPreference</strong> que determina el comportamiento a seguir en caso de errores “non-terminating”. El valor por defecto es <strong>Continue</strong> así que es algo así como el <strong>On Error Resume Next</strong> de Visual Basic.</p>
 <p>Los valores posibles para esta variable son Stop, Inquire, Continue, Suspend y SilentlyContinue, pero yo normalmente únicamente utilizo los valores <strong>Stop</strong> y <strong>Continue</strong>.</p>
-
 <p>De este modo, estableciendo la variable antes de ejecutar el <strong>Import-Module,</strong> es posible obtener el comportamiento deseado.</p>
-
 <pre class="lang:ps decode:true">$ErrorActionPreference = "Stop"
 Import-Module NombreDeModuloQueNoExiste
 Write-Host "Este código nunca llega a llamarse"
 
 </pre>
-
 <p>Personalmente soy partidario de poner el valor a <strong>Stop</strong> al principio de los scripts, junto con el <strong>Set-StrictMode</strong> y luego cambiar este valor puntualmente si así lo necesito en algún caso.</p>
-
-<p>&nbsp;</p>
+<p> </p>
 
     </section>
 

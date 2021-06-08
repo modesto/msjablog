@@ -16,7 +16,7 @@
 
 <meta name="twitter:title" content="[PowerShell] Ojo que no hay un único $null"/>
 <meta name="twitter:description" content="Este es un ejemplo curioso de esos que me ha vuelto loco hasta que me he dado cuenta. Si parto de este código:
-$item1 = Get-ChildItem | Where-Object {$_ -eq &#34;no encuentras esto ni de coña&#34;} &#34;item1 es nulo? {0}&#34; -f ($null -eq $item1) $item2 = $null &#34;item2 es nulo? {0}&#34; -f ($null -eq $item2) Al ejecutarlo el resultado es &#8220;True&#8221; en ambos casos. Vamos, que tanto item1 como item2 son $null."/>
+$item1 = Get-ChildItem | Where-Object {$_ -eq &#34;no encuentras esto ni de coña&#34;}&#34;item1 es nulo? {0}&#34; -f ($null -eq $item1)$item2 = $null&#34;item2 es nulo? {0}&#34; -f ($null -eq $item2)Al ejecutarlo el resultado es “True” en ambos casos. Vamos, que tanto item1 como item2 son $null."/>
 
     <meta name="twitter:site" content="@msanjuan"/>
 
@@ -57,7 +57,7 @@ $item1 = Get-ChildItem | Where-Object {$_ -eq &#34;no encuentras esto ni de coñ
       
       
     
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.81.0" />
 
     <link rel="canonical" href="http://www.modestosanjuan.com/powershell-ojo-que-no-hay-un-unico-null/" />
 
@@ -141,28 +141,20 @@ $item1 = Get-ChildItem | Where-Object {$_ -eq &#34;no encuentras esto ni de coñ
 
     <section class="post-content">
       <p>Este es un ejemplo curioso de esos que me ha vuelto loco hasta que me he dado cuenta. Si parto de este código:</p>
-
 <pre class="lang:ps decode:true">$item1 = Get-ChildItem | Where-Object {$_ -eq "no encuentras esto ni de coña"}
 "item1 es nulo? {0}" -f ($null -eq $item1)
 $item2 = $null
 "item2 es nulo? {0}" -f ($null -eq $item2)</pre>
-
-<p>Al ejecutarlo el resultado es &#8220;True&#8221; en ambos casos. Vamos, que tanto <em>item1</em> como <em>item2</em> son <em>$null</em>. Hasta aquí todo bien. Ahora voy a ejecutar este código después del anterior:</p>
-
+<p>Al ejecutarlo el resultado es “True” en ambos casos. Vamos, que tanto <em>item1</em> como <em>item2</em> son <em>$null</em>. Hasta aquí todo bien. Ahora voy a ejecutar este código después del anterior:</p>
 <pre class="lang:default decode:true">$lista1 = @($item1)
 "La lista 1 tiene una longitud de {0}" -f $lista1.Length
 $lista2 = @($item2)
 "La lista 2 tiene una longitud de {0}" -f $lista2.Length</pre>
-
-<p>En principio el resultado debería ser el mismo en ambos casos&#8230; o no. Al ejecutar este código el resultado será 0 para <em>lista1</em> y 1 para <em>lista2</em>. Toma ya!</p>
-
-<p>En caso de que sea necesario distinguir de qué tipo de _$null_ se trata en cada caso, este código puede servir para salir de dudas:</p>
-
+<p>En principio el resultado debería ser el mismo en ambos casos… o no. Al ejecutar este código el resultado será 0 para <em>lista1</em> y 1 para <em>lista2</em>. Toma ya!</p>
+<p>En caso de que sea necesario distinguir de qué tipo de <em>$null</em> se trata en cada caso, este código puede servir para salir de dudas:</p>
 <pre class="lang:ps decode:true">$item1.PSObject -eq $null
 $item2.PSObject -eq $null</pre>
-
-<p>En este caso, para _item1_ obtendremos un <em>false</em> y para <em>item2</em> un <em>true</em>.</p>
-
+<p>En este caso, para <em>item1</em> obtendremos un <em>false</em> y para <em>item2</em> un <em>true</em>.</p>
 <p>En fin, aquí queda otro <a href="https://www.destroyallsoftware.com/talks/wat">WAT</a> de PowerShell de esos que hacen que la vida sea más divertida 😉</p>
 
     </section>

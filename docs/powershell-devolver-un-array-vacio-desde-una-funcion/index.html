@@ -16,7 +16,7 @@
 
 <meta name="twitter:title" content="[PowerShell] Devolver un array vacío desde una función"/>
 <meta name="twitter:description" content="Esto es un truco rápido muy chorra pero que puede volver loco a más de un desarrollador que no esté acostumbrado a las peculiaridades de PowerShell. Tomando este código como ejemplo:
-function Get-EmptyArray { [System.Collections.ArrayList]$anyArray = @() return $anyArray } Write-Host (Get-EmptyArray).GetType() En principio podría resultar bastante evidente que el resultado de la ejecución será ver por pantalla la cadena &#8220;System.Collections.Arraylist&#8221;. Pues no, el resultado será un error como una casa del estilo de &#8220;You cannot call a method on a null-valued expression&#8221;"/>
+function Get-EmptyArray {[System.Collections.ArrayList]$anyArray = @()return $anyArray }Write-Host (Get-EmptyArray).GetType()En principio podría resultar bastante evidente que el resultado de la ejecución será ver por pantalla la cadena “System.Collections.Arraylist”. Pues no, el resultado será un error como una casa del estilo de “You cannot call a method on a null-valued expression”"/>
 
     <meta name="twitter:site" content="@msanjuan"/>
 
@@ -57,7 +57,7 @@ function Get-EmptyArray { [System.Collections.ArrayList]$anyArray = @() return $
       
       
     
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.81.0" />
 
     <link rel="canonical" href="http://www.modestosanjuan.com/powershell-devolver-un-array-vacio-desde-una-funcion/" />
 
@@ -141,26 +141,21 @@ function Get-EmptyArray { [System.Collections.ArrayList]$anyArray = @() return $
 
     <section class="post-content">
       <p>Esto es un truco rápido muy chorra pero que puede volver loco a más de un desarrollador que no esté acostumbrado a las peculiaridades de PowerShell. Tomando este código como ejemplo:</p>
-
 <pre class="lang:ps decode:true">function Get-EmptyArray {
  [System.Collections.ArrayList]$anyArray = @()
  return $anyArray 
 }
 
 Write-Host (Get-EmptyArray).GetType()</pre>
-
-<p>En principio podría resultar bastante evidente que el resultado de la ejecución será ver por pantalla la cadena &#8220;System.Collections.Arraylist&#8221;. Pues no, el resultado será un error como una casa del estilo de &#8220;<span style="color: #ff0000;">You cannot call a method on a null-valued expression</span>&#8221;</p>
-
+<p>En principio podría resultar bastante evidente que el resultado de la ejecución será ver por pantalla la cadena “System.Collections.Arraylist”. Pues no, el resultado será un error como una casa del estilo de “<span style="color: #ff0000;">You cannot call a method on a null-valued expression</span>”</p>
 <p>La explicación de este funcionamiento tiene que ver con la forma que tiene PowerShell de gestionar qué se retorna en una función y creo que da para otro minipost. Como el objetivo en este caso es saber la solución, el truco es sencillo:</p>
-
 <pre class="lang:ps decode:true ">function Get-EmptyArray {
  [System.Collections.ArrayList]$anyArray = @()
  return ,$anyArray 
 }
 
 Write-Host (Get-EmptyArray).GetType()</pre>
-
-<p>Por si la diferencia no se aprecia, el truco es poner una coma delante de la variable _$anyArray_ cuando se hace el return. Fácil, sencillo y feo, pero funciona 😉</p>
+<p>Por si la diferencia no se aprecia, el truco es poner una coma delante de la variable <em>$anyArray</em> cuando se hace el return. Fácil, sencillo y feo, pero funciona 😉</p>
 
     </section>
 

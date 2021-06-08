@@ -53,7 +53,7 @@
         <link href="http://www.modestosanjuan.com/categories/.net/index.xml" rel="alternate" type="application/rss+xml" title=".Net &middot; Blog de Modesto San Juan" />
       
     
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.81.0" />
 
     <link rel="canonical" href="http://www.modestosanjuan.com/categories/.net/" />
 
@@ -143,7 +143,7 @@
     </header>
     <section class="post-excerpt">
         <p>A un desarrollador que practique TDD, el flujo rojo, verde, refactor no le resulta extraño. En este post quiero romper una lanza a favor del rojo, ese gran incomprendido. Para ilustrarlo voy a recurrir a un ejemplo muy sencillo:
-[TestMethod] public void sample_test() { var messagingService = GivenAMessagingServiceStub(); var unreadMessages = messagingService.UnreadMessages(); unreadMessages.Count.Should().Be(1) } Este ejemplo esta simplificado, pero me permite mostrar un test con una estructura de tipo given/when/then o AAA (según gustos). <a class="read-more" href="/la-importancia-del-rojo-en-tdd/">&raquo;</a></p>
+[TestMethod]public void sample_test(){var messagingService = GivenAMessagingServiceStub();var unreadMessages = messagingService.UnreadMessages();unreadMessages.Count.Should().Be(1)}Este ejemplo esta simplificado, pero me permite mostrar un test con una estructura de tipo given/when/then o AAA (según gustos). <a class="read-more" href="/la-importancia-del-rojo-en-tdd/">&raquo;</a></p>
     </section>
     <footer class="post-meta">
         
@@ -173,7 +173,7 @@
     </header>
     <section class="post-excerpt">
         <p>Cuando necesito acceder a información de la Request desde una acción de un controlador en ASP.NET Web API, la primera tentación es acceder directamente al objeto request y buscar lo que necesito. El principal problema de hacer esto es que convierte en un infierno hacer cualquier tipo de prueba automatizada para esta acción. Por ejemplo:
-[HttpGet] [Route("doAnything")] public IHttpActionResult Get() { var referrer = request.Headers.Referrer var resul = ..... // DO ANY STUFF WITH THE REFERRER return result; } El mecanismo más sencillo que se me ocurre para hacer que esta acción sea fácil de probar es hacer que el dato que necesito de la request, le llegue como parámetro a la acción: <a class="read-more" href="/value-providers-y-parameter-binding-en-asp-net-web-api/">&raquo;</a></p>
+[HttpGet] [Route("doAnything")] public IHttpActionResult Get() { var referrer = request.Headers.Referrervar resul = .....// DO ANY STUFF WITH THE REFERRER return result; }El mecanismo más sencillo que se me ocurre para hacer que esta acción sea fácil de probar es hacer que el dato que necesito de la request, le llegue como parámetro a la acción: <a class="read-more" href="/value-providers-y-parameter-binding-en-asp-net-web-api/">&raquo;</a></p>
     </section>
     <footer class="post-meta">
         

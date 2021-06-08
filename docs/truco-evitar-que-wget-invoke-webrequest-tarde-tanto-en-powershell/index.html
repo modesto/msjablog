@@ -56,7 +56,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.81.0" />
 
     <link rel="canonical" href="http://www.modestosanjuan.com/truco-evitar-que-wget-invoke-webrequest-tarde-tanto-en-powershell/" />
 
@@ -140,15 +140,10 @@
 
     <section class="post-content">
       <p>Mientras estaba preparando unos scripts para automatizar el proceso de sideloading de una aplicación Windows 8.1, me encontré con un problema bastante tonto. Estaba descargando por HTTP el paquete de la aplicación desde una red local pero el comando wget de PowerShell tardaba demasiado. Tenía claro que no era problema de la red porque el archivo bajaba a buena velocidad por otros medios, pero siempre que usaba wget el comando tardaba demasiado tiempo. Una descarga de menos de 2 segundos se convertía en una descarga de más de 10.</p>
-
 <p>Después de dedicar un rato descubrí que el problema estaba en el indicador de progreso de descarga del paquete. Lo único que tenía que hacer era desactivarla y el rendimiento pasaba a ser el esperado. Para hacer esto únicamente es necesario añadir esta línea antes de la llamada al comando wget:</p>
-
 <pre class="lang:ps decode:true">$ProgressPreference='SilentlyContinue'</pre>
-
 <p>Si quisiera volver a mostrar el indicador de progreso para los siguientes comandos, únicamente tendría que volver a establecer su valor por defecto:</p>
-
 <pre class="lang:ps decode:true ">$progressPreference = 'Continue'</pre>
-
 <p>En fin, es una tontería que seguro que cualquiera con algo de callo con PowerShell conoce, pero mejor me lo apunto por aquí por si lo vuelvo a necesitar 😉</p>
 
     </section>

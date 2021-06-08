@@ -57,7 +57,7 @@ ETS tiene mucha potencia y no siempre es fácil obtener documentación sobre có
       
       
     
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.81.0" />
 
     <link rel="canonical" href="http://www.modestosanjuan.com/powershell-sacando-partido-a-la-conversion-de-tipos/" />
 
@@ -141,11 +141,8 @@ ETS tiene mucha potencia y no siempre es fácil obtener documentación sobre có
 
     <section class="post-content">
       <p>PowerShell ETS (Extended Type System) forma parte de las tripas de PowerShell y es la parte que permite que convivan tipos de .Net, COM, ADSI y WMI pero que a nosotros se nos muestren como objetos de PowerShell de primer orden.</p>
-
 <p>ETS tiene mucha potencia y no siempre es fácil obtener documentación sobre cómo hacer las cosas, pero en este post quiero dejarle a mi yo futuro un regalito para cuando necesite realizar conversión de tipos de .Net en PowerShell.</p>
-
 <p>El ejemplo es muy sencillo y me ha surgido en un contexto real y para explicarlo lo voy a simplificar todo lo que pueda. Imaginemos que tenemos un tipo personalizado tal que este:</p>
-
 <pre class="lang:ps decode:true">Add-Type -TypeDefinition @”
 using System;
 using System.Collections;
@@ -168,9 +165,7 @@ namespace Configuration
 }
 “@
 </pre>
-
 <p>Al sobreescribir el método <strong>ToString()</strong> del tipo, esto nos permite hacer cosas como esta:</p>
-
 <pre class="lang:ps decode:true">Function Write-AsString($folder) {
     "as string we get: {0}" -f $folder
 }
@@ -180,9 +175,7 @@ $configFolder.Path = "c:\anyPath\"
 
 Write-AsString $configFolder
 </pre>
-
 <p>Como la función <strong>Write-AsString</strong> no especifica el tipo para <strong>$folder</strong>, al llamar a la función con el parámetro de tipo <strong>ConfigFolder</strong>, se está llamando al método <strong>ToString()</strong> para convertir el valor automáticamente. El tema es que si queremos sacarle un poco más de partido y especificar un tipo que no sea string a <strong>$folder</strong>, lo que obtendremos será un error. Por ejemplo:</p>
-
 <pre class="lang:ps decode:true">Function Write-FullName([System.IO.DirectoryInfo]$folder) {
     "BaseName is: {0}" -f $folder.BaseName
 }
@@ -192,9 +185,7 @@ $configFolder.Path = "c:\anyPath\"
 
 Write-FullName $configFolder
 </pre>
-
 <p>Al ejecutar este código nos dará un error de conversión de tipos porque PowerShell no tiene ni la menor idea de cómo convertir un ConfigFolder en un System.IO.DirectoryInfo. Aquí es donde ETS viene al rescate.  Además de añadir el tipo ConfigFolder, es necesario añadir un tipo que realice la conversión automáticamente:</p>
-
 <pre class="lang:ps decode:true ">Add-Type -TypeDefinition @”
 using System;
 using System.Collections;
@@ -238,11 +229,8 @@ namespace Configuration
     }
 }
 “@</pre>
-
 <p>Por supuesto, este tipo es un ejemplo y podría dejarse un código mucho más limpio, pero cualquiera que sepa lo que es experimentar con el <strong>Add-Type</strong> de PowerShell entenderá que porqué prefiero no dedicarle mucho tiempo a limpiarlo y a irlo probando ;).</p>
-
 <p>Después de añadir este tipo, es necesario decirle a PowerShell que lo tiene que usar. Para esto es necesario crear un archivo (por ejemplo: ConfigFolder.Converter.ps1xml) que sería así:</p>
-
 <pre class="lang:xhtml decode:true ">&lt;Types&gt;
   &lt;Type&gt;
     &lt;Name&gt;Configuration.ConfigFolder&lt;/Name&gt;
@@ -251,16 +239,11 @@ namespace Configuration
     &lt;/TypeConverter&gt;
   &lt;/Type&gt;
 &lt;/Types&gt;</pre>
-
 <p>Y luego ejecutar el comando:</p>
-
 <pre class="lang:ps decode:true">Update-TypeData .\ConfigFolder.Converter.ps1xml</pre>
-
 <p>Una vez hecho esto, el ejemplo que antes fallaba ahora funcionará perfectamente, permitiendo conversiones automáticas del tipo <strong>ConfigFolder</strong> a <strong>System.IO.DirectoryInfo</strong>.</p>
-
 <p>Esto es sólo un ejemplo de lo que PowerShell ETS tiene para ofrecernos. Además de custom converters, también permite extender clases existentes, añadir alias y algunas cosillas curiosas.</p>
-
-<p>&nbsp;</p>
+<p> </p>
 
     </section>
 

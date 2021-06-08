@@ -6,11 +6,7 @@
     <description>Recent content in PowerShell on Blog de Modesto San Juan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <lastBuildDate>Wed, 25 Nov 2015 09:16:48 +0000</lastBuildDate>
-    
-	<atom:link href="http://www.modestosanjuan.com/categories/powershell/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 25 Nov 2015 09:16:48 +0000</lastBuildDate><atom:link href="http://www.modestosanjuan.com/categories/powershell/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[PowerShell] Pasar de SecureString a String</title>
       <link>http://www.modestosanjuan.com/powershell-pasar-de-securestring-a-string/</link>
@@ -47,7 +43,7 @@ En ocasiones me olvido de que PowerShell tiene a su disposición toda la potenci
       
       <guid>http://www.modestosanjuan.com/powershell-variables-automaticas/</guid>
       <description>PowerShell dispone de una serie de variables gestionadas de forma automática que permiten obtener información relacionada con la ejecución de código actual. Su propósito y utilidad es variado, siendo algunas de uso muy frecuente y otras de uso marginal. En cualquier caso, no está mal conocer unas cuantas y que suene dentro de la cabeza que hay otras que tal vez sea útiles en el futuro.
-Tanto la documentación oficial como el comando _&amp;#8220;get-help about_automatic_variables&amp;#8220;_ contienen el listado completo, pero me gustaría enumerar por aquí algunas que me resultan interesantes o que tienen truco.</description>
+Tanto la documentación oficial como el comando “get-help about_automatic_variables“ contienen el listado completo, pero me gustaría enumerar por aquí algunas que me resultan interesantes o que tienen truco.</description>
     </item>
     
     <item>
@@ -57,7 +53,7 @@ Tanto la documentación oficial como el comando _&amp;#8220;get-help about_aut
       
       <guid>http://www.modestosanjuan.com/powershell-ojo-que-no-hay-un-unico-null/</guid>
       <description>Este es un ejemplo curioso de esos que me ha vuelto loco hasta que me he dado cuenta. Si parto de este código:
-$item1 = Get-ChildItem | Where-Object {$_ -eq &#34;no encuentras esto ni de coña&#34;} &#34;item1 es nulo? {0}&#34; -f ($null -eq $item1) $item2 = $null &#34;item2 es nulo? {0}&#34; -f ($null -eq $item2) Al ejecutarlo el resultado es &amp;#8220;True&amp;#8221; en ambos casos. Vamos, que tanto item1 como item2 son $null.</description>
+$item1 = Get-ChildItem | Where-Object {$_ -eq &#34;no encuentras esto ni de coña&#34;}&#34;item1 es nulo? {0}&#34; -f ($null -eq $item1)$item2 = $null&#34;item2 es nulo? {0}&#34; -f ($null -eq $item2)Al ejecutarlo el resultado es “True” en ambos casos. Vamos, que tanto item1 como item2 son $null.</description>
     </item>
     
     <item>
@@ -66,7 +62,7 @@ $item1 = Get-ChildItem | Where-Object {$_ -eq &#34;no encuentras esto ni de coñ
       <pubDate>Thu, 20 Aug 2015 22:14:23 +0000</pubDate>
       
       <guid>http://www.modestosanjuan.com/powershell-saber-si-una-variable-ya-ha-sido-definida/</guid>
-      <description>En ocasiones tengo la necesidad de saber si una variable ha sido previamente definida. Esto es especialmente importante porque utilizo siempre el &amp;#8220;Set-StrictMode -Version 2&amp;#8221; y, si necesito recurrir a variables de otros scopes, cuando intento acceder a una variable no definida obtengo un error. Aunque generalmente intento no recurrir a otros scopes, especialmente el $global, en ocasiones los necesito, especialmente el $script.
+      <description>En ocasiones tengo la necesidad de saber si una variable ha sido previamente definida. Esto es especialmente importante porque utilizo siempre el “Set-StrictMode -Version 2” y, si necesito recurrir a variables de otros scopes, cuando intento acceder a una variable no definida obtengo un error. Aunque generalmente intento no recurrir a otros scopes, especialmente el $global, en ocasiones los necesito, especialmente el $script.
 Un ejemplo podría ser querer verificar si una variable que contiene un array ha sido inicializada o no, para poder añadirle ítems.</description>
     </item>
     
@@ -77,7 +73,7 @@ Un ejemplo podría ser querer verificar si una variable que contiene un array h
       
       <guid>http://www.modestosanjuan.com/powershell-devolver-un-array-vacio-desde-una-funcion/</guid>
       <description>Esto es un truco rápido muy chorra pero que puede volver loco a más de un desarrollador que no esté acostumbrado a las peculiaridades de PowerShell. Tomando este código como ejemplo:
-function Get-EmptyArray { [System.Collections.ArrayList]$anyArray = @() return $anyArray } Write-Host (Get-EmptyArray).GetType() En principio podría resultar bastante evidente que el resultado de la ejecución será ver por pantalla la cadena &amp;#8220;System.Collections.Arraylist&amp;#8221;. Pues no, el resultado será un error como una casa del estilo de &amp;#8220;You cannot call a method on a null-valued expression&amp;#8221;</description>
+function Get-EmptyArray {[System.Collections.ArrayList]$anyArray = @()return $anyArray }Write-Host (Get-EmptyArray).GetType()En principio podría resultar bastante evidente que el resultado de la ejecución será ver por pantalla la cadena “System.Collections.Arraylist”. Pues no, el resultado será un error como una casa del estilo de “You cannot call a method on a null-valued expression”</description>
     </item>
     
     <item>
@@ -88,7 +84,7 @@ function Get-EmptyArray { [System.Collections.ArrayList]$anyArray = @() return $
       <guid>http://www.modestosanjuan.com/powershell-las-ventajas-de-usar-parametros-y-variables-tipados/</guid>
       <description>Cuanto más uso PowerShell más convencido estoy de lo importante que es tipar las variables y los parámetros de las funciones. Debido a la forma en que trabaja PowerShell, especificar los tipos me ayuda a evitar comportamientos indeseados.
 Por ejemplo, dado este script:
-Set-StrictMode -Version 2 $items = Get-ChildItem if ($items) { $items.Count }  Si lo ejecuto estando en un directorio con varios archivos o carpetas, mostrará en pantalla el número de items.</description>
+Set-StrictMode -Version 2$items = Get-ChildItemif ($items) {$items.Count}Si lo ejecuto estando en un directorio con varios archivos o carpetas, mostrará en pantalla el número de items.</description>
     </item>
     
     <item>
@@ -97,9 +93,9 @@ Set-StrictMode -Version 2 $items = Get-ChildItem if ($items) { $items.Count }  S
       <pubDate>Mon, 17 Aug 2015 22:37:14 +0000</pubDate>
       
       <guid>http://www.modestosanjuan.com/powershell-switch-parameters/</guid>
-      <description>En PowerShell es muy común usar parámetros de tipo switch. La peculiaridad de estos parámetros es que al usarlos, se especifica el nombre del parámetro pero no se proporciona ningún valor, ya que se asume que al usarlo su valor será $true y $false si no se especifica. Ejemplos típicos son el uso de &amp;#8211;Recurse o -Force. 
+      <description>En PowerShell es muy común usar parámetros de tipo switch. La peculiaridad de estos parámetros es que al usarlos, se especifica el nombre del parámetro pero no se proporciona ningún valor, ya que se asume que al usarlo su valor será $true y $false si no se especifica. Ejemplos típicos son el uso de –_Recurse o -Force. _
 Este sería un ejemplo de con este tipo de parámetros:
-Function Do-Something([Switch]$Recurse) { Write-Host $Recurse } Do-Something -Recurse Do-Something  Si ejecuto este script, veré por pantalla $True y $False, como podría esperar.</description>
+Function Do-Something([Switch]$Recurse) {Write-Host $Recurse}Do-Something -RecurseDo-SomethingSi ejecuto este script, veré por pantalla $True y $False, como podría esperar.</description>
     </item>
     
     <item>
@@ -118,7 +114,7 @@ Function Do-Something([Switch]$Recurse) { Write-Host $Recurse } Do-Something -Re
       
       <guid>http://www.modestosanjuan.com/powershell-crear-el-fichero-de-manifiesto-para-muchos-modulos-a-la-vez/</guid>
       <description>Hoy he tenido que crear de golpe el manifest a varios módulos. Teníamos más de 10 módulos (.psm1), cada uno en su propia carpeta y necesitaba añadirles el manifest para poder definir la empresa de cada módulo. Gracias al pipeline de PowerShell, no he tenido que esforzarme mucho para conseguirlo:
-ls *.psm1 -Recurse | ForEach-Object { $manifestFileName = $_.BaseName + &#34;.psd1&#34; $manifestPath = Join-Path $_.Directory $manifestFileName $companyConstant = &#34;AnyCompany&#34; New-ModuleManifest -Path $manifestPath -RootModule $_.</description>
+ls *.psm1 -Recurse | ForEach-Object { $manifestFileName = $_.BaseName + &#34;.psd1&#34;$manifestPath = Join-Path $_.Directory $manifestFileName$companyConstant = &#34;AnyCompany&#34;New-ModuleManifest -Path $manifestPath -RootModule $_.</description>
     </item>
     
     <item>
@@ -127,7 +123,8 @@ ls *.psm1 -Recurse | ForEach-Object { $manifestFileName = $_.BaseName + &#34;.ps
       <pubDate>Mon, 03 Aug 2015 23:50:39 +0000</pubDate>
       
       <guid>http://www.modestosanjuan.com/powershell-la-importancia-del-set-strictmode/</guid>
-      <description>Cuando empecé a programar scripts en PowerShell, cometía muchísimos fallos fruto de mi intoxicación con otros lenguajes, especialmente C#, con el que trabajo habitualmente. Después de un tiempo, me di cuenta que PowerShell tiene muchas más similitudes con JavaScript que con C# ya que es un lenguaje interpretado y de tipado débil. Y un tiempo después, aprendí que podía programar en PowerShell de una manera más próxima a TypeScript.</description>
+      <description>Cuando empecé a programar scripts en PowerShell, cometía muchísimos fallos fruto de mi intoxicación con otros lenguajes, especialmente C#, con el que trabajo habitualmente. Después de un tiempo, me di cuenta que PowerShell tiene muchas más similitudes con JavaScript que con C# ya que es un lenguaje interpretado y de tipado débil. Y un tiempo después, aprendí que podía programar en PowerShell de una manera más próxima a TypeScript.
+Lo explico de esta forma porque a mi cerebro le resulta más sencillo recurrir a este paralelismo.</description>
     </item>
     
     <item>

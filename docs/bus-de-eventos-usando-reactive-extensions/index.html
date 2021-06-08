@@ -56,7 +56,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.81.0" />
 
     <link rel="canonical" href="http://www.modestosanjuan.com/bus-de-eventos-usando-reactive-extensions/" />
 
@@ -140,7 +140,6 @@
 
     <section class="post-content">
       <p>Utilizar un bus de eventos dentro de una aplicación es algo bastante común. Un ejemplo muy sencillo podría ser desacoplar la lógica de envío de notificaciones al usuario en WPF desde los ViewModels sin necesidad de recurrir a la inyección de dependencias en el ViewModel. Aunque hasta ahora había recurrido siempre a programar mi propio bus de eventos, utilizar <a href="https://github.com/Reactive-Extensions/Rx.NET" target="_blank">Reactive Extensions</a> me ha resultado muy interesante, útil y sencillo. Este sería un ejemplo de bus de eventos utilizando RX:</p>
-
 <pre class="lang:c# decode:true">public static class ReactiveEventBus {
     private static readonly Subject&lt;object&gt; messageSubject = new Subject&lt;object&gt;();
 
@@ -150,26 +149,17 @@
 
     public static IObservable&lt;T&gt; AsObservable&lt;T&gt;() { return messageSubject.OfType&lt;T&gt;(); }
 }</pre>
-
 <p>Este código lo encontré <a href="http://rogeralsing.com/2010/01/23/rx-framework-building-a-message-bus/" target="_blank">aquí</a>.</p>
-
 <p>Lo habitual en un bus de eventos es tener un mecanismo para enviar eventos y otro para suscribirnos a ellos. En este caso, en lugar de habilitar la suscripción, lo que me proporciona es la posibilidad de obtener un <strong>IObservable<T></strong>, siendo <strong>T</strong> el tipo del mensaje que quiero observar.</p>
-
 <p>Aplicado al ejemplo de las notificaciones, en la MainWindow (o donde sea) podría añadir este código:</p>
-
 <pre class="lang:c# decode:true">var subscription = ReactiveEventBus.AsObservable&lt;GlobalMessage&gt;().Subscribe(message =&gt; MessageBox.Show(message.Message));
 Closed += (sender, args) =&gt; subscription.Dispose();
 </pre>
-
 <p>Y eso me permitiría poder enviar mensajes desde cualquier ViewModel (o cualquier otro sitio) con este código:</p>
-
 <pre class="lang:c# decode:true">ReactiveEventBus.Send(new GlobalMessage("Hola!"));
 </pre>
-
 <p>Es muy importante tener en cuenta la llamada al <strong>Dispose()</strong> de la suscripción para evitar problemas de liberación de recursos.</p>
-
 <p>Lo interesante de que el bus de eventos me de un <strong>IObservable<T></strong> es que, combinado con RX puedo hacer cosas más complejas de una forma muy sencilla, como:</p>
-
 <pre class="lang:c# decode:true ">ReactiveEventBus.AsObservable&lt;ScopedEvent&gt;()
     .Where(evt =&gt; evt.Scope == "Scope1")
     .Subscribe(evt =&gt; PUT YOUR CODE FOR Scope1 HERE);
@@ -178,9 +168,7 @@ ReactiveEventBus.AsObservable&lt;ScopedEvent&gt;()
     .Where(evt =&gt; evt.Scope == "Scope2")
     .Subscribe(evt =&gt; PUT YOUR CODE FOR Scope2 HERE);
 </pre>
-
 <p>Respecto a si tiene sentido el uso de una propiedad para determinar el scope o sería más adecuado utilizar un objeto de distinto tipo, la respuesta es la de siempre: <strong>depende</strong> 😉</p>
-
 <p>Algunos casos en los que me parece interesante son el envío un evento destinado únicamente a los UserControl que están mostrando una entidad concreta en un interfaz MDI o hacer que el scope de un evento sea una ventana concreta.</p>
 
     </section>

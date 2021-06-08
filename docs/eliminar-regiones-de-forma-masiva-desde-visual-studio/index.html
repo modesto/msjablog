@@ -56,7 +56,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.81.0" />
 
     <link rel="canonical" href="http://www.modestosanjuan.com/eliminar-regiones-de-forma-masiva-desde-visual-studio/" />
 
@@ -140,17 +140,11 @@
 
     <section class="post-content">
       <p>No voy a entrar en el debate de si el uso de #regions es una buena práctica o no, pero es algo que no utilizo y que suelo interpretar como un mal olor cuando me lo encuentro en el código. Me he animado a escribir este pequeño apune porque recientemente me he encontrado con la necesidad de eliminar de un proyecto casi 25.000 regiones (si, veinticinco mil) y quiero tener esto a mano para el futuro.</p>
-
 <p>El truco es muy sencillo, necesitamos recurrir a la funcionalidad de buscar y reemplazar de Visual Studio y marcar el check para que utilice expresiones regulares en la búsqueda.</p>
-
 <p><a href="/wp-content/uploads/2015/06/search-replace-vs.png"><img class="alignnone size-full wp-image-104" src="/wp-content/uploads/2015/06/search-replace-vs.png" alt="Buscar y reemplazar" width="385" height="504" srcset="/wp-content/uploads/2015/06/search-replace-vs.png 385w, /wp-content/uploads/2015/06/search-replace-vs-229x300.png 229w" sizes="(max-width: 385px) 100vw, 385px" /></a></p>
-
-<p>&nbsp;</p>
-
+<p> </p>
 <p>Una vez hecho esto, debemos realizar dos pasos, el primero para los #region y el segundo para los #endregion. Estas son las dos expresiones regulares que debemos utilizar si el código está escrito el C#:</p>
-
-<p>&nbsp;</p>
-
+<p> </p>
 <pre class="lang:default decode:true">\#region .*\n
 
 Si es C#
@@ -161,8 +155,7 @@ Si es VB.Net
 
 
 </pre>
-
-<p>Cuando lo hago especifico además que únicamente aplique este cambio para ficheros &#8220;.vb&#8221; o &#8220;.cs&#8221; según corresponda.</p>
+<p>Cuando lo hago especifico además que únicamente aplique este cambio para ficheros “.vb” o “.cs” según corresponda.</p>
 
     </section>
 

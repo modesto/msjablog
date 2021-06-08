@@ -57,7 +57,7 @@ Este post está destinado especialmente a todos aquellos desarrolladores que no 
       
       
     
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.81.0" />
 
     <link rel="canonical" href="http://www.modestosanjuan.com/desarrollador-pon-contenedores-en-tu-vida/" />
 
@@ -141,22 +141,14 @@ Este post está destinado especialmente a todos aquellos desarrolladores que no 
 
     <section class="post-content">
       <p>No, en este post no te voy a vender las virtudes de desplegar su aplicación sobre docker. Mucho se ha escrito sobre el tema y mucho se seguirá escribiendo. También se ha escrito de <a href="https://thehftguy.wordpress.com/2016/11/01/docker-in-production-an-history-of-failure/">lo malo que es</a> docker y de lo <a href="http://patrobinson.github.io/2016/11/05/docker-in-production/">no tan malo que es</a>.</p>
-
 <p>Este post está destinado especialmente a todos aquellos desarrolladores que no desplegáis vuestras aplicaciones con Docker. Porque los que ya usáis docker en el ciclo de entrega ya sabéis lo que voy a contar y además os parece obvio.</p>
-
 <p>Seguro que alguna vez has tenido que instalarte Redis, Mongo, Couchbase, MySql, ElasticSearch, RabbitMq o cualquier otro software similar para hacer una prueba puntual, por requisitos de un proyecto fugaz o para hacer un spike y decidir si finalmente introduces esa pieza o no en tu infraestructura.</p>
-
 <p>Lo normal antes de tener contenedores era instalar el software en cuestión en nuestra máquina o tal vez recurrir a una máquina virtual. Lo de la máquina virtual era práctica habitual cuando sabíamos que el software a instalar iba a causar estragos en nuestra máquina, ya fuera en forma de mierda repartida por todo el sistema o en forma de losa de 500kg para el rendimiento.</p>
-
-<p>Pues ahora tenemos una opción más, con las ventajas de aislamiento de las máquinas virtuales pero muchísimo más sencillo. Gracias al <a href="https://hub.docker.com/">hub de docker</a> tenemos al alcance de un &#8220;docker run&#8221; imágenes oficiales de todos los programas mencionados antes y muchos más. Incluso tenemos algunas no oficiales que pueden ser de mucha ayuda, como Oracle. Si, Oracle, porque quién narices quiere instalarse Oracle para hacer 4 pruebas pudiendo tirar de una imagen preconfigurada!.</p>
-
-<p>Si las imágenes están curradas (suelen estarlo), podrás incluso personalizar aspectos del funcionamiento de la aplicación. Por ejemplo, la <a href="https://hub.docker.com/_/redis/">imagen de Redis</a> está preparada para poder usar tu propio &#8220;redis.conf&#8221; o simplemente para usar redis con contraseña.</p>
-
+<p>Pues ahora tenemos una opción más, con las ventajas de aislamiento de las máquinas virtuales pero muchísimo más sencillo. Gracias al <a href="https://hub.docker.com/">hub de docker</a> tenemos al alcance de un “docker run” imágenes oficiales de todos los programas mencionados antes y muchos más. Incluso tenemos algunas no oficiales que pueden ser de mucha ayuda, como Oracle. Si, Oracle, porque quién narices quiere instalarse Oracle para hacer 4 pruebas pudiendo tirar de una imagen preconfigurada!.</p>
+<p>Si las imágenes están curradas (suelen estarlo), podrás incluso personalizar aspectos del funcionamiento de la aplicación. Por ejemplo, la <a href="https://hub.docker.com/_/redis/">imagen de Redis</a> está preparada para poder usar tu propio “redis.conf” o simplemente para usar redis con contraseña.</p>
 <p>Por cierto, aunque las imágenes del <a href="https://hub.docker.com/r/microsoft/">repositorio de Microsoft</a> aún no se consideran oficiales dentro del hub de Docker, son las oficiales de Microsoft, son de fiar 😉</p>
-
-<p>Tal como lo he mencionado parece que esto de usar Docker durante el desarrollo es algo que sólo vale para hacer pruebas. Pues no, puedes usarlo en tu día a día y así evitar contaminar tu sistema con instalaciones que luego tienes que actualizar cada cierto tiempo, acumulando cada vez más y más &#8220;restos&#8221;.</p>
-
-<p>Un último briconsejo: Si tienes la oportunidad, intenta usar las versiones tageadas como &#8220;alpine&#8221;. Evidentemente, las versiones &#8220;alpine&#8221; están basadas en <a href="https://alpinelinux.org/">Alpine Linux</a>, una distribución &#8220;security-oriented&#8221; que pesa sólo 5Mb. En la mayoría de los casos, teniendo en cuenta que lo que queremos probar es únicamente el software de la imagen que hemos bajado, será suficiente. Como referencia, la imagen &#8220;latest&#8221; de Redis ocupa 74Mb y la &#8220;alpine&#8221; ocupa sólo 8Mb.</p>
+<p>Tal como lo he mencionado parece que esto de usar Docker durante el desarrollo es algo que sólo vale para hacer pruebas. Pues no, puedes usarlo en tu día a día y así evitar contaminar tu sistema con instalaciones que luego tienes que actualizar cada cierto tiempo, acumulando cada vez más y más “restos”.</p>
+<p>Un último briconsejo: Si tienes la oportunidad, intenta usar las versiones tageadas como “alpine”. Evidentemente, las versiones “alpine” están basadas en <a href="https://alpinelinux.org/">Alpine Linux</a>, una distribución “security-oriented” que pesa sólo 5Mb. En la mayoría de los casos, teniendo en cuenta que lo que queremos probar es únicamente el software de la imagen que hemos bajado, será suficiente. Como referencia, la imagen “latest” de Redis ocupa 74Mb y la “alpine” ocupa sólo 8Mb.</p>
 
     </section>
 

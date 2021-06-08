@@ -57,7 +57,7 @@ Hay varios aspectos que son importantes a tener en cuenta al definir datos para 
       
       
     
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.81.0" />
 
     <link rel="canonical" href="http://www.modestosanjuan.com/presta-atencion-a-tus-datos-de-pruebas/" />
 
@@ -140,58 +140,37 @@ Hay varios aspectos que son importantes a tener en cuenta al definir datos para 
     </header>
 
     <section class="post-content">
-      
-
-<p>Los datos utilizados en las pruebas son muy importantes y, aunque el tema de este post parece muy obvio, no son pocas la veces que me he encontrado con problemas debido a este tema, así que creo que merece la pena dedicarle al menos unas líneas.</p>
-
+      <p>Los datos utilizados en las pruebas son muy importantes y, aunque el tema de este post parece muy obvio, no son pocas la veces que me he encontrado con problemas debido a este tema, así que creo que merece la pena dedicarle al menos unas líneas.</p>
 <p>Hay varios aspectos que son importantes a tener en cuenta al definir datos para nuestras pruebas automáticas. En este post me voy a centrar en tres errores que me encuentro con frecuencia:</p>
-
 <ul>
 <li>Datos diferentes con los mismos valores</li>
 <li>Exceso de datos innecesarios para el test</li>
 <li>Utilización de datos que dan lugar a confusión</li>
 </ul>
-
 <h2 id="datos-diferentes-con-los-mismos-valores">Datos diferentes con los mismos valores</h2>
-
 <p>Este problema se da especialmente cuando hablamos de datos numéricos, ya que son los más susceptibles de ser repetidos en los tests. Supongamos que queremos probar un método que nos permite dividir dos números y obtener el resultado (un ejemplo muy original, eh? ;P). Un claro ejemplo de una prueba con datos incorrectos sería este:</p>
-
 <pre class="lang:c# decode:true ">[Test]
 public void Divide() {
     var result = Divide(2, 2);
     result.Should().Be(1);
 }</pre>
-
 <p>Teniendo en cuenta los datos de este test, es perfectamente posible confundir el dividendo y el divisor porque al invertirlos el resultado es el mismo. No sólo se dificulta la lectura del test, es que una implementación podría darnos un falso verde.</p>
-
-<p>Evidentemente este ejemplo es muy básico, pero este tipo de errores se comete con bastante frecuencia cuando tenemos identificadores numéricos, valores para expresar cantidades o fechas. Es típico utilizar &#8220;1&#8221; como identificador numérico pero cuando tenemos que hacer una prueba con el usuario con id 1 de la empresa 1 es muy importante pararnos unos segundos y buscar datos que no puedan ser confundidos.</p>
-
+<p>Evidentemente este ejemplo es muy básico, pero este tipo de errores se comete con bastante frecuencia cuando tenemos identificadores numéricos, valores para expresar cantidades o fechas. Es típico utilizar “1” como identificador numérico pero cuando tenemos que hacer una prueba con el usuario con id 1 de la empresa 1 es muy importante pararnos unos segundos y buscar datos que no puedan ser confundidos.</p>
 <h2 id="exceso-de-datos-innecesarios-para-el-test">Exceso de datos innecesarios para el test</h2>
-
 <p>Otro de los problemas habituales es proporcionar más datos de los estrictamente necesarios para el objetivo de nuestro test. Si estamos escribiendo un tests para verificar el funcionamiento de un API que puede recibir varios parámetros pero algunos son obligatorios y otros opcionales, lo recomendable es que creemos varios tests para contemplar desde el escenario más básico a los escenarios más complejos. Supongamos que tenemos una calculadora de descuentos para clientes que necesita recibir como parámetro un cliente que tenga un identificador, país de procedencia y actividad para poder calcular su descuento correspondiente.</p>
-
 <pre class="lang:default decode:true">var client = GivenAClient (Id:1, Name:"Peter", Country:"Spain", Activity:"Development", Sector:"Software");
 discountCalculator.CalculateFor(client);</pre>
-
 <p>Leyendo este ejemplo parece que un cliente necesita todos los campos para poder calcular un descuento, pero estamos especificando el <em>sector</em> y resulta que era irrelevante, lo que pasa es que nuestro afán de reutilización nos ha jugado una mala pasada. Si asumimos que nuestros tests pueden servir como documentación para otros desarrolladores (o incluso para nuestro yo del futuro), cuanto más concisos seamos con esta información, mejor.</p>
-
 <h2 id="utilización-de-datos-que-dan-lugar-a-confusión">Utilización de datos que dan lugar a confusión</h2>
-
 <p>En otras ocasiones tenemos datos de presencia necesaria pero de valor irrelevante para la ejecución del test. Es importante que en el test quede claro que el valor nos da igual y que no influye en la ejecución del test. En este caso las consecuencias pueden ser similares al punto anterior ya que el test puede generar confusión al leerlo.</p>
-
 <pre class="lang:c# decode:true">var client = GivenAClient (Id:1, Name:"Peter", Country:"Spain", Activity:"Development");
 discountCalculator.CalculateFor(client);</pre>
-
 <p>Al leer este código podríamos pensar que el país y la actividad son relevantes para el cálculo del descuento únicamente porque estamos utilizando valores específicos. Pero, ¿qué pasa si recurrimos a valores genéricos excepto cuando realmente el valor es relevante?</p>
-
 <pre class="lang:c# decode:true">var client = GivenAClient (Id:Any.Id, Name:Any.Name, Country:"Spain", Activity:Any.Activity);
 discountCalculator.CalculateFor(client);</pre>
-
 <p>Con este pequeño cambio queda mucho más clara la información relevante para el test y tanto los compañeros como nuestro yo del futuro lo agradecerá mucho.</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
+<p> </p>
+<p> </p>
 
     </section>
 

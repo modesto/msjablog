@@ -53,7 +53,7 @@
         <link href="http://www.modestosanjuan.com/post/index.xml" rel="alternate" type="application/rss+xml" title="Posts &middot; Blog de Modesto San Juan" />
       
     
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.81.0" />
 
     <link rel="canonical" href="http://www.modestosanjuan.com/post/" />
 
@@ -143,11 +143,41 @@
 	   
 <article class="post post">
     <header class="post-header">
+        <h2 class="post-title"><a href="/powershell-distinguir-entre-rutas-relativas-y-absolutas/">[PowerShell] Distinguir entre rutas relativas y absolutas</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>Esta vez toca un truco muy simple pero muy útil cuando tengo un script que recibe una ruta como parámetro. Es muy típico no saber si la ruta es absoluta o relativa y muy frecuente querer hacer un Join-Path con la ruta actual (o cualquier otra) en caso de que la ruta sea relativa.
+En ocasiones me olvido de que PowerShell tiene a su disposición toda la potencia de .Net y en este caso es precisamente útil. <a class="read-more" href="/powershell-distinguir-entre-rutas-relativas-y-absolutas/">&raquo;</a></p>
+    </section>
+    <footer class="post-meta">
+        
+        
+            
+            
+        
+
+        
+            <img class="author-thumb" src="http://www.modestosanjuan.com/images/logo.jpg" alt="Author image" nopin="nopin" />
+        
+        
+            Modesto San Juan
+        
+        
+        <time class="post-date" datetime="2015-10-08T22:41:43Z">
+            8 Oct 2015
+        </time>
+    </footer>
+</article>
+
+	
+	   
+<article class="post post">
+    <header class="post-header">
         <h2 class="post-title"><a href="/powershell-variables-automaticas/">[PowerShell] Variables automáticas</a></h2>
     </header>
     <section class="post-excerpt">
         <p>PowerShell dispone de una serie de variables gestionadas de forma automática que permiten obtener información relacionada con la ejecución de código actual. Su propósito y utilidad es variado, siendo algunas de uso muy frecuente y otras de uso marginal. En cualquier caso, no está mal conocer unas cuantas y que suene dentro de la cabeza que hay otras que tal vez sea útiles en el futuro.
-Tanto la documentación oficial como el comando _&#8220;get-help about_automatic_variables&#8220;_ contienen el listado completo, pero me gustaría enumerar por aquí algunas que me resultan interesantes o que tienen truco. <a class="read-more" href="/powershell-variables-automaticas/">&raquo;</a></p>
+Tanto la documentación oficial como el comando “get-help about_automatic_variables“ contienen el listado completo, pero me gustaría enumerar por aquí algunas que me resultan interesantes o que tienen truco. <a class="read-more" href="/powershell-variables-automaticas/">&raquo;</a></p>
     </section>
     <footer class="post-meta">
         
@@ -177,7 +207,7 @@ Tanto la documentación oficial como el comando _&#8220;get-help about_automat
     </header>
     <section class="post-excerpt">
         <p>Este es un ejemplo curioso de esos que me ha vuelto loco hasta que me he dado cuenta. Si parto de este código:
-$item1 = Get-ChildItem | Where-Object {$_ -eq "no encuentras esto ni de coña"} "item1 es nulo? {0}" -f ($null -eq $item1) $item2 = $null "item2 es nulo? {0}" -f ($null -eq $item2) Al ejecutarlo el resultado es &#8220;True&#8221; en ambos casos. Vamos, que tanto item1 como item2 son $null. <a class="read-more" href="/powershell-ojo-que-no-hay-un-unico-null/">&raquo;</a></p>
+$item1 = Get-ChildItem | Where-Object {$_ -eq "no encuentras esto ni de coña"}"item1 es nulo? {0}" -f ($null -eq $item1)$item2 = $null"item2 es nulo? {0}" -f ($null -eq $item2)Al ejecutarlo el resultado es “True” en ambos casos. Vamos, que tanto item1 como item2 son $null. <a class="read-more" href="/powershell-ojo-que-no-hay-un-unico-null/">&raquo;</a></p>
     </section>
     <footer class="post-meta">
         
@@ -206,7 +236,7 @@ $item1 = Get-ChildItem | Where-Object {$_ -eq "no encuentras esto ni de coña"} 
         <h2 class="post-title"><a href="/powershell-saber-si-una-variable-ya-ha-sido-definida/">[PowerShell] Saber si una variable ya ha sido definida</a></h2>
     </header>
     <section class="post-excerpt">
-        <p>En ocasiones tengo la necesidad de saber si una variable ha sido previamente definida. Esto es especialmente importante porque utilizo siempre el &#8220;Set-StrictMode -Version 2&#8221; y, si necesito recurrir a variables de otros scopes, cuando intento acceder a una variable no definida obtengo un error. Aunque generalmente intento no recurrir a otros scopes, especialmente el $global, en ocasiones los necesito, especialmente el $script.
+        <p>En ocasiones tengo la necesidad de saber si una variable ha sido previamente definida. Esto es especialmente importante porque utilizo siempre el “Set-StrictMode -Version 2” y, si necesito recurrir a variables de otros scopes, cuando intento acceder a una variable no definida obtengo un error. Aunque generalmente intento no recurrir a otros scopes, especialmente el $global, en ocasiones los necesito, especialmente el $script.
 Un ejemplo podría ser querer verificar si una variable que contiene un array ha sido inicializada o no, para poder añadirle ítems. <a class="read-more" href="/powershell-saber-si-una-variable-ya-ha-sido-definida/">&raquo;</a></p>
     </section>
     <footer class="post-meta">
@@ -237,7 +267,7 @@ Un ejemplo podría ser querer verificar si una variable que contiene un array h
     </header>
     <section class="post-excerpt">
         <p>Esto es un truco rápido muy chorra pero que puede volver loco a más de un desarrollador que no esté acostumbrado a las peculiaridades de PowerShell. Tomando este código como ejemplo:
-function Get-EmptyArray { [System.Collections.ArrayList]$anyArray = @() return $anyArray } Write-Host (Get-EmptyArray).GetType() En principio podría resultar bastante evidente que el resultado de la ejecución será ver por pantalla la cadena &#8220;System.Collections.Arraylist&#8221;. Pues no, el resultado será un error como una casa del estilo de &#8220;You cannot call a method on a null-valued expression&#8221; <a class="read-more" href="/powershell-devolver-un-array-vacio-desde-una-funcion/">&raquo;</a></p>
+function Get-EmptyArray {[System.Collections.ArrayList]$anyArray = @()return $anyArray }Write-Host (Get-EmptyArray).GetType()En principio podría resultar bastante evidente que el resultado de la ejecución será ver por pantalla la cadena “System.Collections.Arraylist”. Pues no, el resultado será un error como una casa del estilo de “You cannot call a method on a null-valued expression” <a class="read-more" href="/powershell-devolver-un-array-vacio-desde-una-funcion/">&raquo;</a></p>
     </section>
     <footer class="post-meta">
         
@@ -268,7 +298,7 @@ function Get-EmptyArray { [System.Collections.ArrayList]$anyArray = @() return $
     <section class="post-excerpt">
         <p>Cuanto más uso PowerShell más convencido estoy de lo importante que es tipar las variables y los parámetros de las funciones. Debido a la forma en que trabaja PowerShell, especificar los tipos me ayuda a evitar comportamientos indeseados.
 Por ejemplo, dado este script:
-Set-StrictMode -Version 2 $items = Get-ChildItem if ($items) { $items.Count }  Si lo ejecuto estando en un directorio con varios archivos o carpetas, mostrará en pantalla el número de items. <a class="read-more" href="/powershell-las-ventajas-de-usar-parametros-y-variables-tipados/">&raquo;</a></p>
+Set-StrictMode -Version 2$items = Get-ChildItemif ($items) {$items.Count}Si lo ejecuto estando en un directorio con varios archivos o carpetas, mostrará en pantalla el número de items. <a class="read-more" href="/powershell-las-ventajas-de-usar-parametros-y-variables-tipados/">&raquo;</a></p>
     </section>
     <footer class="post-meta">
         
@@ -297,9 +327,9 @@ Set-StrictMode -Version 2 $items = Get-ChildItem if ($items) { $items.Count }  S
         <h2 class="post-title"><a href="/powershell-switch-parameters/">[PowerShell] Switch parameters</a></h2>
     </header>
     <section class="post-excerpt">
-        <p>En PowerShell es muy común usar parámetros de tipo switch. La peculiaridad de estos parámetros es que al usarlos, se especifica el nombre del parámetro pero no se proporciona ningún valor, ya que se asume que al usarlo su valor será $true y $false si no se especifica. Ejemplos típicos son el uso de &#8211;Recurse o -Force. 
+        <p>En PowerShell es muy común usar parámetros de tipo switch. La peculiaridad de estos parámetros es que al usarlos, se especifica el nombre del parámetro pero no se proporciona ningún valor, ya que se asume que al usarlo su valor será $true y $false si no se especifica. Ejemplos típicos son el uso de –_Recurse o -Force. _
 Este sería un ejemplo de con este tipo de parámetros:
-Function Do-Something([Switch]$Recurse) { Write-Host $Recurse } Do-Something -Recurse Do-Something  Si ejecuto este script, veré por pantalla $True y $False, como podría esperar. <a class="read-more" href="/powershell-switch-parameters/">&raquo;</a></p>
+Function Do-Something([Switch]$Recurse) {Write-Host $Recurse}Do-Something -RecurseDo-SomethingSi ejecuto este script, veré por pantalla $True y $False, como podría esperar. <a class="read-more" href="/powershell-switch-parameters/">&raquo;</a></p>
     </section>
     <footer class="post-meta">
         
@@ -358,7 +388,7 @@ Function Do-Something([Switch]$Recurse) { Write-Host $Recurse } Do-Something -Re
     </header>
     <section class="post-excerpt">
         <p>Hoy he tenido que crear de golpe el manifest a varios módulos. Teníamos más de 10 módulos (.psm1), cada uno en su propia carpeta y necesitaba añadirles el manifest para poder definir la empresa de cada módulo. Gracias al pipeline de PowerShell, no he tenido que esforzarme mucho para conseguirlo:
-ls *.psm1 -Recurse | ForEach-Object { $manifestFileName = $_.BaseName + ".psd1" $manifestPath = Join-Path $_.Directory $manifestFileName $companyConstant = "AnyCompany" New-ModuleManifest -Path $manifestPath -RootModule $_. <a class="read-more" href="/powershell-crear-el-fichero-de-manifiesto-para-muchos-modulos-a-la-vez/">&raquo;</a></p>
+ls *.psm1 -Recurse | ForEach-Object { $manifestFileName = $_.BaseName + ".psd1"$manifestPath = Join-Path $_.Directory $manifestFileName$companyConstant = "AnyCompany"New-ModuleManifest -Path $manifestPath -RootModule $_. <a class="read-more" href="/powershell-crear-el-fichero-de-manifiesto-para-muchos-modulos-a-la-vez/">&raquo;</a></p>
     </section>
     <footer class="post-meta">
         
@@ -387,7 +417,8 @@ ls *.psm1 -Recurse | ForEach-Object { $manifestFileName = $_.BaseName + ".psd1" 
         <h2 class="post-title"><a href="/powershell-la-importancia-del-set-strictmode/">[PowerShell] La importancia del Set-StrictMode</a></h2>
     </header>
     <section class="post-excerpt">
-        <p>Cuando empecé a programar scripts en PowerShell, cometía muchísimos fallos fruto de mi intoxicación con otros lenguajes, especialmente C#, con el que trabajo habitualmente. Después de un tiempo, me di cuenta que PowerShell tiene muchas más similitudes con JavaScript que con C# ya que es un lenguaje interpretado y de tipado débil. Y un tiempo después, aprendí que podía programar en PowerShell de una manera más próxima a TypeScript. <a class="read-more" href="/powershell-la-importancia-del-set-strictmode/">&raquo;</a></p>
+        <p>Cuando empecé a programar scripts en PowerShell, cometía muchísimos fallos fruto de mi intoxicación con otros lenguajes, especialmente C#, con el que trabajo habitualmente. Después de un tiempo, me di cuenta que PowerShell tiene muchas más similitudes con JavaScript que con C# ya que es un lenguaje interpretado y de tipado débil. Y un tiempo después, aprendí que podía programar en PowerShell de una manera más próxima a TypeScript.
+Lo explico de esta forma porque a mi cerebro le resulta más sencillo recurrir a este paralelismo. <a class="read-more" href="/powershell-la-importancia-del-set-strictmode/">&raquo;</a></p>
     </section>
     <footer class="post-meta">
         
@@ -405,36 +436,6 @@ ls *.psm1 -Recurse | ForEach-Object { $manifestFileName = $_.BaseName + ".psd1" 
         
         <time class="post-date" datetime="2015-08-03T23:50:39Z">
             3 Aug 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/interrumpir-la-ejecucion-cuando-import-module-no-encuentra-el-modulo/">[PowerShell] Interrumpir la ejecución cuando Import-Module no encuentra el módulo</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>Esto es un truco sencillo y muy básico de PowerShell, pero puede desconcertar bastante a quien está empezando o utiliza PowerShell de forma esporádica.
-En PowerShell existen los llamados &#8220;terminating errors&#8221; y los &#8220;non-terminating errors&#8221;. Como su nombre permite intuir, unos finalizan la ejecución del script en curso cuando se producen y los otros no, limitándose a informar del error. Hasta aquí he descrito el comportamiento por defecto. Que un error sea del tipo &#8220;terminating&#8221; o del tipo &#8220;non-terminating&#8221;, no es algo que nosotros podamos controlar, y eso puede dar algún que otro quebradero de cabeza en algunas ocasiones. <a class="read-more" href="/interrumpir-la-ejecucion-cuando-import-module-no-encuentra-el-modulo/">&raquo;</a></p>
-    </section>
-    <footer class="post-meta">
-        
-        
-            
-            
-        
-
-        
-            <img class="author-thumb" src="http://www.modestosanjuan.com/images/logo.jpg" alt="Author image" nopin="nopin" />
-        
-        
-            Modesto San Juan
-        
-        
-        <time class="post-date" datetime="2015-06-30T18:03:02Z">
-            30 Jun 2015
         </time>
     </footer>
 </article>

@@ -16,7 +16,7 @@
 
 <meta name="twitter:title" content="[PowerShell] Variables automáticas"/>
 <meta name="twitter:description" content="PowerShell dispone de una serie de variables gestionadas de forma automática que permiten obtener información relacionada con la ejecución de código actual. Su propósito y utilidad es variado, siendo algunas de uso muy frecuente y otras de uso marginal. En cualquier caso, no está mal conocer unas cuantas y que suene dentro de la cabeza que hay otras que tal vez sea útiles en el futuro.
-Tanto la documentación oficial como el comando _&#8220;get-help about_automatic_variables&#8220;_ contienen el listado completo, pero me gustaría enumerar por aquí algunas que me resultan interesantes o que tienen truco."/>
+Tanto la documentación oficial como el comando “get-help about_automatic_variables“ contienen el listado completo, pero me gustaría enumerar por aquí algunas que me resultan interesantes o que tienen truco."/>
 
     <meta name="twitter:site" content="@msanjuan"/>
 
@@ -57,7 +57,7 @@ Tanto la documentación oficial como el comando _&#8220;get-help about_automat
       
       
     
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.81.0" />
 
     <link rel="canonical" href="http://www.modestosanjuan.com/powershell-variables-automaticas/" />
 
@@ -141,25 +141,16 @@ Tanto la documentación oficial como el comando _&#8220;get-help about_automat
 
     <section class="post-content">
       <p>PowerShell dispone de una serie de variables gestionadas de forma automática que permiten obtener información relacionada con la ejecución de código actual. Su propósito y utilidad es variado, siendo algunas de uso muy frecuente y otras de uso marginal. En cualquier caso, no está mal conocer unas cuantas y que suene dentro de la cabeza que hay otras que tal vez sea útiles en el futuro.</p>
-
-<p>Tanto la <a href="https://technet.microsoft.com/en-us/library/hh847768.aspx" target="_blank">documentación oficial</a> como el comando _&#8220;<span style="color: #3366ff;">get-help</span> <span style="color: #cc99ff;">about_automatic_variables</span>&#8220;_ contienen el listado completo, pero me gustaría enumerar por aquí algunas que me resultan interesantes o que tienen truco.</p>
-
+<p>Tanto la <a href="https://technet.microsoft.com/en-us/library/hh847768.aspx" target="_blank">documentación oficial</a> como el comando <em>“<span style="color: #3366ff;">get-help</span> <span style="color: #cc99ff;">about_automatic_variables</span>“</em> contienen el listado completo, pero me gustaría enumerar por aquí algunas que me resultan interesantes o que tienen truco.</p>
 <p>Algunas variables son de sobra conocidas para cualquiera que conozca medianamente PowerShell. Variables como <strong>$_, $true, $false, $Args, $NULL</strong> son de uso común incluso antes de saber siquiera qué es eso de las variables automáticas.</p>
-
 <p>Relacionadas con la gestión de errores, las variables <strong>$?</strong> y <strong>$Error</strong> podrían ser útiles, aunque hay que tratarlas con cuidado. En el primer caso, <strong>$?</strong> devuelve TRUE si la última operación se realizó correctamente o FALSE en caso contrario. La variable <strong>$Error</strong> en principio se trata de un array que contiene los errores más recientes. El problema que le veo a este array es que únicamente contiene los errores de PowerShell. Es decir, tomando este código como ejemplo:</p>
-
 <pre class="lang:ps decode:true">ping error_forzado
 $?
 $Error</pre>
-
 <p>En un caso como este, la variable <strong>$?</strong> será <em>False</em> pero <strong>$Error</strong> no contendrá el error que ha dado el comando <em>ping</em>. La razón es que no se trata de un error de PowerShell. Cuando hacemos <em>ping</em> estamos invocando un ejecutable, no una función o cmdlet de PowerShell. Por eso hay que tener cuidado y normalmente es más conveniente capturar los errores mediante otros mecanismos.</p>
-
 <p>Relacionado también la captura de errores está la variable <strong>$LastExitCode</strong>, que almacena el código de salida del último programa de windows ejecutado. en el ejemplo anterior, <strong>$LastExitCode</strong> tendría un valor de 1.</p>
-
-<p>Otra variable muy interesante es <strong>$MyInvocation</strong>. Esta variable proporciona información sobre el comando que se está ejecutando actualmente, incluyendo el nombre del script, la función, la ruta, los parámetros, etc. Por ejemplo, las propiedades <em>BoundParameters</em> y <em>UnboundArguments</em> permiten acceder al listado de argumentos pasados a la función. <em>UnboundArguments</em> es algo así como <strong>$Args</strong>, aunque el tipo de <strong>$Args</strong> es Object[] y _UnboundArguments_  es de tipo List<Object>.</p>
-
-<p>Otra variable interesante, relacionada con la anterior es <strong>$PSBoundParameters</strong>. En este caso la explicación es sencilla, llamar a esta variable es lo mismo que llamar a <strong>$MyInvocation.BoundParameters</strong>. Al menos así es en mi máquina, en la que <em>$PSBoundParameters.Equals($MyInvocation.BoundParameters)</em> devuelve <em>True</em>. Y recurro al clásico &#8220;en mi máquina funciona&#8221; porque me he encontrado por <a href="https://gist.github.com/anderssonjohan/4738733" target="_blank">ahí</a> quien dice lo contrario en función de la versión de PowerShell que se ejecute.</p>
-
+<p>Otra variable muy interesante es <strong>$MyInvocation</strong>. Esta variable proporciona información sobre el comando que se está ejecutando actualmente, incluyendo el nombre del script, la función, la ruta, los parámetros, etc. Por ejemplo, las propiedades <em>BoundParameters</em> y <em>UnboundArguments</em> permiten acceder al listado de argumentos pasados a la función. <em>UnboundArguments</em> es algo así como <strong>$Args</strong>, aunque el tipo de <strong>$Args</strong> es Object[] y <em>UnboundArguments</em>  es de tipo List<Object>.</p>
+<p>Otra variable interesante, relacionada con la anterior es <strong>$PSBoundParameters</strong>. En este caso la explicación es sencilla, llamar a esta variable es lo mismo que llamar a <strong>$MyInvocation.BoundParameters</strong>. Al menos así es en mi máquina, en la que <em>$PSBoundParameters.Equals($MyInvocation.BoundParameters)</em> devuelve <em>True</em>. Y recurro al clásico “en mi máquina funciona” porque me he encontrado por <a href="https://gist.github.com/anderssonjohan/4738733" target="_blank">ahí</a> quien dice lo contrario en función de la versión de PowerShell que se ejecute.</p>
 <p>Y por último, dos que dan mucho juego: <strong>$PSCommmandPath</strong> y <strong>$PSScriptRoot</strong>. Estas dos variables proporcionan respectivamente la ruta completa y el directorio del script desde el que se está ejecutando el código. Estas variables pueden resultar muy útiles para hacer referencias a rutas relativas a un script en concreto, independientemente del cual sea el valor de <em>Get-Location</em>. Eso si, es importante tener en cuenta que son de tipo string, si queremos manipularlas lo más conveniente suele ser crear variables de tipo <em>DirectoryInfo</em> o <em>FileInfo</em> a partir de sus valores.</p>
 
     </section>

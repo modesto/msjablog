@@ -16,7 +16,7 @@
 
 <meta name="twitter:title" content="[PowerShell] Crear el fichero de manifiesto para muchos módulos a la vez"/>
 <meta name="twitter:description" content="Hoy he tenido que crear de golpe el manifest a varios módulos. Teníamos más de 10 módulos (.psm1), cada uno en su propia carpeta y necesitaba añadirles el manifest para poder definir la empresa de cada módulo. Gracias al pipeline de PowerShell, no he tenido que esforzarme mucho para conseguirlo:
-ls *.psm1 -Recurse | ForEach-Object { $manifestFileName = $_.BaseName &#43; &#34;.psd1&#34; $manifestPath = Join-Path $_.Directory $manifestFileName $companyConstant = &#34;AnyCompany&#34; New-ModuleManifest -Path $manifestPath -RootModule $_."/>
+ls *.psm1 -Recurse | ForEach-Object { $manifestFileName = $_.BaseName &#43; &#34;.psd1&#34;$manifestPath = Join-Path $_.Directory $manifestFileName$companyConstant = &#34;AnyCompany&#34;New-ModuleManifest -Path $manifestPath -RootModule $_."/>
 
     <meta name="twitter:site" content="@msanjuan"/>
 
@@ -57,7 +57,7 @@ ls *.psm1 -Recurse | ForEach-Object { $manifestFileName = $_.BaseName &#43; &#34
       
       
     
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.81.0" />
 
     <link rel="canonical" href="http://www.modestosanjuan.com/powershell-crear-el-fichero-de-manifiesto-para-muchos-modulos-a-la-vez/" />
 
@@ -141,7 +141,6 @@ ls *.psm1 -Recurse | ForEach-Object { $manifestFileName = $_.BaseName &#43; &#34
 
     <section class="post-content">
       <p>Hoy he tenido que crear de golpe el manifest a varios módulos. Teníamos más de 10 módulos (.psm1), cada uno en su propia carpeta y necesitaba añadirles el manifest para poder definir la empresa de cada módulo. Gracias al pipeline de PowerShell, no he tenido que esforzarme mucho para conseguirlo:</p>
-
 <pre class="lang:ps decode:true">ls *.psm1 -Recurse | ForEach-Object { 
                                         $manifestFileName = $_.BaseName + ".psd1"
                                         $manifestPath = Join-Path $_.Directory $manifestFileName
@@ -149,14 +148,10 @@ ls *.psm1 -Recurse | ForEach-Object { $manifestFileName = $_.BaseName &#43; &#34
                                         New-ModuleManifest -Path $manifestPath  -RootModule $_.Name -Author $companyConstant -CompanyName $companyConstant -Copyright $companyConstant -FileList @($_.Name)
                                         Write-Host $manifestPath
                                     }</pre>
-
 <p>Es un script tonto, sin mucho misterio, pero me lo dejo aquí apuntado para el futuro. La razón por la que necesitaba hacer esto era para luego poder descargar de golpe todos los módulos cargados de esta empresa. Para hacer esto también es bastante sencillo:</p>
-
 <pre class="lang:ps decode:true ">Get-module | Where-Object { $_.CompanyName -eq "AnyCompany" } | Remove-Module</pre>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
+<p> </p>
+<p> </p>
 
     </section>
 

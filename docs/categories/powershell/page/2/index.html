@@ -53,7 +53,7 @@
         <link href="http://www.modestosanjuan.com/categories/powershell/index.xml" rel="alternate" type="application/rss+xml" title="PowerShell &middot; Blog de Modesto San Juan" />
       
     
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.81.0" />
 
     <link rel="canonical" href="http://www.modestosanjuan.com/categories/powershell/" />
 
@@ -145,7 +145,7 @@
     </header>
     <section class="post-excerpt">
         <p>Hoy he tenido que crear de golpe el manifest a varios módulos. Teníamos más de 10 módulos (.psm1), cada uno en su propia carpeta y necesitaba añadirles el manifest para poder definir la empresa de cada módulo. Gracias al pipeline de PowerShell, no he tenido que esforzarme mucho para conseguirlo:
-ls *.psm1 -Recurse | ForEach-Object { $manifestFileName = $_.BaseName + ".psd1" $manifestPath = Join-Path $_.Directory $manifestFileName $companyConstant = "AnyCompany" New-ModuleManifest -Path $manifestPath -RootModule $_. <a class="read-more" href="/powershell-crear-el-fichero-de-manifiesto-para-muchos-modulos-a-la-vez/">&raquo;</a></p>
+ls *.psm1 -Recurse | ForEach-Object { $manifestFileName = $_.BaseName + ".psd1"$manifestPath = Join-Path $_.Directory $manifestFileName$companyConstant = "AnyCompany"New-ModuleManifest -Path $manifestPath -RootModule $_. <a class="read-more" href="/powershell-crear-el-fichero-de-manifiesto-para-muchos-modulos-a-la-vez/">&raquo;</a></p>
     </section>
     <footer class="post-meta">
         
@@ -174,7 +174,8 @@ ls *.psm1 -Recurse | ForEach-Object { $manifestFileName = $_.BaseName + ".psd1" 
         <h2 class="post-title"><a href="/powershell-la-importancia-del-set-strictmode/">[PowerShell] La importancia del Set-StrictMode</a></h2>
     </header>
     <section class="post-excerpt">
-        <p>Cuando empecé a programar scripts en PowerShell, cometía muchísimos fallos fruto de mi intoxicación con otros lenguajes, especialmente C#, con el que trabajo habitualmente. Después de un tiempo, me di cuenta que PowerShell tiene muchas más similitudes con JavaScript que con C# ya que es un lenguaje interpretado y de tipado débil. Y un tiempo después, aprendí que podía programar en PowerShell de una manera más próxima a TypeScript. <a class="read-more" href="/powershell-la-importancia-del-set-strictmode/">&raquo;</a></p>
+        <p>Cuando empecé a programar scripts en PowerShell, cometía muchísimos fallos fruto de mi intoxicación con otros lenguajes, especialmente C#, con el que trabajo habitualmente. Después de un tiempo, me di cuenta que PowerShell tiene muchas más similitudes con JavaScript que con C# ya que es un lenguaje interpretado y de tipado débil. Y un tiempo después, aprendí que podía programar en PowerShell de una manera más próxima a TypeScript.
+Lo explico de esta forma porque a mi cerebro le resulta más sencillo recurrir a este paralelismo. <a class="read-more" href="/powershell-la-importancia-del-set-strictmode/">&raquo;</a></p>
     </section>
     <footer class="post-meta">
         

@@ -53,7 +53,7 @@
         <link href="http://www.modestosanjuan.com/categories/powershell/index.xml" rel="alternate" type="application/rss+xml" title="PowerShell &middot; Blog de Modesto San Juan" />
       
     
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.81.0" />
 
     <link rel="canonical" href="http://www.modestosanjuan.com/categories/powershell/" />
 
@@ -234,7 +234,7 @@ En ocasiones me olvido de que PowerShell tiene a su disposición toda la potenci
     </header>
     <section class="post-excerpt">
         <p>PowerShell dispone de una serie de variables gestionadas de forma automática que permiten obtener información relacionada con la ejecución de código actual. Su propósito y utilidad es variado, siendo algunas de uso muy frecuente y otras de uso marginal. En cualquier caso, no está mal conocer unas cuantas y que suene dentro de la cabeza que hay otras que tal vez sea útiles en el futuro.
-Tanto la documentación oficial como el comando _&#8220;get-help about_automatic_variables&#8220;_ contienen el listado completo, pero me gustaría enumerar por aquí algunas que me resultan interesantes o que tienen truco. <a class="read-more" href="/powershell-variables-automaticas/">&raquo;</a></p>
+Tanto la documentación oficial como el comando “get-help about_automatic_variables“ contienen el listado completo, pero me gustaría enumerar por aquí algunas que me resultan interesantes o que tienen truco. <a class="read-more" href="/powershell-variables-automaticas/">&raquo;</a></p>
     </section>
     <footer class="post-meta">
         
@@ -264,7 +264,7 @@ Tanto la documentación oficial como el comando _&#8220;get-help about_automat
     </header>
     <section class="post-excerpt">
         <p>Este es un ejemplo curioso de esos que me ha vuelto loco hasta que me he dado cuenta. Si parto de este código:
-$item1 = Get-ChildItem | Where-Object {$_ -eq "no encuentras esto ni de coña"} "item1 es nulo? {0}" -f ($null -eq $item1) $item2 = $null "item2 es nulo? {0}" -f ($null -eq $item2) Al ejecutarlo el resultado es &#8220;True&#8221; en ambos casos. Vamos, que tanto item1 como item2 son $null. <a class="read-more" href="/powershell-ojo-que-no-hay-un-unico-null/">&raquo;</a></p>
+$item1 = Get-ChildItem | Where-Object {$_ -eq "no encuentras esto ni de coña"}"item1 es nulo? {0}" -f ($null -eq $item1)$item2 = $null"item2 es nulo? {0}" -f ($null -eq $item2)Al ejecutarlo el resultado es “True” en ambos casos. Vamos, que tanto item1 como item2 son $null. <a class="read-more" href="/powershell-ojo-que-no-hay-un-unico-null/">&raquo;</a></p>
     </section>
     <footer class="post-meta">
         
@@ -293,7 +293,7 @@ $item1 = Get-ChildItem | Where-Object {$_ -eq "no encuentras esto ni de coña"} 
         <h2 class="post-title"><a href="/powershell-saber-si-una-variable-ya-ha-sido-definida/">[PowerShell] Saber si una variable ya ha sido definida</a></h2>
     </header>
     <section class="post-excerpt">
-        <p>En ocasiones tengo la necesidad de saber si una variable ha sido previamente definida. Esto es especialmente importante porque utilizo siempre el &#8220;Set-StrictMode -Version 2&#8221; y, si necesito recurrir a variables de otros scopes, cuando intento acceder a una variable no definida obtengo un error. Aunque generalmente intento no recurrir a otros scopes, especialmente el $global, en ocasiones los necesito, especialmente el $script.
+        <p>En ocasiones tengo la necesidad de saber si una variable ha sido previamente definida. Esto es especialmente importante porque utilizo siempre el “Set-StrictMode -Version 2” y, si necesito recurrir a variables de otros scopes, cuando intento acceder a una variable no definida obtengo un error. Aunque generalmente intento no recurrir a otros scopes, especialmente el $global, en ocasiones los necesito, especialmente el $script.
 Un ejemplo podría ser querer verificar si una variable que contiene un array ha sido inicializada o no, para poder añadirle ítems. <a class="read-more" href="/powershell-saber-si-una-variable-ya-ha-sido-definida/">&raquo;</a></p>
     </section>
     <footer class="post-meta">
@@ -324,7 +324,7 @@ Un ejemplo podría ser querer verificar si una variable que contiene un array h
     </header>
     <section class="post-excerpt">
         <p>Esto es un truco rápido muy chorra pero que puede volver loco a más de un desarrollador que no esté acostumbrado a las peculiaridades de PowerShell. Tomando este código como ejemplo:
-function Get-EmptyArray { [System.Collections.ArrayList]$anyArray = @() return $anyArray } Write-Host (Get-EmptyArray).GetType() En principio podría resultar bastante evidente que el resultado de la ejecución será ver por pantalla la cadena &#8220;System.Collections.Arraylist&#8221;. Pues no, el resultado será un error como una casa del estilo de &#8220;You cannot call a method on a null-valued expression&#8221; <a class="read-more" href="/powershell-devolver-un-array-vacio-desde-una-funcion/">&raquo;</a></p>
+function Get-EmptyArray {[System.Collections.ArrayList]$anyArray = @()return $anyArray }Write-Host (Get-EmptyArray).GetType()En principio podría resultar bastante evidente que el resultado de la ejecución será ver por pantalla la cadena “System.Collections.Arraylist”. Pues no, el resultado será un error como una casa del estilo de “You cannot call a method on a null-valued expression” <a class="read-more" href="/powershell-devolver-un-array-vacio-desde-una-funcion/">&raquo;</a></p>
     </section>
     <footer class="post-meta">
         
@@ -355,7 +355,7 @@ function Get-EmptyArray { [System.Collections.ArrayList]$anyArray = @() return $
     <section class="post-excerpt">
         <p>Cuanto más uso PowerShell más convencido estoy de lo importante que es tipar las variables y los parámetros de las funciones. Debido a la forma en que trabaja PowerShell, especificar los tipos me ayuda a evitar comportamientos indeseados.
 Por ejemplo, dado este script:
-Set-StrictMode -Version 2 $items = Get-ChildItem if ($items) { $items.Count }  Si lo ejecuto estando en un directorio con varios archivos o carpetas, mostrará en pantalla el número de items. <a class="read-more" href="/powershell-las-ventajas-de-usar-parametros-y-variables-tipados/">&raquo;</a></p>
+Set-StrictMode -Version 2$items = Get-ChildItemif ($items) {$items.Count}Si lo ejecuto estando en un directorio con varios archivos o carpetas, mostrará en pantalla el número de items. <a class="read-more" href="/powershell-las-ventajas-de-usar-parametros-y-variables-tipados/">&raquo;</a></p>
     </section>
     <footer class="post-meta">
         
@@ -384,9 +384,9 @@ Set-StrictMode -Version 2 $items = Get-ChildItem if ($items) { $items.Count }  S
         <h2 class="post-title"><a href="/powershell-switch-parameters/">[PowerShell] Switch parameters</a></h2>
     </header>
     <section class="post-excerpt">
-        <p>En PowerShell es muy común usar parámetros de tipo switch. La peculiaridad de estos parámetros es que al usarlos, se especifica el nombre del parámetro pero no se proporciona ningún valor, ya que se asume que al usarlo su valor será $true y $false si no se especifica. Ejemplos típicos son el uso de &#8211;Recurse o -Force. 
+        <p>En PowerShell es muy común usar parámetros de tipo switch. La peculiaridad de estos parámetros es que al usarlos, se especifica el nombre del parámetro pero no se proporciona ningún valor, ya que se asume que al usarlo su valor será $true y $false si no se especifica. Ejemplos típicos son el uso de –_Recurse o -Force. _
 Este sería un ejemplo de con este tipo de parámetros:
-Function Do-Something([Switch]$Recurse) { Write-Host $Recurse } Do-Something -Recurse Do-Something  Si ejecuto este script, veré por pantalla $True y $False, como podría esperar. <a class="read-more" href="/powershell-switch-parameters/">&raquo;</a></p>
+Function Do-Something([Switch]$Recurse) {Write-Host $Recurse}Do-Something -RecurseDo-SomethingSi ejecuto este script, veré por pantalla $True y $False, como podría esperar. <a class="read-more" href="/powershell-switch-parameters/">&raquo;</a></p>
     </section>
     <footer class="post-meta">
         

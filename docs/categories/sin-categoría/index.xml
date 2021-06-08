@@ -6,11 +6,7 @@
     <description>Recent content in Sin categoría on Blog de Modesto San Juan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <lastBuildDate>Thu, 10 Nov 2016 10:01:15 +0000</lastBuildDate>
-    
-	<atom:link href="http://www.modestosanjuan.com/categories/sin-categor%C3%ADa/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 10 Nov 2016 10:01:15 +0000</lastBuildDate><atom:link href="http://www.modestosanjuan.com/categories/sin-categor%C3%ADa/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>La regla del boy scout</title>
       <link>http://www.modestosanjuan.com/la-regla-del-boy-scout/</link>
@@ -68,7 +64,7 @@ Claves primarias mutables o inmutables Para el que ande un poco perdido con el c
       <pubDate>Mon, 13 Jun 2016 10:02:56 +0000</pubDate>
       
       <guid>http://www.modestosanjuan.com/palabras-malditas/</guid>
-      <description>Extreme programming y el desarrollo ágil A principios de siglo (dicho así parece que queda muy atrás, eh&amp;#8230; :P) trabajaba en Indra como coordinador de un equipo de desarrollo. En mi entorno profesional era un poco como un bicho raro porque, además de ser 10 años más joven que la media de mi puesto, era de los pocos que se negaba a abandonar el desarrollo para dedicarme plenamente a la gestión.</description>
+      <description>Extreme programming y el desarrollo ágil A principios de siglo (dicho así parece que queda muy atrás, eh… :P) trabajaba en Indra como coordinador de un equipo de desarrollo. En mi entorno profesional era un poco como un bicho raro porque, además de ser 10 años más joven que la media de mi puesto, era de los pocos que se negaba a abandonar el desarrollo para dedicarme plenamente a la gestión.</description>
     </item>
     
     <item>
@@ -87,7 +83,7 @@ Hay varios aspectos que son importantes a tener en cuenta al definir datos para 
       <pubDate>Tue, 19 Jan 2016 01:13:56 +0000</pubDate>
       
       <guid>http://www.modestosanjuan.com/impresiones-sobre-pair-programming/</guid>
-      <description>El viernes mantuve una conversación bastante entretenida sobre desarrollo de software con un compañero de profesión. Trabaja en una entidad financiera y al hablar de cosas como TDD, Agile, XP, etc. tenía ciertos sentimientos enfrentados. Precisamente uno de los temas que le causaban controversia era el pair programming. Su opinión básicamente se resumía en una frase: &amp;#8220;yo lo que no compro es que dos tíos senior sentados juntos a programar van a ser más productivos que si programan por separado&amp;#8221;.</description>
+      <description>El viernes mantuve una conversación bastante entretenida sobre desarrollo de software con un compañero de profesión. Trabaja en una entidad financiera y al hablar de cosas como TDD, Agile, XP, etc. tenía ciertos sentimientos enfrentados. Precisamente uno de los temas que le causaban controversia era el pair programming. Su opinión básicamente se resumía en una frase: “yo lo que no compro es que dos tíos senior sentados juntos a programar van a ser más productivos que si programan por separado”.</description>
     </item>
     
     <item>
@@ -96,8 +92,8 @@ Hay varios aspectos que son importantes a tener en cuenta al definir datos para 
       <pubDate>Mon, 28 Dec 2015 22:22:29 +0000</pubDate>
       
       <guid>http://www.modestosanjuan.com/nuestra-programacion-es-mala-para-el-desarrollo-de-software/</guid>
-      <description>La programación de mi color favorito El otro día mi hija me preguntó cuál era mi color favorito. Respondí inmediatamente sin pensarlo: &amp;#8220;el azul&amp;#8221;. No era la primera vez que me lo preguntaban y es un dato que tengo claro desde que era niño. O no.
-En esta ocasión, no se exactamente porqué, después de responder a mi hija algo en mi cabeza empezó a retorcerse: &amp;#8220;¿es el azul mi color favorito?</description>
+      <description>La programación de mi color favorito El otro día mi hija me preguntó cuál era mi color favorito. Respondí inmediatamente sin pensarlo: “el azul”. No era la primera vez que me lo preguntaban y es un dato que tengo claro desde que era niño. O no.
+En esta ocasión, no se exactamente porqué, después de responder a mi hija algo en mi cabeza empezó a retorcerse: “¿es el azul mi color favorito?</description>
     </item>
     
     <item>
@@ -116,7 +112,7 @@ En esta ocasión, no se exactamente porqué, después de responder a mi hija alg
       
       <guid>http://www.modestosanjuan.com/interrumpir-la-ejecucion-cuando-import-module-no-encuentra-el-modulo/</guid>
       <description>Esto es un truco sencillo y muy básico de PowerShell, pero puede desconcertar bastante a quien está empezando o utiliza PowerShell de forma esporádica.
-En PowerShell existen los llamados &amp;#8220;terminating errors&amp;#8221; y los &amp;#8220;non-terminating errors&amp;#8221;. Como su nombre permite intuir, unos finalizan la ejecución del script en curso cuando se producen y los otros no, limitándose a informar del error. Hasta aquí he descrito el comportamiento por defecto. Que un error sea del tipo &amp;#8220;terminating&amp;#8221; o del tipo &amp;#8220;non-terminating&amp;#8221;, no es algo que nosotros podamos controlar, y eso puede dar algún que otro quebradero de cabeza en algunas ocasiones.</description>
+En PowerShell existen los llamados “terminating errors” y los “non-terminating errors”. Como su nombre permite intuir, unos finalizan la ejecución del script en curso cuando se producen y los otros no, limitándose a informar del error. Hasta aquí he descrito el comportamiento por defecto. Que un error sea del tipo “terminating” o del tipo “non-terminating”, no es algo que nosotros podamos controlar, y eso puede dar algún que otro quebradero de cabeza en algunas ocasiones.</description>
     </item>
     
     <item>

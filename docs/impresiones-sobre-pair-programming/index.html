@@ -15,7 +15,7 @@
 
 
 <meta name="twitter:title" content="Impresiones sobre pair programming"/>
-<meta name="twitter:description" content="El viernes mantuve una conversación bastante entretenida sobre desarrollo de software con un compañero de profesión. Trabaja en una entidad financiera y al hablar de cosas como TDD, Agile, XP, etc. tenía ciertos sentimientos enfrentados. Precisamente uno de los temas que le causaban controversia era el pair programming. Su opinión básicamente se resumía en una frase: &#8220;yo lo que no compro es que dos tíos senior sentados juntos a programar van a ser más productivos que si programan por separado&#8221;."/>
+<meta name="twitter:description" content="El viernes mantuve una conversación bastante entretenida sobre desarrollo de software con un compañero de profesión. Trabaja en una entidad financiera y al hablar de cosas como TDD, Agile, XP, etc. tenía ciertos sentimientos enfrentados. Precisamente uno de los temas que le causaban controversia era el pair programming. Su opinión básicamente se resumía en una frase: “yo lo que no compro es que dos tíos senior sentados juntos a programar van a ser más productivos que si programan por separado”."/>
 
     <meta name="twitter:site" content="@msanjuan"/>
 
@@ -56,7 +56,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.81.0" />
 
     <link rel="canonical" href="http://www.modestosanjuan.com/impresiones-sobre-pair-programming/" />
 
@@ -139,57 +139,35 @@
     </header>
 
     <section class="post-content">
-      
-
-<p>El viernes mantuve una conversación bastante entretenida sobre desarrollo de software con un compañero de profesión. Trabaja en una entidad financiera y al hablar de cosas como TDD, Agile, XP, etc. tenía ciertos sentimientos enfrentados. Precisamente uno de los temas que le causaban controversia era el pair programming. Su opinión básicamente se resumía en una frase: &#8220;yo lo que no compro es que dos tíos senior sentados juntos a programar van a ser más productivos que si programan por separado&#8221;.</p>
-
+      <p>El viernes mantuve una conversación bastante entretenida sobre desarrollo de software con un compañero de profesión. Trabaja en una entidad financiera y al hablar de cosas como TDD, Agile, XP, etc. tenía ciertos sentimientos enfrentados. Precisamente uno de los temas que le causaban controversia era el pair programming. Su opinión básicamente se resumía en una frase: “yo lo que no compro es que dos tíos senior sentados juntos a programar van a ser más productivos que si programan por separado”.</p>
 <p>Así que me he animado a escribir un post con mi opinión sobre este tema y aportar así mi punto de vista (aunque a nadie le importe xD).</p>
-
 <h1 id="antecedentes">Antecedentes</h1>
-
 <p>Me encanta programar solo. Disfruto muchísimo sentado delante del teclado mientras me enfrento a un reto técnico o busco una aproximación de diseño que me convenza. También me encanta pasarme horas leyendo código de proyectos open source para ver cómo hacen las cosas otros equipos de desarrollo. Disfruto haciendo generadores de código que generan código para generar generadores de código. En resumen, me encanta liarme la manta a la cabeza y perderme las horas muertas en todo lo que tenga que ver con el desarrollo de software.</p>
-
 <p>Pero que me guste no significa que piense que sea lo mejor cuando hablo de un contexto profesional. El desarrollo de software no es únicamente mi profesión, es mi afición. Por eso todas estas cosas que me gustan, las hago principalmente cuando tengo libre y, cuando estoy trabajando, decido lo que hacer buscando el criterio que más le convenga al proyecto.</p>
-
 <p>Actualmente llevo algo más de un año trabajando en un proyecto en el que hacemos mucho pair programming, así que no puedo decir que sea un veterano en esto, pero creo que ha pasado un tiempo lo suficientemente grande como para tener una opinión desde la experiencia.</p>
-
 <h1 id="lo-bueno">Lo bueno</h1>
-
 <p>Para mi los aspectos positivos más interesantes de esta práctica son:</p>
-
 <ul>
-<li>Beneficia a la <strong>propiedad colectiva del código</strong>.- Esto facilita la eliminación del efecto &#8220;es que eso lo hizo fulanito y sólo él puede meterle mano&#8221;. Si además de pair programming, introducimos rotación dentro de los equipos, el beneficio es aún mayor.</li>
+<li>Beneficia a la <strong>propiedad colectiva del código</strong>.- Esto facilita la eliminación del efecto “es que eso lo hizo fulanito y sólo él puede meterle mano”. Si además de pair programming, introducimos rotación dentro de los equipos, el beneficio es aún mayor.</li>
 <li>El <strong>código es mejor</strong>.- Nada como 4 ojos pendientes del código que se está generando. Como mínimo, permitirá garantizar que al menos que ha existido consenso entre dos de cara a la legibilidad, diseño y estructura del código.</li>
 <li>Las <strong>pruebas</strong> son <strong>mejores</strong>.- Me cuesta recordar una sesión de pair programming en la que, fruto del diálogo entre ambas partes, no haya surgido algún test de triangulación para probar un caso límite.</li>
 <li>Promueve la definición y utilización del <strong>lenguaje ubícuo</strong>.- Cuando programas solo prestas menos atención a los nombres y, aunque se la prestes, careces de una figura muy importante de cara a encontrar el nombre más adecuado, el debate.</li>
 </ul>
-
 <h1 id="lo-malo">Lo malo</h1>
-
 <p>Como todo, también tiene algunos aspectos negativos, para mi estos son los principales:</p>
-
 <ul>
 <li>Es <strong>difícil</strong> practicarlo correctamente.- Quien piense que el pair programming se limita a que dos tíos se sienten al lado y se intercambien el teclado, va muy desorientado. Al final pondré algunos enlaces con consejos al respecto.</li>
 <li><strong>Fatiga</strong>.- Si, 4 horas de pairing cansan mucho. Y más si no se practica bien. Un truco, es importante respetar los descansos o el cerebro termina frito.</li>
 </ul>
-
 <h1 id="cuándo">¿Cuándo?</h1>
-
 <p>Dicho esto, tampoco creo que deba hacerse el 100% del tiempo. Creo que esta práctica aporta mucho valor cuando estamos hablando de escribir código de negocio y mucho menos cuando hablamos de UI e infraestructura. Cuando hablamos de dominios que estamos explorando y es evidente que el cuello de botella no va a ser el ritmo al que escribamos código, es precisamente uno de los escenarios en los que más beneficios nos va a proporcionar esta práctica.</p>
-
 <p>Normalmente no me parece práctico recurrir al pair programming para escribir código de infraestructura o código de una vista. A no ser que estemos haciendo mentoring, pero eso sería otro tema.</p>
-
-<p>Por supuesto, siempre hay excepciones y ya sabemos que la respuesta casi siempre es &#8220;depende&#8221;.</p>
-
+<p>Por supuesto, siempre hay excepciones y ya sabemos que la respuesta casi siempre es “depende”.</p>
 <h1 id="más-información">Más información</h1>
-
 <p>Sobre el tema hay mucho escrito, pero tengo recientes en mi cabeza estos dos posts que a su vez enlazan a otro montón de ellos:</p>
-
 <p><a href="http://juandavidvega.es/blog/?p=194" target="_blank">Pair programming: Mi guía práctica</a></p>
-
 <p><a href="http://www.carlosble.com/2015/07/productive-pair-programming/" target="_blank">Productive Pair Programming</a></p>
-
-<p>&nbsp;</p>
+<p> </p>
 
     </section>
 

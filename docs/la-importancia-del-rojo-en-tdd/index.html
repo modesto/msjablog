@@ -16,7 +16,7 @@
 
 <meta name="twitter:title" content="La importancia del rojo en TDD"/>
 <meta name="twitter:description" content="A un desarrollador que practique TDD, el flujo rojo, verde, refactor no le resulta extraño. En este post quiero romper una lanza a favor del rojo, ese gran incomprendido. Para ilustrarlo voy a recurrir a un ejemplo muy sencillo:
-[TestMethod] public void sample_test() { var messagingService = GivenAMessagingServiceStub(); var unreadMessages = messagingService.UnreadMessages(); unreadMessages.Count.Should().Be(1) } Este ejemplo esta simplificado, pero me permite mostrar un test con una estructura de tipo given/when/then o AAA (según gustos)."/>
+[TestMethod]public void sample_test(){var messagingService = GivenAMessagingServiceStub();var unreadMessages = messagingService.UnreadMessages();unreadMessages.Count.Should().Be(1)}Este ejemplo esta simplificado, pero me permite mostrar un test con una estructura de tipo given/when/then o AAA (según gustos)."/>
 
     <meta name="twitter:site" content="@msanjuan"/>
 
@@ -57,7 +57,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.81.0" />
 
     <link rel="canonical" href="http://www.modestosanjuan.com/la-importancia-del-rojo-en-tdd/" />
 
@@ -141,7 +141,6 @@
 
     <section class="post-content">
       <p>A un desarrollador que practique TDD, el flujo <strong>rojo, verde, refactor</strong> no le resulta extraño. En este post quiero romper una lanza a favor del <strong>rojo</strong>, ese gran incomprendido. Para ilustrarlo voy a recurrir a un ejemplo muy sencillo:</p>
-
 <pre class="lang:c# decode:true">[TestMethod]
 public void sample_test()
 {
@@ -149,23 +148,17 @@ public void sample_test()
     var unreadMessages = messagingService.UnreadMessages();
     unreadMessages.Count.Should().Be(1)
 }</pre>
-
 <p>Este ejemplo esta simplificado, pero me permite mostrar un test con una estructura de tipo <strong>given/when/then o AAA</strong> (según gustos). Con el objetivo de obtener ese primer rojo, me encuentro a veces con esto:</p>
-
 <pre class="lang:default decode:true">public IEnumerable&lt;Message&gt; UnreadMessages()
 {
     throw new NotImplementedException();
 }</pre>
-
 <p>Creo que hacer esto desvirtúa el objetivo de buscar el rojo. Uno de los objetivos de buscar el primer rojo es verificar el test, pero es imposible verificar el test si no se llega a ejecutar completo. Es cierto que al lanzar el test va a dar un rojo, pero ese rojo es equivalente a haber lanzado la excepción en lugar de la llamada al código de producción, así que de poco vale. Otras veces se llega un poco más en la búsqueda del rojo con un código similar a este:</p>
-
 <pre class="lang:default decode:true">public IEnumerable&lt;Message&gt; UnreadMessages()
 {
     return null;
 }</pre>
-
 <p>En este caso es cierto que el test falla en la línea del <strong>then</strong>, pero personalmente sigue sin convencerme porque en realidad el rojo no se produce a causa del assert. La razón es sencilla y se ilustra bastante bien diseccionando el test de esta forma:</p>
-
 <pre class="lang:default decode:true">[TestMethod]
 public void sample_test()
 {
@@ -174,14 +167,11 @@ public void sample_test()
     var count = unreadMessages.Count;
     count.Should().Be(1)
 }</pre>
-
 <p>Con este ejemplo se puede ver claramente que el rojo no da debido al assert, da debido a una <strong>NullPointerException</strong> en la asignación de la variable <strong>count</strong>, lo que sigue alejado del objetivo de probar primero el test. En este caso, no cuesta mucho buscar un rojo que además permita probar el test completo:</p>
-
 <pre class="lang:default decode:true ">public IEnumerable&lt;Message&gt; UnreadMessages()
 {
     return new List&lt;Message&gt;();
 }</pre>
-
 <p>Por supuesto, es importante no olvidar que el primer paso nunca es el rojo, es pensar.</p>
 
     </section>
